@@ -1,0 +1,73 @@
+/* Physio8 colour system. Base ramps sampled from Logo_base.jpeg, then extended. */
+:root{
+  /* ── Brand base: Deep Purple (clinical authority) — sampled #331079 ── */
+  --p8-purple-50:#F3F0FB;--p8-purple-100:#E3DCF7;--p8-purple-200:#C5B9EE;--p8-purple-300:#9C88DE;
+  --p8-purple-400:#6F56C6;--p8-purple-500:#4A2AA1;--p8-purple-600:#331079;--p8-purple-700:#2A0D63;
+  --p8-purple-800:#1F0949;--p8-purple-900:#150532;
+  /* ── Brand base: Lime (vitality, movement) — sampled #A3B500 ── */
+  --p8-lime-50:#F8FBE6;--p8-lime-100:#EEF4C4;--p8-lime-200:#DDE98E;--p8-lime-300:#C8DA42;
+  --p8-lime-400:#B5C915;--p8-lime-500:#A3B500;--p8-lime-600:#8A9A00;--p8-lime-700:#6C7800;
+  --p8-lime-800:#4E5700;--p8-lime-900:#333900;
+  /* ── Brand base: Teal (precision, calm) — sampled #008C9E ── */
+  --p8-teal-50:#E8F6F8;--p8-teal-100:#C6E9EE;--p8-teal-200:#8DD4DE;--p8-teal-300:#46B5C4;
+  --p8-teal-400:#119CAF;--p8-teal-500:#008C9E;--p8-teal-600:#007686;--p8-teal-700:#005D6A;
+  --p8-teal-800:#00454F;--p8-teal-900:#002E35;
+  /* ── Neutrals: cool, faintly purple-shifted (hygiene made visible) ── */
+  --p8-white:#FFFFFF;
+  --p8-neutral-50:#FAFAFC;--p8-neutral-100:#F3F3F7;--p8-neutral-200:#E7E6EE;--p8-neutral-300:#D2D1DD;
+  --p8-neutral-400:#A7A5B8;--p8-neutral-500:#78768C;--p8-neutral-600:#565469;--p8-neutral-700:#3D3B4C;
+  --p8-neutral-800:#2A2836;--p8-neutral-900:#191722;
+  /* ── Status ── */
+  --p8-success-50:#E9F5EE;--p8-success-500:#2E7D4F;--p8-success-700:#1E5936;
+  --p8-warning-50:#FDF3E3;--p8-warning-500:#C07408;--p8-warning-700:#8A5205;
+  --p8-danger-50:#FCECEA;--p8-danger-500:#B3261E;--p8-danger-700:#8A1B15;
+
+  /* ══ Semantic aliases — use these in components ══ */
+  --color-brand:var(--p8-purple-600);
+  --color-brand-hover:var(--p8-purple-700);
+  --color-brand-active:var(--p8-purple-800);
+  --color-brand-subtle:var(--p8-purple-50);
+  --color-brand-border:var(--p8-purple-200);
+  --color-energy:var(--p8-lime-500);
+  --color-energy-hover:var(--p8-lime-600);
+  --color-energy-subtle:var(--p8-lime-50);
+  --color-precision:var(--p8-teal-500);
+  --color-precision-hover:var(--p8-teal-600);
+  --color-precision-subtle:var(--p8-teal-50);
+
+  --surface-page:var(--p8-white);
+  --surface-sunken:var(--p8-neutral-50);
+  --surface-card:var(--p8-white);
+  --surface-raised:var(--p8-white);
+  --surface-inverse:var(--p8-purple-800);
+  --surface-accent:var(--p8-purple-50);
+  --surface-overlay:rgba(21,5,50,.55);
+
+  --text-heading:var(--p8-purple-800);
+  --text-body:var(--p8-neutral-700);
+  --text-muted:var(--p8-neutral-500);
+  --text-faint:var(--p8-neutral-400);
+  --text-on-brand:var(--p8-white);
+  --text-on-energy:var(--p8-purple-800);
+  --text-inverse:var(--p8-white);
+  --text-inverse-muted:var(--p8-purple-200);
+  --text-link:var(--p8-purple-600);
+  --text-link-hover:var(--p8-teal-600);
+
+  --border-subtle:var(--p8-neutral-200);
+  --border-default:var(--p8-neutral-300);
+  --border-strong:var(--p8-neutral-400);
+  --border-brand:var(--p8-purple-600);
+  --border-focus:var(--p8-teal-500);
+
+  --status-success-fg:var(--p8-success-700);--status-success-bg:var(--p8-success-50);
+  --status-warning-fg:var(--p8-warning-700);--status-warning-bg:var(--p8-warning-50);
+  --status-danger-fg:var(--p8-danger-700);--status-danger-bg:var(--p8-danger-50);
+  --status-info-fg:var(--p8-teal-700);--status-info-bg:var(--p8-teal-50);
+
+  /* The dual-journey gradient: in-clinic purple flowing into at-home lime.
+     Reserved for the mark, hero washes and pathway progress. Never for body text. */
+  --gradient-journey:linear-gradient(100deg,var(--p8-purple-600) 0%,var(--p8-purple-500) 38%,var(--p8-teal-500) 62%,var(--p8-lime-500) 100%);
+  --gradient-clinic:linear-gradient(160deg,var(--p8-purple-800) 0%,var(--p8-purple-600) 100%);
+  --gradient-wash:linear-gradient(180deg,var(--p8-purple-50) 0%,var(--p8-white) 100%);
+}

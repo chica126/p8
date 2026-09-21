@@ -1,0 +1,26 @@
+:root{
+  --font-display:"Poppins","Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-body:"Plus Jakarta Sans","Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  --weight-regular:400;--weight-medium:500;--weight-semibold:600;--weight-bold:700;--weight-extrabold:800;
+
+  /* Type scale — 1.25 major third, 16px base */
+  --text-3xs:11px;--text-2xs:12px;--text-xs:13px;--text-sm:14px;--text-base:16px;
+  --text-md:18px;--text-lg:20px;--text-xl:24px;--text-2xl:30px;--text-3xl:38px;
+  --text-4xl:48px;--text-5xl:60px;--text-6xl:76px;
+
+  --leading-tight:1.08;--leading-snug:1.2;--leading-normal:1.5;--leading-relaxed:1.65;
+
+  /* Tracking. The wordmark's wide tracking is the brand's typographic signature —
+     it belongs to eyebrows and the mark, never to running text. */
+  --tracking-mark:.22em;--tracking-eyebrow:.14em;--tracking-wide:.02em;
+  --tracking-normal:0;--tracking-tight:-.01em;--tracking-display:-.025em;
+
+  /* Semantic roles */
+  --type-hero-size:var(--text-5xl);--type-hero-weight:var(--weight-semibold);
+  --type-h1-size:var(--text-4xl);--type-h2-size:var(--text-2xl);--type-h3-size:var(--text-xl);
+  --type-body-size:var(--text-base);--type-body-weight:var(--weight-regular);
+  --type-eyebrow-size:var(--text-2xs);--type-eyebrow-weight:var(--weight-semibold);
+  --type-data-size:var(--text-sm);
+}

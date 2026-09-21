@@ -1,0 +1,19 @@
+:root{
+  /* 4px base grid */
+  --space-0:0px;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:20px;
+  --space-6:24px;--space-8:32px;--space-10:40px;--space-12:48px;--space-16:64px;
+  --space-20:80px;--space-24:96px;--space-32:128px;--space-40:160px;
+
+  /* Layout */
+  --layout-max:1200px;
+  --layout-narrow:720px;
+  --layout-gutter:24px;
+  --layout-gutter-lg:48px;
+  --section-y:96px;
+  --section-y-sm:64px;
+
+  /* Component density */
+  --control-h-sm:32px;--control-h-md:40px;--control-h-lg:48px;--control-h-xl:56px;
+  --control-pad-sm:12px;--control-pad-md:18px;--control-pad-lg:24px;
+  --card-pad:24px;--card-pad-lg:32px;
+}
