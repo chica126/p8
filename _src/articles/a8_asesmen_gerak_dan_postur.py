@@ -5,10 +5,10 @@ ARTICLE = {
 "crumb": ["Movement & Posture Assessment", "Movement & Posture Assessment"],
 "title": ["Apa yang terjadi di Movement & Posture Assessment",
           "What happens in a Movement & Posture Assessment"],
-"meta_title": "Asesmen Fisioterapi Pertama: Apa yang Diukur & Berapa Biayanya | Physio8",
+"meta_title": "Asesmen Fisioterapi Pertama: Apa yang Terjadi & Apa yang Diukur | Physio8",
 "meta_desc": "Apa yang terjadi di sesi asesmen fisioterapi pertama? Tahap demi tahap selama 60 menit: wawancara, skrining tanda bahaya, pengukuran, diagnosis fisioterapi, dan rencana tertulis.",
-"excerpt": ["Enam puluh menit, empat belas pengukuran, satu rencana tertulis. Rp 350.000, tanpa biaya tersembunyi dan tanpa paket yang harus dibeli di tempat.",
-            "Sixty minutes, fourteen measurements, one written plan. Rp 350.000, no hidden fees and no package to buy on the spot."],
+"excerpt": ["Enam puluh menit, empat belas pengukuran, satu rencana tertulis — tanpa paket yang harus dibeli di tempat.",
+            "Sixty minutes, fourteen measurements, one written plan — no package to buy on the spot."],
 "dek": ["Enam puluh menit, empat belas pengukuran, satu rencana tertulis. Ini yang terjadi dari menit pertama sampai kamu pulang — dan kenapa kami mengukur sebelum menyentuh.",
         "Sixty minutes, fourteen measurements, one written plan. This is what happens from the first minute until you leave — and why we measure before we touch."],
 "published": "2026-08-22", "modified": "2026-09-22",
@@ -22,8 +22,8 @@ ARTICLE = {
           "profile": "https://unsplash.com/@tomspentys", "page": "https://unsplash.com/photos/CfdzNybONzc",
           "alt": ["Terapis mengukur rentang gerak pergelangan tangan dengan alat ukur", "A clinician measuring wrist range of motion with a measuring device"]},
 "side": [["Siap diukur?", "Ready to be measured?"],
-         ["Rp 350.000 untuk 60 menit, satu terapis, satu pasien. Kamu pulang dengan baseline dan rencana tertulis.",
-          "Rp 350.000 for 60 minutes, one therapist, one patient. You leave with a baseline and a written plan."]],
+         ["60 menit, satu terapis, satu pasien. Kamu pulang dengan baseline dan rencana tertulis. Info harga via WhatsApp.",
+          "60 minutes, one therapist, one patient. You leave with a baseline and a written plan. Pricing on WhatsApp."]],
 "wa": "artikel: Movement & Posture Assessment",
 "related": ["kapan-perlu-fisioterapi", "physio8-pathway-delapan-tahap", "leher-kaku-kerja-kantor"],
 "takeaways": [
@@ -91,10 +91,10 @@ ARTICLE = {
    ["Tanggal tes ulang.", "A re-test date."]
  ]],
 
- ["h2", "biaya", "Biaya dan komitmen", "Cost and commitment"],
- ["callout", "Harga kami terbitkan terbuka:", "We publish our prices:", [
-   ["Movement & Posture Assessment", "Rp 350.000 · 60 menit", "Movement & Posture Assessment", "Rp 350.000 · 60 minutes"],
-   ["Sesi terapi", "Rp 650.000 · 60 menit", "Treatment session", "Rp 650.000 · 60 minutes"],
+ ["h2", "harga", "Harga dan komitmen", "Pricing and commitment"],
+ ["callout", "Yang perlu kamu tahu sebelum datang:", "What to know before you come:", [
+   ["Harga asesmen & sesi terapi", "Tanyakan via WhatsApp", "Assessment & session pricing", "Ask us on WhatsApp"],
+   ["Durasi asesmen", "60 menit, satu terapis", "Assessment length", "60 minutes, one therapist"],
    ["Paket wajib", "Tidak ada", "Compulsory package", "None"]
  ]],
  ["p", "Asesmen tidak mewajibkanmu melanjutkan terapi. Kamu boleh membawa pulang rencana itu, memikirkannya, dan memutuskan sendiri. Studio Physio8 berlokasi di Gading Serpong.",
@@ -105,8 +105,8 @@ ARTICLE = {
   "Tidak. Kamu bisa datang langsung. Bila diperlukan, kami yang merujuk ke dokter spesialis.",
   "No. You can come directly. If needed, we refer you to a medical specialist."],
  ["Berapa biaya asesmen fisioterapi di Physio8?", "How much is a physiotherapy assessment at Physio8?",
-  "Rp 350.000 untuk 60 menit, satu terapis, satu pasien, tanpa paket wajib.",
-  "Rp 350.000 for 60 minutes, one therapist, one patient, with no compulsory package."],
+  "Informasi harga terbaru bisa ditanyakan langsung lewat WhatsApp Physio8. Asesmen berlangsung 60 menit, satu terapis, satu pasien, tanpa paket wajib.",
+  "For current pricing, message Physio8 on WhatsApp. The assessment runs 60 minutes, one therapist, one patient, with no compulsory package."],
  ["Apakah asesmen sudah termasuk terapi?", "Does the assessment include treatment?",
   "Fokus asesmen adalah pengukuran, diagnosis fisioterapi, dan rencana. Kamu juga pulang dengan program rumah pertama.",
   "The assessment focuses on measurement, a physiotherapy diagnosis and a plan. You also leave with your first home programme."],

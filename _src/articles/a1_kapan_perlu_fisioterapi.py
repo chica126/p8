@@ -88,7 +88,7 @@ ARTICLE = {
  ["stats", [
    ["60", "menit satu sesi", "minutes per session"],
    ["14", "pengukuran dasar", "baseline measurements"],
-   ["Rp 350.000", "biaya asesmen", "assessment fee"]
+   ["1", "rencana tertulis", "written plan"]
  ]],
  ["p", "Kami tidak memulai dengan terapi. Kami memulai dengan angka, supaya enam minggu kemudian ada sesuatu yang bisa dibandingkan.",
   "We do not open with treatment. We open with numbers, so that six weeks later there is something to compare against."],
@@ -126,8 +126,8 @@ ARTICLE = {
   "Tidak. Pasien dapat datang langsung ke fisioterapis sesuai standar pelayanan fisioterapi (Permenkes 65/2015). Bila temuan kami mengarah ke hal yang membutuhkan pencitraan atau tindakan medis, kami merujuk ke dokter spesialis dan menyampaikan alasannya.",
   "No. Patients may come directly to a physiotherapist under Indonesia's physiotherapy service standard (Regulation 65/2015). If our findings point to something that needs imaging or medical management, we refer you to a specialist and tell you why."],
  ["Berapa biaya fisioterapi di Physio8?", "What does physiotherapy cost at Physio8?",
-  "Movement & Posture Assessment Rp 350.000 untuk 60 menit, dan sesi terapi Rp 650.000 untuk 60 menit — satu terapis, satu pasien. Harga kami terbitkan terbuka, tanpa paket wajib dan tanpa biaya tersembunyi.",
-  "The Movement & Posture Assessment is Rp 350.000 for 60 minutes and a treatment session is Rp 650.000 for 60 minutes — one therapist, one patient. We publish our prices; there is no compulsory package and no hidden fee."],
+  "Informasi harga terbaru untuk asesmen dan sesi terapi bisa ditanyakan langsung lewat WhatsApp Physio8. Setelah asesmen, perkiraan jumlah sesi dan total biaya kami tuliskan di rencana sebelum terapi dimulai — tanpa paket wajib.",
+  "For current pricing on assessments and treatment sessions, message Physio8 on WhatsApp. After the assessment, the estimated number of sessions and total cost go into your written plan before treatment starts — with no compulsory package."],
  ["Berapa kali seminggu saya harus datang?", "How often do I need to come in?",
   "Umumnya satu sampai dua kali seminggu selama dua sampai tiga minggu pertama, lalu berkurang saat program rumah mengambil porsi lebih besar. Jumlah pastinya kami tulis di rencana setelah asesmen.",
   "Usually once or twice a week for the first two to three weeks, then less as the home programme takes over. The exact number goes into your written plan after the assessment."],

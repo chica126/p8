@@ -88,6 +88,11 @@ def url_of(slug=None):
     return SITE_BASE + ("artikel/" + slug + "/" if slug else "artikel/")
 
 
+def wa_price_link():
+    text = "Halo Physio8, saya ingin menanyakan harga asesmen dan sesi terapi."
+    return f"https://wa.me/{WA_NUMBER}?text=" + quote(text, safe="")
+
+
 def wa_link(src):
     text = f"Halo Physio8, saya ingin membuat jadwal asesmen. (dari {src})"
     return f"https://wa.me/{WA_NUMBER}?text=" + quote(text, safe="")
@@ -383,6 +388,7 @@ def build_article(a, bys, tpl):
     ]:
         s = add_class(s, needle, cls)
     s = replace_once(s, "</style>\n</helmet>", RESPONSIVE_CSS + "</style>\n</helmet>", "article css")
+    s = s.replace("__WA_PRICE__", esc(wa_price_link()))
     return s
 
 
@@ -415,7 +421,8 @@ def t_overrides(a):
             'T.id.refs = "Referensi"; T.en.refs = "References";\n'
             'T.id.refsNote = "Nomor dalam kurung siku di teks merujuk ke daftar ini. Tautan membuka sumber aslinya.";\n'
             'T.en.refsNote = "Numbers in square brackets in the text refer to this list. Links open the original source.";\n'
-            'T.id.photo = "Foto"; T.en.photo = "Photo";\n')
+            'T.id.photo = "Foto"; T.en.photo = "Photo";\n'
+            'T.id.priceLink = "Tanya harga via WhatsApp"; T.en.priceLink = "Ask for pricing on WhatsApp";\n')
 
 
 def seo_js(a):
@@ -563,6 +570,7 @@ def build_hub(arts, tpl):
     ]:
         s = add_class(s, needle, cls)
     s = replace_once(s, "</style>\n</helmet>", RESPONSIVE_CSS + "</style>\n</helmet>", "hub css")
+    s = s.replace("__WA_PRICE__", esc(wa_price_link()))
     return s
 
 

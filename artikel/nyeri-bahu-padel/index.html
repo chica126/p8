@@ -94,7 +94,7 @@ img{max-width:100%}
     <nav class="p8-nav" style="display:flex;align-items:center;gap:var(--space-5);margin-left:var(--space-4);flex-wrap:wrap;font-size:var(--text-sm);font-weight:var(--weight-medium)">
       <a href="../../index.html" style="color:var(--text-body)" style-hover="color:var(--color-brand)">Layanan</a>
       <a href="../../index.html" style="color:var(--text-body)" style-hover="color:var(--color-brand)">Physio8 Pathway</a>
-      <a href="../../index.html" style="color:var(--text-body)" style-hover="color:var(--color-brand)">Harga</a>
+      <a href="https://wa.me/6281511488080?text=Halo%20Physio8%2C%20saya%20ingin%20menanyakan%20harga%20asesmen%20dan%20sesi%20terapi." target="_blank" rel="noopener noreferrer" style="color:var(--text-body)" style-hover="color:var(--color-brand)">Harga</a>
       <a href="../index.html" style="color:var(--color-brand);font-weight:var(--weight-semibold);border-bottom:2px solid var(--color-energy);padding-bottom:2px">Artikel</a>
       <a href="../../index.html" style="color:var(--text-body)" style-hover="color:var(--color-brand)">Tentang</a>
     </nav>
@@ -295,7 +295,7 @@ img{max-width:100%}
         <a href="https://wa.me/6281511488080?text=Halo%20Physio8%2C%20saya%20ingin%20membuat%20jadwal%20asesmen.%20%28dari%20artikel%3A%20Nyeri%20bahu%20padel%29" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:var(--space-2);height:var(--control-h-lg);padding:0 var(--space-6);border-radius:var(--radius-pill);background:var(--p8-white);color:var(--color-brand);font-size:var(--text-base);font-weight:var(--weight-semibold);transition:var(--transition-control)" style-hover="background:var(--p8-purple-50);transform:translateY(-1px);color:var(--color-brand)">{{ t.book }}
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
         </a>
-        <p style="margin:0;font-family:var(--font-mono);font-size:var(--text-sm);color:var(--text-inverse-muted)">Rp 350.000 · 60 {{ t.min }} · Ruko Hudson, Gading Serpong</p>
+        <p style="margin:0;font-family:var(--font-mono);font-size:var(--text-sm);color:var(--text-inverse-muted)">60 {{ t.min }} · Ruko Hudson, Gading Serpong · <a href="https://wa.me/6281511488080?text=Halo%20Physio8%2C%20saya%20ingin%20menanyakan%20harga%20asesmen%20dan%20sesi%20terapi." target="_blank" rel="noopener noreferrer" style="color:var(--p8-lime-300);text-decoration:underline;text-underline-offset:3px">{{ t.priceLink }}</a></p>
       </div>
     </div>
     <div style="display:flex;flex-direction:column;gap:var(--space-4)">
@@ -437,6 +437,7 @@ T.id.refs = "Referensi"; T.en.refs = "References";
 T.id.refsNote = "Nomor dalam kurung siku di teks merujuk ke daftar ini. Tautan membuka sumber aslinya.";
 T.en.refsNote = "Numbers in square brackets in the text refer to this list. Links open the original source.";
 T.id.photo = "Foto"; T.en.photo = "Photo";
+T.id.priceLink = "Tanya harga via WhatsApp"; T.en.priceLink = "Ask for pricing on WhatsApp";
 
 class Component extends DCLogic {
   state = {lang:"id", active:"", progress:"0%"};
