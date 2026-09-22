@@ -563,6 +563,10 @@ def build_hub(arts, tpl):
     # the nav "Artikel" link (and any self link) should stay on this page
     s = s.replace('<a href="../index.html" style="color:var(--color-brand);font-weight:var(--weight-semibold);border-bottom:2px solid var(--color-energy)',
                   '<a href="./index.html" style="color:var(--color-brand);font-weight:var(--weight-semibold);border-bottom:2px solid var(--color-energy)')
+    # drop the "9 panduan klinis · 2 bahasa" stat block from the hub hero
+    s, n = re.subn(r'\n    <div style="display:flex;flex-direction:column;gap:var\(--space-4\);padding-bottom:[^"]*">.*?background:var\(--gradient-journey\)"></div>\n    </div>', '', s, count=1, flags=re.S)
+    if n != 1:
+        sys.exit("hub stats block not found")
     # copy: location is a fact, not the headline
     s = replace_once(s, ">Panduan pemulihan dari fisioterapis di Gading Serpong</h1>",
                      ">Panduan pemulihan dari fisioterapis Physio8</h1>", "hub h1")
