@@ -21,7 +21,7 @@ from urllib.parse import quote
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "_src")
 
-SITE_BASE = "https://chica126.github.io/p8/"   # absolute base used for canonical / og / schema URLs
+SITE_BASE = "https://physio8.id/"   # absolute base used for canonical / og / schema URLs
 SHARE_IMAGE = SITE_BASE + "favicon.png"        # share-preview image for every page (1200x1200)
 CLINICALLY_REVIEWED = False                    # flip to True only after the clinician has reviewed every article
 WA_NUMBER = "6281511488080"
@@ -229,6 +229,22 @@ def share_row(a):
 """
 
 
+def wa_float(src, prefix):
+    """Floating WhatsApp button, bottom-right, Physio8 purple with lime ring."""
+    return f"""<a class="p8-wa-fab" href="{esc(wa_link(src))}" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp Physio8" title="Chat WhatsApp">
+<svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M12 2.2C6.6 2.2 2.2 6.6 2.2 12c0 1.7.45 3.35 1.28 4.8L2.2 21.8l5.12-1.27c1.4.77 2.99 1.17 4.68 1.17 5.4 0 9.8-4.4 9.8-9.8S17.4 2.2 12 2.2zm0 17.8c-1.5 0-2.97-.4-4.25-1.16l-.3-.18-3.04.75.8-2.93-.2-.31A8.1 8.1 0 0 1 3.9 12c0-4.47 3.63-8.1 8.1-8.1s8.1 3.63 8.1 8.1-3.63 8-8.1 8zm4.45-6.06c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.44-1.36-1.69-.14-.24-.01-.37.11-.5.11-.11.24-.28.37-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.43-.06-.12-.55-1.32-.75-1.81-.2-.47-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.3-.22.24-.85.83-.85 2.03s.87 2.35.99 2.51c.12.16 1.72 2.62 4.16 3.68.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/></svg>
+</a>
+<style>
+.p8-wa-fab{{position:fixed;right:24px;bottom:24px;z-index:1000;width:60px;height:60px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;background:#331079;color:#fff;
+  box-shadow:0 0 0 3px #A3B500,0 10px 24px rgba(51,16,121,.35);transition:transform .2s ease,background .2s ease}}
+.p8-wa-fab:hover{{background:#2A0D63;transform:translateY(-3px)}}
+.p8-wa-fab:focus-visible{{outline:3px solid #008C9E;outline-offset:4px}}
+@media (max-width:480px){{.p8-wa-fab{{right:16px;bottom:16px;width:56px;height:56px}}}}
+@media print{{.p8-wa-fab{{display:none}}}}
+</style>"""
+
+
 # ---------------------------------------------------------------- article page
 def article_head(a, bys):
     url = url_of(a["slug"])
@@ -410,7 +426,7 @@ def build_article(a, bys, tpl):
                      '      toastOpacity: this.state.copied ? "1" : "0",\n'
                      '      setId: () => this.setState({lang:"id"}),', "share handler")
     # 9. crawler-readable copy
-    s = replace_once(s, "</x-dc>\n", "</x-dc>\n" + noscript_article(a) + "\n", "noscript")
+    s = replace_once(s, "</x-dc>\n", "</x-dc>\n" + noscript_article(a) + "\n" + wa_float(a["wa"], "../../") + "\n", "noscript")
     # 10. responsive hooks + CSS
     for needle, cls in [
         ('padding:0 var(--layout-gutter);height:72px', "p8-hdr"),
@@ -605,7 +621,7 @@ def build_hub(arts, tpl):
     for a in arts:
         nos.append(f'<li><a href="./{a["slug"]}/index.html">{esc(a["title"][0])}</a> — {esc(a["excerpt"][0])}</li>')
     nos.append("</ul><p>Physio8 · Ruko Hudson, Gading Serpong, Tangerang, Banten.</p></section></noscript>")
-    s = replace_once(s, "</x-dc>\n", "</x-dc>\n" + "\n".join(nos) + "\n", "hub noscript")
+    s = replace_once(s, "</x-dc>\n", "</x-dc>\n" + "\n".join(nos) + "\n" + wa_float("halaman Artikel", "../") + "\n", "hub noscript")
     # responsive hooks + CSS
     for needle, cls in [
         ('padding:0 var(--layout-gutter);height:72px', "p8-hdr"),
