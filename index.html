@@ -469,6 +469,30 @@ h1 {
 .foot-bar p { margin: 0; font-size: 13px; color: #A7A5B8; }
 .foot-bar .tagline2 { font-family: var(--display); font-weight: 500; color: var(--purple); }
 
+/* --- article photos on cards ------------------------------------ */
+.card-a { overflow: hidden; }
+.card-img { position: relative; margin: -24px -24px 20px; aspect-ratio: 3 / 2; background: #EEEDF3; overflow: hidden; }
+.card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 400ms ease; }
+.card-a:hover .card-img img { transform: scale(1.03); }
+.card-img figcaption, .panel-credit {
+  position: absolute; left: 10px; bottom: 8px; padding: 2px 8px; border-radius: 999px;
+  background: rgba(21,5,50,.55); color: #fff; font-size: 11px; line-height: 1.5; pointer-events: none;
+}
+.featured .panel { overflow: hidden; isolation: isolate; }
+.featured .panel-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+.featured .panel::before { content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, rgba(31,9,73,.35) 0%, rgba(31,9,73,.88) 62%, #1F0949 100%); }
+.panel-credit { top: 12px; bottom: auto; left: auto; right: 12px; }
+@media (max-width: 480px) { .card-img { margin: -24px -24px 18px; } .featured .panel { min-height: 300px; } }
+
+/* --- featured card: plain editorial style ----------------------- */
+.featured { border-top: 1px solid var(--line) !important; }
+.featured .panel { padding: 0 !important; min-height: 280px; background: #EEEDF3 !important; }
+.featured .panel::before { display: none !important; }
+.feat-meta { margin: 0 0 10px !important; font-size: 13.5px !important; color: var(--ink-mid) !important; }
+.feat-label { color: var(--teal-ink); font-weight: 600; }
+.card-a .tag { letter-spacing: 0; text-transform: none; font-size: 13.5px; }
+
 @media (max-width: 900px) {
   .featured, .step .wrap, .foot-grid { grid-template-columns: 1fr; }
   .grid3 { grid-template-columns: 1fr; }
@@ -575,13 +599,12 @@ h1 {
     </div>
 
     <a class="card-a featured" href="./artikel/kapan-perlu-fisioterapi/index.html">
-      <div class="panel" aria-hidden="true">
-        <p class="big">72 jam</p>
-        <p class="small">Batas waktu yang membedakan nyeri yang cukup diistirahatkan dari yang perlu diperiksa.</p>
-        <div class="bar"></div>
+      <div class="panel">
+        <img class="panel-img" src="https://images.unsplash.com/photo-1649751361457-01d3a696c7e6?w=900&amp;h=700&amp;q=80&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy" alt="Terapis memeriksa lutut dan tungkai pasien" width="900" height="700" loading="lazy" decoding="async">
+        <span class="panel-credit">Foto: yury kirillov / Unsplash</span>
       </div>
       <div class="body">
-        <div class="card-meta"><span class="tag-pill"><i></i>Paling dibaca</span><span class="mono">18 Sep 2026</span></div>
+        <p class="feat-meta"><span class="feat-label">Paling banyak dibaca</span> · Panduan · 18 Sep 2026</p>
         <h3>Kapan nyeri butuh fisioterapi, dan kapan cukup istirahat</h3>
         <p>Aturan 72 jam, tujuh tanda yang tidak boleh ditunggu, dan apa yang sebenarnya diukur di sesi pertama.</p>
         <span class="more">Lanjut baca <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
@@ -590,18 +613,21 @@ h1 {
 
     <div class="grid3">
         <a class="card-a" href="./artikel/nyeri-setelah-olahraga-weekend/index.html">
+          <figure class="card-img"><img src="https://images.unsplash.com/photo-1676444920926-c8a084ec4003?w=800&amp;h=533&amp;q=80&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy" alt="Sekelompok pemain futsal bertanding di lapangan" width="800" height="533" loading="lazy" decoding="async"><figcaption>Foto: Attareza Naufal / Unsplash</figcaption></figure>
           <div class="card-meta"><span class="tag">Cedera Olahraga</span></div>
           <h3>Nyeri dua hari setelah olahraga weekend: normal atau cedera?</h3>
           <p>DOMS terasa merata dan membaik dengan gerak. Cedera terasa terlokalisasi dan memburuk dengan beban. Cara membedakannya di rumah.</p>
           <span class="more">Lanjut baca <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
         </a>
         <a class="card-a" href="./artikel/leher-kaku-kerja-kantor/index.html">
+          <figure class="card-img"><img src="https://images.unsplash.com/photo-1606677549026-762050b1e7ca?w=800&amp;h=533&amp;q=80&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy" alt="Pekerja kantor memegang lehernya yang kaku" width="800" height="533" loading="lazy" decoding="async"><figcaption>Foto: Teslariu Mihai / Unsplash</figcaption></figure>
           <div class="card-meta"><span class="tag">Postur &amp; Kantor</span></div>
           <h3>Leher kaku setelah delapan jam di depan layar</h3>
           <p>Bukan karena postur burukmu saja — tapi karena tidak berubah posisi. Tiga penyesuaian meja dan dua latihan yang bekerja dalam dua minggu.</p>
           <span class="more">Lanjut baca <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
         </a>
         <a class="card-a" href="./artikel/nyeri-pinggang-duduk-lama/index.html">
+          <figure class="card-img"><img src="https://images.unsplash.com/photo-1769029271190-36b22f5e6771?w=800&amp;h=533&amp;q=80&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy" alt="Seseorang memegangi punggung bawahnya yang nyeri" width="800" height="533" loading="lazy" decoding="async"><figcaption>Foto: Sasun Bughdaryan / Unsplash</figcaption></figure>
           <div class="card-meta"><span class="tag">Nyeri Punggung</span></div>
           <h3>Nyeri pinggang bawah karena duduk lama: yang benar-benar bekerja</h3>
           <p>Tirah baring memperlambat pemulihan. Beban terkontrol mempercepatnya. Program 6 minggu dengan target yang bisa diukur.</p>
