@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /_src/
+Disallow: /_export/
+
+Sitemap: https://chica126.github.io/p8/sitemap.xml

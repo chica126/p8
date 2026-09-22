@@ -637,6 +637,27 @@ def redirect_stub(target, canonical, title):
 """
 
 
+def build_sitemap(arts):
+    """sitemap.xml (with image entries) + robots.txt at the repo root."""
+    latest = max(a["modified"] for a in arts)
+    urls = [(SITE_BASE, latest, "1.0", None), (url_of(), latest, "0.9", None)]
+    urls += [(url_of(a["slug"]), a["modified"], "0.8", a) for a in arts]
+    out = ['<?xml version="1.0" encoding="UTF-8"?>',
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+           'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
+    for loc, mod, prio, a in urls:
+        out.append(f"  <url>\n    <loc>{esc(loc)}</loc>\n    <lastmod>{mod}</lastmod>\n    <priority>{prio}</priority>")
+        if a:
+            out.append(f"    <image:image><image:loc>{esc(img(a, 1200, 630))}</image:loc></image:image>")
+        out.append("  </url>")
+    out.append("</urlset>\n")
+    open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write("\n".join(out))
+    open(os.path.join(ROOT, "robots.txt"), "w", encoding="utf-8").write(
+        "User-agent: *\nAllow: /\nDisallow: /_src/\nDisallow: /_export/\n\n"
+        f"Sitemap: {SITE_BASE}sitemap.xml\n")
+    return len(urls)
+
+
 def main():
     arts = load_articles()
     bys = {a["slug"]: a for a in arts}
@@ -662,6 +683,7 @@ def main():
     for path, wc, nref in written:
         print(f"{os.path.relpath(path, ROOT):55s} {wc:5d} words  {nref} refs")
     print("artikel/index.html (hub) + 2 redirect stubs")
+    print(f"sitemap.xml ({build_sitemap(arts)} URLs) + robots.txt")
 
 
 if __name__ == "__main__":
