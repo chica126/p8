@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -524,6 +524,20 @@ h1 {
 </style>
 </head>
 <body>
+<div class="p8-lang" role="group" aria-label="Bahasa / Language">
+  <button type="button" data-lang="id" aria-pressed="true">ID</button>
+  <button type="button" data-lang="en" aria-pressed="false">EN</button>
+</div>
+<style>
+.p8-lang{position:fixed;top:16px;right:16px;z-index:1001;display:flex;gap:2px;padding:3px;border-radius:999px;
+  background:rgba(255,255,255,.92);box-shadow:0 2px 10px rgba(51,16,121,.15);backdrop-filter:blur(6px)}
+.p8-lang button{font:600 13px/1 "Plus Jakarta Sans",system-ui,sans-serif;letter-spacing:.02em;border:0;cursor:pointer;
+  padding:8px 13px;border-radius:999px;background:transparent;color:#331079;min-width:42px}
+.p8-lang button[aria-pressed="true"]{background:#331079;color:#fff}
+.p8-lang button:focus-visible{outline:2px solid #008C9E;outline-offset:2px}
+@media (max-width:480px){.p8-lang{top:10px;right:10px}.p8-lang button{padding:7px 11px;font-size:12px}}
+@media print{.p8-lang{display:none}}
+</style>
 <div class="wash" aria-hidden="true"><span class="a"></span><span class="b"></span></div>
 
 <div class="hero">
@@ -533,13 +547,12 @@ h1 {
 
     <p class="eyebrow">Physio8.id · Gading Serpong</p>
 
-    <h1>Serving you<br>soon.</h1>
+    <h1 data-i18n="h1">Segera<br>melayani.</h1>
 
     <div class="track" aria-hidden="true"><i></i></div>
 
     <p class="lead">
-      A specialist recovery studio for injury rehabilitation and everyday physical
-      maintenance — one-to-one, arranged around you.
+      <span data-i18n="lead">Studio pemulihan spesialis untuk rehabilitasi cedera dan perawatan gerak sehari-hari — satu terapis, satu pasien, menyesuaikan jadwalmu.</span>
     </p>
 
     <div class="dots" aria-hidden="true"><b></b><b></b><b></b><b></b></div>
@@ -552,7 +565,7 @@ h1 {
           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
         </svg>
-        Follow @physio8.id
+        <span data-i18n="ig">Ikuti @physio8.id</span>
       </a>
 
       <a class="cta cta-ghost" href="https://glints.com/id/en/companies/physio8/7f663fbd-1efe-4650-8293-0537e3ce1c95" target="_blank" rel="noopener noreferrer">
@@ -561,20 +574,20 @@ h1 {
           <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
           <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
         </svg>
-        Apply to our team
+        <span data-i18n="apply">Bergabung dengan tim kami</span>
       </a>
     </div>
 
     <a class="read-link" href="./artikel/index.html">
-      Read our physiotherapy articles &amp; guides
+      <span data-i18n="read">Baca artikel &amp; panduan fisioterapi kami</span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>
       </svg>
     </a>
 
-    <p class="handle-note">Opening dates and rates go out on Instagram first.</p>
-    <p class="hiring-note">We are hiring across the studio, not only physiotherapists.</p>
+    <p data-i18n="handle" class="handle-note">Tanggal buka dan info layanan diumumkan lebih dulu di Instagram.</p>
+    <p data-i18n="hiring" class="hiring-note">Kami membuka lowongan di seluruh tim studio, bukan hanya fisioterapis.</p>
   </div>
 </main>
 
@@ -582,10 +595,9 @@ h1 {
   <p class="meta">
     <span>Ruko Hudson · Gading Serpong</span>
     <span class="sep">·</span>
-    <span>Serving in 2026</span>
+    <span data-i18n="serving">Melayani mulai 2026</span>
   </p>
-  <a class="scroll-cue" href="#artikel">Artikel &amp; lokasi
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
+  <a class="scroll-cue" href="#artikel"><span data-i18n="cue">Artikel &amp; lokasi</span>    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
   </a>
 </div>
 </div>
@@ -594,11 +606,11 @@ h1 {
   <div class="wrap">
     <div class="articles-head">
       <div class="intro">
-        <p class="kicker">Artikel &amp; panduan</p>
-        <h2 class="h2" id="artikel-title">Panduan pemulihan dari fisioterapis Physio8</h2>
-        <p>Kami menjelaskan alasan di balik setiap latihan — apa yang sedang diperbaiki, berapa lama waktunya, dan kapan kamu perlu diperiksa.</p>
+        <p data-i18n="k_art" class="kicker">Artikel &amp; panduan</p>
+        <h2 data-i18n="h2_art" class="h2" id="artikel-title">Panduan pemulihan dari fisioterapis Physio8</h2>
+        <p data-i18n="intro">Kami menjelaskan alasan di balik setiap latihan — apa yang sedang diperbaiki, berapa lama waktunya, dan kapan kamu perlu diperiksa.</p>
       </div>
-      <a class="pill-ghost" href="./artikel/index.html">Lihat semua artikel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+      <a class="pill-ghost" href="./artikel/index.html"><span data-i18n="all">Lihat semua artikel</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
     </div>
 
     <a class="card-a featured" href="./artikel/kapan-perlu-fisioterapi/index.html">
@@ -607,40 +619,40 @@ h1 {
         <span class="panel-credit">Foto: yury kirillov / Unsplash</span>
       </div>
       <div class="body">
-        <p class="feat-meta"><span class="feat-label">Paling banyak dibaca</span> · Panduan · 18 Sep 2026</p>
-        <h3>Kapan nyeri butuh fisioterapi, dan kapan cukup istirahat</h3>
-        <p>Aturan 72 jam, tujuh tanda yang tidak boleh ditunggu, dan apa yang sebenarnya diukur di sesi pertama.</p>
-        <span class="more">Lanjut baca <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+        <p class="feat-meta"><span data-i18n="featmeta"><span class="feat-label">Paling banyak dibaca</span> · Panduan · 18 Sep 2026</span></p>
+        <h3 data-i18n="t1">Kapan nyeri butuh fisioterapi, dan kapan cukup istirahat</h3>
+        <p data-i18n="e1">Aturan 72 jam, tujuh tanda yang tidak boleh ditunggu, dan apa yang sebenarnya diukur di sesi pertama.</p>
+        <span class="more"><span data-i18n="more">Lanjut baca</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
       </div>
     </a>
 
     <div class="grid3">
         <a class="card-a" href="./artikel/nyeri-setelah-olahraga-weekend/index.html">
           <figure class="card-img"><img src="https://images.unsplash.com/photo-1676444920926-c8a084ec4003?w=800&amp;h=533&amp;q=80&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy" alt="Sekelompok pemain futsal bertanding di lapangan" width="800" height="533" loading="lazy" decoding="async"><figcaption>Foto: Attareza Naufal / Unsplash</figcaption></figure>
-          <div class="card-meta"><span class="tag">Cedera Olahraga</span></div>
-          <h3>Nyeri dua hari setelah olahraga weekend: normal atau cedera?</h3>
-          <p>DOMS terasa merata dan membaik dengan gerak. Cedera terasa terlokalisasi dan memburuk dengan beban. Cara membedakannya di rumah.</p>
-          <span class="more">Lanjut baca <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+          <div class="card-meta"><span data-i18n="g2" class="tag">Cedera Olahraga</span></div>
+          <h3 data-i18n="t2">Nyeri dua hari setelah olahraga weekend: normal atau cedera?</h3>
+          <p data-i18n="e2">DOMS terasa merata dan membaik dengan gerak. Cedera terasa terlokalisasi dan memburuk dengan beban. Cara membedakannya di rumah.</p>
+          <span class="more"><span data-i18n="more">Lanjut baca</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
         </a>
         <a class="card-a" href="./artikel/leher-kaku-kerja-kantor/index.html">
           <figure class="card-img"><img src="https://images.unsplash.com/photo-1606677549026-762050b1e7ca?w=800&amp;h=533&amp;q=80&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy" alt="Pekerja kantor memegang lehernya yang kaku" width="800" height="533" loading="lazy" decoding="async"><figcaption>Foto: Teslariu Mihai / Unsplash</figcaption></figure>
-          <div class="card-meta"><span class="tag">Postur &amp; Kantor</span></div>
-          <h3>Leher kaku setelah delapan jam di depan layar</h3>
-          <p>Bukan karena postur burukmu saja — tapi karena tidak berubah posisi. Tiga penyesuaian meja dan dua latihan yang bekerja dalam dua minggu.</p>
-          <span class="more">Lanjut baca <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+          <div class="card-meta"><span data-i18n="g3" class="tag">Postur &amp; Kantor</span></div>
+          <h3 data-i18n="t3">Leher kaku setelah delapan jam di depan layar</h3>
+          <p data-i18n="e3">Bukan karena postur burukmu saja — tapi karena tidak berubah posisi. Tiga penyesuaian meja dan dua latihan yang bekerja dalam dua minggu.</p>
+          <span class="more"><span data-i18n="more">Lanjut baca</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
         </a>
         <a class="card-a" href="./artikel/nyeri-pinggang-duduk-lama/index.html">
           <figure class="card-img"><img src="https://images.unsplash.com/photo-1769029271190-36b22f5e6771?w=800&amp;h=533&amp;q=80&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy" alt="Seseorang memegangi punggung bawahnya yang nyeri" width="800" height="533" loading="lazy" decoding="async"><figcaption>Foto: Sasun Bughdaryan / Unsplash</figcaption></figure>
-          <div class="card-meta"><span class="tag">Nyeri Punggung</span></div>
-          <h3>Nyeri pinggang bawah karena duduk lama: yang benar-benar bekerja</h3>
-          <p>Tirah baring memperlambat pemulihan. Beban terkontrol mempercepatnya. Program 6 minggu dengan target yang bisa diukur.</p>
-          <span class="more">Lanjut baca <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+          <div class="card-meta"><span data-i18n="g4" class="tag">Nyeri Punggung</span></div>
+          <h3 data-i18n="t4">Nyeri pinggang bawah karena duduk lama: yang benar-benar bekerja</h3>
+          <p data-i18n="e4">Tirah baring memperlambat pemulihan. Beban terkontrol mempercepatnya. Program 6 minggu dengan target yang bisa diukur.</p>
+          <span class="more"><span data-i18n="more">Lanjut baca</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
         </a>
     </div>
 
     <div class="byline">
       <img src="./p8/author-timothy.jpeg" alt="" width="44" height="44" loading="lazy">
-      <p>Ditulis oleh <strong>Timothy Abieza, B.Sc. PT</strong><br>Athletic Trainer &amp; Physiotherapist</p>
+      <p><span data-i18n="by">Ditulis oleh</span><strong>Timothy Abieza, B.Sc. PT</strong><br>Athletic Trainer &amp; Physiotherapist</p>
     </div>
   </div>
 </section>
@@ -648,12 +660,12 @@ h1 {
 <section class="sec step" lang="id" aria-labelledby="step-title">
   <div class="wrap">
     <div>
-      <p class="kicker">Langkah pertama</p>
-      <h2 class="h2" id="step-title">Membaca membantu. Diukur lebih membantu.</h2>
-      <p class="lead2">Movement &amp; Posture Assessment berlangsung 60 menit: pengukuran range of motion, tes kekuatan, analisis gerak, dan rencana tertulis dengan target per tahap. Kamu pulang dengan angka awal, bukan tebakan.</p>
+      <p data-i18n="k_step" class="kicker">Langkah pertama</p>
+      <h2 data-i18n="h2_step" class="h2" id="step-title">Membaca membantu. Diukur lebih membantu.</h2>
+      <p data-i18n="lead2" class="lead2">Movement &amp; Posture Assessment berlangsung 60 menit: pengukuran range of motion, tes kekuatan, analisis gerak, dan rencana tertulis dengan target per tahap. Kamu pulang dengan angka awal, bukan tebakan.</p>
       <div class="step-actions">
-        <a class="pill-light" href="https://wa.me/6281511488080?text=Halo%20Physio8%2C%20saya%20ingin%20membuat%20jadwal%20asesmen.%20%28dari%20halaman%20utama%29" target="_blank" rel="noopener noreferrer">Buat jadwal asesmen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
-        <p class="price mono">60 menit · <a href="https://wa.me/6281511488080?text=Halo%20Physio8%2C%20saya%20ingin%20menanyakan%20harga%20asesmen%20dan%20sesi%20terapi." target="_blank" rel="noopener noreferrer" style="color:#C8DA42;text-decoration:underline;text-underline-offset:3px">Tanya harga via WhatsApp</a></p>
+        <a class="pill-light" href="https://wa.me/6281511488080?text=Halo%20Physio8%2C%20saya%20ingin%20membuat%20jadwal%20asesmen.%20%28dari%20halaman%20utama%29" target="_blank" rel="noopener noreferrer"><span data-i18n="book">Buat jadwal asesmen</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+        <p class="price mono"><span data-i18n="min">60 menit · </span><a href="https://wa.me/6281511488080?text=Halo%20Physio8%2C%20saya%20ingin%20menanyakan%20harga%20asesmen%20dan%20sesi%20terapi." target="_blank" rel="noopener noreferrer" style="color:#C8DA42;text-decoration:underline;text-underline-offset:3px"><span data-i18n="price">Tanya harga via WhatsApp</span></a></p>
       </div>
     </div>
     <div class="pathway">
@@ -676,29 +688,29 @@ h1 {
   <div class="wrap foot-grid">
     <div>
       <img class="foot-logo" src="./p8/logo-lockup.png" alt="Physio8" loading="lazy">
-      <p class="foot-about">Studio pemulihan spesialis untuk rehabilitasi cedera dan perawatan gerak sehari-hari — satu terapis, satu pasien.</p>
-      <p class="addr"><strong>Physio8</strong><br>Ruko Hudson, Gading Serpong<br>Tangerang, Banten<br><span class="mono">Melayani mulai 2026</span></p>
+      <p data-i18n="about" class="foot-about">Studio pemulihan spesialis untuk rehabilitasi cedera dan perawatan gerak sehari-hari — satu terapis, satu pasien.</p>
+      <p class="addr"><strong>Physio8</strong><br>Ruko Hudson, Gading Serpong<br>Tangerang, Banten<br><span data-i18n="serving2" class="mono">Melayani mulai 2026</span></p>
       <div class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.957632458893!2d106.6246716!3d-6.2693024999999984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fdcf5e3ed823%3A0xe086797d26b0250d!2sPhysio8!5e0!3m2!1sen!2sid!4v1790002287669!5m2!1sen!2sid" title="Lokasi Physio8, Gading Serpong" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
-      <a class="maps-link" href="https://www.google.com/maps/search/?api=1&amp;query=Physio8+Gading+Serpong" target="_blank" rel="noopener noreferrer">Buka di Maps →</a>
+      <a data-i18n="maps" class="maps-link" href="https://www.google.com/maps/search/?api=1&amp;query=Physio8+Gading+Serpong" target="_blank" rel="noopener noreferrer">Buka di Maps →</a>
     </div>
     <div class="foot-col">
-      <h4>Topik</h4>
+      <h4 data-i18n="topics">Topik</h4>
       <ul>
-        <li><a href="./artikel/nyeri-pinggang-duduk-lama/index.html">Nyeri punggung bawah</a></li>
-        <li><a href="./artikel/leher-kaku-kerja-kantor/index.html">Postur &amp; kerja kantor</a></li>
-        <li><a href="./artikel/runners-knee-shin-splints-achilles/index.html">Cedera lari</a></li>
-        <li><a href="./artikel/nyeri-bahu-padel/index.html">Padel &amp; olahraga raket</a></li>
-        <li><a href="./artikel/rehabilitasi-pasca-operasi-acl/index.html">Rehabilitasi pasca operasi</a></li>
+        <li><a href="./artikel/nyeri-pinggang-duduk-lama/index.html"><span data-i18n="f1">Nyeri punggung bawah</span></a></li>
+        <li><a href="./artikel/leher-kaku-kerja-kantor/index.html"><span data-i18n="f2">Postur &amp; kerja kantor</span></a></li>
+        <li><a href="./artikel/runners-knee-shin-splints-achilles/index.html"><span data-i18n="f3">Cedera lari</span></a></li>
+        <li><a href="./artikel/nyeri-bahu-padel/index.html"><span data-i18n="f4">Padel &amp; olahraga raket</span></a></li>
+        <li><a href="./artikel/rehabilitasi-pasca-operasi-acl/index.html"><span data-i18n="f5">Rehabilitasi pasca operasi</span></a></li>
       </ul>
     </div>
     <div class="foot-col">
       <h4>Physio8</h4>
       <ul>
-        <li><a href="./artikel/index.html">Artikel &amp; panduan</a></li>
+        <li><a href="./artikel/index.html"><span data-i18n="f6">Artikel &amp; panduan</span></a></li>
         <li><a href="https://www.instagram.com/physio8.id/" target="_blank" rel="noopener noreferrer">Instagram @physio8.id</a></li>
-        <li><a href="https://glints.com/id/en/companies/physio8/7f663fbd-1efe-4650-8293-0537e3ce1c95" target="_blank" rel="noopener noreferrer">Karier</a></li>
+        <li><a href="https://glints.com/id/en/companies/physio8/7f663fbd-1efe-4650-8293-0537e3ce1c95" target="_blank" rel="noopener noreferrer"><span data-i18n="f7">Karier</span></a></li>
       </ul>
     </div>
   </div>
@@ -719,5 +731,31 @@ h1 {
 @media (max-width:480px){.p8-wa-fab{right:16px;bottom:16px;width:56px;height:56px}}
 @media print{.p8-wa-fab{display:none}}
 </style>
+<script>
+(function(){
+  var T={"h1": ["Segera<br>melayani.", "Serving you<br>soon."], "lead": ["Studio pemulihan spesialis untuk rehabilitasi cedera dan perawatan gerak sehari-hari — satu terapis, satu pasien, menyesuaikan jadwalmu.", "A specialist recovery studio for injury rehabilitation and everyday physical maintenance — one-to-one, arranged around you."], "ig": ["Ikuti @physio8.id", "Follow @physio8.id"], "apply": ["Bergabung dengan tim kami", "Apply to our team"], "read": ["Baca artikel &amp; panduan fisioterapi kami", "Read our physiotherapy articles &amp; guides"], "handle": ["Tanggal buka dan info layanan diumumkan lebih dulu di Instagram.", "Opening dates and service updates go out on Instagram first."], "hiring": ["Kami membuka lowongan di seluruh tim studio, bukan hanya fisioterapis.", "We are hiring across the studio, not only physiotherapists."], "serving": ["Melayani mulai 2026", "Serving from 2026"], "cue": ["Artikel &amp; lokasi", "Articles &amp; location"], "k_art": ["Artikel &amp; panduan", "Articles &amp; guides"], "h2_art": ["Panduan pemulihan dari fisioterapis Physio8", "Recovery guides from Physio8 physiotherapists"], "intro": ["Kami menjelaskan alasan di balik setiap latihan — apa yang sedang diperbaiki, berapa lama waktunya, dan kapan kamu perlu diperiksa.", "We explain the reasoning behind every exercise — what is being fixed, how long it takes, and when you should get checked."], "all": ["Lihat semua artikel", "See all articles"], "featmeta": ["<span class=\"feat-label\">Paling banyak dibaca</span> · Panduan · 18 Sep 2026", "<span class=\"feat-label\">Most read</span> · Guide · 18 Sep 2026"], "t1": ["Kapan nyeri butuh fisioterapi, dan kapan cukup istirahat", "When pain needs physiotherapy — and when rest is enough"], "e1": ["Aturan 72 jam, tujuh tanda yang tidak boleh ditunggu, dan apa yang sebenarnya diukur di sesi pertama.", "The 72-hour rule, seven signs not worth waiting on, and what actually gets measured in a first session."], "more": ["Lanjut baca", "Continue reading"], "g2": ["Cedera Olahraga", "Sports Injury"], "t2": ["Nyeri dua hari setelah olahraga weekend: normal atau cedera?", "Sore two days after a weekend match: normal or injured?"], "e2": ["DOMS terasa merata dan membaik dengan gerak. Cedera terasa terlokalisasi dan memburuk dengan beban. Cara membedakannya di rumah.", "DOMS is diffuse and improves as you move. Injury is localised and worsens under load. How to tell them apart at home."], "g3": ["Postur &amp; Kantor", "Posture &amp; Desk"], "t3": ["Leher kaku setelah delapan jam di depan layar", "A stiff neck after eight hours at a screen"], "e3": ["Bukan karena postur burukmu saja — tapi karena tidak berubah posisi. Tiga penyesuaian meja dan dua latihan yang bekerja dalam dua minggu.", "It is not just your \"bad posture\" — it is not changing position. Three desk tweaks and two exercises that work within two weeks."], "g4": ["Nyeri Punggung", "Back Pain"], "t4": ["Nyeri pinggang bawah karena duduk lama: yang benar-benar bekerja", "Low back pain from long sitting: what actually works"], "e4": ["Tirah baring memperlambat pemulihan. Beban terkontrol mempercepatnya. Program 6 minggu dengan target yang bisa diukur.", "Bed rest slows recovery. Controlled load speeds it up. A six-week programme with measurable targets."], "by": ["Ditulis oleh", "Written by"], "k_step": ["Langkah pertama", "First step"], "h2_step": ["Membaca membantu. Diukur lebih membantu.", "Reading helps. Measuring helps more."], "lead2": ["Movement &amp; Posture Assessment berlangsung 60 menit: pengukuran range of motion, tes kekuatan, analisis gerak, dan rencana tertulis dengan target per tahap. Kamu pulang dengan angka awal, bukan tebakan.", "The Movement &amp; Posture Assessment takes 60 minutes: range-of-motion measurement, strength tests, movement analysis and a written plan with targets for each stage. You leave with a baseline, not a guess."], "book": ["Buat jadwal asesmen", "Book an assessment"], "min": ["60 menit · ", "60 minutes · "], "price": ["Tanya harga via WhatsApp", "Ask for pricing on WhatsApp"], "about": ["Studio pemulihan spesialis untuk rehabilitasi cedera dan perawatan gerak sehari-hari — satu terapis, satu pasien.", "A specialist recovery studio for injury rehabilitation and everyday movement care — one therapist, one patient."], "serving2": ["Melayani mulai 2026", "Serving from 2026"], "maps": ["Buka di Maps →", "Open in Maps →"], "topics": ["Topik", "Topics"], "f1": ["Nyeri punggung bawah", "Low back pain"], "f2": ["Postur &amp; kerja kantor", "Posture &amp; desk work"], "f3": ["Cedera lari", "Running injuries"], "f4": ["Padel &amp; olahraga raket", "Padel &amp; racket sports"], "f5": ["Rehabilitasi pasca operasi", "Post-surgery rehab"], "f6": ["Artikel &amp; panduan", "Articles &amp; guides"], "f7": ["Karier", "Careers"], "__title": ["Physio8 — Studio Fisioterapi di Gading Serpong | Segera Dibuka", "Physio8 — Physiotherapy Studio in Gading Serpong | Opening Soon"], "__desc": ["Studio fisioterapi satu terapis, satu pasien di Gading Serpong. Rehabilitasi cedera, nyeri punggung, dan cedera olahraga. Baca artikel pemulihan kami.", "One-therapist, one-patient physiotherapy studio in Gading Serpong. Injury rehab, back pain, and sports injuries. Read our recovery articles."]};
+  var WA_ID="Halo Physio8, saya ingin membuat jadwal asesmen.", WA_EN="Hi Physio8, I would like to book an assessment.";
+  var els=document.querySelectorAll("[data-i18n]");
+  function apply(lang){
+    var i=lang==="en"?1:0;
+    els.forEach(function(el){var v=T[el.getAttribute("data-i18n")]; if(v) el.innerHTML=v[i];});
+    document.documentElement.lang=lang;
+    document.querySelectorAll("[lang]:not(html)").forEach(function(el){ if(!el.closest(".p8-lang")) el.setAttribute("lang",lang); });
+    document.title=T.__title[i];
+    var m=document.querySelector('meta[name="description"]'); if(m) m.setAttribute("content",T.__desc[i]);
+    document.querySelectorAll('a[href*="wa.me/"]').forEach(function(a){
+      try{var u=new URL(a.href),t=u.searchParams.get("text")||"";
+        var P=[[WA_ID,WA_EN],["Halo Physio8, saya ingin menanyakan harga asesmen dan sesi terapi.","Hi Physio8, I would like to ask about assessment and therapy session prices."],["(dari halaman utama)","(from homepage)"]];
+        P.forEach(function(p){t=lang==="en"?t.replace(p[0],p[1]):t.replace(p[1],p[0]);});
+        a.href=u.origin+u.pathname+"?text="+encodeURIComponent(t);}catch(e){}
+    });
+    document.querySelectorAll(".p8-lang button").forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-lang")===lang));});
+    try{localStorage.setItem("p8-lang",lang);}catch(e){}
+  }
+  document.querySelectorAll(".p8-lang button").forEach(function(b){b.addEventListener("click",function(){apply(b.getAttribute("data-lang"));});});
+  var saved="id"; try{saved=localStorage.getItem("p8-lang")||"id";}catch(e){}
+  if(saved==="en") apply("en"); else document.documentElement.lang="id";
+})();
+</script>
 </body>
 </html>
