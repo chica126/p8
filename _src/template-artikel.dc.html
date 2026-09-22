@@ -79,7 +79,6 @@ html{scroll-behavior:smooth}
   <header style="max-width:900px">
     <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-5)">
       <span style="display:inline-flex;align-items:center;gap:6px;padding:5px var(--space-3);border-radius:var(--radius-pill);background:var(--color-brand-subtle);color:var(--color-brand);font-size:var(--text-2xs);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase"><span style="width:5px;height:5px;border-radius:var(--radius-circle);background:var(--color-energy)"></span>{{ a.category }}</span>
-      <span style="font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-muted)">{{ a.readLabel }}</span>
     </div>
     <h1 style="margin:0 0 var(--space-5);font-family:var(--font-display);font-size:var(--type-h1-size);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-display);line-height:var(--leading-tight);color:var(--text-heading);text-wrap:pretty">{{ a.title }}</h1>
     <p style="margin:0 0 var(--space-8);max-width:var(--layout-narrow);font-size:var(--text-lg);line-height:var(--leading-relaxed);color:var(--text-body);text-wrap:pretty">{{ a.dek }}</p>
@@ -267,7 +266,6 @@ html{scroll-behavior:smooth}
           <div style="padding:var(--card-pad)">
             <p style="margin:0 0 var(--space-3);font-size:var(--text-2xs);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--color-precision)">{{ r.tag }}</p>
             <h3 style="margin:0 0 var(--space-3);font-family:var(--font-display);font-size:var(--text-lg);font-weight:var(--weight-semibold);line-height:var(--leading-snug);color:var(--text-heading);text-wrap:pretty">{{ r.title }}</h3>
-            <p style="margin:0;font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-faint)">{{ r.read }}</p>
           </div>
         </a>
       </sc-for>

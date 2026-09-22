@@ -4,4 +4,4 @@
    Google Fonts match and is used as the display face. Plus Jakarta Sans (an
    Indonesian-commissioned humanist sans) carries UI + body copy for bilingual
    ID/EN comfort. Replace with licensed binaries + local @font-face when available. */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");

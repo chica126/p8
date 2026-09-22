@@ -180,8 +180,6 @@ img{max-width:100%}
           <div style="padding:var(--card-pad);display:flex;flex-direction:column;flex:1">
             <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-3)">
               <span style="font-size:var(--text-2xs);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--color-precision)">{{ a.tag }}</span>
-              <span style="width:4px;height:4px;border-radius:var(--radius-circle);background:var(--border-default)"></span>
-              <span style="font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-muted)">{{ a.read }}</span>
             </div>
             <h3 style="margin:0 0 var(--space-3);font-family:var(--font-display);font-size:var(--text-lg);font-weight:var(--weight-semibold);line-height:var(--leading-snug);color:var(--text-heading);text-wrap:pretty">{{ a.title }}</h3>
             <p style="margin:0 0 var(--space-5);font-size:var(--text-sm);line-height:var(--leading-relaxed);color:var(--text-muted);text-wrap:pretty">{{ a.excerpt }}</p>
@@ -288,11 +286,11 @@ const ARTICLES = [{"slug": "kapan-perlu-fisioterapi", "tag": "Panduan", "tagEn":
 const PATHWAY = ["Assess","Diagnose","Relieve","Rebuild","Strengthen","Retrain","Return","Maintain"];
 
 const COPY = {
-  id:{readGuide:"Baca panduan",allArticles:"Semua artikel",emptyTitle:"Belum ada artikel yang cocok",emptyBody:"Coba kata kunci lain, atau hapus filter topik.",resetFilter:"Hapus filter",all:"Semua",
+  id:{readGuide:"Lanjut baca",allArticles:"Semua artikel",emptyTitle:"Belum ada artikel yang cocok",emptyBody:"Coba kata kunci lain, atau hapus filter topik.",resetFilter:"Hapus filter",all:"Semua",
     writtenBy:"Ditulis oleh",
     authorBio:"Athletic trainer dan fisioterapis dengan sepuluh tahun praktik klinis dan lapangan. Saat ini Athletic Trainer di Jakarta Intercultural School, sebelumnya physical therapist di PhysioActive dan Eastwest Physiotherapy & Rehabilitation, serta empat tahun menangani sisi medis Persatuan Rugby Union Indonesia. Fokusnya return to sport, cedera olahraga, dan concussion assessment.",
     authorCreds:"B.Sc. Physical Therapy, Saxion University of Applied Sciences · Sport Performance Enhancement, HAN University of Applied Sciences · FAIR · ICIR · CPR & AED"},
-  en:{readGuide:"Read the guide",allArticles:"All articles",emptyTitle:"Nothing matches yet",emptyBody:"Try another keyword, or clear the topic filter.",resetFilter:"Clear filters",all:"All",
+  en:{readGuide:"Continue reading",allArticles:"All articles",emptyTitle:"Nothing matches yet",emptyBody:"Try another keyword, or clear the topic filter.",resetFilter:"Clear filters",all:"All",
     writtenBy:"Written by",
     authorBio:"An athletic trainer and physiotherapist with ten years of clinical and sideline practice. Currently Athletic Trainer at Jakarta Intercultural School, previously a physical therapist at PhysioActive and Eastwest Physiotherapy & Rehabilitation, and four years on the medical side of Persatuan Rugby Union Indonesia. His focus is return to sport, sports injuries, and concussion assessment.",
     authorCreds:"B.Sc. Physical Therapy, Saxion University of Applied Sciences · Sport Performance Enhancement, HAN University of Applied Sciences · FAIR · ICIR · CPR & AED"}
@@ -310,7 +308,7 @@ class Component extends DCLogic {
       excerpt: en ? a.excerptEn : a.excerpt,
       date: en ? a.dateEn : a.date,
       read: (en ? a.read+" min read" : a.read+" menit baca"),
-      meta: (en ? a.dateEn+" · "+a.read+" min read" : a.date+" · "+a.read+" menit baca"),
+      meta: (en ? a.dateEn : a.date),
       slotHint:a.slotHint, href:a.href, img:a.img, credit:a.credit, creditHref:a.creditHref
     };
   }

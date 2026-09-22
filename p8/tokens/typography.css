@@ -1,7 +1,8 @@
 :root{
-  --font-display:"Poppins","Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --font-body:"Plus Jakarta Sans","Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --font-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  /* One family everywhere; the three roles are kept so existing components need no change. */
+  --font-display:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-body:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
 
   --weight-regular:400;--weight-medium:500;--weight-semibold:600;--weight-bold:700;--weight-extrabold:800;
 

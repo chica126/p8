@@ -440,7 +440,7 @@ def seo_js(a):
         ["Struktur heading", f"1 × H1 · {n_h2 + 2} × H2 (termasuk FAQ & Referensi)"],
         ["Referensi", f"{len(a['refs'])} sumber bernomor (jurnal, pedoman klinis, situs rumah sakit internasional)"],
         ["Versi tanpa JavaScript", "Ya — salinan HTML statis untuk crawler dan mesin AI"],
-        ["Panjang", f"≈ {wc:,} kata (ID) · {a['read']} menit baca".replace(",", ".")],
+        ["Panjang", f"≈ {wc:,} kata (ID)".replace(",", ".")],
         ["Gambar", f"Unsplash — {a['image']['name']} (kredit di caption)"],
     ]
     rows_en = [
@@ -454,7 +454,7 @@ def seo_js(a):
         ["Heading structure", f"1 × H1 · {n_h2 + 2} × H2 (incl. FAQ & References)"],
         ["References", f"{len(a['refs'])} numbered sources (journals, clinical guidelines, international hospital sites)"],
         ["No-JavaScript version", "Yes — static HTML copy for crawlers and AI engines"],
-        ["Length", f"≈ {wc:,} words (ID) · {a['read']} min read"],
+        ["Length", f"≈ {wc:,} words (ID)"],
         ["Image", f"Unsplash — {a['image']['name']} (credited in caption)"],
     ]
     return f"const SEO = {js({'id': rows_id, 'en': rows_en})};\n"
