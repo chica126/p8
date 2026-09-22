@@ -41,6 +41,12 @@ a{color:var(--text-link);text-decoration:none}
 a:hover{color:var(--text-link-hover)}
 @media print{header[data-sticky]{position:static}}
 
+/* ---- plain editorial labels: no all-caps, no pill badges (applies site-wide) ---- */
+[style*="text-transform:uppercase"],[style*="text-transform: uppercase"]{text-transform:none !important;letter-spacing:0 !important;font-size:var(--text-sm) !important}
+[style*="background:var(--color-brand-subtle)"][style*="padding:5px"],[style*="background: var(--color-brand-subtle)"][style*="padding: 5px"],
+[style*="background:var(--status-info-bg)"],[style*="background: var(--status-info-bg)"]{background:transparent !important;padding:0 !important;border-radius:0 !important;font-weight:600 !important}
+[style*="background:var(--color-brand-subtle)"][style*="padding:5px"] > span:empty,[style*="background: var(--color-brand-subtle)"][style*="padding: 5px"] > span:empty{display:none !important}
+[style*="background:var(--status-info-bg)"] svg,[style*="background: var(--status-info-bg)"] svg{display:none !important}
 /* ---- responsive (inline styles need !important to be overridden) ---- */
 img{max-width:100%}
 @media (max-width: 960px){

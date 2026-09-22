@@ -163,6 +163,12 @@ def add_class(s, needle, cls, what=None):
 
 
 RESPONSIVE_CSS = """
+/* ---- plain editorial labels: no all-caps, no pill badges (applies site-wide) ---- */
+[style*="text-transform:uppercase"],[style*="text-transform: uppercase"]{text-transform:none !important;letter-spacing:0 !important;font-size:var(--text-sm) !important}
+[style*="background:var(--color-brand-subtle)"][style*="padding:5px"],[style*="background: var(--color-brand-subtle)"][style*="padding: 5px"],
+[style*="background:var(--status-info-bg)"],[style*="background: var(--status-info-bg)"]{background:transparent !important;padding:0 !important;border-radius:0 !important;font-weight:600 !important}
+[style*="background:var(--color-brand-subtle)"][style*="padding:5px"] > span:empty,[style*="background: var(--color-brand-subtle)"][style*="padding: 5px"] > span:empty{display:none !important}
+[style*="background:var(--status-info-bg)"] svg,[style*="background: var(--status-info-bg)"] svg{display:none !important}
 /* ---- responsive (inline styles need !important to be overridden) ---- */
 img{max-width:100%}
 @media (max-width: 960px){
@@ -196,6 +202,30 @@ img{max-width:100%}
 @media (max-width: 380px){
   .p8-lang{display:none !important}
 }
+"""
+
+
+ICON_LINK = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>'
+ICON_WA = '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2C6.6 2.2 2.2 6.6 2.2 12c0 1.7.45 3.35 1.28 4.8L2.2 21.8l5.12-1.27c1.4.77 2.99 1.17 4.68 1.17 5.4 0 9.8-4.4 9.8-9.8S17.4 2.2 12 2.2zm0 17.8c-1.5 0-2.97-.4-4.25-1.16l-.3-.18-3.04.75.8-2.93-.2-.31A8.1 8.1 0 0 1 3.9 12c0-4.47 3.63-8.1 8.1-8.1s8.1 3.63 8.1 8.1-3.63 8-8.1 8zm4.45-6.06c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.44-1.36-1.69-.14-.24-.01-.37.11-.5.11-.11.24-.28.37-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.43-.06-.12-.55-1.32-.75-1.81-.2-.47-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.3-.22.24-.85.83-.85 2.03s.87 2.35.99 2.51c.12.16 1.72 2.62 4.16 3.68.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"></path></svg>'
+ICON_LI = '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"></path></svg>'
+SHARE_BTN = ('display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;'
+             'background:var(--surface-card);border:1px solid var(--border-subtle);color:var(--text-muted);cursor:pointer;'
+             'transition:all 200ms ease;padding:0')
+SHARE_HOVER = 'color:#fff;background:var(--color-brand);border-color:var(--color-brand);transform:translateY(-2px)'
+
+
+def share_row(a):
+    url = url_of(a["slug"])
+    wa = "https://wa.me/?text=" + quote(a["title"][0] + " — " + url, safe="")
+    li = "https://www.linkedin.com/sharing/share-offsite/?url=" + quote(url, safe="")
+    return f"""
+      <div style="display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap;margin-top:var(--space-12);padding-top:var(--space-8);border-top:1px solid var(--border-subtle)">
+        <span style="font-size:var(--text-sm);font-weight:var(--weight-semibold);color:var(--text-muted);margin-right:var(--space-1)">{{{{ t.share }}}}</span>
+        <button type="button" onClick="{{{{ copyLink }}}}" aria-label="{{{{ t.copyLink }}}}" title="{{{{ t.copyLink }}}}" style="{SHARE_BTN}" style-hover="{SHARE_HOVER}">{ICON_LINK}</button>
+        <a href="{esc(wa)}" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp" style="{SHARE_BTN}" style-hover="{SHARE_HOVER}">{ICON_WA}</a>
+        <a href="{esc(li)}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" style="{SHARE_BTN}" style-hover="{SHARE_HOVER}">{ICON_LI}</a>
+      </div>
+      <div role="status" aria-live="polite" style="position:fixed;left:50%;bottom:32px;transform:translateX(-50%);background:var(--surface-inverse);color:#fff;font-size:var(--text-sm);font-weight:var(--weight-medium);padding:12px 24px;border-radius:999px;z-index:999;pointer-events:none;transition:opacity 250ms ease;opacity:{{{{ toastOpacity }}}}">{{{{ t.copied }}}}</div>
 """
 
 
@@ -365,6 +395,20 @@ def build_article(a, bys, tpl):
     s = replace_once(s, "        tag:r.tag[i], title:r.title[i], slotId:r.read[1], hint:r.hint,\n",
                      "        tag:r.tag[i], title:r.title[i], slotId:r.read[1], hint:r.hint,\n"
                      "        href:r.href, img:r.img, credit:r.credit, creditHref:r.creditHref,\n", "renderVals related")
+    # 8b. share row (copy link · WhatsApp · LinkedIn) before the author box
+    author = '      <section style="margin-top:var(--space-16);display:flex;gap:var(--space-6);padding:var(--card-pad-lg)'
+    s = replace_once(s, author, share_row(a) + "\n" + author, "share row")
+    s = replace_once(s, 'state = {lang:"id", active:"", progress:"0%"};',
+                     'state = {lang:"id", active:"", progress:"0%", copied:false};', "share state")
+    s = replace_once(s, '      setId: () => this.setState({lang:"id"}),',
+                     '      copyLink: () => {\n'
+                     f'        const url = {js(url_of(a["slug"]))};\n'
+                     '        const done = () => { this.setState({copied:true}); clearTimeout(this._ct); this._ct = setTimeout(() => this.setState({copied:false}), 2000); };\n'
+                     '        const fallback = () => { const ta = document.createElement("textarea"); ta.value = url; ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); } catch (e) {} document.body.removeChild(ta); done(); };\n'
+                     '        if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(url).then(done, fallback); else fallback();\n'
+                     '      },\n'
+                     '      toastOpacity: this.state.copied ? "1" : "0",\n'
+                     '      setId: () => this.setState({lang:"id"}),', "share handler")
     # 9. crawler-readable copy
     s = replace_once(s, "</x-dc>\n", "</x-dc>\n" + noscript_article(a) + "\n", "noscript")
     # 10. responsive hooks + CSS
@@ -387,7 +431,8 @@ def build_article(a, bys, tpl):
         ('grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)', "p8-book"),
     ]:
         s = add_class(s, needle, cls)
-    s = replace_once(s, "</style>\n</helmet>", RESPONSIVE_CSS + "</style>\n</helmet>", "article css")
+    hide_review = "" if CLINICALLY_REVIEWED else "\n.p8-review{display:none !important}\n"
+    s = replace_once(s, "</style>\n</helmet>", RESPONSIVE_CSS + hide_review + "</style>\n</helmet>", "article css")
     s = s.replace("__WA_PRICE__", esc(wa_price_link()))
     return s
 
@@ -422,7 +467,10 @@ def t_overrides(a):
             'T.id.refsNote = "Nomor dalam kurung siku di teks merujuk ke daftar ini. Tautan membuka sumber aslinya.";\n'
             'T.en.refsNote = "Numbers in square brackets in the text refer to this list. Links open the original source.";\n'
             'T.id.photo = "Foto"; T.en.photo = "Photo";\n'
-            'T.id.priceLink = "Tanya harga via WhatsApp"; T.en.priceLink = "Ask for pricing on WhatsApp";\n')
+            'T.id.priceLink = "Tanya harga via WhatsApp"; T.en.priceLink = "Ask for pricing on WhatsApp";\n'
+            'T.id.share = "Bagikan"; T.en.share = "Share";\n'
+            'T.id.copyLink = "Salin link"; T.en.copyLink = "Copy link";\n'
+            'T.id.copied = "Link disalin"; T.en.copied = "Link copied";\n')
 
 
 def seo_js(a):
