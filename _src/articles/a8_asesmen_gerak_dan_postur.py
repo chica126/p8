@@ -11,7 +11,7 @@ ARTICLE = {
             "Sixty minutes, fourteen measurements, one written plan — no package to buy on the spot."],
 "dek": ["Enam puluh menit, empat belas pengukuran, satu rencana tertulis. Ini yang terjadi dari menit pertama sampai kamu pulang — dan kenapa kami mengukur sebelum menyentuh.",
         "Sixty minutes, fourteen measurements, one written plan. This is what happens from the first minute until you leave — and why we measure before we touch."],
-"published": "2026-08-22", "modified": "2026-09-22",
+"published": "2026-08-22", "modified": "2026-09-28",
 "date_label": ["22 Agu 2026", "22 Aug 2026"],
 "read": 6,
 "about": "Asesmen fisioterapi",
@@ -37,7 +37,7 @@ ARTICLE = {
   "You leave with a physiotherapy diagnosis, a written plan, an estimated number of sessions and the total cost."]
 ],
 "blocks": [
- ["h2", "kenapa-mengukur", "Kenapa kami mengukur dulu", "Why we measure first"],
+ ["h2", "kenapa-mengukur", "Mengapa kami melakukan pemeriksaan terlebih dulu?", "Why do we examine first?"],
  ["p", "World Physiotherapy mendeskripsikan fisioterapi sebagai profesi yang dimulai dari pemeriksaan dan evaluasi untuk menentukan diagnosis, prognosis, dan rencana intervensi [1]. Di Physio8, langkah itu kami jalankan dengan angka: bila kami tidak mengukur di awal, enam minggu kemudian tidak ada yang bisa dibandingkan, dan \"rasanya membaik\" menjadi satu-satunya ukuran.",
   "World Physiotherapy describes physiotherapy as a profession that begins with examination and evaluation to reach a diagnosis, prognosis and plan of intervention [1]. At Physio8 we run that step with numbers: if we do not measure at the start, there is nothing to compare six weeks later, and 'it feels better' becomes the only yardstick."],
  ["stats", [
@@ -57,11 +57,10 @@ ARTICLE = {
  ["h2", "menit-demi-menit", "Menit demi menit", "Minute by minute"],
  ["table", [
    ["Waktu", "Yang terjadi", "Kenapa", "Time", "What happens", "Why"],
-   ["0–15", "Wawancara sambil duduk: riwayat, pekerjaan, olahraga, tujuanmu", "Cerita cedera adalah bagian dari asesmen", "0–15", "Seated interview: history, work, sport, your goal", "The story of the injury is part of the assessment"],
-   ["15–20", "Skrining tanda bahaya", "Memastikan keluhan berada dalam lingkup fisioterapi", "15–20", "Red-flag screen", "Making sure the problem is within physiotherapy's scope"],
-   ["20–45", "Pengukuran: rentang gerak, kekuatan, tes fungsional, analisis postur dan gerak", "Membuat baseline yang bisa dibandingkan", "20–45", "Measurement: range, strength, functional tests, posture and movement analysis", "Creating a comparable baseline"],
-   ["45–55", "Penjelasan diagnosis fisioterapi", "Kamu harus bisa menjelaskan ulang dengan kata-katamu sendiri", "45–55", "Explaining the physiotherapy diagnosis", "You should be able to explain it back in your own words"],
-   ["55–60", "Rencana tertulis & program rumah pertama", "Kamu tahu langkah berikutnya sebelum pulang", "55–60", "Written plan & first home exercises", "You know the next step before you leave"]
+   ["0–15", "Wawancara sambil duduk: riwayat, pekerjaan, olahraga, tujuanmu, serta skrining tanda bahaya", "Cerita cedera adalah bagian dari asesmen. Memastikan keluhan berada dalam lingkup fisioterapi", "0–15", "Seated interview: history, work, sport, your goal, plus a red-flag screen", "The story of the injury is part of the assessment. Making sure the problem is within physiotherapy's scope"],
+   ["15–20", "Pengukuran: rentang gerak, kekuatan, tes fungsional, analisis postur dan gerak", "Membuat baseline yang bisa dibandingkan", "15–20", "Measurement: range, strength, functional tests, posture and movement analysis", "Creating a comparable baseline"],
+   ["20–45", "Penjelasan diagnosis fisioterapi dan pemilihan latihan gerak", "Kamu harus bisa menjelaskan ulang dengan kata-katamu sendiri", "20–45", "Explaining the physiotherapy diagnosis and choosing movement exercises", "You should be able to explain it back in your own words"],
+   ["45–60", "Rencana tertulis & program rumah pertama", "Kamu tahu langkah berikutnya sebelum pulang", "45–60", "Written plan & first home exercises", "You know the next step before you leave"]
  ]],
 
  ["h2", "yang-diukur", "Apa saja yang diukur", "What gets measured"],
@@ -76,7 +75,7 @@ ARTICLE = {
    ["Tes khusus untuk struktur yang dicurigai.", "Special tests for the suspected structure."]
  ]],
 
- ["h2", "diagnosis-fisioterapi", "Diagnosis fisioterapi, bukan diagnosis medis", "A physiotherapy diagnosis, not a medical one"],
+ ["h2", "diagnosis-fisioterapi", "Diagnosis fisioterapi", "The physiotherapy diagnosis"],
  ["p", "Standar pelayanan fisioterapi di Indonesia mengenal diagnosis fisioterapi — rumusan tentang gangguan gerak dan fungsi, penyebabnya, dan dampaknya pada aktivitasmu [2]. Ini berbeda dari diagnosis medis. Bila temuan kami mengarah ke kondisi yang memerlukan pencitraan, obat, atau tindakan medis, kami merujukmu ke dokter spesialis dan menjelaskan alasannya.",
   "Indonesia's physiotherapy service standard recognises a physiotherapy diagnosis — a statement of the movement and function impairment, its cause, and its impact on your activities [2]. It is different from a medical diagnosis. If our findings point to a condition needing imaging, medication or medical procedures, we refer you to a specialist and explain why."],
  ["p", "Pencitraan juga tidak selalu diperlukan. Untuk nyeri pinggang misalnya, pedoman internasional menyarankan penggunaan pencitraan secara bijak, bukan rutin [4].",

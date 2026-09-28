@@ -11,7 +11,7 @@ ARTICLE = {
             "Bed rest slows recovery. Controlled load speeds it up. A six-week programme with measurable targets."],
 "dek": ["Sebagian besar nyeri pinggang bawah tidak berbahaya dan membaik dengan tetap aktif. Pedoman WHO, NICE, dan The Lancet sepakat pada satu hal: latihan, bukan tirah baring.",
         "Most low back pain is not dangerous and improves by staying active. Guidance from the WHO, NICE and The Lancet agrees on one thing: exercise, not bed rest."],
-"published": "2026-09-08", "modified": "2026-09-22",
+"published": "2026-09-08", "modified": "2026-09-28",
 "date_label": ["8 Sep 2026", "8 Sep 2026"],
 "read": 9,
 "about": "Nyeri punggung bawah",
@@ -47,7 +47,7 @@ ARTICLE = {
  ["p", "Tinjauan Cochrane membandingkan saran tirah baring dengan saran tetap aktif untuk nyeri pinggang akut. Hasilnya: orang yang disarankan tetap aktif mengalami nyeri dan fungsi yang sedikit lebih baik [2]. Istirahat total beberapa hari membuat otot kaku, tidur terganggu, dan rasa takut bergerak semakin besar — semuanya memperpanjang nyeri.",
   "A Cochrane review compared advice to rest in bed with advice to stay active for acute low back pain. People advised to stay active had slightly better pain and function [2]. Several days of complete rest stiffens muscles, disturbs sleep and grows the fear of moving — all of which prolong pain."],
 
- ["h2", "yang-direkomendasikan", "Yang direkomendasikan pedoman", "What the guidelines recommend"],
+ ["h2", "yang-direkomendasikan", "Riset merekomendasikan", "What the research recommends"],
  ["ul", [
    ["Edukasi dan penjelasan: memahami bahwa nyeri tidak sama dengan kerusakan [1][3].", "Education and reassurance: understanding that hurt does not equal harm [1][3]."],
    ["Program latihan terstruktur — penguatan, gerak, atau latihan gabungan — sesuai kebutuhan dan preferensi [3][4].", "A structured exercise programme — strengthening, mobility or combined — matched to needs and preferences [3][4]."],
@@ -75,7 +75,7 @@ ARTICLE = {
    ["Setelah kerja", "Jalan 20–30 menit", "After work", "Walk for 20–30 minutes"]
  ]],
 
- ["h2", "tanda-bahaya", "Tanda bahaya: jangan tunggu", "Red flags: do not wait"],
+ ["h2", "tanda-bahaya", "Tanda bahaya: jangan ditunda", "Red flags: do not wait"],
  ["p", "Mayo Clinic menyarankan segera mencari pertolongan darurat bila nyeri punggung muncul setelah trauma (kecelakaan, jatuh, cedera olahraga), disertai gangguan baru pada buang air kecil atau besar, atau disertai demam [5]. Periksakan ke tenaga kesehatan bila nyeri tidak membaik setelah seminggu, terasa hebat terutama di malam hari, menjalar ke tungkai hingga di bawah lutut, menimbulkan lemah atau kesemutan di tungkai, atau disertai penurunan berat badan tanpa sebab [5].",
   "Mayo Clinic advises emergency care if back pain follows trauma (a crash, a bad fall, a sports injury), comes with new bladder or bowel control problems, or comes with a fever [5]. See a clinician if it has not improved after a week, is intense especially at night, spreads down a leg below the knee, causes weakness or tingling in the legs, or comes with unexplained weight loss [5]."],
  ["p", "Pasien boleh datang langsung ke fisioterapis tanpa surat rujukan. Studio Physio8 berlokasi di Gading Serpong; di asesmen pertama kami melakukan skrining tanda bahaya sebelum pemeriksaan fisik, dan merujuk ke dokter spesialis bila diperlukan.",

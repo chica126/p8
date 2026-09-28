@@ -9,9 +9,9 @@ ARTICLE = {
 "meta_desc": "Berapa lama rehabilitasi setelah operasi ACL? Fase pemulihan berbasis kriteria, kenapa kembali bertanding sebelum 9 bulan meningkatkan risiko cedera ulang, dan tes yang harus lulus.",
 "excerpt": ["Sembilan sampai dua belas bulan, bukan tiga. Kriteria kelulusan per fase — dan kenapa tes hop menentukan kapan kamu boleh kembali bermain.",
             "Nine to twelve months, not three. Pass criteria for each phase — and why hop tests decide when you can play again."],
-"dek": ["Operasi ACL hanya separuh pekerjaan. Separuh lainnya adalah 9–12 bulan rehabilitasi yang maju berdasarkan kriteria, bukan kalender — dan data menunjukkan terburu-buru kembali bertanding punya harga yang mahal.",
-        "ACL surgery is only half the job. The other half is 9–12 months of rehab that progresses on criteria, not the calendar — and the data show rushing back to sport has a steep price."],
-"published": "2026-08-27", "modified": "2026-09-22",
+"dek": ["Operasi ACL hanya separuh perjalanan. Separuh lainnya adalah 9–12 bulan rehabilitasi yang terukur dan spesifik — dan data menunjukkan kembali bertanding lebih awal punya konsekuensi yang berat.",
+        "ACL surgery is only half the journey. The other half is 9–12 months of measured, specific rehab — and the data show that returning to sport early carries serious consequences."],
+"published": "2026-08-27", "modified": "2026-09-28",
 "date_label": ["27 Agu 2026", "27 Aug 2026"],
 "read": 11,
 "about": "Rekonstruksi ligamen krusiatum anterior",
@@ -37,7 +37,7 @@ ARTICLE = {
   "More symmetrical quadriceps strength before returning significantly lowers reinjury risk [2]."]
 ],
 "blocks": [
- ["h2", "kenapa-lama", "Kenapa rehabilitasi ACL begitu lama", "Why ACL rehab takes so long"],
+ ["h2", "kenapa-lama", "Mengapa rehabilitasi ACL begitu lama", "Why ACL rehab takes so long"],
  ["p", "Setelah rekonstruksi, graft (jaringan pengganti ligamen) perlu waktu berbulan-bulan untuk menyatu dan menguat. Pada saat yang sama, otot paha depan hampir selalu melemah drastis, dan kontrol gerak lutut — kemampuan mendarat, berbelok, dan mengerem dengan aman — harus dilatih ulang. Mayo Clinic menyebut rehabilitasi yang tekun sebagai kunci memulihkan stabilitas dan fungsi, dan bahwa atlet umumnya butuh sekitar satu tahun atau lebih sebelum aman kembali bertanding [4].",
   "After reconstruction, the graft (the tissue replacing the ligament) needs months to incorporate and strengthen. At the same time, the quadriceps almost always weakens dramatically, and knee control — landing, cutting and braking safely — has to be retrained. Mayo Clinic describes rigorous rehabilitation as key to restoring stability and function, and notes that it can take a year or more before athletes can safely return to play [4]."],
  ["stats", [
@@ -52,7 +52,7 @@ ARTICLE = {
  ["p", "Studi lain pada 158 atlet profesional menemukan bahwa yang tidak lulus keenam kriteria tes sebelum kembali berlatih bersama tim memiliki risiko ruptur graft sekitar empat kali lebih tinggi. Defisit rasio kekuatan hamstring terhadap quadriceps juga dikaitkan dengan risiko ruptur yang lebih tinggi [3].",
   "Another study of 158 professional athletes found that those who did not pass all six discharge criteria before returning to team training had roughly four times the risk of graft rupture. Deficits in the hamstring-to-quadriceps strength ratio were also linked to higher rupture risk [3]."],
 
- ["h2", "fase", "Fase-fase rehabilitasi", "The phases of rehab"],
+ ["h2", "fase", "Fase rehabilitasi", "The phases of rehab"],
  ["p", "Pedoman praktik klinis Belanda yang terbit di British Journal of Sports Medicine merekomendasikan fase pra-operasi (prehabilitasi) lalu tiga fase pasca operasi yang maju berdasarkan kriteria: berbasis gangguan, latihan spesifik olahraga, dan kembali bertanding [1]. Angka minggu di bawah adalah perkiraan umum; yang menentukan adalah kriteria lulus.",
   "The Dutch clinical practice guideline published in the British Journal of Sports Medicine recommends a pre-operative (prehab) phase followed by three criterion-based post-operative phases: impairment-based, sport-specific training, and return to play [1]. The week numbers below are typical estimates; the pass criteria are what decide."],
  ["table", [
@@ -65,7 +65,7 @@ ARTICLE = {
    ["≥ 9 bulan", "Kembali bertanding bertahap", "Lulus seluruh baterai tes + kesiapan psikologis", "≥ 9 months", "Graded return to competition", "Full test battery passed + psychological readiness"]
  ]],
 
- ["h2", "tes-hop", "Tes hop dan simetri kekuatan", "Hop tests and strength symmetry"],
+ ["h2", "tes-hop", "Hop test dan simetri kekuatan", "Hop tests and strength symmetry"],
  ["p", "Limb Symmetry Index (LSI) membandingkan kaki yang dioperasi dengan kaki sehat, dinyatakan dalam persen. Target umum sebelum kembali bertanding adalah 90% atau lebih pada tes kekuatan paha depan dan serangkaian tes hop [1][2].",
   "The Limb Symmetry Index (LSI) compares the operated leg with the healthy leg as a percentage. The usual target before returning to sport is 90% or more on quadriceps strength and a series of hop tests [1][2]."],
  ["ul", [
@@ -77,9 +77,9 @@ ARTICLE = {
  ["p", "Konsensus internasional tentang kembali berolahraga menekankan bahwa kembali bertanding adalah sebuah kontinum — kembali berpartisipasi, kembali berolahraga, lalu kembali ke performa — dan keputusan terbaik dibuat bersama antara atlet, klinisi, dan pelatih [5].",
   "The international consensus on return to sport stresses that return is a continuum — return to participation, return to sport, then return to performance — and that the best decisions are shared between athlete, clinician and coach [5]."],
 
- ["h2", "kesalahan", "Tiga kesalahan yang paling sering", "The three most common mistakes"],
+ ["h2", "kesalahan", "Tiga kesalahan yang umum terjadi", "Three common mistakes"],
  ["ol", [
-   ["Kembali bertanding karena \"sudah tidak sakit\" di bulan 4–6. Tidak nyeri bukan berarti siap.", "Returning because it 'doesn't hurt any more' at months 4–6. No pain does not mean ready."],
+   ["Kembali bertanding karena \"sudah tidak sakit\" di bulan 4–6. Tidak nyeri bukan berarti siap bermain.", "Returning because it 'doesn't hurt any more' at months 4–6. No pain does not mean ready to play."],
    ["Berhenti rehabilitasi setelah bisa lari. Fase terakhir — kekuatan, lompat, berbelok — adalah yang paling melindungi graft.", "Stopping rehab once you can run. The final phase — strength, hopping, cutting — is what protects the graft most."],
    ["Mengabaikan kaki yang sehat. LSI bisa terlihat bagus bila kaki sehat ikut melemah karena tidak dilatih.", "Neglecting the healthy leg. LSI can look good if the healthy leg has also weakened from disuse."]
  ]],

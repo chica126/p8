@@ -11,7 +11,7 @@ ARTICLE = {
             "DOMS is diffuse and improves as you move. Injury is localised and worsens under load. How to tell them apart at home."],
 "dek": ["DOMS terasa merata, memuncak di hari kedua, dan membaik saat kamu bergerak. Cedera terasa di satu titik dan memburuk saat diberi beban. Ini cara membedakannya tanpa menebak.",
         "DOMS is diffuse, peaks on day two and eases as you move. An injury sits in one spot and worsens under load. Here is how to tell them apart without guessing."],
-"published": "2026-09-15", "modified": "2026-09-22",
+"published": "2026-09-15", "modified": "2026-09-28",
 "date_label": ["15 Sep 2026", "15 Sep 2026"],
 "read": 7,
 "about": "Delayed onset muscle soreness",
@@ -29,19 +29,19 @@ ARTICLE = {
 "takeaways": [
  ["DOMS biasanya muncul 12–24 jam setelah aktivitas, memuncak di 24–72 jam, dan hilang sendiri dalam 5–7 hari [1].",
   "DOMS usually appears 12–24 hours after activity, peaks at 24–72 hours and resolves on its own within 5–7 days [1]."],
- ["Pemicu utamanya kontraksi eksentrik yang tidak biasa: sprint mendadak berhenti, turunan, atau lompatan berulang [1][2].",
-  "The main trigger is unaccustomed eccentric work: sudden stops, downhill running, repeated landings [1][2]."],
- ["Nyeri yang tajam, terasa di satu titik, muncul saat kejadian, atau disertai memar — perlakukan sebagai cedera sampai terbukti bukan [3].",
-  "Pain that is sharp, pinpoint, starts at the moment it happened, or comes with bruising — treat it as an injury until shown otherwise [3]."],
+ ["Pemicu utamanya kontraksi eksentrik yang tidak biasa: mendadak berhenti saat sprint, jalan turunan, atau lompatan berulang [1][2].",
+  "The main trigger is unaccustomed eccentric work: stopping suddenly mid-sprint, walking downhill, repeated landings [1][2]."],
+ ["Nyeri yang tajam, terasa di satu titik, muncul saat kejadian, atau terkadang disertai memar — perlakukan sebagai cedera sampai terbukti bukan [3].",
+  "Pain that is sharp, pinpoint, starts at the moment it happened, or sometimes comes with bruising — treat it as an injury until shown otherwise [3]."],
  ["Gerak ringan membantu DOMS. Istirahat total tidak mempercepatnya [1].",
   "Light movement helps DOMS. Complete rest does not speed it up [1]."]
 ],
 "blocks": [
  ["h2", "apa-itu-doms", "Apa itu DOMS, sebenarnya", "What DOMS actually is"],
- ["p", "Delayed onset muscle soreness (DOMS) adalah pegal otot yang muncul terlambat — bukan saat bermain, tapi keesokan harinya. Penyebabnya kerusakan mikro pada serabut otot dan respons peradangan ringan sesudahnya, terutama setelah kontraksi eksentrik: otot bekerja sambil memanjang, seperti saat mengerem sprint atau mendarat dari lompatan [1][2].",
-  "Delayed onset muscle soreness (DOMS) is soreness that arrives late — not during the match, but the next day. It comes from micro-damage to muscle fibres and the mild inflammatory response that follows, especially after eccentric work: muscles working while lengthening, as when braking a sprint or landing a jump [1][2]."],
- ["p", "Itulah sebabnya futsal atau padel seminggu sekali sering meninggalkan betis, paha depan, dan hamstring yang \"remuk\" pada hari Senin atau Selasa. Tubuhmu tidak terbiasa dengan dosis itu. Kabar baiknya: setelah beberapa sesi dengan dosis serupa, pegalnya jauh berkurang — efek adaptasi yang terdokumentasi baik [1].",
-  "That is why once-a-week futsal or padel so often leaves calves, quads and hamstrings wrecked on Monday or Tuesday. Your body is not used to that dose. The good news: after a few sessions at a similar dose, soreness drops markedly — a well-documented adaptation effect [1]."],
+ ["p", "Delayed onset muscle soreness (DOMS) adalah pegal otot yang muncul terlambat, biasanya keesokan harinya. Penyebabnya kerusakan mikroskopis pada serabut otot dan respons peradangan ringan sesudah aktivitas, terutama setelah kontraksi eksentrik: kontraksi otot saat memanjang, seperti saat mengerem sprint atau mendarat dari lompatan [1][2].",
+  "Delayed onset muscle soreness (DOMS) is soreness that arrives late, usually the next day. It comes from microscopic damage to muscle fibres and a mild inflammatory response after activity, especially after eccentric contractions: the muscle contracting while it lengthens, as when braking a sprint or landing a jump [1][2]."],
+ ["p", "Itulah sebabnya futsal atau padel seminggu sekali sering meninggalkan betis, paha depan, dan hamstring yang \"nyeri\" pada hari Senin atau Selasa. Tubuhmu tidak terbiasa dengan dosis itu. Kabar baiknya: setelah beberapa sesi dengan dosis serupa, pegalnya jauh berkurang — efek adaptasi yang terdokumentasi baik [1].",
+  "That is why once-a-week futsal or padel so often leaves calves, quads and hamstrings sore on Monday or Tuesday. Your body is not used to that dose. The good news: after a few sessions at a similar dose, soreness drops markedly — a well-documented adaptation effect [1]."],
 
  ["h2", "timeline", "Timeline DOMS yang normal", "The normal DOMS timeline"],
  ["stats", [
@@ -80,9 +80,9 @@ ARTICLE = {
    ["Kembali berlatih dengan intensitas lebih rendah — bukan menunggu sampai nol nyeri.", "Return to training at a lower intensity — do not wait for zero soreness."]
  ]],
 
- ["h2", "mencegah", "Mencegah \"remuk Senin\" berikutnya", "Preventing the next Monday wreck"],
- ["p", "Masalahnya jarang olahraganya; masalahnya dosis yang naik-turun. Bermain 90 menit sekali seminggu tanpa latihan lain membuat otot selalu menghadapi beban yang asing. Dua sesi kekuatan singkat di hari kerja — terutama gerakan eksentrik seperti Nordic hamstring curl, calf raise, dan split squat — membuat dosis akhir pekan tidak lagi mengejutkan.",
-  "The problem is rarely the sport; it is the dose swinging up and down. Playing 90 minutes once a week with nothing else means your muscles always meet an unfamiliar load. Two short strength sessions midweek — especially eccentric work like Nordic hamstring curls, calf raises and split squats — stop the weekend dose from being a shock."],
+ ["h2", "mencegah", "Mencegah \"The Monday Effect\" berikutnya", "Preventing the next \"Monday Effect\""],
+ ["p", "Masalahnya ada di frekuensi olahraganya, begitu pula pada effort yang tidak konsisten. Bermain 90 menit sekali seminggu tanpa latihan lain membuat otot selalu menghadapi beban yang asing. Dua sesi kekuatan singkat di hari kerja — terutama gerakan eksentrik seperti Nordic hamstring curl, calf raise, dan split squat — membuat dosis akhir pekan tidak lagi mengejutkan.",
+  "The problem lies in how often you play, and in effort that is not consistent. Playing 90 minutes once a week with nothing else means your muscles always meet an unfamiliar load. Two short strength sessions midweek — especially eccentric work like Nordic hamstring curls, calf raises and split squats — stop the weekend dose from being a shock."],
  ["callout", "Aturan sederhana untuk pemain akhir pekan:", "A simple rule for weekend players:", [
    ["Latihan kekuatan", "2× seminggu, 20–30 menit", "Strength work", "2× a week, 20–30 minutes"],
    ["Pemanasan sebelum main", "10 menit, termasuk sprint bertahap", "Pre-match warm-up", "10 minutes, including build-up sprints"],

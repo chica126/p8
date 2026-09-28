@@ -9,9 +9,9 @@ ARTICLE = {
 "meta_desc": "Leher kaku setelah seharian di depan laptop? Kenapa \"postur tegak\" saja tidak cukup, tiga penyesuaian meja, dan latihan leher yang didukung bukti untuk pekerja kantor.",
 "excerpt": ["Bukan cuma soal postur burukmu — tapi soal tidak berubah posisi. Tiga penyesuaian meja dan dua latihan yang bekerja dalam dua minggu.",
             "It is not just your 'bad posture' — it is not changing position. Three desk tweaks and two exercises that work within two weeks."],
-"dek": ["Penyebabnya jarang satu postur yang \"salah\". Lebih sering: satu posisi yang ditahan terlalu lama, otot yang tidak siap menahannya, dan beban kerja yang naik. Ini yang benar-benar membantu.",
-        "The cause is rarely one 'wrong' posture. More often it is one position held too long, muscles not conditioned to hold it, and a rising workload. Here is what actually helps."],
-"published": "2026-09-11", "modified": "2026-09-22",
+"dek": ["Penyebabnya bukan karena satu postur yang salah. Namun lebih sering karena satu posisi yang ditahan terlalu lama, otot yang tidak siap menahannya, dan beban kerja yang naik.",
+        "The cause is rarely one 'wrong' posture. More often it is one position held too long, muscles not conditioned to hold it, and a rising workload."],
+"published": "2026-09-11", "modified": "2026-09-28",
 "date_label": ["11 Sep 2026", "11 Sep 2026"],
 "read": 7,
 "about": "Nyeri leher",
@@ -43,7 +43,7 @@ ARTICLE = {
  ["p", "Yang lebih sering terjadi: kepala ditahan di posisi yang sama selama berjam-jam, otot leher dalam dan bahu tidak cukup kuat untuk menahan beban statis itu, lalu beban kerja naik — tenggat, rapat daring beruntun, tidur yang terpotong. Nyeri muncul bukan karena satu posisi salah, tapi karena satu posisi tidak pernah berganti.",
   "What usually happens: the head is held in one position for hours, the deep neck and shoulder muscles are not conditioned for that static load, and then the workload rises — deadlines, back-to-back video calls, broken sleep. Pain appears not because one position is wrong, but because one position never changes."],
 
- ["h2", "tiga-penyesuaian", "Tiga penyesuaian meja yang masuk akal", "Three desk adjustments that make sense"],
+ ["h2", "tiga-penyesuaian", "Tiga penyesuaian meja yang bisa dicoba", "Three desk adjustments to try"],
  ["p", "Ergonomi tetap berguna — bukan untuk mencari postur sempurna, tapi untuk mengurangi beban yang tidak perlu. Panduan ergonomi Mayo Clinic menyarankan hal-hal berikut [5]:",
   "Ergonomics still matters — not to find a perfect posture, but to remove unnecessary load. Mayo Clinic's office ergonomics guide suggests the following [5]:"],
  ["ol", [
@@ -78,7 +78,7 @@ ARTICLE = {
    ["Setelah jatuh/benturan, atau disertai demam", "Perlu evaluasi medis", "Ke dokter/IGD", "After a fall or blow, or with fever", "Needs medical evaluation", "See a doctor / emergency care"]
  ]],
 
- ["h2", "di-studio", "Yang kami lakukan di studio", "What we do in the studio"],
+ ["h2", "di-studio", "Yang kami lakukan", "What we do"],
  ["p", "Di asesmen pertama kami mengukur rentang gerak leher dalam derajat, daya tahan otot leher dalam, kekuatan bahu, dan menanyakan detail hari kerjamu: berapa jam di layar, berapa monitor, berapa rapat. Programnya lalu dibuat agar muat di jam kerja — bukan program satu jam yang tidak akan pernah dikerjakan. Studio Physio8 berlokasi di Gading Serpong.",
   "In the first assessment we measure neck range in degrees, deep neck-muscle endurance and shoulder strength, and ask about your workday in detail: hours on screen, number of monitors, number of meetings. The programme is then built to fit inside the workday — not an hour-long routine that will never get done. The Physio8 studio is located in Gading Serpong."]
 ],

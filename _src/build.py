@@ -343,7 +343,7 @@ def noscript_article(a):
         elif k == "callout":
             out.append(f"<p><strong>{esc(b[1])}</strong></p><ul>" +
                        "".join(f"<li>{esc(x[0])}: {esc(x[1])}</li>" for x in b[3]) + "</ul>")
-    out.append('<h2 id="faq">Pertanyaan yang sering masuk</h2>')
+    out.append('<h2 id="faq">Pertanyaan yang sering muncul</h2>')
     for f in a["faqs"]:
         out.append(f"<h3>{esc(f[0])}</h3><p>{esc(f[2])}</p>")
     out.append('<h2 id="referensi">Referensi</h2><ol>' +

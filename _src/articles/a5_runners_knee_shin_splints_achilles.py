@@ -11,7 +11,7 @@ ARTICLE = {
             "Where it hurts, when it starts and how it responds to pace tell us three different things. Plus the most common weekly-progression mistake."],
 "dek": ["Tiga cedera yang paling sering membuat pelari berhenti punya pola yang berbeda — dan penanganan yang berbeda pula. Kuncinya ada di lokasi, waktu, dan respons terhadap beban.",
         "The three injuries that most often stop runners have different patterns — and different fixes. The keys are location, timing and response to load."],
-"published": "2026-09-04", "modified": "2026-09-22",
+"published": "2026-09-04", "modified": "2026-09-28",
 "date_label": ["4 Sep 2026", "4 Sep 2026"],
 "read": 10,
 "about": "Cedera akibat lari",
@@ -27,10 +27,10 @@ ARTICLE = {
 "wa": "artikel: Cedera lari",
 "related": ["nyeri-setelah-olahraga-weekend", "rehabilitasi-pasca-operasi-acl", "kapan-perlu-fisioterapi"],
 "takeaways": [
- ["Runner's knee (nyeri patelofemoral) terasa di sekitar atau belakang tempurung lutut, memburuk saat turun tangga, jongkok, atau duduk lama [1][2].",
+ ["Runner's knee (nyeri pada patelofemoral) terasa di sekitar atau belakang tempurung lutut, memburuk saat turun tangga, jongkok, atau duduk lama [1][2].",
   "Runner's knee (patellofemoral pain) is felt around or behind the kneecap and worsens on stairs, squatting or long sitting [1][2]."],
- ["Shin splints terasa sepanjang sisi dalam tulang kering; nyeri di satu titik yang sangat spesifik perlu dicurigai stress fracture [3].",
-  "Shin splints are felt along the inner edge of the shinbone; pain at one very specific point should raise suspicion of a stress fracture [3]."],
+ ["Shin splints terasa sepanjang sisi dalam tulang kering; nyeri di satu titik yang sangat spesifik perlu dicurigai sebagai stress fracture, kondisi yang berbeda dari shin splints [3].",
+  "Shin splints are felt along the inner edge of the shinbone; pain at one very specific point should raise suspicion of a stress fracture, which is a different condition [3]."],
  ["Tendinopati Achilles merespons latihan beban progresif; banyak pelari tetap bisa berlari selama nyeri dipantau [5][6].",
   "Achilles tendinopathy responds to progressive loading; many runners can keep running while pain is monitored [5][6]."],
  ["Aturan kenaikan 10% per minggu tidak terbukti mencegah cedera pada pelari pemula [7].",
@@ -56,7 +56,7 @@ ARTICLE = {
    ["Taping atau foot orthoses bisa membantu jangka pendek, sebagai pendamping latihan — bukan pengganti [1].", "Taping or foot orthoses can help short term, alongside exercise — not instead of it [1]."]
  ]],
 
- ["h2", "shin-splints", "Shin splints (medial tibial stress syndrome)", "Shin splints (medial tibial stress syndrome)"],
+ ["h2", "shin-splints", "Shin splints (nyeri pada tulang kering)", "Shin splints (medial tibial stress syndrome)"],
  ["p", "Shin splints adalah nyeri di sepanjang sisi dalam tulang kering, sering pada pelari yang baru menaikkan volume atau berpindah ke permukaan keras [3]. Tinjauan sistematis menemukan faktor risiko antara lain riwayat shin splints sebelumnya, indeks massa tubuh lebih tinggi, dan navicular drop (lengkung kaki yang turun berlebihan saat menumpu) [4].",
   "Shin splints are pain along the inner edge of the shinbone, common in runners who have just increased volume or moved to harder surfaces [3]. A systematic review found risk factors including a previous history of shin splints, higher body mass index and navicular drop (the arch dropping excessively under load) [4]."],
  ["p", "Satu hal yang tidak boleh dilewatkan: bila nyeri terasa di satu titik kecil yang sangat nyeri ditekan, memburuk setiap lari, atau terasa bahkan saat istirahat dan malam hari, itu perlu diperiksa untuk kemungkinan stress fracture [3].",

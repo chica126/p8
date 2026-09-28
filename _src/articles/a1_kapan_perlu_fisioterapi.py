@@ -5,13 +5,13 @@ ARTICLE = {
 "crumb": ["Kapan nyeri butuh fisioterapi", "When pain needs physiotherapy"],
 "title": ["Kapan nyeri butuh fisioterapi, dan kapan cukup istirahat",
           "When pain needs physiotherapy — and when rest is enough"],
-"meta_title": "Kapan Harus ke Fisioterapis? Aturan 72 Jam & 7 Tanda Bahaya | Physio8",
+"meta_title": "Kapan Harus ke Fisioterapi? Aturan 72 Jam & 7 Tanda Bahaya | Physio8",
 "meta_desc": "Kapan nyeri cukup diistirahatkan dan kapan harus ke fisioterapis: aturan 72 jam, tujuh tanda yang tidak boleh ditunggu, dan apa yang diukur di asesmen pertama.",
 "excerpt": ["Aturan 72 jam, tujuh tanda yang tidak boleh ditunggu, dan apa yang sebenarnya diukur di sesi pertama.",
             "The 72-hour rule, seven signs not worth waiting on, and what actually gets measured in a first session."],
-"dek": ["Aturan 72 jam, tujuh tanda yang tidak boleh ditunggu, dan angka apa yang sebenarnya kami ukur di sesi pertama — supaya keputusanmu berdasar data, bukan tebakan.",
-        "The 72-hour rule, seven signs not worth waiting on, and which numbers we actually measure in a first session — so the decision rests on data, not a guess."],
-"published": "2026-09-12", "modified": "2026-09-22",
+"dek": ["Aturan 72 jam, tujuh tanda yang tidak boleh ditunda, dan apa yang sebenarnya kami ukur di sesi pertama — supaya keputusanmu tepat.",
+        "The 72-hour rule, seven signs not worth waiting on, and what we actually measure in a first session — so you make the right call."],
+"published": "2026-09-12", "modified": "2026-09-28",
 "date_label": ["18 Sep 2026", "18 Sep 2026"],
 "read": 9,
 "about": "Nyeri muskuloskeletal",
@@ -29,19 +29,19 @@ ARTICLE = {
 "takeaways": [
  ["Nyeri otot yang merata, muncul 24–72 jam setelah aktivitas dan membaik saat kamu bergerak, hampir selalu DOMS — bukan cedera [3].",
   "Diffuse muscle soreness that appears 24–72 hours after activity and eases once you move is almost always DOMS, not an injury [3]."],
- ["Kalau nyeri masih sama atau lebih buruk setelah 72 jam istirahat relatif, itu bukan soal kesabaran. Itu informasi.",
-  "If pain is the same or worse after 72 hours of relative rest, that is not a patience problem. That is information."],
- ["Bengkak, sendi yang terasa goyah, kesemutan menjalar, atau nyeri yang membangunkanmu: jangan ditunggu [2].",
-  "Swelling, a joint that feels unstable, radiating numbness, or pain that wakes you: do not wait these out [2]."],
- ["Istirahat total yang berkepanjangan cenderung memperlambat pemulihan jaringan lunak. Beban terkontrol yang mempercepatnya [1][4].",
-  "Prolonged complete rest tends to slow soft-tissue recovery. Controlled load is what speeds it up [1][4]."]
+ ["Jika nyeri belum berubah atau justru memburuk setelah 72 jam istirahat, itu bukanlah ujian kesabaran — namun sebuah informasi.",
+  "If pain has not changed or is worse after 72 hours of rest, that is not a patience problem. That is information."],
+ ["Bengkak, sendi yang terasa kurang stabil, kesemutan menjalar, atau nyeri yang membangunkanmu saat tidur: jangan ditunda untuk melakukan pengecekan [2].",
+  "Swelling, a joint that feels unstable, radiating numbness, or pain that wakes you from sleep: get them checked without delay [2]."],
+ ["Periode istirahat yang berkepanjangan cenderung memperlambat pemulihan jaringan lunak. Pelatihan dengan beban yang terkontrol mempercepatnya [1][4].",
+  "Long periods of rest tend to slow soft-tissue recovery. Training with controlled load speeds it up [1][4]."]
 ],
 "blocks": [
  ["h2", "apa-yang-terjadi", "Apa yang tubuhmu lakukan saat nyeri", "What your body is doing when it hurts"],
- ["p", "Nyeri bukan laporan kerusakan. Nyeri adalah kesimpulan sistem saraf tentang seberapa besar ancaman pada satu area — dan kesimpulan itu dipengaruhi beban, tidur, stres, serta riwayat cedera. Karena itu dua orang dengan hasil pencitraan yang mirip bisa merasakan hal yang sangat berbeda [5].",
-  "Pain is not a damage report. It is a conclusion your nervous system draws about how threatened one area is — and that conclusion is shaped by load, sleep, stress and injury history. That is why two people with near-identical scans can feel very different things [5]."],
- ["p", "Konsekuensinya praktis: skala nyeri saja tidak cukup untuk memutuskan apa yang harus kamu lakukan. Yang kami baca adalah pola — di mana nyerinya, kapan munculnya, apa yang mengubahnya, dan apakah ia bergerak ke arah yang benar dalam hitungan hari.",
-  "The practical consequence: a pain score alone is not enough to decide what to do. What we read is the pattern — where it sits, when it started, what changes it, and whether it is moving the right way across days."],
+ ["p", "Nyeri bukanlah sebuah kerusakan. Nyeri adalah respons otak kita tentang seberapa besar perubahan pada satu area — dan respons itu dipengaruhi beban, tidur, stres, serta riwayat cedera. Oleh karena itu, tidak ada dua tubuh yang merasakan cedera dengan cara yang persis sama [5].",
+  "Pain is not damage. It is your brain\'s response to how much has changed in one area — and that response is shaped by load, sleep, stress and injury history. That is why no two bodies experience an injury in exactly the same way [5]."],
+ ["p", "Konsekuensinya praktis: skala nyeri saja tidak cukup untuk memutuskan apa yang bisa dilakukan. Yang fisioterapis baca ialah pola — di mana nyerinya, kapan munculnya, apa yang mengubahnya, dan apakah ia membaik dalam jangka waktu dekat.",
+  "The practical consequence: a pain score alone is not enough to decide what to do. What a physiotherapist reads is the pattern — where it sits, when it started, what changes it, and whether it improves in the short term."],
 
  ["h2", "aturan-72-jam", "Aturan 72 jam", "The 72-hour rule"],
  ["p", "Panduan PEACE & LOVE yang terbit di British Journal of Sports Medicine menyarankan melindungi area cedera selama satu sampai tiga hari pertama, lalu kembali memberi beban secara bertahap begitu nyeri mengizinkan [1]. Jadi 72 jam adalah jendela pengamatan yang wajar — bukan target penyembuhan. Dalam tiga hari itu kamu tidak diam; kamu mengumpulkan data.",
@@ -59,7 +59,7 @@ ARTICLE = {
  ["h2", "normal-vs-periksa", "Nyeri biasa vs nyeri yang perlu diperiksa", "Ordinary soreness vs pain worth assessing"],
  ["table", [
    ["Apa yang kamu perhatikan", "Biasanya cukup istirahat aktif", "Sebaiknya diperiksa", "What you are checking", "Usually active rest is enough", "Worth assessing"],
-   ["Lokasi", "Merata di beberapa otot", "Satu titik yang bisa kamu tunjuk", "Location", "Diffuse across several muscles", "One point you can put a finger on"],
+   ["Lokasi cedera", "Merata di beberapa otot", "Satu titik yang bisa kamu tunjuk", "Location", "Diffuse across several muscles", "One point you can put a finger on"],
    ["Waktu muncul", "24–72 jam setelah aktivitas", "Langsung saat kejadian", "Onset", "24–72 hours after activity", "Immediately, at the moment it happened"],
    ["Respons terhadap gerak", "Membaik setelah pemanasan", "Memburuk saat beban ditambah", "Response to movement", "Eases after a warm-up", "Worsens as load increases"],
    ["Bengkak atau memar", "Tidak ada atau minimal", "Terlihat dalam 24 jam pertama", "Swelling or bruising", "None or minimal", "Visible within the first 24 hours"],
@@ -67,10 +67,10 @@ ARTICLE = {
    ["Arah setelah 72 jam", "Menurun", "Datar atau meningkat", "Direction after 72 hours", "Falling", "Flat or rising"]
  ]],
 
- ["h2", "tujuh-tanda", "Tujuh tanda yang tidak boleh ditunggu", "Seven signs not worth waiting on"],
+ ["h2", "tujuh-tanda", "Tujuh tanda yang tidak boleh ditunda", "Seven signs not worth waiting on"],
  ["ol", [
    ["Bengkak yang muncul dalam 24 jam pertama dan tidak berkurang.", "Swelling that appears within the first 24 hours and does not subside."],
-   ["Sendi terasa lepas, tidak stabil, atau ada bunyi \"pop\" saat kejadian [2].", "A joint that feels loose or unstable, or a \"pop\" at the moment of injury [2]."],
+   ["Sendi terasa lepas, tidak stabil, atau ada bunyi \"pop\" saat kejadian, dan memberikan sinyal sakit yang berkepanjangan [2].", "A joint that feels loose or unstable, or a \"pop\" at the moment of injury, followed by lingering pain [2]."],
    ["Tidak bisa menumpu berat badan atau menggerakkan sendi seperti biasa [2].", "You cannot bear weight or move the joint normally [2]."],
    ["Kesemutan atau mati rasa yang menjalar ke lengan atau kaki.", "Tingling or numbness radiating into an arm or a leg."],
    ["Nyeri yang membangunkanmu dari tidur.", "Pain that wakes you from sleep."],
@@ -105,17 +105,17 @@ ARTICLE = {
  ["callout", "Perkiraan yang kami sampaikan di awal, termasuk kabar yang tidak menyenangkan. Angka individual bisa berbeda.", "The estimates we give you up front, including the unwelcome ones. Individual numbers vary.", [
    ["Ketegangan otot ringan", "2–3 minggu", "Minor muscle strain", "2–3 weeks"],
    ["Keseleo pergelangan kaki tingkat II", "6–8 minggu sampai kembali berolahraga", "Grade II ankle sprain", "6–8 weeks to return to sport"],
-   ["Tendinopati Achilles atau patela", "12 minggu atau lebih dengan beban progresif", "Achilles or patellar tendinopathy", "12 weeks or more of progressive load"],
+   ["Tendinopati Achilles atau tendon patela", "12 minggu atau lebih dengan beban progresif", "Achilles or patellar tendinopathy", "12 weeks or more of progressive load"],
    ["Nyeri pinggang bawah non-spesifik", "Sebagian besar membaik dalam beberapa minggu", "Non-specific low back pain", "Most improve within a few weeks"],
-   ["Pasca rekonstruksi ACL", "Minimal 9 bulan sampai kembali bertanding [9]", "After ACL reconstruction", "At least 9 months to return to sport [9]"]
+   ["Pasca rekonstruksi ACL", "Minimal 9 bulan untuk memenuhi return to sport assessment [9]", "After ACL reconstruction", "At least 9 months to pass a return-to-sport assessment [9]"]
  ]],
  ["p", "Angka-angka itu mengasumsikan program rumah dikerjakan konsisten. Kalau tes ulang pekan keenam mengatakan lain, kami mengubah rencananya — bukan sekadar menambah jumlah sesi.",
   "Those numbers assume the home programme is done consistently. If the week-six re-test says otherwise, we change the plan — we do not simply add sessions."],
 
- ["h2", "malam-ini", "Yang bisa kamu lakukan malam ini", "What you can do tonight"],
+ ["h2", "hari-ini", "Yang bisa kamu lakukan hari ini", "What you can do today"],
  ["ol", [
-   ["Catat nyerimu 0–10, pagi dan malam, selama tiga hari. Bawa catatannya.", "Log your pain 0–10, morning and night, for three days. Bring the log."],
-   ["Kurangi satu variabel, bukan semuanya: turunkan jarak atau beban sekitar 30%, pertahankan frekuensinya.", "Cut one variable, not all of them: drop distance or load by about 30% and keep the frequency."],
+   ["Catat nyerimu 0–10, pagi dan malam, selama tiga hari.", "Log your pain 0–10, morning and night, for three days."],
+   ["Kurangi satu variabel: turunkan jarak atau beban sekitar 30%, pertahankan frekuensinya.", "Cut one variable: drop distance or load by about 30% and keep the frequency."],
    ["Gerakkan sendi yang nyeri dalam rentang tanpa nyeri, 10 repetisi, tiga kali sehari.", "Move the painful joint through its pain-free range, 10 reps, three times a day."]
  ]],
  ["p", "Kalau setelah tiga hari trennya belum menurun, kami bisa mengukurnya di studio Physio8 yang berlokasi di Gading Serpong. Satu sesi asesmen biasanya cukup untuk tahu apakah ini masalah beban, mobilitas, atau kontrol gerak — dan berapa lama perbaikannya.",

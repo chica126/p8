@@ -9,9 +9,9 @@ ARTICLE = {
 "meta_desc": "Nyeri bahu setelah main padel? Kenapa smash dan bandeja membebani rotator cuff, tanda yang perlu diperiksa, dan program penguatan bahu berbasis bukti untuk pemain padel.",
 "excerpt": ["Smash berulang membebani otot rotator cuff pada rentang yang sama setiap kali. Tes mandiri sederhana dan program penguatan 8 minggu.",
             "Repeated smashes load the rotator cuff through the same range every time. A simple self-check and an eight-week strengthening programme."],
-"dek": ["Padel sedang naik daun, dan begitu pula keluhan bahu dan siku. Kebanyakan bukan \"salah urat\", melainkan tendon rotator cuff yang menerima beban overhead lebih cepat dari kemampuannya beradaptasi.",
-        "Padel is booming, and so are shoulder and elbow complaints. Most are not a 'pulled nerve' but rotator cuff tendons taking overhead load faster than they can adapt."],
-"published": "2026-09-01", "modified": "2026-09-22",
+"dek": ["Padel sedang naik daun, dan begitu pula keluhan bahu dan siku. Kebanyakan bukan \"salah urat\", melainkan tendon rotator cuff yang menerima beban overhead lebih banyak daripada kemampuannya.",
+        "Padel is booming, and so are shoulder and elbow complaints. Most are not a 'pulled nerve' but rotator cuff tendons taking more overhead load than they can handle."],
+"published": "2026-09-01", "modified": "2026-09-28",
 "date_label": ["1 Sep 2026", "1 Sep 2026"],
 "read": 8,
 "about": "Cedera rotator cuff",
@@ -44,9 +44,9 @@ ARTICLE = {
   "A padel player's shoulder works hard on overhead strokes — smash, bandeja and vibora — repeated dozens of times per match, often through the same range. Recreational players who have just started, or who suddenly play three or four times a week, raise the load faster than their tendons can adapt."],
 
  ["h2", "rotator-cuff", "Rotator cuff: apa yang sebenarnya terganggu", "The rotator cuff: what is actually irritated"],
- ["p", "Rotator cuff adalah empat otot dan tendonnya yang menjaga kepala tulang lengan tetap di mangkuk sendi bahu. Mayo Clinic menggambarkan cedera rotator cuff sebagai nyeri tumpul yang dalam di bahu, bisa mengganggu tidur, menyulitkan menyisir rambut atau meraih ke belakang punggung, dan kadang disertai lemah lengan [2]. Risikonya meningkat seiring usia dan pada olahraga dengan gerak overhead berulang seperti tenis [2].",
-  "The rotator cuff is four muscles and their tendons that keep the head of the upper-arm bone centred in the shoulder socket. Mayo Clinic describes rotator cuff injury as a dull ache deep in the shoulder that can disturb sleep, make it hard to comb your hair or reach behind your back, and sometimes comes with arm weakness [2]. Risk rises with age and in sports with repetitive overhead movement such as tennis [2]."],
- ["p", "\"Salah urat\" bukan diagnosis. Yang lebih sering terjadi adalah tendinopati — tendon menjadi sensitif karena beban yang naik terlalu cepat — dan tendon seperti ini merespons beban yang tepat, bukan diurut keras-keras.",
+ ["p", "Rotator cuff adalah empat otot yang tendonnya berfungsi menjaga kepala tulang lengan atas (humerus) tetap di mangkuk sendi bahu. Mayo Clinic menjabarkan cedera rotator cuff sebagai nyeri tumpul pada bahu, bisa mengganggu tidur, membuat sulit menyisir rambut, dan kadang disertai lemah lengan [2]. Risikonya meningkat seiring usia dan pada olahraga dengan gerak overhead berulang seperti tenis [2].",
+  "The rotator cuff is four muscles and their tendons that keep the head of the upper-arm bone (humerus) centred in the shoulder socket. Mayo Clinic describes rotator cuff injury as a dull ache in the shoulder that can disturb sleep, make it hard to comb your hair, and sometimes comes with arm weakness [2]. Risk rises with age and in sports with repetitive overhead movement such as tennis [2]."],
+ ["p", "\"Salah urat\" bukanlah sebuah diagnosis. Yang lebih sering terjadi adalah tendinopati — tendon menjadi sensitif karena beban yang naik terlalu cepat — dan tendon seperti ini merespons beban yang tepat, bukan diurut keras-keras.",
   "A 'pulled nerve' is not a diagnosis. What usually happens is tendinopathy — the tendon becomes sensitive because load rose too quickly — and tendons like this respond to the right load, not to hard massage."],
 
  ["h2", "tes-mandiri", "Tes mandiri sederhana", "A simple self-check"],
@@ -55,15 +55,15 @@ ARTICLE = {
    ["Tempelkan siku di samping badan, putar lengan bawah keluar melawan tahanan tangan lain. Bandingkan kiri dan kanan.", "With your elbow tucked in, rotate your forearm outward against your other hand's resistance. Compare left and right."],
    ["Coba raih ke belakang punggung seperti memasang kaitan bra atau memasukkan dompet. Terbatas atau nyeri di satu sisi?", "Reach behind your back as if tucking in a shirt or reaching a back pocket. Limited or painful on one side?"]
  ]],
- ["p", "Tes ini bukan diagnosis — ia hanya membantumu memutuskan apakah perlu diperiksa. Lemah mendadak setelah jatuh atau benturan, atau tidak bisa mengangkat lengan sama sekali, perlu evaluasi medis segera [2].",
-  "This is not a diagnosis — it only helps you decide whether to get checked. Sudden weakness after a fall or impact, or being unable to lift the arm at all, needs prompt medical evaluation [2]."],
+ ["p", "Tes ini bukan untuk self-diagnosis — namun hanya membantumu memutuskan apakah perlu melakukan pemeriksaan lebih lanjut atau tidak. Jika terjadi kelemahan mendadak setelah jatuh atau benturan, atau tidak bisa mengangkat lengan sama sekali, perlu evaluasi medis segera [2].",
+  "This is not for self-diagnosis — it only helps you decide whether a proper examination is needed. Sudden weakness after a fall or impact, or being unable to lift the arm at all, needs prompt medical evaluation [2]."],
 
- ["h2", "program-8-minggu", "Program penguatan 8 minggu", "An eight-week strengthening programme"],
+ ["h2", "program-8-minggu", "Program penguatan dalam 8 minggu", "An eight-week strengthening programme"],
  ["p", "Pedoman multidisiplin Belanda untuk nyeri subakromial menyarankan penanganan non-operatif dengan terapi latihan yang spesifik, dan menyatakan tidak ada bukti meyakinkan bahwa operasi lebih efektif daripada penanganan konservatif [3]. Tinjauan sistematis tentang latihan beban untuk tendinopati rotator cuff juga menyimpulkan bukti yang ada mendukung latihan untuk menurunkan nyeri dan disabilitas, meski jumlah penelitiannya masih terbatas [4]. Kerangka yang kami gunakan:",
   "The Dutch multidisciplinary guideline for subacromial pain recommends non-operative care with specific exercise therapy, and states there is no convincing evidence that surgery is more effective than conservative management [3]. A systematic review of loaded exercise for rotator cuff tendinopathy likewise concluded that the available evidence supports exercise for pain and disability, although the number of studies is limited [4]. The framework we use:"],
  ["table", [
    ["Minggu", "Fokus", "Contoh", "Week", "Focus", "Examples"],
-   ["1–2", "Tenangkan, tetap bergerak", "Isometrik rotasi luar, gerak bahu tanpa nyeri", "1–2", "Settle, keep moving", "External-rotation isometrics, pain-free shoulder movement"],
+   ["1–2", "Active recovery", "Isometrik rotasi luar, gerak bahu tanpa nyeri", "1–2", "Active recovery", "External-rotation isometrics, pain-free shoulder movement"],
    ["3–5", "Kekuatan rotator cuff & skapula", "Rotasi luar dengan band, row, wall slide", "3–5", "Rotator cuff & scapular strength", "Banded external rotation, rows, wall slides"],
    ["6–8", "Beban overhead & kecepatan", "Press overhead ringan, lempar bola medis, smash bertahap", "6–8", "Overhead load & speed", "Light overhead press, med-ball throws, graded smashes"]
  ]],

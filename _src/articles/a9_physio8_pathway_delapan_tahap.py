@@ -11,7 +11,7 @@ ARTICLE = {
             "Assess to Maintain: what you do in the studio, what you do at home, and which numbers have to move before the next stage."],
 "dek": ["Empat fase, delapan tahap, dan satu aturan: tidak naik tahap tanpa kriteria yang terukur. Ini peta pemulihan yang kami gunakan untuk setiap pasien — dari pengukuran pertama sampai pencegahan kambuh.",
         "Four phases, eight stages and one rule: no moving up without a measured criterion. This is the recovery map we use for every patient — from the first measurement to preventing a relapse."],
-"published": "2026-08-18", "modified": "2026-09-22",
+"published": "2026-08-18", "modified": "2026-09-28",
 "date_label": ["18 Agu 2026", "18 Aug 2026"],
 "read": 7,
 "about": "Program rehabilitasi muskuloskeletal",
@@ -29,10 +29,8 @@ ARTICLE = {
 "takeaways": [
  ["Delapan tahap dikelompokkan dalam empat fase: TAHU, PULIH, KUAT, JAGA.",
   "Eight stages are grouped into four phases: KNOW, HEAL, BUILD, KEEP."],
- ["Setiap tahap punya kriteria keluar yang terukur — naik tahap karena angka, bukan karena jumlah sesi habis.",
-  "Every stage has a measured exit criterion — you move up because of the numbers, not because sessions ran out."],
- ["Beban latihan yang tepat adalah stimulus bagi jaringan untuk pulih dan menguat [1].",
-  "The right exercise load is the stimulus that drives tissue repair and strengthening [1]."],
+ ["Setiap tahap punya kriteria keluar yang terukur — naik tahap karena adanya progres. Beban latihan yang tepat adalah stimulus bagi jaringan untuk pulih dan menguat [1].",
+  "Every stage has a measured exit criterion — you move up because you have progressed. The right exercise load is the stimulus that drives tissue repair and strengthening [1]."],
  ["Pengukuran yang sama diulang di Tahap 1, 6, dan 8: baseline, bukti, pencegahan.",
   "The same measurements are repeated at Stages 1, 6 and 8: baseline, proof, prevention."]
 ],
@@ -75,7 +73,7 @@ ARTICLE = {
  ["p", "Tahap 7 adalah kembali beraktivitas — olahraga, pekerjaan, atau aktivitas harian — setelah lulus baterai tes, dengan laporan keluar tertulis. Konsensus internasional tentang kembali berolahraga menggambarkan proses ini sebagai kontinum yang berjalan paralel dengan rehabilitasi, bukan keputusan sekali di akhir [4]. Tahap 8 menjaga hasilnya: program rumah, pengingat berkala, dan pengukuran ulang sebelum masalah kembali.",
   "Stage 7 is the return to activity — sport, work or daily life — after passing a test battery, with a written discharge report. The international consensus on return to sport describes this as a continuum running alongside rehab, not a single decision at the end [4]. Stage 8 protects the result: a home programme, scheduled check-ins and a re-measurement before the problem returns."],
 
- ["h2", "di-rumah", "Studio dan rumah bekerja bersama", "Studio and home working together"],
+ ["h2", "di-rumah", "Kerja sama studio dan rumah", "Studio and home, working together"],
  ["p", "Sesi di studio hanya sebagian kecil dari minggu pemulihanmu. Setelah setiap sesi, program rumah dikirim di hari yang sama dan disesuaikan dengan tahapmu. Semakin jauh tahapnya, semakin besar porsi program rumah — dan semakin jarang kamu perlu datang.",
   "Studio sessions are a small part of your recovery week. After every session your home programme is sent the same day and matched to your stage. The further along you are, the larger the home programme's share — and the less often you need to come in."],
  ["ul", [
