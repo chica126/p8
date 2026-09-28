@@ -87,8 +87,8 @@ ARTICLE = {
    ["Nyeri muncul lebih awal di setiap lari, bukan lebih lambat.", "Pain arrives earlier in each run, not later."],
    ["Tanggal lomba kurang dari delapan minggu lagi dan nyeri belum membaik.", "Race day is less than eight weeks away and the pain is not improving."]
  ]],
- ["p", "Di studio Physio8 yang berlokasi di Gading Serpong, asesmen untuk pelari mencakup kekuatan pinggul, lutut, dan betis kedua sisi, single-leg squat, serta analisis pola lari. Rencananya dihitung mundur dari tanggal lombamu.",
-  "At the Physio8 studio, located in Gading Serpong, a runner's assessment covers hip, knee and calf strength on both sides, single-leg squat control and running-pattern analysis. The plan counts back from your race date."]
+ ["p", "Di klinik Physio8 yang berlokasi di Gading Serpong, asesmen untuk pelari mencakup kekuatan pinggul, lutut, dan betis kedua sisi, single-leg squat, serta analisis pola lari. Rencananya dihitung mundur dari tanggal lombamu.",
+  "At the Physio8 clinic, located in Gading Serpong, a runner's assessment covers hip, knee and calf strength on both sides, single-leg squat control and running-pattern analysis. The plan counts back from your race date."]
 ],
 "faqs": [
  ["Apakah boleh tetap lari saat nyeri lutut?", "Can I keep running with knee pain?",

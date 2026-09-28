@@ -78,8 +78,8 @@ ARTICLE = {
  ["h2", "tanda-bahaya", "Tanda bahaya: jangan ditunda", "Red flags: do not wait"],
  ["p", "Mayo Clinic menyarankan segera mencari pertolongan darurat bila nyeri punggung muncul setelah trauma (kecelakaan, jatuh, cedera olahraga), disertai gangguan baru pada buang air kecil atau besar, atau disertai demam [5]. Periksakan ke tenaga kesehatan bila nyeri tidak membaik setelah seminggu, terasa hebat terutama di malam hari, menjalar ke tungkai hingga di bawah lutut, menimbulkan lemah atau kesemutan di tungkai, atau disertai penurunan berat badan tanpa sebab [5].",
   "Mayo Clinic advises emergency care if back pain follows trauma (a crash, a bad fall, a sports injury), comes with new bladder or bowel control problems, or comes with a fever [5]. See a clinician if it has not improved after a week, is intense especially at night, spreads down a leg below the knee, causes weakness or tingling in the legs, or comes with unexplained weight loss [5]."],
- ["p", "Pasien boleh datang langsung ke fisioterapis tanpa surat rujukan. Studio Physio8 berlokasi di Gading Serpong; di asesmen pertama kami melakukan skrining tanda bahaya sebelum pemeriksaan fisik, dan merujuk ke dokter spesialis bila diperlukan.",
-  "You can see a physiotherapist directly without a referral letter. The Physio8 studio is located in Gading Serpong; in the first assessment we screen for red flags before any hands-on examination, and refer to a medical specialist when needed."]
+ ["p", "Pasien boleh datang langsung ke fisioterapis tanpa surat rujukan. Klinik Physio8 berlokasi di Gading Serpong; di asesmen pertama kami melakukan skrining tanda bahaya sebelum pemeriksaan fisik, dan merujuk ke dokter spesialis bila diperlukan.",
+  "You can see a physiotherapist directly without a referral letter. The Physio8 clinic is located in Gading Serpong; in the first assessment we screen for red flags before any hands-on examination, and refer to a medical specialist when needed."]
 ],
 "faqs": [
  ["Apakah sakit pinggang karena duduk lama berbahaya?", "Is low back pain from sitting dangerous?",

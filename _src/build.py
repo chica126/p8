@@ -298,7 +298,7 @@ def article_head(a, bys):
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="1200">
-<meta property="og:image:alt" content="Physio8 — studio fisioterapi di Gading Serpong">
+<meta property="og:image:alt" content="Physio8 — klinik fisioterapi di Gading Serpong">
 <meta property="article:published_time" content="{a['published']}">
 <meta property="article:modified_time" content="{a['modified']}">
 <meta property="article:section" content="{esc(a['tag'][0])}">
@@ -367,7 +367,7 @@ def build_article(a, bys, tpl):
     s = s.replace('href="./Artikel Hub.dc.html"', 'href="../index.html"')
     s = s.replace('href="./index.html"', 'href="../../index.html"')
     # 4. hero image + visible caption with photographer credit
-    hero_old = '<image-slot id="art-hero" shape="rect" placeholder="Foto studio — fisioterapis mengukur range of motion lutut pasien"></image-slot>\n  </div>'
+    hero_old = '<image-slot id="art-hero" shape="rect" placeholder="Foto klinik — fisioterapis mengukur range of motion lutut pasien"></image-slot>\n  </div>'
     hero_new = (f'<image-slot id="art-hero" shape="rect" placeholder="{esc(a["image"]["alt"][0])}" '
                 f'src="{img(a, 1800)}" credit="{esc(credit(a))}" credit-href="{esc(a["image"]["profile"])}"></image-slot>\n  </div>\n'
                 f'  <p style="margin:calc(var(--space-8) * -1) 0 var(--space-12);font-size:var(--text-xs);line-height:var(--leading-normal);color:var(--text-muted)">'
@@ -559,7 +559,7 @@ def build_hub(arts, tpl):
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="1200">
-<meta property="og:image:alt" content="Physio8 — studio fisioterapi di Gading Serpong">
+<meta property="og:image:alt" content="Physio8 — klinik fisioterapi di Gading Serpong">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}">
@@ -587,12 +587,12 @@ def build_hub(arts, tpl):
     s = replace_once(s, ">Panduan pemulihan dari fisioterapis di Gading Serpong</h1>",
                      ">Panduan pemulihan dari fisioterapis Physio8</h1>", "hub h1")
     s = re.sub(r"Ditulis dan ditinjau oleh fisioterapis Physio8 yang praktik di Gading Serpong, BSD City\.",
-               "Setiap klaim disertai referensi ke jurnal, pedoman klinis, atau situs rumah sakit internasional. Studio Physio8 berlokasi di Gading Serpong.", s)
+               "Setiap klaim disertai referensi ke jurnal, pedoman klinis, atau situs rumah sakit internasional. Klinik Physio8 berlokasi di Gading Serpong.", s)
     if "BSD" in s.split("<script type=\"text/x-dc\"")[0]:
         sys.exit("hub still mentions BSD")
     # featured + list cards: real links and photos
     s = replace_once(s, '<a href="./Artikel Detail.dc.html" style="display:grid', '<a href="{{ featured.href }}" style="display:grid', "hub featured link")
-    s = replace_once(s, '<image-slot id="hub-featured" shape="rect" placeholder="Foto sesi asesmen — fisioterapis dan pasien di studio"></image-slot>',
+    s = replace_once(s, '<image-slot id="hub-featured" shape="rect" placeholder="Foto sesi asesmen — fisioterapis dan pasien di klinik"></image-slot>',
                      '<image-slot id="hub-featured" shape="rect" placeholder="{{ featured.slotHint }}" src="{{ featured.img }}" credit="{{ featured.credit }}" credit-href="{{ featured.creditHref }}"></image-slot>',
                      "hub featured image")
     s = replace_once(s, '<a href="./Artikel Detail.dc.html" style="display:flex;flex-direction:column', '<a href="{{ a.href }}" style="display:flex;flex-direction:column', "hub list link")

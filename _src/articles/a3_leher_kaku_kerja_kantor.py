@@ -78,9 +78,9 @@ ARTICLE = {
    ["Setelah jatuh/benturan, atau disertai demam", "Perlu evaluasi medis", "Ke dokter/IGD", "After a fall or blow, or with fever", "Needs medical evaluation", "See a doctor / emergency care"]
  ]],
 
- ["h2", "di-studio", "Yang kami lakukan", "What we do"],
- ["p", "Di asesmen pertama kami mengukur rentang gerak leher dalam derajat, daya tahan otot leher dalam, kekuatan bahu, dan menanyakan detail hari kerjamu: berapa jam di layar, berapa monitor, berapa rapat. Programnya lalu dibuat agar muat di jam kerja — bukan program satu jam yang tidak akan pernah dikerjakan. Studio Physio8 berlokasi di Gading Serpong.",
-  "In the first assessment we measure neck range in degrees, deep neck-muscle endurance and shoulder strength, and ask about your workday in detail: hours on screen, number of monitors, number of meetings. The programme is then built to fit inside the workday — not an hour-long routine that will never get done. The Physio8 studio is located in Gading Serpong."]
+ ["h2", "di-klinik", "Yang kami lakukan", "What we do"],
+ ["p", "Di asesmen pertama kami mengukur rentang gerak leher dalam derajat, daya tahan otot leher dalam, kekuatan bahu, dan menanyakan detail hari kerjamu: berapa jam di layar, berapa monitor, berapa rapat. Programnya lalu dibuat agar muat di jam kerja — bukan program satu jam yang tidak akan pernah dikerjakan. Klinik Physio8 berlokasi di Gading Serpong.",
+  "In the first assessment we measure neck range in degrees, deep neck-muscle endurance and shoulder strength, and ask about your workday in detail: hours on screen, number of monitors, number of meetings. The programme is then built to fit inside the workday — not an hour-long routine that will never get done. The Physio8 clinic is located in Gading Serpong."]
 ],
 "faqs": [
  ["Posisi monitor yang benar seperti apa?", "What is the correct monitor position?",

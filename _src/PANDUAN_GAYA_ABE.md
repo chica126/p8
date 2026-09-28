@@ -122,7 +122,7 @@ Aturan lain yang tetap berlaku:
 - Sitasi [n] diletakkan di akhir kalimat yang membuat klaim.
 - Sumber yang dipakai: jurnal (BJSM, JOSPT, Cochrane, Lancet), pedoman (WHO, NICE, APTA), Mayo Clinic, Cleveland Clinic, Permenkes.
 - Paragraf pendek, 2–4 kalimat.
-- Lokasi ditulis sebagai fakta: "Studio Physio8 berlokasi di Gading Serpong."
+- Lokasi ditulis sebagai fakta: "Klinik Physio8 berlokasi di Gading Serpong."
 
 ---
 
@@ -143,7 +143,7 @@ Draf Abe masih berisi salah ketik. Gaya boleh ditiru, salah ketiknya tidak.
 
 - **Diagnosis:** tulis "diagnosis fisioterapi", jangan pernah menyiratkan diagnosis medis. Jangan pernah menulis "tidak perlu ke dokter". Tanpa jaminan hasil.
 - **Tanda bahaya:** tulis eksplisit. Skrining tanda bahaya dilakukan sebelum pemeriksaan fisik. Kondisi darurat diarahkan ke layanan medis, bukan ke fisioterapis.
-- **"Studio", bukan "klinik"**, sampai badan hukum diputuskan. Menurut Brand DNA §15, klinik mewajibkan dokter sebagai penanggung jawab, sedangkan praktik mandiri fisioterapis tidak.
+- **Sebut "klinik", bukan "studio"** (keputusan Norman, 28 Sep 2026). Bahasa Inggris: "clinic". Catatan: Brand DNA §15 menyebut izin klinik mewajibkan dokter sebagai penanggung jawab; pastikan izin usaha sejalan.
 - **Lokasi:** Gading Serpong disebut sebagai lokasi, bukan keunggulan. Jangan menulis "BSD".
 - **Harga:** tidak ditulis angkanya. Arahkan ke WhatsApp.
 - **Sitasi:** setiap klaim klinis wajib bersitasi. Angka harus sesuai sumbernya.

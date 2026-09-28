@@ -84,9 +84,9 @@ ARTICLE = {
    ["Mengabaikan kaki yang sehat. LSI bisa terlihat bagus bila kaki sehat ikut melemah karena tidak dilatih.", "Neglecting the healthy leg. LSI can look good if the healthy leg has also weakened from disuse."]
  ]],
 
- ["h2", "di-studio", "Di Physio8", "At Physio8"],
- ["p", "Kami bekerja dengan rencana dan batasan dari dokter bedahmu, mengukur rentang gerak, kekuatan, dan tes hop pada setiap pergantian fase, dan menuliskan kriteria lulus sebelum fase dimulai — sehingga kamu tahu persis apa yang harus dicapai. Studio Physio8 berlokasi di Gading Serpong. Bila ada tanda yang mengkhawatirkan — bengkak yang tiba-tiba, lutut terasa goyah, demam, atau nyeri betis — kami merujuk kembali ke dokter bedahmu hari itu juga.",
-  "We work within your surgeon's plan and restrictions, measure range, strength and hop tests at every phase change, and write down the pass criteria before a phase begins — so you know exactly what you are aiming for. The Physio8 studio is located in Gading Serpong. If anything worrying appears — sudden swelling, the knee giving way, fever or calf pain — we refer you back to your surgeon the same day."]
+ ["h2", "di-klinik", "Di Physio8", "At Physio8"],
+ ["p", "Kami bekerja dengan rencana dan batasan dari dokter bedahmu, mengukur rentang gerak, kekuatan, dan tes hop pada setiap pergantian fase, dan menuliskan kriteria lulus sebelum fase dimulai — sehingga kamu tahu persis apa yang harus dicapai. Klinik Physio8 berlokasi di Gading Serpong. Bila ada tanda yang mengkhawatirkan — bengkak yang tiba-tiba, lutut terasa goyah, demam, atau nyeri betis — kami merujuk kembali ke dokter bedahmu hari itu juga.",
+  "We work within your surgeon's plan and restrictions, measure range, strength and hop tests at every phase change, and write down the pass criteria before a phase begins — so you know exactly what you are aiming for. The Physio8 clinic is located in Gading Serpong. If anything worrying appears — sudden swelling, the knee giving way, fever or calf pain — we refer you back to your surgeon the same day."]
 ],
 "faqs": [
  ["Berapa lama pemulihan setelah operasi ACL?", "How long is recovery after ACL surgery?",

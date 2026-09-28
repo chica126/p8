@@ -90,8 +90,8 @@ ARTICLE = {
  ]],
 
  ["h2", "kapan-periksa", "Kapan harus diperiksa", "When to get it checked"],
- ["p", "Periksakan bila nyeri muncul tiba-tiba saat bermain, terasa di satu titik, disertai memar atau bengkak, membuatmu pincang, atau tidak membaik setelah lima hari. Studio Physio8 berlokasi di Gading Serpong; asesmen pertama mengukur kekuatan dan rentang gerak kedua sisi sehingga kita tahu apakah ini DOMS yang lambat pulih atau cedera yang perlu program.",
-  "Get it checked if the pain came on suddenly during play, sits in one spot, comes with bruising or swelling, makes you limp, or has not improved after five days. The Physio8 studio is located in Gading Serpong; a first assessment measures strength and range on both sides so we know whether this is slow-clearing DOMS or an injury that needs a programme."]
+ ["p", "Periksakan bila nyeri muncul tiba-tiba saat bermain, terasa di satu titik, disertai memar atau bengkak, membuatmu pincang, atau tidak membaik setelah lima hari. Klinik Physio8 berlokasi di Gading Serpong; asesmen pertama mengukur kekuatan dan rentang gerak kedua sisi sehingga kita tahu apakah ini DOMS yang lambat pulih atau cedera yang perlu program.",
+  "Get it checked if the pain came on suddenly during play, sits in one spot, comes with bruising or swelling, makes you limp, or has not improved after five days. The Physio8 clinic is located in Gading Serpong; a first assessment measures strength and range on both sides so we know whether this is slow-clearing DOMS or an injury that needs a programme."]
 ],
 "faqs": [
  ["Berapa lama DOMS biasanya berlangsung?", "How long does DOMS usually last?",

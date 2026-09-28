@@ -118,8 +118,8 @@ ARTICLE = {
    ["Kurangi satu variabel: turunkan jarak atau beban sekitar 30%, pertahankan frekuensinya.", "Cut one variable: drop distance or load by about 30% and keep the frequency."],
    ["Gerakkan sendi yang nyeri dalam rentang tanpa nyeri, 10 repetisi, tiga kali sehari.", "Move the painful joint through its pain-free range, 10 reps, three times a day."]
  ]],
- ["p", "Kalau setelah tiga hari trennya belum menurun, kami bisa mengukurnya di studio Physio8 yang berlokasi di Gading Serpong. Satu sesi asesmen biasanya cukup untuk tahu apakah ini masalah beban, mobilitas, atau kontrol gerak — dan berapa lama perbaikannya.",
-  "If the trend has not turned after three days, we can measure it at the Physio8 studio, located in Gading Serpong. One assessment is usually enough to know whether this is a load, mobility or motor-control problem — and how long the fix takes."]
+ ["p", "Kalau setelah tiga hari trennya belum menurun, kami bisa mengukurnya di klinik Physio8 yang berlokasi di Gading Serpong. Satu sesi asesmen biasanya cukup untuk tahu apakah ini masalah beban, mobilitas, atau kontrol gerak — dan berapa lama perbaikannya.",
+  "If the trend has not turned after three days, we can measure it at the Physio8 clinic, located in Gading Serpong. One assessment is usually enough to know whether this is a load, mobility or motor-control problem — and how long the fix takes."]
 ],
 "faqs": [
  ["Apakah saya perlu surat rujukan dokter untuk fisioterapi?", "Do I need a doctor's referral for physiotherapy?",

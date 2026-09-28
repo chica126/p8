@@ -96,8 +96,8 @@ ARTICLE = {
    ["Durasi asesmen", "60 menit, satu terapis", "Assessment length", "60 minutes, one therapist"],
    ["Paket wajib", "Tidak ada", "Compulsory package", "None"]
  ]],
- ["p", "Asesmen tidak mewajibkanmu melanjutkan terapi. Kamu boleh membawa pulang rencana itu, memikirkannya, dan memutuskan sendiri. Studio Physio8 berlokasi di Gading Serpong.",
-  "The assessment does not commit you to treatment. You can take the plan home, think it over and decide for yourself. The Physio8 studio is located in Gading Serpong."]
+ ["p", "Asesmen tidak mewajibkanmu melanjutkan terapi. Kamu boleh membawa pulang rencana itu, memikirkannya, dan memutuskan sendiri. Klinik Physio8 berlokasi di Gading Serpong.",
+  "The assessment does not commit you to treatment. You can take the plan home, think it over and decide for yourself. The Physio8 clinic is located in Gading Serpong."]
 ],
 "faqs": [
  ["Apakah perlu surat rujukan dokter untuk asesmen?", "Do I need a doctor's referral for the assessment?",

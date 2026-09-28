@@ -6,9 +6,9 @@ ARTICLE = {
 "title": ["Delapan tahap Physio8 Pathway, dijelaskan",
           "The eight stages of the Physio8 Pathway, explained"],
 "meta_title": "Tahapan Fisioterapi: 8 Tahap Physio8 Pathway dari Asesmen sampai Pencegahan | Physio8",
-"meta_desc": "Tahapan fisioterapi yang terstruktur: Assess sampai Maintain. Apa yang dikerjakan di studio, apa yang dikerjakan di rumah, dan angka apa yang harus tercapai sebelum naik tahap.",
+"meta_desc": "Tahapan fisioterapi yang terstruktur: Assess sampai Maintain. Apa yang dikerjakan di klinik, apa yang dikerjakan di rumah, dan angka apa yang harus tercapai sebelum naik tahap.",
 "excerpt": ["Assess sampai Maintain: apa yang kamu kerjakan di klinik, apa yang kamu kerjakan di rumah, dan angka apa yang harus bergerak sebelum tahap berikutnya.",
-            "Assess to Maintain: what you do in the studio, what you do at home, and which numbers have to move before the next stage."],
+            "Assess to Maintain: what you do in the clinic, what you do at home, and which numbers have to move before the next stage."],
 "dek": ["Empat fase, delapan tahap, dan satu aturan: tidak naik tahap tanpa kriteria yang terukur. Ini peta pemulihan yang kami gunakan untuk setiap pasien — dari pengukuran pertama sampai pencegahan kambuh.",
         "Four phases, eight stages and one rule: no moving up without a measured criterion. This is the recovery map we use for every patient — from the first measurement to preventing a relapse."],
 "published": "2026-08-18", "modified": "2026-09-28",
@@ -73,16 +73,16 @@ ARTICLE = {
  ["p", "Tahap 7 adalah kembali beraktivitas — olahraga, pekerjaan, atau aktivitas harian — setelah lulus baterai tes, dengan laporan keluar tertulis. Konsensus internasional tentang kembali berolahraga menggambarkan proses ini sebagai kontinum yang berjalan paralel dengan rehabilitasi, bukan keputusan sekali di akhir [4]. Tahap 8 menjaga hasilnya: program rumah, pengingat berkala, dan pengukuran ulang sebelum masalah kembali.",
   "Stage 7 is the return to activity — sport, work or daily life — after passing a test battery, with a written discharge report. The international consensus on return to sport describes this as a continuum running alongside rehab, not a single decision at the end [4]. Stage 8 protects the result: a home programme, scheduled check-ins and a re-measurement before the problem returns."],
 
- ["h2", "di-rumah", "Kerja sama studio dan rumah", "Studio and home, working together"],
- ["p", "Sesi di studio hanya sebagian kecil dari minggu pemulihanmu. Setelah setiap sesi, program rumah dikirim di hari yang sama dan disesuaikan dengan tahapmu. Semakin jauh tahapnya, semakin besar porsi program rumah — dan semakin jarang kamu perlu datang.",
-  "Studio sessions are a small part of your recovery week. After every session your home programme is sent the same day and matched to your stage. The further along you are, the larger the home programme's share — and the less often you need to come in."],
+ ["h2", "di-rumah", "Kerja sama klinik dan rumah", "Clinic and home, working together"],
+ ["p", "Sesi di klinik hanya sebagian kecil dari minggu pemulihanmu. Setelah setiap sesi, program rumah dikirim di hari yang sama dan disesuaikan dengan tahapmu. Semakin jauh tahapnya, semakin besar porsi program rumah — dan semakin jarang kamu perlu datang.",
+  "Clinic sessions are a small part of your recovery week. After every session your home programme is sent the same day and matched to your stage. The further along you are, the larger the home programme's share — and the less often you need to come in."],
  ["ul", [
    ["Kamu selalu tahu sedang di tahap berapa, dan apa yang menutup tahap itu.", "You always know which stage you are at, and what closes it."],
    ["Terapis yang sama sepanjang rencana.", "The same therapist throughout the plan."],
    ["Keluar berdasarkan kriteria, bukan karena sisa sesi di paket.", "Discharge on criteria, not on sessions left in a package."]
  ]],
- ["p", "Studio Physio8 berlokasi di Gading Serpong. Semua tahap dimulai dari tempat yang sama: asesmen 60 menit yang menetapkan baseline Tahap 1.",
-  "The Physio8 studio is located in Gading Serpong. Every stage starts from the same place: a 60-minute assessment that sets your Stage 1 baseline."]
+ ["p", "Klinik Physio8 berlokasi di Gading Serpong. Semua tahap dimulai dari tempat yang sama: asesmen 60 menit yang menetapkan baseline Tahap 1.",
+  "The Physio8 clinic is located in Gading Serpong. Every stage starts from the same place: a 60-minute assessment that sets your Stage 1 baseline."]
 ],
 "faqs": [
  ["Berapa kali sesi fisioterapi yang dibutuhkan?", "How many physiotherapy sessions will I need?",

@@ -78,9 +78,9 @@ ARTICLE = {
  ["p", "Karena siku justru lebih sering cedera pada pemain padel, perlu disebut: nyeri di sisi luar siku (lateral elbow tendinopathy, atau \"tennis elbow\") mengikuti prinsip yang sama — tendon yang dibebani terlalu cepat, dan pulih dengan beban bertahap [1]. Periksa juga raket, grip, dan teknik backhand.",
   "Because the elbow is actually injured more often in padel, it deserves a mention: pain on the outside of the elbow (lateral elbow tendinopathy, or 'tennis elbow') follows the same principle — a tendon loaded too fast, recovering with graded load [1]. Check your racket, grip and backhand technique too."],
 
- ["h2", "di-studio", "Di studio", "In the studio"],
- ["p", "Asesmen bahu di Physio8 mengukur rotasi dalam dan luar dalam derajat, kekuatan rotator cuff kedua sisi, kontrol skapula, dan meninjau video pukulan overhead-mu bila ada. Studio kami berlokasi di Gading Serpong; rencananya disusun supaya kamu tetap bisa bermain selama pemulihan, bukan berhenti total.",
-  "A Physio8 shoulder assessment measures internal and external rotation in degrees, rotator cuff strength on both sides and scapular control, and reviews video of your overhead strokes if you have it. Our studio is located in Gading Serpong; the plan is built so you can keep playing during recovery rather than stopping completely."]
+ ["h2", "di-klinik", "Di klinik", "In the clinic"],
+ ["p", "Asesmen bahu di Physio8 mengukur rotasi dalam dan luar dalam derajat, kekuatan rotator cuff kedua sisi, kontrol skapula, dan meninjau video pukulan overhead-mu bila ada. Klinik kami berlokasi di Gading Serpong; rencananya disusun supaya kamu tetap bisa bermain selama pemulihan, bukan berhenti total.",
+  "A Physio8 shoulder assessment measures internal and external rotation in degrees, rotator cuff strength on both sides and scapular control, and reviews video of your overhead strokes if you have it. Our clinic is located in Gading Serpong; the plan is built so you can keep playing during recovery rather than stopping completely."]
 ],
 "faqs": [
  ["Apakah nyeri bahu setelah padel perlu istirahat total?", "Does shoulder pain after padel need complete rest?",
