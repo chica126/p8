@@ -22,7 +22,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "_src")
 
 SITE_BASE = "https://physio8.id/"   # absolute base used for canonical / og / schema URLs
-SHARE_IMAGE = SITE_BASE + "favicon.png"        # share-preview image for every page (1200x1200)
+SHARE_IMAGE = SITE_BASE + "og-image.jpg"       # share-preview image for every page (1200x630, clinic front)
 HOME_MODIFIED = "2026-11-03"                   # bump when the homepage content changes
 CLINICALLY_REVIEWED = False                    # flip to True only after the clinician has reviewed every article
 WA_NUMBER = "6281511488080"
@@ -39,7 +39,7 @@ AUTHOR = {
 }
 PUBLISHER = {
     "@type": "MedicalBusiness", "name": "Physio8", "url": SITE_BASE,
-    "logo": SITE_BASE + "p8/logo-full.png", "image": SITE_BASE + "favicon.png",
+    "logo": SITE_BASE + "p8/logo-full.png", "image": SITE_BASE + "og-image.jpg",
     "telephone": "+6281511488080",
     "address": {"@type": "PostalAddress", "streetAddress": "Ruko Hudson Blok B No. 29, Paramount Gading Serpong",
                 "addressLocality": "Medang, Pagedangan", "addressRegion": "Kabupaten Tangerang, Banten",
@@ -331,15 +331,15 @@ def article_head(a, bys):
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{SHARE_IMAGE}">
-<meta property="og:image:type" content="image/png">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="1200">
-<meta property="og:image:alt" content="Physio8 — klinik fisioterapi di Gading Serpong">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fasad klinik Physio8 di Paramount Gading Serpong">
 <meta property="article:published_time" content="{a['published']}">
 <meta property="article:modified_time" content="{a['modified']}">
 <meta property="article:section" content="{esc(a['tag'][0])}">
 {tags}
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(a['title'][0])}">
 <meta name="twitter:description" content="{esc(desc)}">
 <meta name="twitter:image" content="{SHARE_IMAGE}">
@@ -595,11 +595,11 @@ def build_hub(arts, tpl):
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{SHARE_IMAGE}">
-<meta property="og:image:type" content="image/png">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="1200">
-<meta property="og:image:alt" content="Physio8 — klinik fisioterapi di Gading Serpong">
-<meta name="twitter:card" content="summary">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fasad klinik Physio8 di Paramount Gading Serpong">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}">
 <meta name="twitter:image" content="{SHARE_IMAGE}">

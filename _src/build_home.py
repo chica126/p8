@@ -586,7 +586,7 @@ def jsonld():
     clinic = {
         "@context": "https://schema.org", "@type": ["Physiotherapy", "MedicalClinic"], "@id": SITE + "#clinic",
         "name": "Physio8", "alternateName": "Physio8 Physiotherapy & Recovery",
-        "description": DESC[0], "url": SITE, "logo": SITE + "p8/logo-full.png", "image": SITE + "favicon.png",
+        "description": DESC[0], "url": SITE, "logo": SITE + "p8/logo-full.png", "image": SITE + "og-image.jpg",
         "telephone": WA_DISPLAY.replace(" ", "").replace("-", ""), "address": addr,
         "geo": {"@type": "GeoCoordinates", "latitude": GEO[0], "longitude": GEO[1]}, "hasMap": MAP_LINK,
         "areaServed": "Gading Serpong, Tangerang", "priceRange": f"{rp(LITE)} – {rp(n)}",
@@ -687,14 +687,15 @@ def build_home(arts, img_fn, date_fn):
 <meta property="og:url" content="{SITE}">
 <meta property="og:title" content="{esc(TITLE[0])}">
 <meta property="og:description" content="{esc(DESC[0])}">
-<meta property="og:image" content="{SITE}favicon.png">
+<meta property="og:image" content="{SITE}og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="1200">
-<meta property="og:image:alt" content="Physio8 — Physiotherapy &amp; Recovery">
-<meta name="twitter:card" content="summary">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fasad klinik Physio8 di Paramount Gading Serpong">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(TITLE[0])}">
 <meta name="twitter:description" content="{esc(DESC[0])}">
-<meta name="twitter:image" content="{SITE}favicon.png">
+<meta name="twitter:image" content="{SITE}og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
