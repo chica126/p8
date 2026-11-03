@@ -385,9 +385,8 @@ def team():
     <h2 class="h2" style="margin-bottom:40px"{en("One clinical standard, led by experience")}>Satu standar klinis, dipimpin pengalaman</h2>
     <div class="lead rv">
       <div class="lead-id">
-        <div class="loop">{loop_svg()}</div>
-        <span class="mono" aria-hidden="true">IS</span>
-        <div>
+        <figure class="lead-photo"><picture><source type="image/webp" srcset="./p8/ika-setia-ningsih.webp"><img src="./p8/ika-setia-ningsih.jpg" width="525" height="552" alt="Ika Setia Ningsih, S.Ft, Lead Physiotherapist Physio8" data-en-alt="Ika Setia Ningsih, S.Ft, Lead Physiotherapist at Physio8" loading="lazy" decoding="async"></picture></figure>
+        <div class="lead-info">
           <p class="role"{en("Lead Physiotherapist")}>Lead Physiotherapist</p>
           <p class="name">Ika Setia Ningsih, S.Ft</p>
           <div class="yrs"><b class="tnum">18+</b><span{en("years of hands-on<br>practice since 2008")}>tahun praktik<br>langsung sejak 2008</span></div>
@@ -595,7 +594,7 @@ def jsonld():
         "availableService": [{"@type": "MedicalTherapy", "name": x} for x in
                              ("Physiotherapy", "Clinical Pilates", "Manual therapy", "Dry needling", "Kinesio taping",
                               "Movement & Posture Assessment")],
-        "employee": {"@type": "Person", "name": "Ika Setia Ningsih", "honorificSuffix": "S.Ft", "jobTitle": "Lead Physiotherapist",
+        "employee": {"@type": "Person", "name": "Ika Setia Ningsih", "honorificSuffix": "S.Ft", "jobTitle": "Lead Physiotherapist", "image": SITE + "p8/ika-setia-ningsih.jpg",
                      "alumniOf": {"@type": "CollegeOrUniversity", "name": "Universitas Esa Unggul"}},
         "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Physio8 prices", "itemListElement": [
             offer("Physiotherapy Standard — single session", s), offer("Physiotherapy Standard — package of 4", s4 * 4, "Valid 8 weeks"),

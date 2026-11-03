@@ -192,12 +192,15 @@ ul,ol{margin:0;padding:0;list-style:none}
 .trained p{color:var(--muted);font-size:15.5px;margin-top:4px}
 
 /* team */
-.lead{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,64px);align-items:stretch;background:var(--surface);border-radius:32px;padding:clamp(24px,4vw,48px)}
-.lead-id{background:var(--purple);border-radius:var(--radius);color:#fff;padding:32px;display:flex;flex-direction:column;justify-content:space-between;min-height:360px;position:relative;overflow:hidden}
+.lead{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:start;gap:clamp(28px,5vw,64px);align-items:stretch;background:var(--surface);border-radius:32px;padding:clamp(24px,4vw,48px)}
+.lead-id{background:var(--purple);border-radius:var(--radius);color:#fff;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.lead-photo{aspect-ratio:525/552;background:var(--purple-50)}
+.lead-photo picture,.lead-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.lead-info{padding:24px 28px 28px}
 .lead-id .mono{width:88px;height:88px;border-radius:50%;background:#fff;color:var(--purple);display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:700;letter-spacing:-.02em}
-.lead-id .role{font-size:14px;font-weight:600;color:#D8E37A;margin-top:auto}
+.lead-id .role{font-size:14px;font-weight:600;color:#D8E37A}
 .lead-id .name{font-size:28px;font-weight:700;line-height:1.2;margin-top:6px;color:#fff}
-.lead-id .yrs{display:flex;align-items:baseline;gap:10px;margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.18)}
+.lead-id .yrs{display:flex;align-items:baseline;gap:10px;margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.18)}
 .lead-id .yrs b{font-size:40px;font-weight:700;line-height:1;letter-spacing:-.03em}
 .lead-id .yrs span{font-size:14px;color:#CBC3E8;line-height:1.4}
 .lead-id .loop{position:absolute;right:-40px;top:-30px;width:220px;opacity:.12}
@@ -400,7 +403,6 @@ ul,ol{margin:0;padding:0;list-style:none}
   .acard.row{flex-direction:column}
   .acard.row .photo{width:100%;flex:none;aspect-ratio:16/9}
   .acard.row .ex{display:block}
-  .lead-id{min-height:300px}
   .loc-card{padding:22px}
   .ftr .top{grid-template-columns:minmax(0,1fr)}
   .p8-wa-fab{right:16px;bottom:16px;width:56px;height:56px}
