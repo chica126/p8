@@ -92,7 +92,6 @@ ARTICLE = {
  ["h2", "harga", "Harga dan komitmen", "Pricing and commitment"],
  ["callout", "Yang perlu kamu tahu sebelum datang:", "What to know before you come:", [
    ["Harga sesi fisioterapi", "Rp 485.000 (Standard) · Rp 585.000 (Senior)", "Physiotherapy session price", "Rp 485.000 (Standard) · Rp 585.000 (Senior)"],
-   ["Kunjungan pertama, Nov–Des 2026", "Tanpa biaya untuk pasien baru (soft opening)", "First visit, Nov–Dec 2026", "Free for new patients (soft opening)"],
    ["Durasi asesmen", "60 menit, satu terapis", "Assessment length", "60 minutes, one therapist"],
    ["Paket wajib", "Tidak ada", "Compulsory package", "None"]
  ]],
@@ -104,8 +103,8 @@ ARTICLE = {
   "Tidak. Kamu bisa datang langsung. Bila diperlukan, kami yang merujuk ke dokter spesialis.",
   "No. You can come directly. If needed, we refer you to a medical specialist."],
  ["Berapa biaya asesmen fisioterapi di Physio8?", "How much is a physiotherapy assessment at Physio8?",
-  "Selama soft opening November–Desember 2026, kunjungan pertama, termasuk asesmen ini, tanpa biaya untuk pasien baru. Harga per sesi terapi kami publikasikan di physio8.id/#harga. Asesmen berlangsung 60 menit, satu terapis, satu pasien, tanpa paket wajib.",
-  "During the soft opening (November–December 2026), the first visit, including this assessment, is free for new patients. Per-session treatment prices are published at physio8.id/#harga. The assessment runs 60 minutes, one therapist, one patient, with no compulsory package."],
+  "Harga per sesi terapi kami publikasikan di physio8.id/#harga. Asesmen berlangsung 60 menit, satu terapis, satu pasien, tanpa paket wajib.",
+  "Per-session treatment prices are published at physio8.id/#harga. The assessment runs 60 minutes, one therapist, one patient, with no compulsory package."],
  ["Apakah asesmen sudah termasuk terapi?", "Does the assessment include treatment?",
   "Fokus asesmen adalah pengukuran, diagnosis fisioterapi, dan rencana. Kamu juga pulang dengan program rumah pertama.",
   "The assessment focuses on measurement, a physiotherapy diagnosis and a plan. You also leave with your first home programme."],

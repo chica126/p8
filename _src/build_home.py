@@ -8,8 +8,8 @@ AI engines read the full page; English is swapped in client-side from the
 data-en / data-en-<attr> attributes on each element (ID | EN toggle).
 
 Run via build.py (it calls build_home), or on its own:  python3 _src/build_home.py
-Prices, the soft-opening offer and the clinic details all live in the CONFIG
-block below. The soft-opening block hides itself automatically after SOFT_UNTIL.
+Prices and clinic details live in the CONFIG block below. The soft-opening offer is
+switched off (SHOW_SOFT = False); set it to True to show the banner and offer block again.
 """
 import html, json, os, sys
 from urllib.parse import quote
@@ -31,6 +31,7 @@ MAP_EMBED = ("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.9576324
              "!5e0!3m2!1sid!2sid!4v1790002287669!5m2!1sid!2sid")
 MAP_LINK = "https://www.google.com/maps/search/?api=1&query=Physio8+Ruko+Hudson+Paramount+Gading+Serpong"
 GEO = (-6.2693025, 106.6246716)
+SHOW_SOFT = False
 SOFT_UNTIL = "2026-12-31"          # soft-opening block disappears after this date (WIB)
 
 PRICES = {  # rupiah per session: single, package of 4, package of 8
@@ -197,7 +198,7 @@ def header():
             f'<strong>Soft opening November–Desember 2026.</strong> Kunjungan pertama ditanggung Physio8, termasuk Movement &amp; Posture Assessment.</p>'
             f'<a href="#harga"{en("See the details")}>Lihat ketentuan</a></div></div>')
     return f"""<a class="skip" href="#main"{en("Skip to content")}>Lewati ke konten</a>
-{soft}
+{soft if SHOW_SOFT else ""}
 <header class="hdr">
   <div class="wrap">
     <a class="brand" href="/" aria-label="Physio8"><img src="./p8/logo-full.svg" alt="Physio8 — Physiotherapy &amp; Recovery" width="90" height="60"></a>
@@ -441,7 +442,7 @@ def pricing():
       <div class="addon rv"><div><b>Kinesio taping</b><span{en("Per application")}>Per aplikasi</span></div><span class="v tnum">{rp(TAPING)}</span></div>
     </div>
     <ul class="terms">{tl}</ul>
-    {soft}
+    {soft if SHOW_SOFT else ""}
   </div>
 </section>"""
 
