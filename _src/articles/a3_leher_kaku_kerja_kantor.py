@@ -12,7 +12,6 @@ ARTICLE = {
 "dek": ["Penyebabnya bukan karena satu postur yang salah. Namun lebih sering karena satu posisi yang ditahan terlalu lama, otot yang tidak siap menahannya, dan beban kerja yang naik.",
         "The cause is rarely one 'wrong' posture. More often it is one position held too long, muscles not conditioned to hold it, and a rising workload."],
 "published": "2026-09-11", "modified": "2026-09-28",
-"date_label": ["11 Sep 2026", "11 Sep 2026"],
 "read": 7,
 "about": "Nyeri leher",
 "keywords_primary": ["leher kaku karena kerja di depan laptop", "stiff neck from laptop work"],

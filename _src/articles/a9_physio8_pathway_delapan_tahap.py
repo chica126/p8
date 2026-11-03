@@ -12,7 +12,6 @@ ARTICLE = {
 "dek": ["Empat fase, delapan tahap, dan satu aturan: tidak naik tahap tanpa kriteria yang terukur. Ini peta pemulihan yang kami gunakan untuk setiap pasien — dari pengukuran pertama sampai pencegahan kambuh.",
         "Four phases, eight stages and one rule: no moving up without a measured criterion. This is the recovery map we use for every patient — from the first measurement to preventing a relapse."],
 "published": "2026-08-18", "modified": "2026-09-28",
-"date_label": ["18 Agu 2026", "18 Aug 2026"],
 "read": 7,
 "about": "Program rehabilitasi muskuloskeletal",
 "keywords_primary": ["tahapan fisioterapi", "stages of physiotherapy"],

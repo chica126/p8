@@ -12,7 +12,6 @@ ARTICLE = {
 "dek": ["Operasi ACL hanya separuh perjalanan. Separuh lainnya adalah 9–12 bulan rehabilitasi yang terukur dan spesifik — dan data menunjukkan kembali bertanding lebih awal punya konsekuensi yang berat.",
         "ACL surgery is only half the journey. The other half is 9–12 months of measured, specific rehab — and the data show that returning to sport early carries serious consequences."],
 "published": "2026-08-27", "modified": "2026-09-28",
-"date_label": ["27 Agu 2026", "27 Aug 2026"],
 "read": 11,
 "about": "Rekonstruksi ligamen krusiatum anterior",
 "keywords_primary": ["rehabilitasi ACL", "ACL rehabilitation"],

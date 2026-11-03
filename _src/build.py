@@ -15,7 +15,7 @@ folder stays private even though it lives in the repo.
 When the site moves to its own domain, change SITE_BASE below and rebuild.
 When Timothy has clinically reviewed the articles, set CLINICALLY_REVIEWED = True.
 """
-import glob, html, importlib.util, json, os, re, sys
+import glob, html, importlib.util, json, os, posixpath, re, sys
 from urllib.parse import quote
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -23,6 +23,7 @@ SRC = os.path.join(ROOT, "_src")
 
 SITE_BASE = "https://physio8.id/"   # absolute base used for canonical / og / schema URLs
 SHARE_IMAGE = SITE_BASE + "favicon.png"        # share-preview image for every page (1200x1200)
+HOME_MODIFIED = "2026-11-03"                   # bump when the homepage content changes
 CLINICALLY_REVIEWED = False                    # flip to True only after the clinician has reviewed every article
 WA_NUMBER = "6281511488080"
 UTM = "utm_source=physio8&utm_medium=referral"
@@ -38,9 +39,11 @@ AUTHOR = {
 }
 PUBLISHER = {
     "@type": "MedicalBusiness", "name": "Physio8", "url": SITE_BASE,
-    "logo": SITE_BASE + "favicon.png", "image": SITE_BASE + "p8/logo-lockup.png",
-    "address": {"@type": "PostalAddress", "streetAddress": "Ruko Hudson, Gading Serpong",
-                "addressLocality": "Tangerang", "addressRegion": "Banten", "addressCountry": "ID"},
+    "logo": SITE_BASE + "p8/logo-full.png", "image": SITE_BASE + "favicon.png",
+    "telephone": "+6281511488080",
+    "address": {"@type": "PostalAddress", "streetAddress": "Ruko Hudson Blok B No. 29, Paramount Gading Serpong",
+                "addressLocality": "Medang, Pagedangan", "addressRegion": "Kabupaten Tangerang, Banten",
+                "postalCode": "15334", "addressCountry": "ID"},
     "geo": {"@type": "GeoCoordinates", "latitude": -6.2693025, "longitude": 106.6246716},
     "hasMap": "https://www.google.com/maps/search/?api=1&query=Physio8+Gading+Serpong",
     "sameAs": ["https://www.instagram.com/physio8.id/"],
@@ -86,6 +89,22 @@ def profile(a):
 
 def url_of(slug=None):
     return SITE_BASE + ("artikel/" + slug + "/" if slug else "artikel/")
+
+
+def path_of(slug=None):
+    """Root-relative canonical path, used for every internal link (never …/index.html)."""
+    return "/artikel/" + slug + "/" if slug else "/artikel/"
+
+
+def clean_links(s, page_dir):
+    """Rewrite relative href="…/index.html" links to their canonical root path, so crawlers
+    only ever see /artikel/<slug>/ and never the duplicate /artikel/<slug>/index.html."""
+    def fix(m):
+        q, target, frag = m.group(1), m.group(2), m.group(3) or ""
+        path = posixpath.normpath(posixpath.join(page_dir, target))
+        path = path[:-len("index.html")] if path.endswith("/index.html") else path
+        return f"href={q}{path}{frag}{q}"
+    return re.sub(r"""href=(["'])((?:\./|\.\./)*(?:[\w-]+/)*index\.html)(#[^"']*)?\1""", fix, s)
 
 
 def wa_price_link():
@@ -147,6 +166,14 @@ def fmt_date_en(iso):
     months = ["January", "February", "March", "April", "May", "June", "July", "August",
               "September", "October", "November", "December"]
     return f"{int(d)} {months[int(m) - 1]} {y}"
+
+
+def fmt_date_short(iso):
+    """Hub card label, e.g. ["27 Agu 2026", "27 Aug 2026"] — always derived from `published`."""
+    y, m, d = iso.split("-")
+    id_m = ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"]
+    en_m = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    return [f"{int(d)} {id_m[int(m) - 1]} {y}", f"{int(d)} {en_m[int(m) - 1]} {y}"]
 
 
 def add_class(s, needle, cls, what=None):
@@ -236,9 +263,9 @@ def wa_float(src, prefix):
 </a>
 <style>
 .p8-wa-fab{{position:fixed;right:24px;bottom:24px;z-index:1000;width:60px;height:60px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;background:#331079;color:#fff;
-  box-shadow:0 0 0 3px #A3B500,0 10px 24px rgba(51,16,121,.35);transition:transform .2s ease,background .2s ease}}
-.p8-wa-fab:hover{{background:#2A0D63;transform:translateY(-3px)}}
+  display:flex;align-items:center;justify-content:center;background:#2F1F71;color:#fff;
+  box-shadow:0 0 0 3px #A6B717,0 10px 24px rgba(51,16,121,.35);transition:transform .2s ease,background .2s ease}}
+.p8-wa-fab:hover{{background:#261859;transform:translateY(-3px)}}
 .p8-wa-fab:focus-visible{{outline:3px solid #008C9E;outline-offset:4px}}
 @media (max-width:480px){{.p8-wa-fab{{right:16px;bottom:16px;width:56px;height:56px}}}}
 @media print{{.p8-wa-fab{{display:none}}}}
@@ -285,7 +312,7 @@ def article_head(a, bys):
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#331079">
+<meta name="theme-color" content="#2F1F71">
 <meta name="author" content="Timothy Abieza, B.Sc. PT">
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="article">
@@ -307,15 +334,16 @@ def article_head(a, bys):
 <meta name="twitter:title" content="{esc(a['title'][0])}">
 <meta name="twitter:description" content="{esc(desc)}">
 <meta name="twitter:image" content="{SHARE_IMAGE}">
-<link rel="icon" type="image/png" href="../../favicon.png">
-<link rel="apple-touch-icon" href="../../favicon.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script type="application/ld+json">
 {ld}
 </script>
 <script src="../../support.js"></script>"""
 
 
-def noscript_article(a):
+def noscript_article(a, bys):
     """Plain-HTML copy of the Indonesian article for crawlers and AI engines that do not run JS."""
     out = [f'<article lang="id" style="max-width:760px;margin:0 auto;padding:24px 16px;font-family:system-ui,sans-serif;line-height:1.65;color:#3D3B4C">',
            f'<p><a href="../../index.html">Beranda</a> · <a href="../index.html">Artikel</a> · {esc(a["tag"][0])}</p>',
@@ -348,6 +376,8 @@ def noscript_article(a):
         out.append(f"<h3>{esc(f[0])}</h3><p>{esc(f[2])}</p>")
     out.append('<h2 id="referensi">Referensi</h2><ol>' +
                "".join(f'<li>{esc(r[0])} <a href="{esc(r[1])}">{esc(r[1])}</a></li>' for r in a["refs"]) + "</ol>")
+    out.append('<h2>Artikel terkait</h2><ul>' +
+               "".join(f'<li><a href="{path_of(slug)}">{esc(bys[slug]["title"][0])}</a></li>' for slug in a["related"]) + "</ul>")
     out.append(f'<p>Physio8 · Ruko Hudson, Gading Serpong, Tangerang, Banten. '
                f'<a href="{esc(wa_link(a["wa"]))}">Buat jadwal asesmen via WhatsApp</a>.</p>')
     out.append("<p><small>Artikel ini bersifat edukatif dan bukan pengganti pemeriksaan klinis langsung.</small></p></article>")
@@ -426,7 +456,7 @@ def build_article(a, bys, tpl):
                      '      toastOpacity: this.state.copied ? "1" : "0",\n'
                      '      setId: () => this.setState({lang:"id"}),', "share handler")
     # 9. crawler-readable copy
-    s = replace_once(s, "</x-dc>\n", "</x-dc>\n" + noscript_article(a) + "\n" + wa_float(a["wa"], "../../") + "\n", "noscript")
+    s = replace_once(s, "</x-dc>\n", "</x-dc>\n" + noscript_article(a, bys) + "\n" + wa_float(a["wa"], "../../") + "\n", "noscript")
     # 10. responsive hooks + CSS
     for needle, cls in [
         ('padding:0 var(--layout-gutter);height:72px', "p8-hdr"),
@@ -450,7 +480,7 @@ def build_article(a, bys, tpl):
     hide_review = "" if CLINICALLY_REVIEWED else "\n.p8-review{display:none !important}\n"
     s = replace_once(s, "</style>\n</helmet>", RESPONSIVE_CSS + hide_review + "</style>\n</helmet>", "article css")
     s = s.replace("__WA_PRICE__", esc(wa_price_link()))
-    return s
+    return clean_links(s, path_of(a["slug"]))
 
 
 def data_js(a, bys):
@@ -470,7 +500,7 @@ def data_js(a, bys):
     for slug in a["related"]:
         r = bys[slug]
         related.append({"tag": r["tag"], "title": r["title"], "read": [r["read"], "rel-" + slug],
-                        "hint": r["image"]["alt"][0], "href": f"../{slug}/index.html",
+                        "hint": r["image"]["alt"][0], "href": path_of(slug),
                         "img": img(r, 800), "credit": credit(r), "creditHref": r["image"]["profile"]})
     return (f"const A = {js(A)};\n\nconst B = {js(a['blocks'])};\n\n"
             f"const RELATED = {js(related)};\n\nconst REFS = {js(a['refs'])};\n")
@@ -483,7 +513,7 @@ def t_overrides(a):
             'T.id.refsNote = "Nomor dalam kurung siku di teks merujuk ke daftar ini. Tautan membuka sumber aslinya.";\n'
             'T.en.refsNote = "Numbers in square brackets in the text refer to this list. Links open the original source.";\n'
             'T.id.photo = "Foto"; T.en.photo = "Photo";\n'
-            'T.id.priceLink = "Tanya harga via WhatsApp"; T.en.priceLink = "Ask for pricing on WhatsApp";\n'
+            'T.id.priceLink = "Lihat harga"; T.en.priceLink = "See prices";\n'
             'T.id.share = "Bagikan"; T.en.share = "Share";\n'
             'T.id.copyLink = "Salin link"; T.en.copyLink = "Copy link";\n'
             'T.id.copied = "Link disalin"; T.en.copied = "Link copied";\n')
@@ -547,7 +577,7 @@ def build_hub(arts, tpl):
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#331079">
+<meta name="theme-color" content="#2F1F71">
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Physio8">
@@ -564,8 +594,9 @@ def build_hub(arts, tpl):
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}">
 <meta name="twitter:image" content="{SHARE_IMAGE}">
-<link rel="icon" type="image/png" href="../favicon.png">
-<link rel="apple-touch-icon" href="../favicon.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script type="application/ld+json">
 {ld}
 </script>
@@ -607,10 +638,10 @@ def build_hub(arts, tpl):
         s = replace_once(s, f'<a href="../index.html">{label}</a>', f'<a href="./{slug}/index.html">{label}</a>', "topic " + slug)
     # data
     data = [{"slug": a["slug"], "tag": a["tag"][0], "tagEn": a["tag"][1], "read": a["read"],
-             "date": a["date_label"][0], "dateEn": a["date_label"][1],
+             "date": fmt_date_short(a["published"])[0], "dateEn": fmt_date_short(a["published"])[1],
              "title": a["title"][0], "titleEn": a["title"][1],
              "excerpt": a["excerpt"][0], "excerptEn": a["excerpt"][1],
-             "slotHint": a["image"]["alt"][0], "href": f"./{a['slug']}/index.html",
+             "slotHint": a["image"]["alt"][0], "href": path_of(a["slug"]),
              "img": img(a, 900), "credit": credit(a), "creditHref": a["image"]["profile"]} for a in arts]
     s = re.sub(r"const ARTICLES = \[.*?\n\];\n", lambda m: f"const ARTICLES = {js(data)};\n", s, count=1, flags=re.S)
     s = replace_once(s, "      slotHint:a.slotHint\n    };",
@@ -639,7 +670,7 @@ def build_hub(arts, tpl):
         s = add_class(s, needle, cls)
     s = replace_once(s, "</style>\n</helmet>", RESPONSIVE_CSS + "</style>\n</helmet>", "hub css")
     s = s.replace("__WA_PRICE__", esc(wa_price_link()))
-    return s
+    return clean_links(s, path_of())
 
 
 def redirect_stub(target, canonical, title):
@@ -656,7 +687,7 @@ def redirect_stub(target, canonical, title):
 def build_sitemap(arts):
     """sitemap.xml (with image entries) + robots.txt at the repo root."""
     latest = max(a["modified"] for a in arts)
-    urls = [(SITE_BASE, latest, "1.0", None), (url_of(), latest, "0.9", None)]
+    urls = [(SITE_BASE, max(latest, HOME_MODIFIED), "1.0", None), (url_of(), latest, "0.9", None)]
     urls += [(url_of(a["slug"]), a["modified"], "0.8", a) for a in arts]
     out = ['<?xml version="1.0" encoding="UTF-8"?>',
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
@@ -696,9 +727,11 @@ def main():
         redirect_stub("./artikel/index.html", url_of(), "Artikel — Physio8"))
     open(os.path.join(ROOT, "Artikel Detail.dc.html"), "w", encoding="utf-8").write(
         redirect_stub("./artikel/kapan-perlu-fisioterapi/index.html", url_of("kapan-perlu-fisioterapi"), "Kapan nyeri butuh fisioterapi — Physio8"))
+    from build_home import build_home
+    open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8").write(build_home(arts, img, fmt_date_short))
     for path, wc, nref in written:
         print(f"{os.path.relpath(path, ROOT):55s} {wc:5d} words  {nref} refs")
-    print("artikel/index.html (hub) + 2 redirect stubs")
+    print("artikel/index.html (hub) + 2 redirect stubs + index.html (homepage)")
     print(f"sitemap.xml ({build_sitemap(arts)} URLs) + robots.txt")
 
 

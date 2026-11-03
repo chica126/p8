@@ -12,7 +12,6 @@ ARTICLE = {
 "dek": ["Sebagian besar nyeri pinggang bawah tidak berbahaya dan membaik dengan tetap aktif. Pedoman WHO, NICE, dan The Lancet sepakat pada satu hal: latihan, bukan tirah baring.",
         "Most low back pain is not dangerous and improves by staying active. Guidance from the WHO, NICE and The Lancet agrees on one thing: exercise, not bed rest."],
 "published": "2026-09-08", "modified": "2026-09-28",
-"date_label": ["8 Sep 2026", "8 Sep 2026"],
 "read": 9,
 "about": "Nyeri punggung bawah",
 "keywords_primary": ["sakit pinggang karena duduk lama", "low back pain from sitting"],

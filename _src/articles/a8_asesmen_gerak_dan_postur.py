@@ -11,8 +11,7 @@ ARTICLE = {
             "Sixty minutes, fourteen measurements, one written plan — no package to buy on the spot."],
 "dek": ["Enam puluh menit, empat belas pengukuran, satu rencana tertulis. Ini yang terjadi dari menit pertama sampai kamu pulang — dan kenapa kami mengukur sebelum menyentuh.",
         "Sixty minutes, fourteen measurements, one written plan. This is what happens from the first minute until you leave — and why we measure before we touch."],
-"published": "2026-08-22", "modified": "2026-09-28",
-"date_label": ["22 Agu 2026", "22 Aug 2026"],
+"published": "2026-08-22", "modified": "2026-11-03",
 "read": 6,
 "about": "Asesmen fisioterapi",
 "keywords_primary": ["asesmen fisioterapi", "physiotherapy assessment"],
@@ -22,8 +21,8 @@ ARTICLE = {
           "profile": "https://unsplash.com/@tomspentys", "page": "https://unsplash.com/photos/CfdzNybONzc",
           "alt": ["Terapis mengukur rentang gerak pergelangan tangan dengan alat ukur", "A clinician measuring wrist range of motion with a measuring device"]},
 "side": [["Siap diukur?", "Ready to be measured?"],
-         ["60 menit, satu terapis, satu pasien. Kamu pulang dengan baseline dan rencana tertulis. Info harga via WhatsApp.",
-          "60 minutes, one therapist, one patient. You leave with a baseline and a written plan. Pricing on WhatsApp."]],
+         ["60 menit, satu terapis, satu pasien. Kamu pulang dengan baseline dan rencana tertulis. Harga per sesi ada di physio8.id.",
+          "60 minutes, one therapist, one patient. You leave with a baseline and a written plan. Per-session prices are on physio8.id."]],
 "wa": "artikel: Movement & Posture Assessment",
 "related": ["kapan-perlu-fisioterapi", "physio8-pathway-delapan-tahap", "leher-kaku-kerja-kantor"],
 "takeaways": [
@@ -92,7 +91,8 @@ ARTICLE = {
 
  ["h2", "harga", "Harga dan komitmen", "Pricing and commitment"],
  ["callout", "Yang perlu kamu tahu sebelum datang:", "What to know before you come:", [
-   ["Harga asesmen & sesi terapi", "Tanyakan via WhatsApp", "Assessment & session pricing", "Ask us on WhatsApp"],
+   ["Harga sesi fisioterapi", "Rp 485.000 (Standard) · Rp 585.000 (Senior)", "Physiotherapy session price", "Rp 485.000 (Standard) · Rp 585.000 (Senior)"],
+   ["Kunjungan pertama, Nov–Des 2026", "Tanpa biaya untuk pasien baru (soft opening)", "First visit, Nov–Dec 2026", "Free for new patients (soft opening)"],
    ["Durasi asesmen", "60 menit, satu terapis", "Assessment length", "60 minutes, one therapist"],
    ["Paket wajib", "Tidak ada", "Compulsory package", "None"]
  ]],
@@ -104,8 +104,8 @@ ARTICLE = {
   "Tidak. Kamu bisa datang langsung. Bila diperlukan, kami yang merujuk ke dokter spesialis.",
   "No. You can come directly. If needed, we refer you to a medical specialist."],
  ["Berapa biaya asesmen fisioterapi di Physio8?", "How much is a physiotherapy assessment at Physio8?",
-  "Informasi harga terbaru bisa ditanyakan langsung lewat WhatsApp Physio8. Asesmen berlangsung 60 menit, satu terapis, satu pasien, tanpa paket wajib.",
-  "For current pricing, message Physio8 on WhatsApp. The assessment runs 60 minutes, one therapist, one patient, with no compulsory package."],
+  "Selama soft opening November–Desember 2026, kunjungan pertama, termasuk asesmen ini, tanpa biaya untuk pasien baru. Harga per sesi terapi kami publikasikan di physio8.id/#harga. Asesmen berlangsung 60 menit, satu terapis, satu pasien, tanpa paket wajib.",
+  "During the soft opening (November–December 2026), the first visit, including this assessment, is free for new patients. Per-session treatment prices are published at physio8.id/#harga. The assessment runs 60 minutes, one therapist, one patient, with no compulsory package."],
  ["Apakah asesmen sudah termasuk terapi?", "Does the assessment include treatment?",
   "Fokus asesmen adalah pengukuran, diagnosis fisioterapi, dan rencana. Kamu juga pulang dengan program rumah pertama.",
   "The assessment focuses on measurement, a physiotherapy diagnosis and a plan. You also leave with your first home programme."],

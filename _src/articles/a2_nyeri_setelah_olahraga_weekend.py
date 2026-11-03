@@ -12,7 +12,6 @@ ARTICLE = {
 "dek": ["DOMS terasa merata, memuncak di hari kedua, dan membaik saat kamu bergerak. Cedera terasa di satu titik dan memburuk saat diberi beban. Ini cara membedakannya tanpa menebak.",
         "DOMS is diffuse, peaks on day two and eases as you move. An injury sits in one spot and worsens under load. Here is how to tell them apart without guessing."],
 "published": "2026-09-15", "modified": "2026-09-28",
-"date_label": ["15 Sep 2026", "15 Sep 2026"],
 "read": 7,
 "about": "Delayed onset muscle soreness",
 "keywords_primary": ["DOMS atau cedera", "DOMS or injury"],

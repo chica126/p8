@@ -12,7 +12,6 @@ ARTICLE = {
 "dek": ["Padel sedang naik daun, dan begitu pula keluhan bahu dan siku. Kebanyakan bukan \"salah urat\", melainkan tendon rotator cuff yang menerima beban overhead lebih banyak daripada kemampuannya.",
         "Padel is booming, and so are shoulder and elbow complaints. Most are not a 'pulled nerve' but rotator cuff tendons taking more overhead load than they can handle."],
 "published": "2026-09-01", "modified": "2026-09-28",
-"date_label": ["1 Sep 2026", "1 Sep 2026"],
 "read": 8,
 "about": "Cedera rotator cuff",
 "keywords_primary": ["nyeri bahu main padel", "padel shoulder pain"],

@@ -1,16 +1,16 @@
 /* Physio8 colour system. Base ramps sampled from Logo_base.jpeg, then extended. */
 :root{
-  /* ── Brand base: Deep Purple (clinical authority) — sampled #331079 ── */
-  --p8-purple-50:#F3F0FB;--p8-purple-100:#E3DCF7;--p8-purple-200:#C5B9EE;--p8-purple-300:#9C88DE;
-  --p8-purple-400:#6F56C6;--p8-purple-500:#4A2AA1;--p8-purple-600:#331079;--p8-purple-700:#2A0D63;
-  --p8-purple-800:#1F0949;--p8-purple-900:#150532;
-  /* ── Brand base: Lime (vitality, movement) — sampled #A3B500 ── */
+  /* ── Brand base: Deep Purple (clinical authority) — from the Nov 2026 logo master #2F1F71 ── */
+  --p8-purple-50:#F4F2FA;--p8-purple-100:#E7E3F4;--p8-purple-200:#CBC3E8;--p8-purple-300:#A096D4;
+  --p8-purple-400:#6E61B3;--p8-purple-500:#463894;--p8-purple-600:#2F1F71;--p8-purple-700:#261859;
+  --p8-purple-800:#1A1142;--p8-purple-900:#120B2F;
+  /* ── Brand base: Lime (vitality, movement) — logo master #A6B717 ── */
   --p8-lime-50:#F8FBE6;--p8-lime-100:#EEF4C4;--p8-lime-200:#DDE98E;--p8-lime-300:#C8DA42;
-  --p8-lime-400:#B5C915;--p8-lime-500:#A3B500;--p8-lime-600:#8A9A00;--p8-lime-700:#6C7800;
+  --p8-lime-400:#B5C915;--p8-lime-500:#A6B717;--p8-lime-600:#8A9A00;--p8-lime-700:#6C7800;
   --p8-lime-800:#4E5700;--p8-lime-900:#333900;
-  /* ── Brand base: Teal (precision, calm) — sampled #008C9E ── */
+  /* ── Brand base: Teal (precision, calm) — logo master #008699 ── */
   --p8-teal-50:#E8F6F8;--p8-teal-100:#C6E9EE;--p8-teal-200:#8DD4DE;--p8-teal-300:#46B5C4;
-  --p8-teal-400:#119CAF;--p8-teal-500:#008C9E;--p8-teal-600:#007686;--p8-teal-700:#005D6A;
+  --p8-teal-400:#119CAF;--p8-teal-500:#008699;--p8-teal-600:#00707F;--p8-teal-700:#005D6A;
   --p8-teal-800:#00454F;--p8-teal-900:#002E35;
   /* ── Neutrals: cool, faintly purple-shifted (hygiene made visible) ── */
   --p8-white:#FFFFFF;
@@ -41,7 +41,7 @@
   --surface-raised:var(--p8-white);
   --surface-inverse:var(--p8-purple-800);
   --surface-accent:var(--p8-purple-50);
-  --surface-overlay:rgba(21,5,50,.55);
+  --surface-overlay:rgba(18,11,47,.55);
 
   --text-heading:var(--p8-purple-800);
   --text-body:var(--p8-neutral-700);

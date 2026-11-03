@@ -12,7 +12,6 @@ ARTICLE = {
 "dek": ["Tiga cedera yang paling sering membuat pelari berhenti punya pola yang berbeda — dan penanganan yang berbeda pula. Kuncinya ada di lokasi, waktu, dan respons terhadap beban.",
         "The three injuries that most often stop runners have different patterns — and different fixes. The keys are location, timing and response to load."],
 "published": "2026-09-04", "modified": "2026-09-28",
-"date_label": ["4 Sep 2026", "4 Sep 2026"],
 "read": 10,
 "about": "Cedera akibat lari",
 "keywords_primary": ["cedera lari", "running injuries"],
