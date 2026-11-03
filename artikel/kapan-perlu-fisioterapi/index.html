@@ -56,6 +56,15 @@ html{scroll-behavior:smooth}
 [style*="background:var(--status-info-bg)"],[style*="background: var(--status-info-bg)"]{background:transparent !important;padding:0 !important;border-radius:0 !important;font-weight:600 !important}
 [style*="background:var(--color-brand-subtle)"][style*="padding:5px"] > span:empty,[style*="background: var(--color-brand-subtle)"][style*="padding: 5px"] > span:empty{display:none !important}
 [style*="background:var(--status-info-bg)"] svg,[style*="background: var(--status-info-bg)"] svg{display:none !important}
+/* ---- dark footer (Physio8 purple) ---- */
+.p8-foot{color:#CBC3E8}
+.p8-foot p,.p8-foot span{color:#CBC3E8 !important}
+.p8-foot a,.p8-foot strong{color:#fff !important}
+.p8-foot a:hover{color:#D8E37A !important}
+.p8-foot [style*="text-transform:uppercase"],.p8-foot [style*="text-transform: uppercase"]{color:#D8E37A !important}
+.p8-foot [style*="border-top:1px solid"],.p8-foot [style*="border-top: 1px solid"]{border-top-color:rgba(255,255,255,.16) !important}
+.p8-foot iframe{filter:none}
+.p8-foot [style*="border:1px solid var(--border-subtle)"]{border-color:rgba(255,255,255,.16) !important}
 /* ---- responsive (inline styles need !important to be overridden) ---- */
 img{max-width:100%}
 @media (max-width: 960px){
@@ -68,7 +77,7 @@ img{max-width:100%}
 @media (max-width: 760px){
   .p8-nav{display:none !important}
   .p8-hdr{height:64px !important;gap:var(--space-3) !important}
-  .p8-hdr img{height:34px !important}
+  .p8-hdr img{height:44px !important}
   .p8-hdr-cta{padding:0 var(--space-4) !important;font-size:var(--text-xs) !important;height:36px !important}
   .p8-h1{font-size:clamp(30px,8.4vw,40px) !important}
   .p8-review{margin:0 !important}
@@ -98,7 +107,7 @@ img{max-width:100%}
 
 <header style="position:sticky;top:0;z-index:40;background:rgba(255,255,255,.86);backdrop-filter:var(--blur-glass);-webkit-backdrop-filter:var(--blur-glass);border-bottom:1px solid var(--border-subtle)">
   <div class="p8-hdr" style="max-width:var(--layout-max);margin:0 auto;padding:0 var(--layout-gutter);height:72px;display:flex;align-items:center;gap:var(--space-6)">
-    <a href="/" style="display:flex;align-items:center;flex:0 0 auto"><img src="../../p8/logo.svg" alt="Physio8" style="height:40px;width:auto;display:block" /></a>
+    <a href="/" style="display:flex;align-items:center;flex:0 0 auto"><img src="../../p8/logo-full.svg" alt="Physio8 — Physiotherapy &amp; Recovery" style="height:54px;width:auto;display:block" /></a>
     <nav class="p8-nav" style="display:flex;align-items:center;gap:var(--space-5);margin-left:var(--space-4);flex-wrap:wrap;font-size:var(--text-sm);font-weight:var(--weight-medium)">
       <a href="/#metode" style="color:var(--text-body)" style-hover="color:var(--color-brand)">Metode</a>
       <a href="/#pilates" style="color:var(--text-body)" style-hover="color:var(--color-brand)">Clinical Pilates</a>
@@ -367,10 +376,10 @@ img{max-width:100%}
   </div>
 </section>
 
-<footer style="background:var(--surface-page);border-top:1px solid var(--border-subtle)">
+<footer class="p8-foot" style="background:#2F1F71;border-top:0">
   <div style="max-width:var(--layout-max);margin:0 auto;padding:var(--space-12) var(--layout-gutter);display:flex;justify-content:space-between;gap:var(--space-8);flex-wrap:wrap;align-items:center">
     <div style="display:flex;align-items:center;gap:var(--space-5)">
-      <img src="../../p8/logo-mark.svg" alt="Physio8" style="height:32px;width:auto;display:block" />
+      <img src="../../p8/logo-full-white.svg" alt="Physio8 — Physiotherapy &amp; Recovery" style="height:64px;width:auto;display:block" />
       <p style="margin:0;font-size:var(--text-sm);color:var(--text-muted)">Ruko Hudson Blok B No. 29 · Paramount Gading Serpong · Tangerang</p>
     </div>
     <p style="margin:0;font-size:var(--text-xs);color:var(--text-muted);letter-spacing:var(--tracking-wide)">Recover. Move. Repeat — for life.</p>

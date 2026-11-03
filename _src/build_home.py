@@ -200,7 +200,7 @@ def header():
 {soft}
 <header class="hdr">
   <div class="wrap">
-    <a class="brand" href="/" aria-label="Physio8"><img src="./p8/logo.svg" alt="Physio8" width="180" height="100"></a>
+    <a class="brand" href="/" aria-label="Physio8"><img src="./p8/logo-full.svg" alt="Physio8 — Physiotherapy &amp; Recovery" width="90" height="60"></a>
     <nav class="nav" aria-label="Utama" data-en-aria-label="Main">{links}</nav>
     <div class="hdr-right">
       <div class="lang" role="group" aria-label="Bahasa / Language">
@@ -235,7 +235,7 @@ def hero():
       <ul class="hero-facts">{fl}</ul>
     </div>
     <div class="hero-media">
-      {photo(IMG_HERO, 960, 1200, eager=True)}
+      <figure class="photo hero-photo"><picture><source type="image/webp" srcset="./p8/hero-klinik-640.webp 640w, ./p8/hero-klinik.webp 968w" sizes="(max-width: 920px) 100vw, 50vw"><img src="./p8/hero-klinik.jpg" width="968" height="1020" alt="Fasad klinik Physio8 di Ruko Hudson, Paramount Gading Serpong" data-en-alt="The Physio8 clinic front at Ruko Hudson, Paramount Gading Serpong" fetchpriority="high" decoding="async"></picture></figure>
       <div class="hero-card">
         <p class="t"{en("First visit")}>Kunjungan pertama</p>
         <p class="n">Movement &amp; Posture Assessment</p>
@@ -532,11 +532,11 @@ def booking():
   <div class="wrap">
     <div class="book rv">
       <div>
-        <p class="eyebrow" style="color:#D8E37A"{en("Book an assessment")}>Buat jadwal asesmen</p>
+        <p class="eyebrow"{en("Book an assessment")}>Buat jadwal asesmen</p>
         <h2 class="h2"{en("Start from your baseline")}>Mulai dari baseline-mu</h2>
         <p class="lede"{en("Book the Movement &amp; Posture Assessment on WhatsApp. You leave with your numbers, a physiotherapy diagnosis and a plan with its total cost.")}>Jadwalkan Movement &amp; Posture Assessment lewat WhatsApp. Kamu pulang dengan angka awal, diagnosis fisioterapi, dan rencana beserta total biayanya.</p>
-        <div class="acts"><a class="btn btn-white" {wa_attrs()}>{WA_GLYPH}<span{en("Book on WhatsApp")}>Jadwalkan via WhatsApp</span></a>
-        <a class="btn btn-outline-white" href="#harga"><span{en("See prices")}>Lihat harga</span></a></div>
+        <div class="acts"><a class="btn btn-primary" {wa_attrs()}>{WA_GLYPH}<span{en("Book on WhatsApp")}>Jadwalkan via WhatsApp</span></a>
+        <a class="btn btn-ghost" href="#harga"><span{en("See prices")}>Lihat harga</span></a></div>
       </div>
       <div class="channels">{cl}</div>
     </div>
@@ -558,7 +558,7 @@ def footer():
     return f"""<footer class="ftr">
   <div class="wrap">
     <div class="top">
-      <div><img class="logo" src="./p8/logo-full.svg" alt="Physio8 — Physiotherapy &amp; Recovery" width="240" height="160">
+      <div><img class="logo" src="./p8/logo-full-white.svg" alt="Physio8 — Physiotherapy &amp; Recovery" width="240" height="160">
         <p class="about"{en("Specialist physiotherapy and clinical Pilates in Gading Serpong. One therapist, one patient, one method.")}>Fisioterapi spesialis dan clinical Pilates di Gading Serpong. Satu terapis, satu pasien, satu metode.</p></div>
       {cc}
       <div><h4{en("Visit")}>Kunjungi</h4><address>Ruko Hudson Blok B No. 29<br>Paramount Gading Serpong<br>Medang, Pagedangan<br><span{en("Tangerang Regency, Banten 15334")}>Kab. Tangerang, Banten 15334</span></address>

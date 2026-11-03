@@ -196,6 +196,15 @@ RESPONSIVE_CSS = """
 [style*="background:var(--status-info-bg)"],[style*="background: var(--status-info-bg)"]{background:transparent !important;padding:0 !important;border-radius:0 !important;font-weight:600 !important}
 [style*="background:var(--color-brand-subtle)"][style*="padding:5px"] > span:empty,[style*="background: var(--color-brand-subtle)"][style*="padding: 5px"] > span:empty{display:none !important}
 [style*="background:var(--status-info-bg)"] svg,[style*="background: var(--status-info-bg)"] svg{display:none !important}
+/* ---- dark footer (Physio8 purple) ---- */
+.p8-foot{color:#CBC3E8}
+.p8-foot p,.p8-foot span{color:#CBC3E8 !important}
+.p8-foot a,.p8-foot strong{color:#fff !important}
+.p8-foot a:hover{color:#D8E37A !important}
+.p8-foot [style*="text-transform:uppercase"],.p8-foot [style*="text-transform: uppercase"]{color:#D8E37A !important}
+.p8-foot [style*="border-top:1px solid"],.p8-foot [style*="border-top: 1px solid"]{border-top-color:rgba(255,255,255,.16) !important}
+.p8-foot iframe{filter:none}
+.p8-foot [style*="border:1px solid var(--border-subtle)"]{border-color:rgba(255,255,255,.16) !important}
 /* ---- responsive (inline styles need !important to be overridden) ---- */
 img{max-width:100%}
 @media (max-width: 960px){
@@ -208,7 +217,7 @@ img{max-width:100%}
 @media (max-width: 760px){
   .p8-nav{display:none !important}
   .p8-hdr{height:64px !important;gap:var(--space-3) !important}
-  .p8-hdr img{height:34px !important}
+  .p8-hdr img{height:44px !important}
   .p8-hdr-cta{padding:0 var(--space-4) !important;font-size:var(--text-xs) !important;height:36px !important}
   .p8-h1{font-size:clamp(30px,8.4vw,40px) !important}
   .p8-review{margin:0 !important}
