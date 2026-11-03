@@ -98,7 +98,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .photo .credit{position:absolute;right:12px;bottom:10px;font-size:11px;color:rgba(255,255,255,.92);text-shadow:0 1px 3px rgba(0,0,0,.45)}
 .photo .credit a{color:inherit;text-decoration:underline;text-underline-offset:2px}
 .hero-media{margin-bottom:40px}
-.hero-media .photo{aspect-ratio:968/1020}
+.hero-media .photo{aspect-ratio:1008/1062}
 .hero-photo picture{display:block;width:100%;height:100%}
 .hero-photo img{object-position:50% 40%}
 .hero-card{position:absolute;left:-32px;bottom:-40px;background:#fff;border-radius:20px;box-shadow:0 20px 50px rgba(26,17,66,.16);padding:20px 22px;width:min(380px,88%)}
@@ -358,7 +358,7 @@ ul,ol{margin:0;padding:0;list-style:none}
   .hero .wrap,.method,.pil,.lead,.loc,.arts,.faq,.book,.sec-head{grid-template-columns:minmax(0,1fr)}
   .sec-head{gap:16px;margin-bottom:40px}
   .hero-media{max-width:560px}
-  .hero-media .photo{aspect-ratio:968/1020}
+  .hero-media .photo{aspect-ratio:1008/1062}
   .hero-media{margin-bottom:0}
   .hero-card{left:16px;bottom:16px}
   .method .photo{position:relative;top:0;aspect-ratio:16/10}

@@ -235,7 +235,7 @@ def hero():
       <ul class="hero-facts">{fl}</ul>
     </div>
     <div class="hero-media">
-      <figure class="photo hero-photo"><picture><source type="image/webp" srcset="./p8/hero-klinik-640.webp 640w, ./p8/hero-klinik.webp 968w" sizes="(max-width: 920px) 100vw, 50vw"><img src="./p8/hero-klinik.jpg" width="968" height="1020" alt="Fasad klinik Physio8 di Ruko Hudson, Paramount Gading Serpong" data-en-alt="The Physio8 clinic front at Ruko Hudson, Paramount Gading Serpong" fetchpriority="high" decoding="async"></picture></figure>
+      <figure class="photo hero-photo"><picture><source type="image/webp" srcset="./p8/hero-fasad-640.webp 640w, ./p8/hero-fasad.webp 1008w" sizes="(max-width: 920px) 100vw, 50vw"><img src="./p8/hero-fasad.jpg" width="1008" height="1062" alt="Fasad klinik Physio8 di Ruko Hudson, Paramount Gading Serpong" data-en-alt="The Physio8 clinic front at Ruko Hudson, Paramount Gading Serpong" fetchpriority="high" decoding="async"></picture></figure>
       <div class="hero-card">
         <p class="t"{en("First visit")}>Kunjungan pertama</p>
         <p class="n">Movement &amp; Posture Assessment</p>
@@ -586,7 +586,7 @@ def jsonld():
     clinic = {
         "@context": "https://schema.org", "@type": ["Physiotherapy", "MedicalClinic"], "@id": SITE + "#clinic",
         "name": "Physio8", "alternateName": "Physio8 Physiotherapy & Recovery",
-        "description": DESC[0], "url": SITE, "logo": SITE + "p8/logo-full.png", "image": SITE + "og-image.jpg",
+        "description": DESC[0], "url": SITE, "logo": SITE + "p8/logo-full.png", "image": SITE + "og-physio8.jpg",
         "telephone": WA_DISPLAY.replace(" ", "").replace("-", ""), "address": addr,
         "geo": {"@type": "GeoCoordinates", "latitude": GEO[0], "longitude": GEO[1]}, "hasMap": MAP_LINK,
         "areaServed": "Gading Serpong, Tangerang", "priceRange": f"{rp(LITE)} – {rp(n)}",
@@ -687,7 +687,7 @@ def build_home(arts, img_fn, date_fn):
 <meta property="og:url" content="{SITE}">
 <meta property="og:title" content="{esc(TITLE[0])}">
 <meta property="og:description" content="{esc(DESC[0])}">
-<meta property="og:image" content="{SITE}og-image.jpg">
+<meta property="og:image" content="{SITE}og-physio8.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -695,7 +695,7 @@ def build_home(arts, img_fn, date_fn):
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(TITLE[0])}">
 <meta name="twitter:description" content="{esc(DESC[0])}">
-<meta name="twitter:image" content="{SITE}og-image.jpg">
+<meta name="twitter:image" content="{SITE}og-physio8.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">

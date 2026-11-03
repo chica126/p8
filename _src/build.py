@@ -22,7 +22,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "_src")
 
 SITE_BASE = "https://physio8.id/"   # absolute base used for canonical / og / schema URLs
-SHARE_IMAGE = SITE_BASE + "og-image.jpg"       # share-preview image for every page (1200x630, clinic front)
+SHARE_IMAGE = SITE_BASE + "og-physio8.jpg"       # share-preview image for every page (1200x630, clinic front)
 HOME_MODIFIED = "2026-11-03"                   # bump when the homepage content changes
 CLINICALLY_REVIEWED = False                    # flip to True only after the clinician has reviewed every article
 WA_NUMBER = "6281511488080"
@@ -39,7 +39,7 @@ AUTHOR = {
 }
 PUBLISHER = {
     "@type": "MedicalBusiness", "name": "Physio8", "url": SITE_BASE,
-    "logo": SITE_BASE + "p8/logo-full.png", "image": SITE_BASE + "og-image.jpg",
+    "logo": SITE_BASE + "p8/logo-full.png", "image": SITE_BASE + "og-physio8.jpg",
     "telephone": "+6281511488080",
     "address": {"@type": "PostalAddress", "streetAddress": "Ruko Hudson Blok B No. 29, Paramount Gading Serpong",
                 "addressLocality": "Medang, Pagedangan", "addressRegion": "Kabupaten Tangerang, Banten",
