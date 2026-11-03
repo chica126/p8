@@ -97,7 +97,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .photo img{width:100%;height:100%;object-fit:cover}
 .photo .credit{position:absolute;right:12px;bottom:10px;font-size:11px;color:rgba(255,255,255,.92);text-shadow:0 1px 3px rgba(0,0,0,.45)}
 .photo .credit a{color:inherit;text-decoration:underline;text-underline-offset:2px}
-.hero-media{margin-bottom:40px}
+.hero-media{margin-bottom:0}
 .hero-media .photo{aspect-ratio:1008/1062}
 .hero-photo picture{display:block;width:100%;height:100%}
 .hero-photo img{object-position:50% 40%}

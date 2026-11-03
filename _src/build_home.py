@@ -236,11 +236,6 @@ def hero():
     </div>
     <div class="hero-media">
       <figure class="photo hero-photo"><picture><source type="image/webp" srcset="./p8/hero-fasad-640.webp 640w, ./p8/hero-fasad.webp 1008w" sizes="(max-width: 920px) 100vw, 50vw"><img src="./p8/hero-fasad.jpg" width="1008" height="1062" alt="Fasad klinik Physio8 di Ruko Hudson, Paramount Gading Serpong" data-en-alt="The Physio8 clinic front at Ruko Hudson, Paramount Gading Serpong" fetchpriority="high" decoding="async"></picture></figure>
-      <div class="hero-card">
-        <p class="t"{en("First visit")}>Kunjungan pertama</p>
-        <p class="n">Movement &amp; Posture Assessment</p>
-        <div class="flow" aria-label="Scan, Check, Plan, Re-scan"><span>Scan</span><i></i><span>Check</span><i></i><span>Plan</span><i></i><span>Re-scan</span></div>
-      </div>
     </div>
   </div>
 </section>"""
