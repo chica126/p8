@@ -254,6 +254,26 @@ ul,ol{margin:0;padding:0;list-style:none}
 .soft .note{margin-top:16px;font-size:14px;color:var(--muted)}
 
 
+
+/* why physio8 */
+.whys{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.why{display:flex;flex-direction:column;gap:12px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px;color:inherit;transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease}
+.why:hover{border-color:var(--purple-200);box-shadow:var(--shadow);transform:translateY(-2px);color:inherit}
+.why-no{font-size:40px;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--purple)}
+.why:nth-child(2) .why-no{color:var(--teal)}
+.why:nth-child(3) .why-no{color:var(--lime-text)}
+.why h3{font-size:22px;margin-top:6px}
+.why p{color:var(--muted);font-size:16px}
+.why .link-arrow{margin-top:auto;padding-top:8px;font-size:15px}
+/* per-section WhatsApp CTA */
+.sec-cta{margin-top:36px;display:flex;align-items:center;justify-content:space-between;gap:16px 24px;flex-wrap:wrap;padding:20px 24px;border-radius:var(--radius);background:var(--purple-50)}
+.sec-cta p{font-size:17px;font-weight:600;color:var(--ink)}
+.sec-cta .btn{height:46px;padding:0 22px;font-size:15px}
+.tint .sec-cta{background:#fff;border:1px solid var(--line)}
+.sec-cta.on-dark{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.sec-cta.on-dark p{color:#fff}
+.faq .sec-cta{margin-top:28px}
+
 /* injuries */
 .injuries{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .inj{display:flex;flex-direction:column;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;color:inherit;transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease}
@@ -376,6 +396,7 @@ ul,ol{margin:0;padding:0;list-style:none}
   .offs{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:920px){
+  .whys{grid-template-columns:minmax(0,1fr)}
   .injuries,.svcs{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
   .inj.big{grid-column:1/-1}
   .nav,.hdr .btn-desk{display:none}
@@ -400,6 +421,7 @@ ul,ol{margin:0;padding:0;list-style:none}
   .map{min-height:340px}
 }
 @media (max-width:640px){
+  .sec-cta .btn{width:100%}
   .injuries,.svcs{grid-template-columns:minmax(0,1fr)}
   .inj.big{grid-column:auto}
   .price-cta .btn{width:100%}
