@@ -212,3 +212,23 @@ Berlaku untuk semua copy website, bukan hanya artikel.
 **Positioning:** copy dibuka dari cedera olahraga (padel dan tenis lebih dulu, lalu lari, bersepeda, dan futsal). Keluhan umum (punggung, leher) tetap disebut sebagai pintu kedua.
 
 **Harga tidak dicantumkan.** Arahkan ke WhatsApp ("Tanyakan harga").
+
+---
+
+## 9. Referensi gaya website: IKEA Indonesia (ikea.co.id/in)
+
+Dipakai untuk copy website (homepage, CTA, judul bagian). Artikel klinis tetap mengikuti gaya Abe.
+
+**Yang diambil dari IKEA:**
+- Judul diawali kata kerja ajakan yang menyebut manfaat: "Temukan solusi untuk cederamu", "Kenali kondisimu sebelum terapi", "Bangun kekuatan dengan clinical Pilates", "Pilih layanan yang tepat untukmu", "Kunjungi klinik kami".
+- Paragraf pembuka berupa pertanyaan yang menyebut masalah pembaca, lalu jawabannya: "Nyeri yang tidak kunjung hilang? Kami membantu…", "Butuh informasi harga? Hubungi kami…".
+- Kalimat pendek, ramah, dan berorientasi manfaat. Akhiran "-mu" untuk sapaan ("cederamu", "untukmu").
+- CTA kata kerja singkat: "Jadwalkan", "Baca selengkapnya", "Pelajari selengkapnya", "Lihat semua artikel", "Hubungi kami".
+- Ajakan penutup berupa pertanyaan: "Siap kembali bergerak?"
+
+**Yang tidak diambil (bertentangan dengan Brand Guidelines dan etika layanan kesehatan):**
+- Tanda seru, huruf kapital penuh ("GRATIS!"), dan emoji.
+- Kata "gratis", "promo", "diskon", "impian", "revolusioner".
+- Campuran "Anda" dan "kamu" dalam satu halaman. Physio8 konsisten memakai "kamu".
+- Janji hasil ("pasti sembuh", "bebas nyeri"). Ajakan boleh hangat, klaim tetap terukur.
+
