@@ -108,18 +108,18 @@ NAV = [("cedera", "Cedera olahraga", "Sports injuries"), ("metode", "Metode", "M
 
 STEPS = [
     ("Assess", "Pemeriksaan klinis dan pengukuran gerak dengan kamera.", "A clinical exam and movement measured on camera."),
-    ("Diagnose", "Penjelasan masalahnya, rencana terapi, dan perkiraan biayanya.", "What the problem is, the treatment plan and what it will cost."),
-    ("Relieve", "Nyeri diturunkan dulu sampai target yang disepakati.", "Pain brought down first, to the level we agreed."),
-    ("Rebuild", "Rentang gerak dan kekuatan dasar dibangun lagi.", "Range of motion and basic strength built back."),
+    ("Diagnose", "Penjelasan masalah, rencana terapi, dan perkiraan biaya.", "What the problem is, the treatment plan and what it will cost."),
+    ("Relieve", "Nyeri diturunkan terlebih dahulu hingga mencapai target yang disepakati.", "Pain brought down first, to the level we agreed."),
+    ("Rebuild", "Rentang gerak dan kekuatan dasar dibangun kembali.", "Range of motion and basic strength built back."),
     ("Strengthen", "Latihan beban dan clinical Pilates.", "Strength training and clinical Pilates."),
     ("Retrain", "Latihan gerakan khas olahragamu, lalu tes ulang.", "Drills for the movements your sport needs, then a re-test."),
-    ("Return", "Tes kesiapan sebelum kamu kembali main.", "A readiness test before you go back to playing."),
-    ("Maintain", "Latihan rutin dan cek berkala supaya kondisimu terjaga.", "Regular training and check-ins to keep you in shape."),
+    ("Return", "Tes kesiapan sebelum kamu kembali bermain.", "A readiness test before you go back to playing."),
+    ("Maintain", "Latihan rutin dan pemeriksaan berkala agar kondisimu tetap terjaga.", "Regular training and check-ins to keep you in shape."),
 ]
 
 METHOD = [
     ("01–02", "Pemeriksaan dan pengukuran", "Assessment and measurement",
-     "Selain pemeriksaan klinis, postur dan gerakmu direkam dengan kamera berbasis AR. Hasil hari pertama ini jadi patokan untuk sesi-sesi berikutnya.",
+     "Selain pemeriksaan klinis, postur dan gerakmu direkam dengan kamera berbasis AR. Hasil hari pertama ini menjadi acuan untuk sesi-sesi berikutnya.",
      "Alongside a clinical exam, your posture and movement are recorded with an AR camera. Day one becomes the reference point for every session after.",
      [("Postur 4 sisi", "Posture from 4 sides"), ("Rentang gerak", "Range of motion"), ("Squat screen", "Squat screen")]),
     ("03–04", "Terapi", "Treatment",
@@ -133,28 +133,28 @@ METHOD = [
      "Sebelum terapi dimulai, kamu sudah tahu diagnosisnya, perkiraan jumlah sesi, dan total biayanya.",
      "Before treatment starts you know the diagnosis, roughly how many sessions it takes and the total cost.", []),
     ("06 & 08", "Tes ulang", "Re-tests",
-     "Pengukuran hari pertama diulang, jadi perubahannya kelihatan dalam angka.",
+     "Pengukuran hari pertama diulang, sehingga perubahannya terlihat dalam angka.",
      "The day-one measurements are repeated, so you can see the change in numbers.", []),
 ]
 
 INJURIES = [
     ("Padel &amp; tenis", "Padel &amp; tennis", "nyeri-bahu-padel",
-     "Bahu nyeri saat smash atau servis, tennis elbow, pergelangan tangan, dan betis yang tertarik saat lari pendek di lapangan.",
+     "Bahu nyeri saat smash atau servis, tennis elbow, pergelangan tangan, dan betis yang tertarik saat berlari jarak pendek di lapangan.",
      "Shoulder pain on smashes and serves, tennis elbow, sore wrists, and calves that pull on short sprints across the court."),
     ("Lari", "Running", "runners-knee-shin-splints-achilles",
-     "Runner's knee, shin splints, dan tendon Achilles yang kaku tiap pagi.",
+     "Runner's knee, shin splints, dan tendon Achilles yang kaku setiap pagi.",
      "Runner's knee, shin splints and an Achilles that is stiff every morning."),
     ("Bersepeda", "Cycling", None,
-     "Nyeri lutut bagian depan atau samping, pinggang dan leher pegal karena posisi di atas sepeda, dan tangan yang kebas setelah gowes jauh.",
+     "Nyeri lutut bagian depan atau samping, pinggang dan leher pegal karena posisi di atas sepeda, dan tangan yang kebas setelah bersepeda jarak jauh.",
      "Pain at the front or side of the knee, a sore lower back and neck from your riding position, and hands that go numb on long rides."),
     ("Futsal &amp; sepak bola", "Futsal &amp; football", "nyeri-setelah-olahraga-weekend",
-     "Hamstring tertarik, keseleo pergelangan kaki, dan nyeri yang muncul dua hari setelah main.",
+     "Hamstring tertarik, keseleo pergelangan kaki, dan nyeri yang muncul dua hari setelah bertanding.",
      "Pulled hamstrings, sprained ankles and the soreness that shows up two days after a game."),
     ("Setelah operasi", "After surgery", "rehabilitasi-pasca-operasi-acl",
      "Program setelah rekonstruksi ACL atau operasi bahu, sampai lolos tes untuk kembali bermain.",
      "Rehab after ACL reconstruction or shoulder surgery, through to the return-to-sport tests."),
     ("Punggung &amp; leher", "Back &amp; neck", "nyeri-pinggang-duduk-lama",
-     "Pinggang dan leher pegal karena duduk lama atau kerja di depan layar. Tidak harus atlet untuk datang.",
+     "Pinggang dan leher pegal karena duduk lama atau bekerja di depan layar. Kamu tidak harus menjadi atlet untuk datang.",
      "A sore lower back or stiff neck from long hours at a desk. You do not have to be an athlete to come in."),
 ]
 
@@ -169,22 +169,22 @@ CREDS = [
 
 FAQ = [
     ("Apakah saya perlu surat rujukan dokter?", "Do I need a doctor's referral?",
-     "Tidak. Kamu bisa langsung datang ke fisioterapis (Permenkes No. 65 Tahun 2015 tentang Standar Pelayanan Fisioterapi). Kalau dari pemeriksaan kami ada yang perlu dicek dokter, misalnya butuh rontgen atau MRI, kami rujuk ke dokter spesialis dan jelaskan alasannya.",
+     "Tidak. Kamu dapat langsung datang ke fisioterapis (Permenkes No. 65 Tahun 2015 tentang Standar Pelayanan Fisioterapi). Jika hasil pemeriksaan kami menunjukkan kondisi yang perlu diperiksa dokter, misalnya memerlukan rontgen atau MRI, kami akan merujukmu ke dokter spesialis dan menjelaskan alasannya.",
      "No. You can see a physiotherapist directly (Ministry of Health Regulation No. 65/2015). If our exam shows something a doctor should look at, such as a need for an X-ray or MRI, we refer you to a specialist and explain why."),
     ("Saya bukan atlet. Boleh datang?", "I'm not an athlete. Can I still come?",
-     "Boleh. Fokus kami memang cedera olahraga, tapi kami juga menangani nyeri punggung, leher kaku karena kerja, dan pemulihan setelah operasi.",
+     "Tentu. Fokus kami memang cedera olahraga, namun kami juga menangani nyeri punggung, leher kaku akibat bekerja, dan pemulihan setelah operasi.",
      "Yes. Sports injuries are our focus, but we also treat back pain, a stiff neck from desk work and recovery after surgery."),
     ("Apa yang terjadi di kunjungan pertama?", "What happens at the first visit?",
-     "Kami tanya soal keluhan dan olahragamu, cek tanda bahaya, lalu rekam postur dan gerakmu dengan kamera dan lakukan pemeriksaan klinis. Di akhir kunjungan kamu tahu apa masalahnya, rencana terapinya, dan perkiraan biayanya.",
+     "Kami menanyakan keluhan dan olahragamu, memeriksa tanda bahaya, merekam postur dan gerakmu dengan kamera, lalu melakukan pemeriksaan klinis. Di akhir kunjungan, kamu akan mengetahui masalahnya, rencana terapi, dan perkiraan biayanya.",
      "We ask about your injury and your sport, screen for red flags, record your posture and movement on camera and do a clinical exam. By the end you know what the problem is, the plan and roughly what it will cost."),
     ("Berapa biayanya?", "How much does it cost?",
-     "Info harga terbaru bisa ditanyakan langsung lewat WhatsApp. Kamu bisa bayar per sesi atau ambil paket 4 atau 8 sesi.",
+     "Informasi harga terbaru dapat ditanyakan langsung melalui WhatsApp. Pembayaran dapat dilakukan per sesi atau dengan paket 4 atau 8 sesi.",
      "Ask us on WhatsApp for current prices. You can pay per session or take a package of 4 or 8 sessions."),
     ("Apa bedanya clinical Pilates dengan kelas Pilates biasa?", "How is clinical Pilates different from a regular Pilates class?",
-     "Clinical Pilates dipandu fisioterapis yang tahu kondisi dan hasil pengukuranmu. Latihannya dipilih sesuai tahap pemulihan dan bebannya dinaikkan pelan-pelan. Ini bagian dari terapi, bukan kelas umum.",
+     "Clinical Pilates dipandu fisioterapis yang memahami kondisi dan hasil pengukuranmu. Latihannya dipilih sesuai tahap pemulihan dan bebannya dinaikkan secara bertahap. Clinical Pilates merupakan bagian dari terapi, bukan kelas umum.",
      "Clinical Pilates is run by a physiotherapist who knows your condition and your measurements. Exercises match your stage of recovery and load goes up gradually. It is part of your treatment rather than a group class."),
     ("Bagaimana cara membuat jadwal?", "How do I book?",
-     f"Chat kami di WhatsApp {WA_DISPLAY}. Pengingat jadwal dan latihan rumahmu juga kami kirim lewat WhatsApp.",
+     f"Hubungi kami melalui WhatsApp di {WA_DISPLAY}. Pengingat jadwal dan latihan rumahmu juga kami kirim melalui WhatsApp.",
      f"Message us on WhatsApp at {WA_DISPLAY}. Reminders and your home exercises come through WhatsApp too."),
     ("Di mana lokasi Physio8?", "Where is Physio8?",
      "Ruko Hudson Blok B No. 29, Paramount Gading Serpong, Medang, Pagedangan, Kabupaten Tangerang, Banten 15334. Sekitar 4,8 km dari gerbang tol West BSD 1.",
@@ -232,12 +232,12 @@ def hero():
       <p class="hero-k"><span{en("Sports physiotherapy")}>Fisioterapi olahraga</span><span class="sep" aria-hidden="true"></span><span>Paramount Gading Serpong</span></p>
       <h1>
         <span class="display"><span>Recover.</span><span class="c2">Move.</span><span class="c3">Repeat.</span></span>
-        <span class="h1-sub"{en("Physiotherapy for sports injuries in Gading Serpong, from the padel and tennis court to your running and cycling routes.")}>Fisioterapi untuk cedera olahraga di Gading Serpong, dari lapangan padel dan tenis sampai rute lari dan gowesmu.</span>
+        <span class="h1-sub"{en("Physiotherapy for sports injuries in Gading Serpong, from the padel and tennis court to your running and cycling routes.")}>Fisioterapi untuk cedera olahraga di Gading Serpong, dari lapangan padel dan tenis hingga lintasan lari dan jalur bersepeda.</span>
       </h1>
-      <p class="lede"{en("Shoulder hurts on every smash? Elbow sore after a match, or a knee that complains on your runs? We find the cause, measure how you move, then build a programme to get you back to playing.")}>Bahu sakit setiap smash? Siku nyeri setelah main, atau lutut yang protes waktu lari? Kami cari penyebabnya, ukur gerakmu, lalu susun programnya sampai kamu bisa main lagi.</p>
+      <p class="lede"{en("Shoulder hurts on every smash? Elbow sore after a match, or a knee that complains on your runs? We find the cause, measure how you move, then build a programme to get you back to playing.")}>Bahu terasa nyeri setiap melakukan smash? Siku sakit setelah bermain, atau lutut nyeri saat berlari? Kami mencari penyebabnya, mengukur gerakmu, lalu menyusun program terapi hingga kamu dapat kembali bermain.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" {wa_attrs()}>{WA_GLYPH}<span{en("Book a session")}>Buat jadwal</span></a>
-        <a class="btn btn-ghost" {wa_attrs(WA_PRICE)}><span{en("Ask about prices")}>Tanya harga</span>{icon("arrow")}</a>
+        <a class="btn btn-ghost" {wa_attrs(WA_PRICE)}><span{en("Ask about prices")}>Tanyakan harga</span>{icon("arrow")}</a>
       </div>
       <ul class="hero-facts">{fl}</ul>
     </div>
@@ -262,7 +262,7 @@ def injuries():
   <div class="wrap">
     <div class="sec-head">
       <div><p class="eyebrow"{en("Sports injuries")}>Cedera olahraga</p><h2 class="h2"{en("Injuries we treat")}>Cedera yang kami tangani</h2></div>
-      <p class="lede"{en("We focus on padel and tennis players, runners, cyclists and futsal players. Injuries like these often start small, get ignored because you can still play, and end up keeping you off the court.")}>Fokus kami pemain padel dan tenis, pelari, pesepeda, dan pemain futsal. Cedera seperti ini biasanya mulai dari nyeri kecil, dibiarkan karena masih bisa main, lalu lama-lama bikin kamu berhenti.</p>
+      <p class="lede"{en("We focus on padel and tennis players, runners, cyclists and futsal players. Injuries like these often start small, get ignored because you can still play, and end up keeping you off the court.")}>Fokus kami adalah pemain padel dan tenis, pelari, pesepeda, serta pemain futsal. Cedera seperti ini biasanya berawal dari nyeri ringan yang dibiarkan karena masih bisa bermain, lalu lambat laun membuat kamu harus berhenti berolahraga.</p>
     </div>
     <div class="injuries">{cards}</div>
   </div>
@@ -280,13 +280,13 @@ def pathway():
   <div class="wrap">
     <div class="sec-head">
       <div><p class="eyebrow">Physio8 Pathway</p><h2 class="h2"{en("From injury back to the court")}>Dari cedera sampai kembali ke lapangan</h2></div>
-      <p class="lede"{en("The programme has eight steps. The first two happen in the clinic: we examine you and explain what is going on. After that you come in for treatment sessions and do home exercises in between, which we keep track of.")}>Programnya ada delapan tahap. Dua tahap pertama di klinik: kami periksa dan jelaskan masalahnya. Setelah itu kamu datang untuk sesi terapi, dan di sela-selanya mengerjakan latihan di rumah yang kami pantau.</p>
+      <p class="lede"{en("The programme has eight steps. The first two happen in the clinic: we examine you and explain what is going on. After that you come in for treatment sessions and do home exercises in between, which we keep track of.")}>Program kami terdiri dari delapan tahap. Dua tahap pertama dilakukan di klinik, yaitu pemeriksaan dan penjelasan masalah. Setelah itu, kamu menjalani sesi terapi di klinik dan mengerjakan latihan di rumah yang kami pantau.</p>
     </div>
     <ol class="steps">{steps}</ol>
     <div class="phase" aria-hidden="true"><div{en("In the clinic")}>Di klinik</div><div{en("Clinic sessions + home exercises")}>Sesi di klinik + latihan di rumah</div></div>
     <div class="pathway-foot">
-      <p{en("You move to the next step once the target for the current one is reached. At steps 6 and 8 we measure again and compare it with your first day.")}>Kamu pindah ke tahap berikutnya kalau target tahap sebelumnya sudah tercapai. Di tahap 6 dan 8 kami ukur ulang, lalu bandingkan dengan hasil hari pertama.</p>
-      <a class="link-arrow" href="/artikel/physio8-pathway-delapan-tahap/"><span{en("Read more")}>Baca penjelasan lengkapnya</span>{icon("arrow")}</a>
+      <p{en("You move to the next step once the target for the current one is reached. At steps 6 and 8 we measure again and compare it with your first day.")}>Kamu melanjutkan ke tahap berikutnya setelah target tahap sebelumnya tercapai. Pada tahap 6 dan 8, kami melakukan pengukuran ulang dan membandingkannya dengan hasil hari pertama.</p>
+      <a class="link-arrow" href="/artikel/physio8-pathway-delapan-tahap/"><span{en("Read more")}>Baca penjelasan lengkap</span>{icon("arrow")}</a>
     </div>
   </div>
 </section>"""
@@ -307,7 +307,7 @@ def method():
     <div>
       <p class="eyebrow"{en("What we do")}>Apa yang kami kerjakan</p>
       <h2 class="h2"{en("Our treatment programme")}>Rangkaian program terapi kami</h2>
-      <p class="lede" style="margin-bottom:36px"{en("Every patient goes through the same process, so the quality of your care does not depend on which therapist is on duty.")}>Setiap pasien melewati alur yang sama, jadi kualitasnya tidak bergantung pada terapis yang sedang bertugas.</p>
+      <p class="lede" style="margin-bottom:36px"{en("Every patient goes through the same process, so the quality of your care does not depend on which therapist is on duty.")}>Setiap pasien menjalani alur yang sama, sehingga kualitas perawatan tidak bergantung pada terapis yang sedang bertugas.</p>
       <ul class="mlist">{rows}</ul>
     </div>
   </div>
@@ -322,7 +322,7 @@ def assessment():
         (rom_svg(), "Rentang gerak", "Range of motion",
          "Seberapa jauh leher, punggung, dan bahumu bisa bergerak, diukur dengan kamera dan giroskop.", "How far your neck, back and shoulders move, measured by camera and gyroscope."),
         (squat_svg(), "Squat screen", "Squat screen",
-         "Cara kamu jongkok memperlihatkan banyak hal soal pinggul, lutut, dan pergelangan kaki.", "The way you squat says a lot about your hips, knees and ankles."),
+         "Gerakan jongkok memperlihatkan kondisi pinggul, lutut, dan pergelangan kakimu.", "The way you squat says a lot about your hips, knees and ankles."),
     ]
     cards = "".join(f'<div class="tool rv"><div class="viz">{svg}</div><h3{en(te)}>{ti}</h3><p{en(de)}>{di}</p></div>'
                     for svg, ti, te, di, de in tools)
@@ -330,8 +330,8 @@ def assessment():
     return f"""<section class="sec dark" id="asesmen">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="eyebrow"{en("Your first visit")}>Kunjungan pertama</p><h2 class="h2"{en("We measure before we treat")}>Kami ukur dulu sebelum terapi</h2></div>
-      <div><p class="lede"{en("On your first visit we record your posture and movement with an AR camera and measure your range of motion. We repeat it in the middle and at the end of the programme, so you can see the progress yourself.")}>Di kunjungan pertama, postur dan gerakmu kami rekam dengan kamera AR, dan rentang gerakmu diukur. Pengukuran ini kami ulang di tengah dan akhir program, jadi kamu bisa lihat sendiri perkembangannya.</p>
+      <div><p class="eyebrow"{en("Your first visit")}>Kunjungan pertama</p><h2 class="h2"{en("We measure before we treat")}>Kami mengukur terlebih dahulu sebelum terapi</h2></div>
+      <div><p class="lede"{en("On your first visit we record your posture and movement with an AR camera and measure your range of motion. We repeat it in the middle and at the end of the programme, so you can see the progress yourself.")}>Pada kunjungan pertama, postur dan gerakmu kami rekam dengan kamera AR, dan rentang gerakmu kami ukur. Pengukuran ini kami ulangi di tengah dan akhir program, sehingga kamu dapat melihat sendiri perkembangannya.</p>
       <ol class="scan-flow" aria-label="Scan, Check, Plan, Re-scan">{flow}</ol></div>
     </div>
     <div class="tools">{cards}</div>
@@ -349,7 +349,7 @@ def pilates():
     yam = "https://doi.org/10.1002/14651858.CD010265.pub2"
     ste = "https://doi.org/10.1001/jamainternmed.2015.7431"
     r2_id = (f'Tinjauan Cochrane menemukan Pilates membantu mengurangi nyeri punggung bawah kronis dibanding intervensi minimal '
-             f'(<a href="{yam}" target="_blank" rel="noopener">Yamato, 2015</a>). Latihan yang disertai edukasi juga menurunkan risiko nyeri punggung bawah datang lagi '
+             f'(<a href="{yam}" target="_blank" rel="noopener">Yamato, 2015</a>). Latihan yang disertai edukasi juga menurunkan risiko nyeri punggung bawah kambuh '
              f'(<a href="{ste}" target="_blank" rel="noopener">Steffens, 2016</a>).')
     r2_en = (f'A Cochrane review found Pilates helped chronic low back pain more than minimal intervention '
              f'(<a href="{yam}" target="_blank" rel="noopener">Yamato, 2015</a>). Exercise with education also lowered the chance of low back pain coming back '
@@ -359,16 +359,16 @@ def pilates():
     {photo(IMG_PILATES, 960, 1152)}
     <div>
       <p class="eyebrow">Clinical Pilates</p>
-      <h2 class="h2"{en("Why Pilates is part of the programme")}>Kenapa ada Pilates di program kami</h2>
+      <h2 class="h2"{en("Why Pilates is part of the programme")}>Mengapa Pilates menjadi bagian dari program kami</h2>
       <div class="tracks">
         {track("p1", "Fisioterapi", "Physiotherapy", "nyeri · rentang gerak · jaringan cedera", "pain · range of motion · injured tissue", {1, 2, 3, 4}, {5, 6, 7})}
         {track("p2", "Clinical Pilates", "Clinical Pilates", "kekuatan inti · kontrol · postur", "core strength · control · posture", {5, 6, 7, 8}, {4})}
         <div class="track-nums" aria-hidden="true">{nums}</div>
       </div>
       <ul class="reasons">
-        <li><span class="ix">01</span><div><h3{en("Pain gone does not mean recovered")}>Nyeri hilang belum berarti pulih</h3><p{en("Once the pain settles, the muscles around the injury are usually still weak. Go straight back to playing and the same injury often returns.")}>Setelah nyeri turun, otot di sekitar area cedera biasanya masih lemah. Kalau langsung kembali main, cedera yang sama sering datang lagi.</p></div></li>
-        <li><span class="ix">02</span><div><h3{en("There is research behind it")}>Ada dasar risetnya</h3><p{en(r2_en)}>{r2_id}</p></div></li>
-        <li><span class="ix">03</span><div><h3{en("Adjusted to you")}>Disesuaikan dengan kondisimu</h3><p{en("Run by the physiotherapist who has your measurements, with load increased gradually and checked again at steps 6 and 8.")}>Dipandu fisioterapis yang memegang hasil pengukuranmu, bebannya dinaikkan pelan-pelan, lalu dicek ulang di tahap 6 dan 8.</p></div></li>
+        <li><span class="ix">01</span><div><h3{en("Pain gone does not mean recovered")}>Nyeri hilang belum berarti pulih</h3><p{en("Once the pain settles, the muscles around the injury are usually still weak. Go straight back to playing and the same injury often returns.")}>Setelah nyeri turun, otot di sekitar area cedera biasanya masih lemah. Jika langsung kembali bermain, cedera yang sama sering kambuh.</p></div></li>
+        <li><span class="ix">02</span><div><h3{en("There is research behind it")}>Didukung riset</h3><p{en(r2_en)}>{r2_id}</p></div></li>
+        <li><span class="ix">03</span><div><h3{en("Adjusted to you")}>Disesuaikan dengan kondisimu</h3><p{en("Run by the physiotherapist who has your measurements, with load increased gradually and checked again at steps 6 and 8.")}>Dipandu fisioterapis yang memegang hasil pengukuranmu, bebannya dinaikkan secara bertahap, lalu dievaluasi ulang pada tahap 6 dan 8.</p></div></li>
       </ul>
     </div>
   </div>
@@ -380,7 +380,7 @@ def team():
     return f"""<section class="sec" id="tim">
   <div class="wrap">
     <p class="eyebrow"{en("Our team")}>Tim kami</p>
-    <h2 class="h2" style="margin-bottom:40px"{en("Meet our physiotherapist")}>Kenalan dengan fisioterapis kami</h2>
+    <h2 class="h2" style="margin-bottom:40px"{en("Meet our physiotherapist")}>Mengenal fisioterapis kami</h2>
     <div class="lead rv">
       <div class="lead-id">
         <figure class="lead-photo"><picture><source type="image/webp" srcset="./p8/ika-setia-ningsih.webp"><img src="./p8/ika-setia-ningsih.jpg" width="525" height="552" alt="Ika Setia Ningsih, S.Ft, Lead Physiotherapist Physio8" data-en-alt="Ika Setia Ningsih, S.Ft, Lead Physiotherapist at Physio8" loading="lazy" decoding="async"></picture></figure>
@@ -413,16 +413,16 @@ def pricing():
            ("Targeted lite treatment", "Targeted lite treatment",
             "Sesi singkat 15 menit untuk satu area keluhan.", "A short 15-minute session for one problem area."),
            ("Kinesio taping", "Kinesio taping",
-            "Taping untuk menopang otot atau sendi supaya kamu tetap bisa aktif.", "Taping to support a muscle or joint so you can stay active.")]
+            "Taping untuk menopang otot atau sendi agar kamu tetap dapat beraktivitas.", "Taping to support a muscle or joint so you can stay active.")]
     cards = "".join(f'<div class="svc rv"><h3{en(te)}>{ti}</h3><p{en(de)}>{di}</p></div>' for ti, te, di, de in svc)
     return f"""<section class="sec" id="harga">
   <div class="wrap">
     <div class="sec-head">
       <div><p class="eyebrow"{en("Services")}>Layanan</p><h2 class="h2"{en("Services and prices")}>Layanan dan harga</h2></div>
-      <p class="lede"{en("For current prices, just ask us on WhatsApp. After your first visit, the estimated number of sessions and the total cost go into your written plan.")}>Untuk info harga terbaru, langsung tanya kami lewat WhatsApp. Setelah pemeriksaan pertama, perkiraan jumlah sesi dan total biayanya kami tuliskan di rencana terapimu.</p>
+      <p class="lede"{en("For current prices, just ask us on WhatsApp. After your first visit, the estimated number of sessions and the total cost go into your written plan.")}>Untuk informasi harga terbaru, silakan hubungi kami melalui WhatsApp. Setelah pemeriksaan pertama, perkiraan jumlah sesi dan total biayanya kami tuliskan di rencana terapimu.</p>
     </div>
-    <div class="svcs">{cards}<div class="price-cta rv"><p{en("Prices, packages and available times: ask us directly.")}>Harga, paket, dan jadwal kosong bisa ditanyakan langsung.</p>
-      <a class="btn btn-primary" {wa_attrs(WA_PRICE)}>{WA_GLYPH}<span{en("Ask on WhatsApp")}>Tanya via WhatsApp</span></a></div></div>
+    <div class="svcs">{cards}<div class="price-cta rv"><p{en("Prices, packages and available times: ask us directly.")}>Informasi harga, paket, dan ketersediaan jadwal dapat ditanyakan langsung.</p>
+      <a class="btn btn-primary" {wa_attrs(WA_PRICE)}>{WA_GLYPH}<span{en("Ask on WhatsApp")}>Tanyakan via WhatsApp</span></a></div></div>
   </div>
 </section>"""
 
@@ -436,7 +436,7 @@ def location():
   <div class="wrap">
     <div class="sec-head">
       <div><p class="eyebrow"{en("Location")}>Lokasi</p><h2 class="h2">Paramount Gading Serpong</h2></div>
-      <p class="lede"{en("You will find us in the Ruko Hudson row at Paramount Gading Serpong.")}>Klinik kami ada di deretan Ruko Hudson, Paramount Gading Serpong.</p>
+      <p class="lede"{en("You will find us in the Ruko Hudson row at Paramount Gading Serpong.")}>Klinik kami berlokasi di deretan Ruko Hudson, Paramount Gading Serpong.</p>
     </div>
     <div class="loc">
       <div class="map"><iframe src="{esc(MAP_EMBED)}" title="Peta lokasi Physio8" data-en-title="Map of Physio8's location" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
@@ -471,8 +471,8 @@ def articles(arts, img_fn, date_fn):
     return f"""<section class="sec" id="artikel">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="eyebrow"{en("Articles")}>Artikel</p><h2 class="h2"{en("Reading on injuries and recovery")}>Bacaan seputar cedera dan pemulihan</h2></div>
-      <div><p class="lede"{en("Written by our physiotherapists, with journal references. From padel shoulder injuries to when pain is worth getting checked.")}>Ditulis fisioterapis kami, lengkap dengan rujukan jurnal. Mulai dari cedera bahu pemain padel sampai kapan nyeri perlu diperiksa.</p>
+      <div><p class="eyebrow"{en("Articles")}>Artikel</p><h2 class="h2"{en("Reading on injuries and recovery")}>Artikel seputar cedera dan pemulihan</h2></div>
+      <div><p class="lede"{en("Written by our physiotherapists, with journal references. From padel shoulder injuries to when pain is worth getting checked.")}>Ditulis oleh fisioterapis kami, lengkap dengan rujukan jurnal. Mulai dari cedera bahu pemain padel hingga kapan nyeri perlu diperiksa.</p>
       <p style="margin-top:18px"><a class="link-arrow" href="/artikel/"><span{en("All articles")}>Semua artikel</span>{icon("arrow")}</a></p></div>
     </div>
     <div class="arts">{card(feat, "feat", 1000, 625)}<div class="alist">{lst}</div></div>
@@ -486,7 +486,7 @@ def faq():
     return f"""<section class="sec" id="faq">
   <div class="wrap faq">
     <div><p class="eyebrow">FAQ</p><h2 class="h2"{en("Frequently asked questions")}>Pertanyaan yang sering muncul</h2>
-      <p class="lede"{en("Have another question? Ask us on WhatsApp and a physiotherapist will answer.")}>Ada pertanyaan lain? Tanya lewat WhatsApp, fisioterapis kami yang jawab.</p></div>
+      <p class="lede"{en("Have another question? Ask us on WhatsApp and a physiotherapist will answer.")}>Ada pertanyaan lain? Silakan hubungi kami melalui WhatsApp; fisioterapis kami akan menjawabnya.</p></div>
     <div>{items}</div>
   </div>
 </section>"""
@@ -494,7 +494,7 @@ def faq():
 
 def booking():
     ch = [(f'href="{esc(WA_BOOK[0])}" data-en-href="{esc(WA_BOOK[1])}" target="_blank" rel="noopener noreferrer"', WA_GLYPH, f"WhatsApp · {WA_DISPLAY}",
-           "Buat jadwal, pengingat, dan latihan rumahmu.", "Bookings, reminders and your home exercises."),
+           "Pemesanan jadwal, pengingat, dan latihan rumahmu.", "Bookings, reminders and your home exercises."),
           (f'href="{IG}" target="_blank" rel="noopener noreferrer"', icon("insta"), "Instagram · @physio8.id",
            "Cerita pasien, hasil tes ulang, dan kabar klinik.", "Patient stories, re-test results and clinic news."),
           (f'href="{CAREERS}" target="_blank" rel="noopener noreferrer"', icon("brief"), "Karier · Glints",
@@ -509,9 +509,9 @@ def booking():
       <div>
         <p class="eyebrow"{en("Book a session")}>Buat jadwal</p>
         <h2 class="h2"{en("Tell us what is bothering you")}>Ceritakan keluhanmu ke kami</h2>
-        <p class="lede"{en("Message us on WhatsApp: what the injury is, how long you have had it and which sport you play. We will help you set up your first visit.")}>Chat kami di WhatsApp: cedera apa, sudah berapa lama, dan olahraga apa yang kamu mainkan. Nanti kami bantu atur jadwal kunjungan pertamamu.</p>
-        <div class="acts"><a class="btn btn-primary" {wa_attrs()}>{WA_GLYPH}<span{en("Chat on WhatsApp")}>Chat via WhatsApp</span></a>
-        <a class="btn btn-ghost" {wa_attrs(WA_PRICE)}><span{en("Ask about prices")}>Tanya harga</span></a></div>
+        <p class="lede"{en("Message us on WhatsApp: what the injury is, how long you have had it and which sport you play. We will help you set up your first visit.")}>Hubungi kami melalui WhatsApp dan ceritakan cedera yang kamu alami, sudah berapa lama, serta olahraga yang kamu tekuni. Kami akan membantu mengatur jadwal kunjungan pertamamu.</p>
+        <div class="acts"><a class="btn btn-primary" {wa_attrs()}>{WA_GLYPH}<span{en("Chat on WhatsApp")}>Hubungi via WhatsApp</span></a>
+        <a class="btn btn-ghost" {wa_attrs(WA_PRICE)}><span{en("Ask about prices")}>Tanyakan harga</span></a></div>
       </div>
       <div class="channels">{cl}</div>
     </div>

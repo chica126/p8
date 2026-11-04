@@ -176,3 +176,39 @@ Draf Abe masih berisi salah ketik. Gaya boleh ditiru, salah ketiknya tidak.
 - [ ] Mekanik bersih (lihat bagian 4).
 - [ ] Guardrail bagian 5 lolos semua.
 - [ ] Versi EN diselaraskan dengan maknanya, bukan diterjemahkan kata per kata.
+
+---
+
+## 8. Aturan bahasa tambahan dari Norman dan Bobby (November 2026)
+
+Berlaku untuk semua copy website, bukan hanya artikel.
+
+**Bahasa Indonesia baku, tetap hangat.** Tetap menyapa dengan "kamu", tetapi tanpa kata slang atau percakapan santai.
+
+| Hindari | Gunakan |
+|---|---|
+| balik ke lapangan | kembali ke lapangan |
+| main lagi, setelah main | kembali bermain, setelah bermain / bertanding |
+| bikin | membuat |
+| gowes | bersepeda |
+| kalau | jika |
+| jadi (sebagai kata sambung) | sehingga |
+| tapi | namun |
+| dulu | terlebih dahulu |
+| cek, dicek | memeriksa, dievaluasi |
+| pelan-pelan | secara bertahap |
+| lewat WhatsApp | melalui WhatsApp |
+| chat kami, tanya kami | hubungi kami, tanyakan |
+| kenapa | mengapa |
+| info harga | informasi harga |
+
+**Judul berupa frasa lengkap yang menyebut "kami".** Contoh dari Norman: "Isi program terapinya" → "Rangkaian program terapi kami". Hindari judul yang menggantung dengan akhiran "-nya".
+
+**Jangan terdengar seperti AI (masukan Bobby).**
+- Tidak memakai judul bergaya slogan dua bagian, seperti "Delapan tahap, satu metode" atau "Diukur, bukan ditebak".
+- Tidak memakai terjemahan kaku seperti "hibrida". Jelaskan isinya: "sesi di klinik + latihan di rumah".
+- Batasi tanda pisah (—) dan pola "X, bukan Y".
+
+**Positioning:** copy dibuka dari cedera olahraga (padel dan tenis lebih dulu, lalu lari, bersepeda, dan futsal). Keluhan umum (punggung, leher) tetap disebut sebagai pintu kedua.
+
+**Harga tidak dicantumkan.** Arahkan ke WhatsApp ("Tanyakan harga").
