@@ -8,8 +8,8 @@ AI engines read the full page; English is swapped in client-side from the
 data-en / data-en-<attr> attributes on each element (ID | EN toggle).
 
 Run via build.py (it calls build_home), or on its own:  python3 _src/build_home.py
-Prices and clinic details live in the CONFIG block below. The soft-opening offer is
-switched off (SHOW_SOFT = False); set it to True to show the banner and offer block again.
+Clinic details live in the CONFIG block below. Prices are not shown on the site (per client,
+Nov 2026): visitors are sent to WhatsApp. PRICES is kept for reference only.
 """
 import html, json, os, sys
 from urllib.parse import quote
@@ -31,14 +31,11 @@ MAP_EMBED = ("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.9576324
              "!5e0!3m2!1sid!2sid!4v1790002287669!5m2!1sid!2sid")
 MAP_LINK = "https://www.google.com/maps/search/?api=1&query=Physio8+Ruko+Hudson+Paramount+Gading+Serpong"
 GEO = (-6.2693025, 106.6246716)
-SHOW_SOFT = False
-SOFT_UNTIL = "2026-12-31"          # soft-opening block disappears after this date (WIB)
 
-PRICES = {  # rupiah per session: single, package of 4, package of 8
+PRICES = {  # reference only, not published (client: "contact us" pricing). single, pkg 4, pkg 8
     "std": (485000, 450000, 410000),
     "snr": (585000, 545000, 495000),
 }
-SOFT_OFF = (5, 8, 10)             # % off per session: single, pkg 4, pkg 8
 LITE, TAPING = 80000, 100000
 
 IMG_HERO = {"src": "https://images.unsplash.com/photo-1649751361457-01d3a696c7e6", "name": "yury kirillov",
@@ -106,51 +103,56 @@ def journey(i, n=8):
 
 
 # ------------------------------------------------------------------ content
-NAV = [("metode", "Metode", "Method"), ("pilates", "Clinical Pilates", "Clinical Pilates"), ("harga", "Harga", "Prices"),
+NAV = [("cedera", "Cedera olahraga", "Sports injuries"), ("metode", "Metode", "Method"), ("harga", "Layanan", "Services"),
        ("tim", "Tim", "Team"), ("lokasi", "Lokasi", "Location"), ("artikel", "Artikel", "Articles")]
 
 STEPS = [
-    ("Assess", "Diukur dengan teknologi dan pemeriksaan klinis.", "Measured with technology and a clinical exam."),
-    ("Diagnose", "Movement Report: diagnosis fisioterapi, rencana, dan biaya.", "Movement Report: physiotherapy diagnosis, plan and cost."),
-    ("Relieve", "Nyeri turun sampai target yang disepakati.", "Pain brought down to the agreed target."),
-    ("Rebuild", "Rentang gerak dan kapasitas beban dibangun kembali.", "Range of motion and load capacity rebuilt."),
-    ("Strengthen", "Clinical Pilates dan pembebanan progresif.", "Clinical Pilates and progressive loading."),
-    ("Retrain", "Pola gerak yang lebih baik, lalu tes ulang.", "Better movement patterns, then a re-test."),
-    ("Return", "Tes kesiapan dan laporan akhir terapi.", "Readiness test and discharge report."),
-    ("Maintain", "Pilates, program rumah, dan tes ulang berkala.", "Pilates, a home plan and periodic re-tests."),
+    ("Assess", "Pemeriksaan klinis dan pengukuran gerak dengan kamera.", "A clinical exam and movement measured on camera."),
+    ("Diagnose", "Penjelasan masalahnya, rencana terapi, dan perkiraan biayanya.", "What the problem is, the treatment plan and what it will cost."),
+    ("Relieve", "Nyeri diturunkan dulu sampai target yang disepakati.", "Pain brought down first, to the level we agreed."),
+    ("Rebuild", "Rentang gerak dan kekuatan dasar dibangun lagi.", "Range of motion and basic strength built back."),
+    ("Strengthen", "Latihan beban dan clinical Pilates.", "Strength training and clinical Pilates."),
+    ("Retrain", "Latihan gerakan khas olahragamu, lalu tes ulang.", "Drills for the movements your sport needs, then a re-test."),
+    ("Return", "Tes kesiapan sebelum kamu kembali main.", "A readiness test before you go back to playing."),
+    ("Maintain", "Latihan rutin dan cek berkala supaya kondisimu terjaga.", "Regular training and check-ins to keep you in shape."),
 ]
 
 METHOD = [
-    ("01–02", "Diagnostik berbantuan alat", "Tool-assisted diagnostic",
-     "Computer vision berbasis AR mengukur postur, gerak, dan rentang gerak, bersama pemeriksaan klinis lengkap. Hari pertama menjadi baseline-mu, dalam angka.",
-     "AR-assisted computer vision measures posture, movement and range of motion alongside a full clinical exam. Day one becomes your baseline, in numbers.",
-     [("Postur 4 sisi", "4-view posture"), ("Rentang gerak", "Range of motion"), ("Squat screen", "Squat screen")]),
-    ("03–04", "Penanganan", "Treatment",
-     "Terapi manual dan modalitas yang dipilih sesuai protokol, bukan kebiasaan terapis.",
-     "Manual therapy and modalities chosen by protocol, not by habit.",
+    ("01–02", "Pemeriksaan dan pengukuran", "Assessment and measurement",
+     "Selain pemeriksaan klinis, postur dan gerakmu direkam dengan kamera berbasis AR. Hasil hari pertama ini jadi patokan untuk sesi-sesi berikutnya.",
+     "Alongside a clinical exam, your posture and movement are recorded with an AR camera. Day one becomes the reference point for every session after.",
+     [("Postur 4 sisi", "Posture from 4 sides"), ("Rentang gerak", "Range of motion"), ("Squat screen", "Squat screen")]),
+    ("03–04", "Terapi", "Treatment",
+     "Terapi manual dan alat bantu yang dipilih sesuai protokol untuk kondisimu.",
+     "Manual therapy and modalities chosen by protocol for your condition.",
      [("Terapi manual", "Manual therapy"), ("Ultrasound", "Ultrasound"), ("Dry needling", "Dry needling"), ("TENS", "TENS"), ("Infrared", "Infrared")]),
     ("05–06", "Clinical Pilates", "Clinical Pilates",
-     "Pilates yang dipandu fisioterapis dan pembebanan progresif, untuk membangun kekuatan dan kontrol yang menurunkan risiko cedera berulang.",
-     "Physio-guided Pilates and progressive loading that build the strength and control that lower the risk of re-injury.", []),
-    ("02–08", "Rencana pemulihan", "Recovery plan",
-     "Diagnosis, penyebab, jumlah sesi, dan total biaya disampaikan tertulis sebelum terapi dimulai.",
-     "Diagnosis, cause, number of sessions and total cost, in writing, before therapy starts.", []),
-    ("06 & 08", "Tes ulang setelah terapi", "Post-treatment re-test",
-     "Pengukuran yang sama diulang di tahap 6 dan 8, lalu dibandingkan berdampingan dengan hari pertama.",
-     "The same measurements repeated at steps 6 and 8, side by side with day one.", []),
+     "Pilates yang dipandu fisioterapis, ditambah latihan beban bertahap, untuk membangun kekuatan dan kontrol gerak.",
+     "Physio-guided Pilates plus gradual strength work to build strength and movement control.", []),
+    ("02–08", "Rencana tertulis", "A written plan",
+     "Sebelum terapi dimulai, kamu sudah tahu diagnosisnya, perkiraan jumlah sesi, dan total biayanya.",
+     "Before treatment starts you know the diagnosis, roughly how many sessions it takes and the total cost.", []),
+    ("06 & 08", "Tes ulang", "Re-tests",
+     "Pengukuran hari pertama diulang, jadi perubahannya kelihatan dalam angka.",
+     "The day-one measurements are repeated, so you can see the change in numbers.", []),
 ]
 
-VALUES = [
-    ("E", "Evidence-based practice", "Baseline diukur, lalu dites ulang. Bukti perkembangan adalah hasil yang kamu bawa pulang.",
-     "Measured baselines, re-tested. The evidence is the product."),
-    ("I", "Intentional engagement", "Satu pasien dalam satu waktu. Tidak ada layanan ala ban berjalan.",
-     "One patient at a time. No production-line care."),
-    ("G", "Guide every step", "Delapan tahap, masing-masing dijelaskan. Kamu selalu tahu apa yang berikutnya.",
-     "Eight steps, each explained. You always know what comes next."),
-    ("H", "Highest standards of hygiene", "Klinik yang bersih tanpa cela, dengan ruang putih yang memperlihatkannya.",
-     "A spotless clinic, and white space that shows it."),
-    ("T", "Total patient trust", "Harga dipublikasikan, linimasa yang jujur, termasuk kabar yang kurang menyenangkan.",
-     "Published prices, honest timelines, bad news included."),
+INJURIES = [
+    ("Padel &amp; tenis", "Padel &amp; tennis", "nyeri-bahu-padel",
+     "Bahu nyeri saat smash atau servis, tennis elbow, pergelangan tangan, dan betis yang tertarik saat lari pendek di lapangan.",
+     "Shoulder pain on smashes and serves, tennis elbow, sore wrists, and calves that pull on short sprints across the court."),
+    ("Lari", "Running", "runners-knee-shin-splints-achilles",
+     "Runner's knee, shin splints, dan tendon Achilles yang kaku tiap pagi.",
+     "Runner's knee, shin splints and an Achilles that is stiff every morning."),
+    ("Futsal &amp; sepak bola", "Futsal &amp; football", "nyeri-setelah-olahraga-weekend",
+     "Hamstring tertarik, keseleo pergelangan kaki, dan nyeri yang muncul dua hari setelah main.",
+     "Pulled hamstrings, sprained ankles and the soreness that shows up two days after a game."),
+    ("Setelah operasi", "After surgery", "rehabilitasi-pasca-operasi-acl",
+     "Program setelah rekonstruksi ACL atau operasi bahu, sampai lolos tes untuk kembali bermain.",
+     "Rehab after ACL reconstruction or shoulder surgery, through to the return-to-sport tests."),
+    ("Punggung &amp; leher", "Back &amp; neck", "nyeri-pinggang-duduk-lama",
+     "Pinggang dan leher pegal karena duduk lama atau kerja di depan layar. Tidak harus atlet untuk datang.",
+     "A sore lower back or stiff neck from long hours at a desk. You do not have to be an athlete to come in."),
 ]
 
 CREDS = [
@@ -158,47 +160,46 @@ CREDS = [
     ("Sertifikasi dry needling, Australian Physiotherapy Association", "Certified in dry needling, Australian Physiotherapy Association"),
     ("Sertifikasi Mulligan Concept", "Certified in the Mulligan Concept"),
     ("Sarjana Fisioterapi, Universitas Esa Unggul", "Bachelor of Physiotherapy, Esa Unggul University"),
-    ("Mantan staf pengajar fisioterapi, Universitas Esa Unggul", "Former physiotherapy faculty staff, Esa Unggul University"),
+    ("Pernah mengajar di program studi fisioterapi Universitas Esa Unggul", "Former physiotherapy lecturer at Esa Unggul University"),
     ("Pelatihan podiatri dan dasar women's health", "Trained in podiatry and basic women's health"),
 ]
 
 FAQ = [
     ("Apakah saya perlu surat rujukan dokter?", "Do I need a doctor's referral?",
-     "Tidak. Pasien dapat datang langsung ke fisioterapis sesuai Standar Pelayanan Fisioterapi (Permenkes No. 65 Tahun 2015). Bila temuan kami mengarah ke kondisi yang memerlukan pencitraan atau tindakan medis, kami merujukmu ke dokter spesialis dan menjelaskan alasannya.",
-     "No. You can see a physiotherapist directly under Indonesia's physiotherapy service standard (Ministry of Health Regulation No. 65/2015). If our findings point to a condition that needs imaging or medical treatment, we refer you to a specialist and explain why."),
+     "Tidak. Kamu bisa langsung datang ke fisioterapis (Permenkes No. 65 Tahun 2015 tentang Standar Pelayanan Fisioterapi). Kalau dari pemeriksaan kami ada yang perlu dicek dokter, misalnya butuh rontgen atau MRI, kami rujuk ke dokter spesialis dan jelaskan alasannya.",
+     "No. You can see a physiotherapist directly (Ministry of Health Regulation No. 65/2015). If our exam shows something a doctor should look at, such as a need for an X-ray or MRI, we refer you to a specialist and explain why."),
+    ("Saya bukan atlet. Boleh datang?", "I'm not an athlete. Can I still come?",
+     "Boleh. Fokus kami memang cedera olahraga, tapi kami juga menangani nyeri punggung, leher kaku karena kerja, dan pemulihan setelah operasi.",
+     "Yes. Sports injuries are our focus, but we also treat back pain, a stiff neck from desk work and recovery after surgery."),
     ("Apa yang terjadi di kunjungan pertama?", "What happens at the first visit?",
-     "Movement & Posture Assessment: wawancara dan skrining tanda bahaya, pemetaan postur dari empat sisi, pengukuran rentang gerak, squat screen, lalu pemeriksaan klinis. Kamu pulang dengan diagnosis fisioterapi, rencana pemulihan, dan total biayanya.",
-     "The Movement & Posture Assessment: an interview and red-flag screen, four-view posture mapping, range-of-motion measurement, a squat screen, then a clinical exam. You leave with a physiotherapy diagnosis, a recovery plan and its total cost."),
+     "Kami tanya soal keluhan dan olahragamu, cek tanda bahaya, lalu rekam postur dan gerakmu dengan kamera dan lakukan pemeriksaan klinis. Di akhir kunjungan kamu tahu apa masalahnya, rencana terapinya, dan perkiraan biayanya.",
+     "We ask about your injury and your sport, screen for red flags, record your posture and movement on camera and do a clinical exam. By the end you know what the problem is, the plan and roughly what it will cost."),
+    ("Berapa biayanya?", "How much does it cost?",
+     "Info harga terbaru bisa ditanyakan langsung lewat WhatsApp. Kamu bisa bayar per sesi atau ambil paket 4 atau 8 sesi.",
+     "Ask us on WhatsApp for current prices. You can pay per session or take a package of 4 or 8 sessions."),
     ("Apa bedanya clinical Pilates dengan kelas Pilates biasa?", "How is clinical Pilates different from a regular Pilates class?",
-     "Clinical Pilates dipandu fisioterapis yang memegang data pengukuranmu. Latihannya dipilih sesuai tahap pemulihan, bebannya dinaikkan bertahap, dan hasilnya dites ulang di tahap 6 dan 8. Fokusnya kekuatan inti, kontrol, dan postur.",
-     "Clinical Pilates is guided by the physiotherapist who holds your measurements. Exercises are chosen for your stage of recovery, load is progressed step by step, and results are re-tested at steps 6 and 8. The focus is core strength, control and posture."),
-    ("Apakah saya harus membeli paket?", "Do I have to buy a package?",
-     "Tidak. Kamu bisa membayar per sesi. Paket 4 sesi (berlaku 8 minggu) dan 8 sesi (berlaku 14 minggu) menurunkan harga per sesi. Jumlah sesi yang kamu butuhkan kami tulis di rencana pemulihan.",
-     "No. You can pay per session. Packages of 4 sessions (valid 8 weeks) and 8 sessions (valid 14 weeks) lower the price per session. The number of sessions you need is written in your recovery plan."),
+     "Clinical Pilates dipandu fisioterapis yang tahu kondisi dan hasil pengukuranmu. Latihannya dipilih sesuai tahap pemulihan dan bebannya dinaikkan pelan-pelan. Ini bagian dari terapi, bukan kelas umum.",
+     "Clinical Pilates is run by a physiotherapist who knows your condition and your measurements. Exercises match your stage of recovery and load goes up gradually. It is part of your treatment rather than a group class."),
     ("Bagaimana cara membuat jadwal?", "How do I book?",
-     f"Lewat WhatsApp di {WA_DISPLAY}. Pengingat jadwal dan program rumahmu juga dikirim lewat WhatsApp.",
-     f"On WhatsApp at {WA_DISPLAY}. Appointment reminders and your home programme come through WhatsApp too."),
+     f"Chat kami di WhatsApp {WA_DISPLAY}. Pengingat jadwal dan latihan rumahmu juga kami kirim lewat WhatsApp.",
+     f"Message us on WhatsApp at {WA_DISPLAY}. Reminders and your home exercises come through WhatsApp too."),
     ("Di mana lokasi Physio8?", "Where is Physio8?",
-     "Ruko Hudson Blok B No. 29, Paramount Gading Serpong, Medang, Pagedangan, Kabupaten Tangerang, Banten 15334 — sekitar 4,8 km dari gerbang tol West BSD 1.",
-     "Ruko Hudson Blok B No. 29, Paramount Gading Serpong, Medang, Pagedangan, Tangerang Regency, Banten 15334 — about 4.8 km from the West BSD 1 toll gate."),
+     "Ruko Hudson Blok B No. 29, Paramount Gading Serpong, Medang, Pagedangan, Kabupaten Tangerang, Banten 15334. Sekitar 4,8 km dari gerbang tol West BSD 1.",
+     "Ruko Hudson Blok B No. 29, Paramount Gading Serpong, Medang, Pagedangan, Tangerang Regency, Banten 15334. About 4.8 km from the West BSD 1 toll gate."),
 ]
 
-TITLE = ("Physio8 — Klinik Fisioterapi & Clinical Pilates di Gading Serpong",
-         "Physio8 — Physiotherapy & Clinical Pilates Clinic in Gading Serpong")
-DESC = ("Fisioterapi dan clinical Pilates di Paramount Gading Serpong. Asesmen postur berbantuan AR, Physio8 Pathway delapan tahap, dan harga per sesi yang dipublikasikan.",
-        "Physiotherapy and clinical Pilates in Paramount Gading Serpong. AR-assisted posture assessment, the eight-step Physio8 Pathway and published per-session prices.")
+TITLE = ("Physio8 — Fisioterapi Cedera Olahraga & Clinical Pilates di Gading Serpong",
+         "Physio8 — Sports Injury Physiotherapy & Clinical Pilates in Gading Serpong")
+DESC = ("Fisioterapi untuk cedera olahraga padel, tenis, lari, dan futsal, plus clinical Pilates, di Paramount Gading Serpong. Gerakmu diukur dengan kamera AR, lalu dilatih sampai siap main lagi.",
+        "Physiotherapy for padel, tennis, running and futsal injuries, plus clinical Pilates, in Paramount Gading Serpong. Your movement is measured with an AR camera, then trained until you are ready to play again.")
+
+WA_PRICE = (wa("Halo Physio8, saya ingin tanya harga layanan fisioterapi. (dari website)"),
+            wa("Hi Physio8, I would like to ask about your prices. (from the website)"))
 
 
-# ------------------------------------------------------------------ sections
 def header():
     links = "".join(f'<a href="#{a}"{en(e)}>{i}</a>' for a, i, e in NAV)
-    mlinks = "".join(f'<a href="#{a}"{en(e)}>{i}</a>' for a, i, e in NAV)
-    soft = (f'<div class="notice" data-until="{SOFT_UNTIL}"><div class="wrap"><span class="dot" aria-hidden="true"></span>'
-            f'<p{en("<strong>Soft opening, November–December 2026.</strong> Your first visit is on us, including the Movement &amp; Posture Assessment.")}>'
-            f'<strong>Soft opening November–Desember 2026.</strong> Kunjungan pertama ditanggung Physio8, termasuk Movement &amp; Posture Assessment.</p>'
-            f'<a href="#harga"{en("See the details")}>Lihat ketentuan</a></div></div>')
     return f"""<a class="skip" href="#main"{en("Skip to content")}>Lewati ke konten</a>
-{soft if SHOW_SOFT else ""}
 <header class="hdr">
   <div class="wrap">
     <a class="brand" href="/" aria-label="Physio8"><img src="./p8/logo-full.svg" alt="Physio8 — Physiotherapy &amp; Recovery" width="90" height="60"></a>
@@ -207,31 +208,31 @@ def header():
       <div class="lang" role="group" aria-label="Bahasa / Language">
         <button type="button" data-lang="id" aria-pressed="true">ID</button><button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
-      <a class="btn btn-primary btn-desk" {wa_attrs()}><span{en("Book an assessment")}>Buat jadwal asesmen</span></a>
+      <a class="btn btn-primary btn-desk" {wa_attrs()}><span{en("Book a session")}>Buat jadwal</span></a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Menu">{icon("menu")}</button>
     </div>
   </div>
 </header>
-<div class="mnav" id="mnav">{mlinks}<a class="btn btn-primary" {wa_attrs()}><span{en("Book an assessment")}>Buat jadwal asesmen</span></a></div>"""
+<div class="mnav" id="mnav">{links}<a class="btn btn-primary" {wa_attrs()}><span{en("Book a session")}>Buat jadwal</span></a></div>"""
 
 
 def hero():
-    facts = [("Satu terapis, satu pasien", "One therapist, one patient"),
-             ("Protokol KNGF dan riset University of Melbourne", "KNGF protocols and University of Melbourne research"),
-             ("Harga per sesi dipublikasikan", "Per-session prices published")]
+    facts = [("Satu terapis untuk satu pasien", "One therapist per patient"),
+             ("Gerakmu diukur dengan kamera AR", "Your movement measured with an AR camera"),
+             ("Dipimpin fisioterapis berpengalaman 18 tahun", "Led by a physiotherapist with 18 years' experience")]
     fl = "".join(f'<li>{icon("ccheck")}<span{en(e)}>{i}</span></li>' for i, e in facts)
     return f"""<section class="hero" id="main">
   <div class="wrap">
     <div>
-      <p class="hero-k"><span{en("Physiotherapy &amp; clinical Pilates")}>Fisioterapi &amp; clinical Pilates</span><span class="sep" aria-hidden="true"></span><span>Paramount Gading Serpong</span></p>
+      <p class="hero-k"><span{en("Sports physiotherapy")}>Fisioterapi olahraga</span><span class="sep" aria-hidden="true"></span><span>Paramount Gading Serpong</span></p>
       <h1>
         <span class="display"><span>Recover.</span><span class="c2">Move.</span><span class="c3">Repeat.</span></span>
-        <span class="h1-sub"{en("Specialist physiotherapy and clinical Pilates in Gading Serpong, measured from day one.")}>Klinik fisioterapi dan clinical Pilates di Gading Serpong, terukur sejak hari pertama.</span>
+        <span class="h1-sub"{en("Physiotherapy for sports injuries in Gading Serpong, from the padel and tennis court to your running route.")}>Fisioterapi untuk cedera olahraga di Gading Serpong, dari lapangan padel dan tenis sampai rute larimu.</span>
       </h1>
-      <p class="lede"{en("Every recovery starts with numbers. Your posture, range of motion and movement are measured with AR-assisted computer vision and a clinical exam. You get a physiotherapy diagnosis, an eight-step plan and its total cost before therapy starts.")}>Setiap pemulihan dimulai dari angka. Postur, rentang gerak, dan pola gerakmu diukur dengan computer vision berbasis AR dan pemeriksaan klinis. Kamu mendapat diagnosis fisioterapi, rencana delapan tahap, dan total biayanya sebelum terapi dimulai.</p>
+      <p class="lede"{en("Shoulder hurts on every smash? Elbow sore after a match, or a knee that complains on your runs? We find the cause, measure how you move, then build a programme to get you back to playing.")}>Bahu sakit setiap smash? Siku nyeri setelah main, atau lutut yang protes waktu lari? Kami cari penyebabnya, ukur gerakmu, lalu susun programnya sampai kamu bisa main lagi.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" {wa_attrs()}>{WA_GLYPH}<span{en("Book an assessment")}>Buat jadwal asesmen</span></a>
-        <a class="btn btn-ghost" href="#harga"><span{en("See prices")}>Lihat harga</span>{icon("arrow")}</a>
+        <a class="btn btn-primary" {wa_attrs()}>{WA_GLYPH}<span{en("Book a session")}>Buat jadwal</span></a>
+        <a class="btn btn-ghost" {wa_attrs(WA_PRICE)}><span{en("Ask about prices")}>Tanya harga</span>{icon("arrow")}</a>
       </div>
       <ul class="hero-facts">{fl}</ul>
     </div>
@@ -242,13 +243,21 @@ def hero():
 </section>"""
 
 
-def numbers():
-    items = [("8", "tahap Physio8 Pathway, dari asesmen sampai pemeliharaan", "steps in the Physio8 Pathway, from assessment to maintenance"),
-             ("4", "sisi pemetaan postur dengan computer vision", "views of computer-vision posture mapping"),
-             ("1:1", "satu terapis untuk satu pasien di setiap sesi", "one therapist for one patient, every session"),
-             ("18+", "tahun pengalaman klinis lead physiotherapist kami", "years of clinical experience behind our lead physiotherapist")]
-    li = "".join(f'<li><b class="tnum">{n}</b><span{en(e)}>{i}</span></li>' for n, i, e in items)
-    return f'<div class="numbers"><div class="wrap"><ul>{li}</ul></div></div>'
+def injuries():
+    cards = ""
+    for k, (ti, te, slug, di, de) in enumerate(INJURIES):
+        cls = "inj rv" + (" big" if k == 0 else "")
+        cards += (f'<a class="{cls}" href="/artikel/{slug}/"><h3{en(te)}>{ti}</h3><p{en(de)}>{di}</p>'
+                  f'<span class="link-arrow"><span{en("Read the guide")}>Baca panduannya</span>{icon("arrow")}</span></a>')
+    return f"""<section class="sec" id="cedera">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow"{en("Sports injuries")}>Cedera olahraga</p><h2 class="h2"{en("Injuries we treat")}>Cedera yang kami tangani</h2></div>
+      <p class="lede"{en("We focus on people who play padel, tennis, run or play futsal. Injuries like these often start small, get ignored because you can still play, and end up keeping you off the court.")}>Fokus kami pemain padel, tenis, pelari, dan pemain futsal. Cedera seperti ini biasanya mulai dari nyeri kecil, dibiarkan karena masih bisa main, lalu lama-lama bikin kamu berhenti.</p>
+    </div>
+    <div class="injuries">{cards}</div>
+  </div>
+</section>"""
 
 
 def pathway():
@@ -258,17 +267,17 @@ def pathway():
         steps += (f'<li class="step rv"><div class="bar" style="background:{c}"></div>'
                   f'<span class="no" style="color:{c if k < 6 else "#6C7800"}">{k+1:02d}</span>'
                   f'<h3>{name}</h3><p{en(e)}>{i}</p></li>')
-    return f"""<section class="sec" id="metode">
+    return f"""<section class="sec tint" id="metode">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="eyebrow">Physio8 Pathway</p><h2 class="h2"{en("Eight steps, one method")}>Delapan tahap, satu metode</h2></div>
-      <p class="lede"{en("You always know which step you are on, what its target is and what comes next. Steps 1–2 happen in the clinic; steps 3–8 run hybrid, clinic sessions plus a home programme we monitor.")}>Kamu selalu tahu sedang di tahap mana, apa targetnya, dan apa yang datang berikutnya. Tahap 1–2 berlangsung di klinik; tahap 3–8 berjalan hibrida, sesi di klinik ditambah program rumah yang kami pantau.</p>
+      <div><p class="eyebrow">Physio8 Pathway</p><h2 class="h2"{en("From injury back to the court")}>Dari cedera sampai balik ke lapangan</h2></div>
+      <p class="lede"{en("The programme has eight steps. The first two happen in the clinic: we examine you and explain what is going on. After that you come in for treatment sessions and do home exercises in between, which we keep track of.")}>Programnya ada delapan tahap. Dua tahap pertama di klinik: kami periksa dan jelaskan masalahnya. Setelah itu kamu datang untuk sesi terapi, dan di sela-selanya mengerjakan latihan di rumah yang kami pantau.</p>
     </div>
     <ol class="steps">{steps}</ol>
-    <div class="phase" aria-hidden="true"><div{en("In clinic")}>Di klinik</div><div{en("Hybrid: clinic sessions + home programme")}>Hibrida: sesi klinik + program rumah</div></div>
+    <div class="phase" aria-hidden="true"><div{en("In the clinic")}>Di klinik</div><div{en("Clinic sessions + home exercises")}>Sesi di klinik + latihan di rumah</div></div>
     <div class="pathway-foot">
-      <p{en("Every step has a measured exit criterion. You move up because you have progressed, and the re-tests at steps 6 and 8 show it next to your day-one numbers.")}>Setiap tahap punya kriteria keluar yang terukur. Kamu naik tahap karena adanya progres, dan tes ulang di tahap 6 dan 8 memperlihatkannya di samping angka hari pertama.</p>
-      <a class="link-arrow" href="/artikel/physio8-pathway-delapan-tahap/"><span{en("Read the full pathway")}>Baca penjelasan lengkap</span>{icon("arrow")}</a>
+      <p{en("You move to the next step once the target for the current one is reached. At steps 6 and 8 we measure again and compare it with your first day.")}>Kamu pindah ke tahap berikutnya kalau target tahap sebelumnya sudah tercapai. Di tahap 6 dan 8 kami ukur ulang, lalu bandingkan dengan hasil hari pertama.</p>
+      <a class="link-arrow" href="/artikel/physio8-pathway-delapan-tahap/"><span{en("Read more")}>Baca penjelasan lengkapnya</span>{icon("arrow")}</a>
     </div>
   </div>
 </section>"""
@@ -287,9 +296,9 @@ def method():
   <div class="wrap method">
     {photo(IMG_METHOD, 900, 1125)}
     <div>
-      <p class="eyebrow"{en("Methodology")}>Metodologi</p>
-      <h2 class="h2"{en("How the steps become a method")}>Bagaimana tahapan menjadi metode</h2>
-      <p class="lede" style="margin-bottom:36px"{en("The same structure for every patient, so the plan does not depend on which therapist you see.")}>Struktur yang sama untuk setiap pasien, sehingga rencanamu tidak bergantung pada terapis mana yang menangani.</p>
+      <p class="eyebrow"{en("What we do")}>Apa yang kami kerjakan</p>
+      <h2 class="h2"{en("What the programme includes")}>Isi program terapinya</h2>
+      <p class="lede" style="margin-bottom:36px"{en("Every patient goes through the same process, so the quality of your care does not depend on which therapist is on duty.")}>Setiap pasien melewati alur yang sama, jadi kualitasnya tidak bergantung pada terapis yang sedang bertugas.</p>
       <ul class="mlist">{rows}</ul>
     </div>
   </div>
@@ -299,12 +308,12 @@ def method():
 def assessment():
     tools = [
         (posture_svg([("Depan", "Front"), ("Kanan", "Right"), ("Belakang", "Back"), ("Kiri", "Left")]),
-         "Postur dengan computer vision", "Posture, by computer vision",
-         "Pemetaan berbantuan AR dari empat sisi: depan, kanan, belakang, dan kiri.", "AR-assisted mapping from four views: front, right, back and left."),
+         "Postur dari empat sisi", "Posture from four sides",
+         "Kamera AR merekam posturmu dari depan, kanan, belakang, dan kiri.", "An AR camera records your posture from the front, right, back and left."),
         (rom_svg(), "Rentang gerak", "Range of motion",
-         "Leher, punggung, dan bahu, diukur dengan kamera dan giroskop.", "Neck, back and shoulders, measured by camera and gyroscope."),
-        (squat_svg(), "Gerak fungsional", "Functional movement",
-         "Squat screen memberi data gerak yang cepat dan objektif.", "Squat screens give fast, objective movement data."),
+         "Seberapa jauh leher, punggung, dan bahumu bisa bergerak, diukur dengan kamera dan giroskop.", "How far your neck, back and shoulders move, measured by camera and gyroscope."),
+        (squat_svg(), "Squat screen", "Squat screen",
+         "Cara kamu jongkok memperlihatkan banyak hal soal pinggul, lutut, dan pergelangan kaki.", "The way you squat says a lot about your hips, knees and ankles."),
     ]
     cards = "".join(f'<div class="tool rv"><div class="viz">{svg}</div><h3{en(te)}>{ti}</h3><p{en(de)}>{di}</p></div>'
                     for svg, ti, te, di, de in tools)
@@ -312,12 +321,12 @@ def assessment():
     return f"""<section class="sec dark" id="asesmen">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="eyebrow"{en("Tool-assisted diagnostic")}>Diagnostik berbantuan alat</p><h2 class="h2"{en("Measured, not guessed")}>Diukur, bukan ditebak</h2></div>
-      <div><p class="lede"{en("Your first visit, the Movement &amp; Posture Assessment, turns how you stand and move into numbers. The same scan is repeated later, so progress is something you can see.")}>Kunjungan pertamamu, Movement &amp; Posture Assessment, mengubah cara kamu berdiri dan bergerak menjadi angka. Pemindaian yang sama diulang kemudian, sehingga perkembangan bisa kamu lihat sendiri.</p>
+      <div><p class="eyebrow"{en("Your first visit")}>Kunjungan pertama</p><h2 class="h2"{en("We measure before we treat")}>Kami ukur dulu sebelum terapi</h2></div>
+      <div><p class="lede"{en("On your first visit we record your posture and movement with an AR camera and measure your range of motion. We repeat it in the middle and at the end of the programme, so you can see the progress yourself.")}>Di kunjungan pertama, postur dan gerakmu kami rekam dengan kamera AR, dan rentang gerakmu diukur. Pengukuran ini kami ulang di tengah dan akhir program, jadi kamu bisa lihat sendiri perkembangannya.</p>
       <ol class="scan-flow" aria-label="Scan, Check, Plan, Re-scan">{flow}</ol></div>
     </div>
     <div class="tools">{cards}</div>
-    <p class="dark-foot"{en("Measurements sit alongside a full clinical exam by a physiotherapist. The technology supports clinical judgement; it does not replace it.")}>Pengukuran ini berjalan bersama pemeriksaan klinis lengkap oleh fisioterapis. Teknologi membantu penilaian klinis, bukan menggantikannya.</p>
+    <p class="dark-foot"{en("A physiotherapist always reads these measurements together with the clinical exam.")}>Semua hasil pengukuran ini tetap dibaca fisioterapis bersama hasil pemeriksaan klinis.</p>
   </div>
 </section>"""
 
@@ -330,45 +339,29 @@ def pilates():
     nums = "".join(f"<span>{k:02d}</span>" for k in range(1, 9))
     yam = "https://doi.org/10.1002/14651858.CD010265.pub2"
     ste = "https://doi.org/10.1001/jamainternmed.2015.7431"
-    r2_id = (f'Tinjauan Cochrane menemukan Pilates lebih efektif dibanding intervensi minimal untuk nyeri punggung bawah kronis '
-             f'(<a href="{yam}" target="_blank" rel="noopener">Yamato, 2015</a>). Latihan yang disertai edukasi menurunkan risiko episode nyeri punggung bawah '
+    r2_id = (f'Tinjauan Cochrane menemukan Pilates membantu mengurangi nyeri punggung bawah kronis dibanding intervensi minimal '
+             f'(<a href="{yam}" target="_blank" rel="noopener">Yamato, 2015</a>). Latihan yang disertai edukasi juga menurunkan risiko nyeri punggung bawah datang lagi '
              f'(<a href="{ste}" target="_blank" rel="noopener">Steffens, 2016</a>).')
-    r2_en = (f'A Cochrane review found Pilates more effective than minimal intervention for chronic low back pain '
-             f'(<a href="{yam}" target="_blank" rel="noopener">Yamato, 2015</a>). Exercise combined with education lowered the risk of further low back pain episodes '
+    r2_en = (f'A Cochrane review found Pilates helped chronic low back pain more than minimal intervention '
+             f'(<a href="{yam}" target="_blank" rel="noopener">Yamato, 2015</a>). Exercise with education also lowered the chance of low back pain coming back '
              f'(<a href="{ste}" target="_blank" rel="noopener">Steffens, 2016</a>).')
     return f"""<section class="sec tint" id="pilates">
   <div class="wrap pil">
     {photo(IMG_PILATES, 960, 1152)}
     <div>
-      <p class="eyebrow"{en("Why clinical Pilates")}>Mengapa clinical Pilates</p>
-      <h2 class="h2"{en("Pain relief is just step one")}>Meredakan nyeri baru tahap pertama</h2>
+      <p class="eyebrow">Clinical Pilates</p>
+      <h2 class="h2"{en("Why Pilates is part of the programme")}>Kenapa ada Pilates di program kami</h2>
       <div class="tracks">
         {track("p1", "Fisioterapi", "Physiotherapy", "nyeri · rentang gerak · jaringan cedera", "pain · range of motion · injured tissue", {1, 2, 3, 4}, {5, 6, 7})}
         {track("p2", "Clinical Pilates", "Clinical Pilates", "kekuatan inti · kontrol · postur", "core strength · control · posture", {5, 6, 7, 8}, {4})}
         <div class="track-nums" aria-hidden="true">{nums}</div>
       </div>
       <ul class="reasons">
-        <li><span class="ix">01</span><div><h3{en("Recovery goes on")}>Pemulihan berlanjut</h3><p{en("Pain relief alone does not train strength or control. Skip that stage and the pattern behind the injury often stays.")}>Meredakan nyeri saja tidak melatih kekuatan dan kontrol. Bila tahap ini dilewati, pola yang menyebabkan cedera sering tetap ada.</p></div></li>
-        <li><span class="ix">02</span><div><h3{en("Backed by evidence")}>Didukung bukti</h3><p{en(r2_en)}>{r2_id}</p></div></li>
-        <li><span class="ix">03</span><div><h3{en("Dosed to you")}>Dosis sesuai kebutuhanmu</h3><p{en("Guided by the physiotherapist who knows your measurements, progressed step by step and re-tested at steps 6 and 8.")}>Dipandu fisioterapis yang memegang data pengukuranmu, ditingkatkan bertahap, dan dites ulang di tahap 6 dan 8.</p></div></li>
+        <li><span class="ix">01</span><div><h3{en("Pain gone does not mean recovered")}>Nyeri hilang belum berarti pulih</h3><p{en("Once the pain settles, the muscles around the injury are usually still weak. Go straight back to playing and the same injury often returns.")}>Setelah nyeri turun, otot di sekitar area cedera biasanya masih lemah. Kalau langsung kembali main, cedera yang sama sering datang lagi.</p></div></li>
+        <li><span class="ix">02</span><div><h3{en("There is research behind it")}>Ada dasar risetnya</h3><p{en(r2_en)}>{r2_id}</p></div></li>
+        <li><span class="ix">03</span><div><h3{en("Adjusted to you")}>Disesuaikan dengan kondisimu</h3><p{en("Run by the physiotherapist who has your measurements, with load increased gradually and checked again at steps 6 and 8.")}>Dipandu fisioterapis yang memegang hasil pengukuranmu, bebannya dinaikkan pelan-pelan, lalu dicek ulang di tahap 6 dan 8.</p></div></li>
       </ul>
     </div>
-  </div>
-</section>"""
-
-
-def values():
-    cards = "".join(f'<li class="value rv"><span class="l" aria-hidden="true">{l}</span><h3>{t}</h3><p{en(e)}>{i}</p></li>'
-                    for l, t, i, e in VALUES)
-    return f"""<section class="sec tint" id="nilai">
-  <div class="wrap">
-    <div class="sec-head">
-      <div><p class="eyebrow"{en("Core values · E.I.G.H.T.")}>Nilai kami · E.I.G.H.T.</p><h2 class="h2"{en("Evidence-based care, measured progress")}>Perawatan berbasis bukti, progres yang terukur</h2></div>
-      <p class="lede"{en("Five commitments, spelled by the number our name is built on. Every plan, message and decision at Physio8 traces back to one of them.")}>Lima komitmen, dieja dari angka yang menjadi nama kami. Setiap rencana, pesan, dan keputusan di Physio8 berakar pada salah satunya.</p>
-    </div>
-    <ul class="values">{cards}</ul>
-    <div class="trained rv"><span class="ic">{icon("cap")}</span><div><h3{en("Trained on international methods")}>Dilatih dengan metode internasional</h3>
-      <p{en("Protocols and training follow KNGF guidelines (Royal Dutch Society for Physical Therapy) and University of Melbourne research. Every therapist is certified on them before treating alone.")}>Protokol dan pelatihan mengikuti pedoman KNGF (Royal Dutch Society for Physical Therapy) dan riset University of Melbourne. Setiap terapis disertifikasi pada protokol ini sebelum menangani pasien sendiri.</p></div></div>
   </div>
 </section>"""
 
@@ -377,8 +370,8 @@ def team():
     creds = "".join(f'<li>{icon("check")}<span{en(e)}>{i}</span></li>' for i, e in CREDS)
     return f"""<section class="sec" id="tim">
   <div class="wrap">
-    <p class="eyebrow"{en("Lead physiotherapist")}>Lead physiotherapist</p>
-    <h2 class="h2" style="margin-bottom:40px"{en("One clinical standard, led by experience")}>Satu standar klinis, dipimpin pengalaman</h2>
+    <p class="eyebrow"{en("Our team")}>Tim kami</p>
+    <h2 class="h2" style="margin-bottom:40px"{en("Meet our physiotherapist")}>Kenalan dengan fisioterapis kami</h2>
     <div class="lead rv">
       <div class="lead-id">
         <figure class="lead-photo"><picture><source type="image/webp" srcset="./p8/ika-setia-ningsih.webp"><img src="./p8/ika-setia-ningsih.jpg" width="525" height="552" alt="Ika Setia Ningsih, S.Ft, Lead Physiotherapist Physio8" data-en-alt="Ika Setia Ningsih, S.Ft, Lead Physiotherapist at Physio8" loading="lazy" decoding="async"></picture></figure>
@@ -389,8 +382,9 @@ def team():
         </div>
       </div>
       <div class="lead-bio">
-        <p class="big"{en("18 years of hands-on practice across Jakarta clinics, including senior physiotherapist roles, and former physiotherapy faculty staff at Esa Unggul University. Ika leads Physio8's clinical team, so every plan follows one clinical standard.")}>18 tahun praktik langsung di berbagai klinik di Jakarta, termasuk sebagai senior physiotherapist, dan pernah menjadi staf pengajar fisioterapi di Universitas Esa Unggul. Ika memimpin tim klinis Physio8, sehingga setiap rencana mengikuti satu standar klinis.</p>
+        <p class="big"{en("Ika has spent 18 years treating patients at clinics across Jakarta, including as a senior physiotherapist, and has taught physiotherapy at Esa Unggul University. At Physio8 she leads the clinical team and makes sure every treatment plan follows the same standard.")}>Ika sudah 18 tahun menangani pasien di berbagai klinik di Jakarta, termasuk sebagai senior physiotherapist, dan pernah mengajar di program studi fisioterapi Universitas Esa Unggul. Di Physio8, Ika memimpin tim klinis dan memastikan setiap rencana terapi mengikuti standar yang sama.</p>
         <ul class="creds">{creds}</ul>
+        <p class="trained-note"{en("Team protocols and training follow KNGF guidelines (the Royal Dutch Society for Physical Therapy) and University of Melbourne research.")}>Protokol dan pelatihan tim mengacu pada pedoman KNGF (asosiasi fisioterapi Belanda) dan riset University of Melbourne.</p>
       </div>
     </div>
   </div>
@@ -398,51 +392,28 @@ def team():
 
 
 def pricing():
-    def card(key, ti, te, si, se, cls=""):
-        s, p4, p8 = PRICES[key]
-        rows = (f'<div class="prow"><span class="k"><span{en("Single session")}>Satu sesi</span><small{en("Pay as you go")}>Bayar per kedatangan</small></span>'
-                f'<span class="v tnum">{rp(s)}<small{en("per session")}>per sesi</small></span></div>'
-                f'<div class="prow"><span class="k"><span{en("Package of 4")}>Paket 4 sesi</span><small{en("Valid 8 weeks")}>Berlaku 8 minggu</small></span>'
-                f'<span class="v tnum">{rp(p4)}<small{en(f"per session · {rp(p4*4)} total")}>per sesi · total {rp(p4*4)}</small></span></div>'
-                f'<div class="prow"><span class="k"><span{en("Package of 8")}>Paket 8 sesi</span><small{en("Valid 14 weeks")}>Berlaku 14 minggu</small></span>'
-                f'<span class="v tnum">{rp(p8)}<small{en(f"per session · {rp(p8*8)} total")}>per sesi · total {rp(p8*8)}</small></span></div>')
-        return (f'<article class="pcard {cls} rv"><div class="head"><div><h3>{ti}</h3><p class="sub"{en(se)}>{si}</p></div></div>'
-                f'{rows}<div class="foot"><a class="btn btn-ghost" {wa_attrs()}><span{en("Book on WhatsApp")}>Jadwalkan via WhatsApp</span>{icon("arrow")}</a></div></article>')
-    std = card("std", "Physiotherapy Standard", "Physiotherapy Standard", "Sesi fisioterapi satu terapis, satu pasien.", "A one-to-one physiotherapy session.")
-    snr = card("snr", "Physiotherapy Senior", "Physiotherapy Senior", "Sesi fisioterapi satu terapis, satu pasien, dengan fisioterapis senior.", "A one-to-one physiotherapy session with a senior physiotherapist.", "senior")
-    terms = [("Tidak dapat dikembalikan", "Non-refundable"), ("Tidak dapat diuangkan", "Cannot be cashed out"),
-             ("Tidak dapat dipindahtangankan", "Non-transferable"), ("Tidak dapat ditukar atau di-upgrade (Standard ke Senior)", "No exchange or upgrade (Standard to Senior)")]
-    tl = f'<li class="k"><b{en("Package terms:")}>Ketentuan paket:</b></li>' + "".join(f"<li{en(e)}>{i}</li>" for i, e in terms)
-    # soft opening
-    offs = (f'<div class="off"><p class="p"{en("Free")}>Tanpa biaya</p><p class="d"{en("First visit: Movement &amp; Posture Assessment, your baseline and a plan with its total cost")}>Kunjungan pertama: Movement &amp; Posture Assessment, baseline-mu, dan rencana beserta total biayanya</p></div>'
-            + "".join(f'<div class="off"><p class="p">{pc}%</p><p class="d"{en(f"off every session · {le}")}>potongan setiap sesi · {li}</p></div>'
-                      for pc, li, le in zip(SOFT_OFF, ("satu sesi", "paket 4 sesi", "paket 8 sesi"), ("single session", "package of 4", "package of 8"))))
-    trs = ""
-    for key, name in (("std", "Physiotherapy Standard"), ("snr", "Physiotherapy Senior")):
-        tds = "".join(f'<td class="tnum"><b>{rp(round(p * (100 - o) / 100))}</b><s>{rp(p)}</s></td>' for p, o in zip(PRICES[key], SOFT_OFF))
-        trs += f"<tr><th scope=\"row\">{name}</th>{tds}</tr>"
-    soft = f"""<div class="soft rv" data-until="{SOFT_UNTIL}">
-      <div class="soft-top"><div><p class="k"{en("Soft opening · November–December 2026")}>Soft opening · November–Desember 2026</p>
-        <h3{en("Your first visit is on us")}>Kunjungan pertama ditanggung Physio8</h3>
-        <p class="lede"{en("Your baseline, measured with AR-assisted computer vision, and a plan with its total cost. Sessions booked during the soft opening are priced below.")}>Baseline-mu diukur dengan computer vision berbasis AR, lalu kamu menerima rencana beserta total biayanya. Sesi yang dipesan selama soft opening mengikuti harga di bawah.</p></div>
-        <a class="btn btn-primary" {wa_attrs()}>{WA_GLYPH}<span{en("Book your first visit")}>Jadwalkan kunjungan pertama</span></a></div>
-      <div class="offs">{offs}</div>
-      <div class="soft-table"><table><thead><tr><th scope="col"{en("Per session")}>Per sesi</th><th scope="col"{en("Single")}>Satu sesi</th><th scope="col"{en("Package of 4")}>Paket 4 sesi</th><th scope="col"{en("Package of 8")}>Paket 8 sesi</th></tr></thead><tbody>{trs}</tbody></table></div>
-      <p class="note"{en("One free first visit per new patient. Package terms apply (validity 8 or 14 weeks). Reductions do not combine; targeted lite treatment and kinesio taping stay at the normal price.")}>Satu kunjungan pertama tanpa biaya untuk setiap pasien baru. Ketentuan paket berlaku (masa berlaku 8 atau 14 minggu). Potongan tidak dapat digabung; targeted lite treatment dan kinesio taping tetap harga normal.</p>
-    </div>"""
+    svc = [("Movement &amp; Posture Assessment", "Movement &amp; Posture Assessment",
+            "Pemeriksaan pertama: wawancara, pengukuran gerak dengan kamera, dan pemeriksaan klinis.",
+            "Your first visit: an interview, movement measured on camera and a clinical exam."),
+           ("Fisioterapi", "Physiotherapy",
+            "Sesi satu terapis untuk satu pasien, dengan fisioterapis atau fisioterapis senior. Bisa per sesi atau paket 4 dan 8 sesi.",
+            "One therapist, one patient, with a physiotherapist or senior physiotherapist. Per session or in packages of 4 and 8."),
+           ("Clinical Pilates", "Clinical Pilates",
+            "Pilates yang dipandu fisioterapis, bagian dari tahap 5 sampai 8.",
+            "Physio-guided Pilates, part of steps 5 to 8."),
+           ("Targeted lite treatment", "Targeted lite treatment",
+            "Sesi singkat 15 menit untuk satu area keluhan.", "A short 15-minute session for one problem area."),
+           ("Kinesio taping", "Kinesio taping",
+            "Taping untuk menopang otot atau sendi supaya kamu tetap bisa aktif.", "Taping to support a muscle or joint so you can stay active.")]
+    cards = "".join(f'<div class="svc rv"><h3{en(te)}>{ti}</h3><p{en(de)}>{di}</p></div>' for ti, te, di, de in svc)
     return f"""<section class="sec" id="harga">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="eyebrow"{en("Services and prices")}>Layanan dan harga</p><h2 class="h2"{en("Published prices, per session")}>Harga per sesi, dipublikasikan</h2></div>
-      <p class="lede"{en("Your recovery plan states the number of sessions and the total cost before therapy starts. Packages are optional.")}>Rencana pemulihanmu mencantumkan jumlah sesi dan total biaya sebelum terapi dimulai. Paket bersifat pilihan, bukan kewajiban.</p>
+      <div><p class="eyebrow"{en("Services")}>Layanan</p><h2 class="h2"{en("Services and prices")}>Layanan dan harga</h2></div>
+      <p class="lede"{en("For current prices, just ask us on WhatsApp. After your first visit, the estimated number of sessions and the total cost go into your written plan.")}>Untuk info harga terbaru, langsung tanya kami lewat WhatsApp. Setelah pemeriksaan pertama, perkiraan jumlah sesi dan total biayanya kami tuliskan di rencana terapimu.</p>
     </div>
-    <div class="price-grid">{std}{snr}</div>
-    <div class="addons">
-      <div class="addon rv"><div><b>Targeted lite treatment</b><span{en("15 minutes · one focused area")}>15 menit · satu area fokus</span></div><span class="v tnum">{rp(LITE)}</span></div>
-      <div class="addon rv"><div><b>Kinesio taping</b><span{en("Per application")}>Per aplikasi</span></div><span class="v tnum">{rp(TAPING)}</span></div>
-    </div>
-    <ul class="terms">{tl}</ul>
-    {soft if SHOW_SOFT else ""}
+    <div class="svcs">{cards}<div class="price-cta rv"><p{en("Prices, packages and available times: ask us directly.")}>Harga, paket, dan jadwal kosong bisa ditanyakan langsung.</p>
+      <a class="btn btn-primary" {wa_attrs(WA_PRICE)}>{WA_GLYPH}<span{en("Ask on WhatsApp")}>Tanya via WhatsApp</span></a></div></div>
   </div>
 </section>"""
 
@@ -455,8 +426,8 @@ def location():
     return f"""<section class="sec" id="lokasi">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="eyebrow"{en("Our location")}>Lokasi kami</p><h2 class="h2">Paramount Gading Serpong</h2></div>
-      <p class="lede"{en("Our clinic is in the Ruko Hudson row at Paramount Gading Serpong, Tangerang.")}>Klinik kami berada di deretan Ruko Hudson, Paramount Gading Serpong, Tangerang.</p>
+      <div><p class="eyebrow"{en("Location")}>Lokasi</p><h2 class="h2">Paramount Gading Serpong</h2></div>
+      <p class="lede"{en("You will find us in the Ruko Hudson row at Paramount Gading Serpong.")}>Klinik kami ada di deretan Ruko Hudson, Paramount Gading Serpong.</p>
     </div>
     <div class="loc">
       <div class="map"><iframe src="{esc(MAP_EMBED)}" title="Peta lokasi Physio8" data-en-title="Map of Physio8's location" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
@@ -475,8 +446,8 @@ def location():
 
 def articles(arts, img_fn, date_fn):
     bys = {a["slug"]: a for a in arts}
-    feat = bys["asesmen-gerak-dan-postur"]
-    rest = [bys[s] for s in ("nyeri-setelah-olahraga-weekend", "nyeri-pinggang-duduk-lama", "nyeri-bahu-padel")]
+    feat = bys["nyeri-bahu-padel"]
+    rest = [bys[s] for s in ("runners-knee-shin-splints-achilles", "rehabilitasi-pasca-operasi-acl", "nyeri-setelah-olahraga-weekend")]
 
     def card(a, cls, w, h):
         d = date_fn(a["published"])
@@ -491,8 +462,8 @@ def articles(arts, img_fn, date_fn):
     return f"""<section class="sec" id="artikel">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="eyebrow"{en("Articles and guides")}>Artikel dan panduan</p><h2 class="h2"{en("Recovery guides from our physiotherapists")}>Panduan pemulihan dari fisioterapis kami</h2></div>
-      <div><p class="lede"{en("The reasoning behind each exercise: what is being repaired, how long it takes and when you should get checked. Every guide cites journals and clinical guidelines.")}>Alasan di balik setiap latihan: apa yang sedang diperbaiki, berapa lama waktunya, dan kapan kamu perlu diperiksa. Setiap panduan merujuk jurnal dan pedoman klinis.</p>
+      <div><p class="eyebrow"{en("Articles")}>Artikel</p><h2 class="h2"{en("Reading on injuries and recovery")}>Bacaan seputar cedera dan pemulihan</h2></div>
+      <div><p class="lede"{en("Written by our physiotherapists, with journal references. From padel shoulder injuries to when pain is worth getting checked.")}>Ditulis fisioterapis kami, lengkap dengan rujukan jurnal. Mulai dari cedera bahu pemain padel sampai kapan nyeri perlu diperiksa.</p>
       <p style="margin-top:18px"><a class="link-arrow" href="/artikel/"><span{en("All articles")}>Semua artikel</span>{icon("arrow")}</a></p></div>
     </div>
     <div class="arts">{card(feat, "feat", 1000, 625)}<div class="alist">{lst}</div></div>
@@ -506,7 +477,7 @@ def faq():
     return f"""<section class="sec" id="faq">
   <div class="wrap faq">
     <div><p class="eyebrow">FAQ</p><h2 class="h2"{en("Frequently asked questions")}>Pertanyaan yang sering muncul</h2>
-      <p class="lede"{en("Something not covered here? Ask us on WhatsApp; a physiotherapist replies.")}>Pertanyaanmu belum terjawab? Tanyakan lewat WhatsApp; fisioterapis kami yang akan menjawab.</p></div>
+      <p class="lede"{en("Have another question? Ask us on WhatsApp and a physiotherapist will answer.")}>Ada pertanyaan lain? Tanya lewat WhatsApp, fisioterapis kami yang jawab.</p></div>
     <div>{items}</div>
   </div>
 </section>"""
@@ -514,11 +485,11 @@ def faq():
 
 def booking():
     ch = [(f'href="{esc(WA_BOOK[0])}" data-en-href="{esc(WA_BOOK[1])}" target="_blank" rel="noopener noreferrer"', WA_GLYPH, f"WhatsApp · {WA_DISPLAY}",
-           "Pemesanan jadwal, pengingat, dan program rumahmu.", "Bookings, reminders and your home programme."),
+           "Buat jadwal, pengingat, dan latihan rumahmu.", "Bookings, reminders and your home exercises."),
           (f'href="{IG}" target="_blank" rel="noopener noreferrer"', icon("insta"), "Instagram · @physio8.id",
-           "Cerita progres, hasil tes ulang, dan kabar klinik.", "Progress stories, re-test results and clinic news."),
+           "Cerita pasien, hasil tes ulang, dan kabar klinik.", "Patient stories, re-test results and clinic news."),
           (f'href="{CAREERS}" target="_blank" rel="noopener noreferrer"', icon("brief"), "Karier · Glints",
-           "Kami membuka lowongan di seluruh tim klinik.", "We are hiring across the clinic team.")]
+           "Kami sedang membuka lowongan.", "We are hiring.")]
     cl = ""
     for k, (attrs, ic, t, di, de) in enumerate(ch):
         tt = f'<b{en("Careers · Glints")}>{t}</b>' if k == 2 else f"<b>{t}</b>"
@@ -527,11 +498,11 @@ def booking():
   <div class="wrap">
     <div class="book rv">
       <div>
-        <p class="eyebrow"{en("Book an assessment")}>Buat jadwal asesmen</p>
-        <h2 class="h2"{en("Start from your baseline")}>Mulai dari baseline-mu</h2>
-        <p class="lede"{en("Book the Movement &amp; Posture Assessment on WhatsApp. You leave with your numbers, a physiotherapy diagnosis and a plan with its total cost.")}>Jadwalkan Movement &amp; Posture Assessment lewat WhatsApp. Kamu pulang dengan angka awal, diagnosis fisioterapi, dan rencana beserta total biayanya.</p>
-        <div class="acts"><a class="btn btn-primary" {wa_attrs()}>{WA_GLYPH}<span{en("Book on WhatsApp")}>Jadwalkan via WhatsApp</span></a>
-        <a class="btn btn-ghost" href="#harga"><span{en("See prices")}>Lihat harga</span></a></div>
+        <p class="eyebrow"{en("Book a session")}>Buat jadwal</p>
+        <h2 class="h2"{en("Tell us what is bothering you")}>Ceritakan keluhanmu ke kami</h2>
+        <p class="lede"{en("Message us on WhatsApp: what the injury is, how long you have had it and which sport you play. We will help you set up your first visit.")}>Chat kami di WhatsApp: cedera apa, sudah berapa lama, dan olahraga apa yang kamu mainkan. Nanti kami bantu atur jadwal kunjungan pertamamu.</p>
+        <div class="acts"><a class="btn btn-primary" {wa_attrs()}>{WA_GLYPH}<span{en("Chat on WhatsApp")}>Chat via WhatsApp</span></a>
+        <a class="btn btn-ghost" {wa_attrs(WA_PRICE)}><span{en("Ask about prices")}>Tanya harga</span></a></div>
       </div>
       <div class="channels">{cl}</div>
     </div>
@@ -540,12 +511,13 @@ def booking():
 
 
 def footer():
-    cols = [("Physio8", "Physio8", [("#metode", "Physio8 Pathway", "Physio8 Pathway"), ("#pilates", "Clinical Pilates", "Clinical Pilates"),
-                                    ("#harga", "Harga", "Prices"), ("#tim", "Tim", "Team"), ("#faq", "FAQ", "FAQ")]),
-            ("Artikel", "Articles", [("/artikel/nyeri-pinggang-duduk-lama/", "Nyeri punggung bawah", "Low back pain"),
-                                     ("/artikel/leher-kaku-kerja-kantor/", "Postur &amp; kerja kantor", "Posture &amp; desk work"),
+    cols = [("Physio8", "Physio8", [("#cedera", "Cedera olahraga", "Sports injuries"), ("#metode", "Physio8 Pathway", "Physio8 Pathway"),
+                                    ("#pilates", "Clinical Pilates", "Clinical Pilates"), ("#harga", "Layanan", "Services"),
+                                    ("#tim", "Tim", "Team"), ("#faq", "FAQ", "FAQ")]),
+            ("Artikel", "Articles", [("/artikel/nyeri-bahu-padel/", "Cedera bahu pemain padel", "Padel shoulder injuries"),
                                      ("/artikel/runners-knee-shin-splints-achilles/", "Cedera lari", "Running injuries"),
-                                     ("/artikel/rehabilitasi-pasca-operasi-acl/", "Rehabilitasi pasca operasi", "Post-surgery rehab"),
+                                     ("/artikel/rehabilitasi-pasca-operasi-acl/", "Rehabilitasi ACL", "ACL rehab"),
+                                     ("/artikel/nyeri-setelah-olahraga-weekend/", "Nyeri setelah olahraga", "Soreness after sport"),
                                      ("/artikel/", "Semua artikel", "All articles")])]
     cc = ""
     for hi, he, links in cols:
@@ -554,7 +526,7 @@ def footer():
   <div class="wrap">
     <div class="top">
       <div><img class="logo" src="./p8/logo-full-white.svg" alt="Physio8 — Physiotherapy &amp; Recovery" width="240" height="160">
-        <p class="about"{en("Specialist physiotherapy and clinical Pilates in Gading Serpong. One therapist, one patient, one method.")}>Fisioterapi spesialis dan clinical Pilates di Gading Serpong. Satu terapis, satu pasien, satu metode.</p></div>
+        <p class="about"{en("Sports physiotherapy and clinical Pilates in Paramount Gading Serpong.")}>Fisioterapi olahraga dan clinical Pilates di Paramount Gading Serpong.</p></div>
       {cc}
       <div><h4{en("Visit")}>Kunjungi</h4><address>Ruko Hudson Blok B No. 29<br>Paramount Gading Serpong<br>Medang, Pagedangan<br><span{en("Tangerang Regency, Banten 15334")}>Kab. Tangerang, Banten 15334</span></address>
         <ul style="margin-top:14px"><li><a {wa_attrs()}>WhatsApp {WA_DISPLAY}</a></li><li><a href="{IG}" target="_blank" rel="noopener noreferrer">Instagram @physio8.id</a></li><li><a href="{CAREERS}" target="_blank" rel="noopener noreferrer"{en("Careers")}>Karier</a></li></ul></div>
@@ -570,34 +542,20 @@ def jsonld():
     addr = {"@type": "PostalAddress", "streetAddress": "Ruko Hudson Blok B No. 29, Paramount Gading Serpong",
             "addressLocality": "Medang, Pagedangan", "addressRegion": "Kabupaten Tangerang, Banten",
             "postalCode": "15334", "addressCountry": "ID"}
-
-    def offer(name, price, desc=None):
-        o = {"@type": "Offer", "name": name, "price": price, "priceCurrency": "IDR"}
-        if desc:
-            o["description"] = desc
-        return o
-    s, s4, s8 = PRICES["std"]
-    n, n4, n8 = PRICES["snr"]
     clinic = {
         "@context": "https://schema.org", "@type": ["Physiotherapy", "MedicalClinic"], "@id": SITE + "#clinic",
         "name": "Physio8", "alternateName": "Physio8 Physiotherapy & Recovery",
         "description": DESC[0], "url": SITE, "logo": SITE + "p8/logo-full.png", "image": SITE + "og-physio8.jpg",
         "telephone": WA_DISPLAY.replace(" ", "").replace("-", ""), "address": addr,
         "geo": {"@type": "GeoCoordinates", "latitude": GEO[0], "longitude": GEO[1]}, "hasMap": MAP_LINK,
-        "areaServed": "Gading Serpong, Tangerang", "priceRange": f"{rp(LITE)} – {rp(n)}",
-        "currenciesAccepted": "IDR", "sameAs": [IG],
+        "areaServed": "Gading Serpong, Tangerang", "currenciesAccepted": "IDR", "sameAs": [IG],
         "medicalSpecialty": "PhysicalTherapy",
+        "knowsAbout": ["Sports injuries", "Padel injuries", "Tennis elbow", "Running injuries", "ACL rehabilitation", "Clinical Pilates"],
         "availableService": [{"@type": "MedicalTherapy", "name": x} for x in
-                             ("Physiotherapy", "Clinical Pilates", "Manual therapy", "Dry needling", "Kinesio taping",
-                              "Movement & Posture Assessment")],
+                             ("Sports injury physiotherapy", "Clinical Pilates", "Manual therapy", "Dry needling", "Kinesio taping",
+                              "Movement & Posture Assessment", "Post-surgery rehabilitation")],
         "employee": {"@type": "Person", "name": "Ika Setia Ningsih", "honorificSuffix": "S.Ft", "jobTitle": "Lead Physiotherapist", "image": SITE + "p8/ika-setia-ningsih.jpg",
                      "alumniOf": {"@type": "CollegeOrUniversity", "name": "Universitas Esa Unggul"}},
-        "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Physio8 prices", "itemListElement": [
-            offer("Physiotherapy Standard — single session", s), offer("Physiotherapy Standard — package of 4", s4 * 4, "Valid 8 weeks"),
-            offer("Physiotherapy Standard — package of 8", s8 * 8, "Valid 14 weeks"),
-            offer("Physiotherapy Senior — single session", n), offer("Physiotherapy Senior — package of 4", n4 * 4, "Valid 8 weeks"),
-            offer("Physiotherapy Senior — package of 8", n8 * 8, "Valid 14 weeks"),
-            offer("Targeted lite treatment (15 min)", LITE), offer("Kinesio taping (per application)", TAPING)]},
         "slogan": "Recover. Move. Repeat — for life.",
     }
     site = {"@context": "https://schema.org", "@type": "WebSite", "@id": SITE + "#website", "url": SITE, "name": "Physio8",
@@ -658,8 +616,8 @@ JS = r"""
 def build_home(arts, img_fn, date_fn):
     meta = {"id": {"title": TITLE[0], "desc": DESC[0]}, "en": {"title": TITLE[1], "desc": DESC[1]}}
     js = JS.replace("__META__", json.dumps(meta, ensure_ascii=False)).replace("__ICONX__", json.dumps(icon("x")))
-    body = "\n".join([header(), "<main>", hero(), numbers(), pathway(), method(), assessment(), pilates(), team(),
-                      pricing(), values(), location(), articles(arts, img_fn, date_fn), faq(), booking(), "</main>", footer()])
+    body = "\n".join([header(), "<main>", hero(), injuries(), pathway(), method(), assessment(), pilates(), team(),
+                      pricing(), location(), articles(arts, img_fn, date_fn), faq(), booking(), "</main>", footer()])
     return f"""<!doctype html>
 <html lang="id">
 <head>

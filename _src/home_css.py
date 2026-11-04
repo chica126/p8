@@ -253,6 +253,27 @@ ul,ol{margin:0;padding:0;list-style:none}
 .soft-table td s{display:block;color:var(--faint);font-size:13px;text-decoration-thickness:1px}
 .soft .note{margin-top:16px;font-size:14px;color:var(--muted)}
 
+
+/* injuries */
+.injuries{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.inj{display:flex;flex-direction:column;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;color:inherit;transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease}
+.inj:hover{border-color:var(--purple-200);box-shadow:var(--shadow);transform:translateY(-2px);color:inherit}
+.inj h3{font-size:22px}
+.inj p{color:var(--muted);font-size:16px}
+.inj .link-arrow{margin-top:auto;padding-top:8px;font-size:15px}
+.inj.big{grid-column:span 2;background:var(--purple);border-color:var(--purple)}
+.inj.big h3{color:#fff;font-size:clamp(26px,2.6vw,34px)}
+.inj.big p{color:#CBC3E8;font-size:17.5px;max-width:560px}
+.inj.big .link-arrow{color:#D8E37A}
+/* services (no prices) */
+.svcs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.svc{border:1px solid var(--line);border-radius:var(--radius);padding:26px;background:#fff}
+.svc h3{font-size:19px}
+.svc p{margin-top:8px;color:var(--muted);font-size:15.5px}
+.price-cta{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:18px;background:var(--purple-50);border-radius:var(--radius);padding:26px}
+.price-cta p{font-size:17px;font-weight:600;color:var(--ink);line-height:1.45}
+.trained-note{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+
 /* location */
 .loc{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:20px;align-items:stretch}
 .map{border-radius:var(--radius);overflow:hidden;min-height:440px;background:var(--surface-2);position:relative}
@@ -352,6 +373,7 @@ ul,ol{margin:0;padding:0;list-style:none}
   .offs{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:920px){
+  .injuries,.svcs{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
   .nav,.hdr .btn-desk{display:none}
   .menu-btn{display:inline-flex}
   .mnav{position:fixed;inset:84px 0 0 0;background:#fff;z-index:49;padding:24px var(--gutter) 40px;overflow:auto}
@@ -374,6 +396,9 @@ ul,ol{margin:0;padding:0;list-style:none}
   .map{min-height:340px}
 }
 @media (max-width:640px){
+  .injuries,.svcs{grid-template-columns:minmax(0,1fr)}
+  .inj.big{grid-column:auto}
+  .price-cta .btn{width:100%}
   body{font-size:16px}
   .hdr .wrap{height:72px;gap:12px}
   .brand img{height:50px}

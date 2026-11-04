@@ -522,7 +522,7 @@ def t_overrides(a):
             'T.id.refsNote = "Nomor dalam kurung siku di teks merujuk ke daftar ini. Tautan membuka sumber aslinya.";\n'
             'T.en.refsNote = "Numbers in square brackets in the text refer to this list. Links open the original source.";\n'
             'T.id.photo = "Foto"; T.en.photo = "Photo";\n'
-            'T.id.priceLink = "Lihat harga"; T.en.priceLink = "See prices";\n'
+            'T.id.priceLink = "Tanya harga"; T.en.priceLink = "Ask about prices";\n'
             'T.id.share = "Bagikan"; T.en.share = "Share";\n'
             'T.id.copyLink = "Salin link"; T.en.copyLink = "Copy link";\n'
             'T.id.copied = "Link disalin"; T.en.copied = "Link copied";\n')
