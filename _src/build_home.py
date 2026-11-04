@@ -306,7 +306,7 @@ def method():
     {photo(IMG_METHOD, 900, 1125)}
     <div>
       <p class="eyebrow"{en("What we do")}>Apa yang kami kerjakan</p>
-      <h2 class="h2"{en("What the programme includes")}>Isi program terapinya</h2>
+      <h2 class="h2"{en("Our treatment programme")}>Rangkaian program terapi kami</h2>
       <p class="lede" style="margin-bottom:36px"{en("Every patient goes through the same process, so the quality of your care does not depend on which therapist is on duty.")}>Setiap pasien melewati alur yang sama, jadi kualitasnya tidak bergantung pada terapis yang sedang bertugas.</p>
       <ul class="mlist">{rows}</ul>
     </div>
