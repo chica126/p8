@@ -413,7 +413,7 @@ def team():
         <div class="lead-info">
           <p class="role"{en("Lead Physiotherapist")}>Lead Physiotherapist</p>
           <p class="name">Ika Setia Ningsih, S.Ft</p>
-          <div class="yrs"><b class="tnum">18+</b><span{en("years of hands-on<br>practice since 2008")}>tahun praktik<br>langsung sejak 2008</span></div>
+          <div class="yrs"><b class="tnum">18+</b><span{en("Years of Practice<br>Since 2008")}>Tahun Praktik<br>Sejak 2008</span></div>
         </div>
       </div>
       <div class="lead-bio">
@@ -437,10 +437,10 @@ def pricing():
            ("Clinical Pilates", "Clinical Pilates",
             "Pilates yang dipandu fisioterapis, bagian dari tahap 5 sampai 8.",
             "Physio-guided Pilates, part of steps 5 to 8."),
-           ("Leg compression", "Leg compression",
+           ("Leg Compression", "Leg Compression",
             "Terapi kompresi pada kaki untuk membantu kaki terasa lebih ringan setelah berolahraga atau beraktivitas lama.",
             "Compression therapy for the legs to help them feel lighter after exercise or a long day on your feet."),
-           ("Kinesio taping", "Kinesio taping",
+           ("Kinesio Taping", "Kinesio Taping",
             "Taping untuk menopang otot atau sendi agar kamu tetap dapat beraktivitas.", "Taping to support a muscle or joint so you can stay active.")]
     cards = "".join(f'<div class="svc rv"><h3{en(te)}>{ti}</h3><p{en(de)}>{di}</p></div>' for ti, te, di, de in svc)
     return f"""<section class="sec" id="harga">
@@ -451,6 +451,36 @@ def pricing():
     </div>
     <div class="svcs">{cards}<div class="price-cta rv"><p{en("Want to know prices, packages and available times?")}>Ingin tahu harga, paket, dan jadwal yang tersedia?</p>
       <a class="btn btn-primary" {wa_attrs(WA_PRICE)}>{WA_GLYPH}<span{en("Ask on WhatsApp")}>Tanyakan via WhatsApp</span></a></div></div>
+  </div>
+</section>"""
+
+
+# Real Google reviews, quoted verbatim (typos included). Names shortened to first name + initial.
+REVIEWS = [
+    ("Lim W.", "Kaki area ankle agak sakit akhirnya mutusin utk fisio di Physio8. Surprisingly hbs difisio lgs enakan, tdnya bt lari msh sakit. Msh bth beberapa kali treatment, but this place recommended bgt bt yg sering olahraga dan bth treatment after exercise."),
+    ("KJ", "Excellent service, keluhan pundak yg ketarik di terapi pertama langsung kerasa recoverynya. Very recommended!"),
+    ("Freshica D.", "Suka banget fisio di sini, therapistnya profesional dan ruang treatmentnya juga bersih dan nyaman. Will come back again"),
+    ("Adrian L.", "nice and cozy place with best physiotherapist. 10/10 will recommened to a friends"),
+]
+STAR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95z"/></svg>'
+
+
+def reviews():
+    stars = (f'<p class="stars" role="img" aria-label="5 dari 5 bintang" data-en-aria-label="5 out of 5 stars">{STAR * 5}</p>')
+    cards = "".join(
+        f'<figure class="rev rv"><span class="q">{icon("quote")}</span>{stars}'
+        f'<blockquote lang="id"><p>{esc(t)}</p></blockquote>'
+        f'<figcaption><b>{esc(n)}</b><span{en("Google review")}>Ulasan Google</span></figcaption></figure>'
+        for n, t in REVIEWS)
+    return f"""<section class="sec tint" id="ulasan">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow"{en("Patient reviews")}>Ulasan pasien</p><h2 class="h2"{en("What our patients say")}>Apa kata pasien kami</h2></div>
+      <div><p class="lede"{en("Real reviews from Google, shown as written, in their original language.")}>Ulasan asli dari Google, kami tampilkan apa adanya tanpa disunting.</p>
+      <a class="link-arrow rev-all" href="{esc(MAP_LINK)}" target="_blank" rel="noopener noreferrer"><span{en("Read all reviews on Google")}>Baca semua ulasan di Google</span>{icon("external")}</a></div>
+    </div>
+    <div class="revs">{cards}</div>
+    {wa_cta("Punya keluhan serupa?", "Dealing with something similar?", "Tanyakan via WhatsApp", "Ask on WhatsApp", wa_pair("Halo Physio8, saya ingin bertanya tentang keluhan saya.", "Hi Physio8, I would like to ask about my condition."))}
   </div>
 </section>"""
 
@@ -590,7 +620,7 @@ def jsonld():
         "medicalSpecialty": "PhysicalTherapy",
         "knowsAbout": ["Sports injuries", "Padel injuries", "Tennis elbow", "Running injuries", "Cycling injuries", "ACL rehabilitation", "Clinical Pilates"],
         "availableService": [{"@type": "MedicalTherapy", "name": x} for x in
-                             ("Sports injury physiotherapy", "Clinical Pilates", "Manual therapy", "Dry needling", "Kinesio taping", "Leg compression",
+                             ("Sports injury physiotherapy", "Clinical Pilates", "Manual therapy", "Dry needling", "Kinesio Taping", "Leg Compression",
                               "Movement & Posture Assessment", "Post-surgery rehabilitation")],
         "employee": {"@type": "Person", "name": "Ika Setia Ningsih", "honorificSuffix": "S.Ft", "jobTitle": "Lead Physiotherapist", "image": SITE + "p8/ika-setia-ningsih.jpg"},
         "slogan": "Recover. Move. Repeat — for life.",
@@ -654,7 +684,7 @@ def build_home(arts, img_fn, date_fn):
     meta = {"id": {"title": TITLE[0], "desc": DESC[0]}, "en": {"title": TITLE[1], "desc": DESC[1]}}
     js = JS.replace("__META__", json.dumps(meta, ensure_ascii=False)).replace("__ICONX__", json.dumps(icon("x")))
     body = "\n".join([header(), "<main>", hero(), why(), pathway(), team(), assessment(), pilates(), injuries(),
-                      pricing(), location(), articles(arts, img_fn, date_fn), faq(), booking(), "</main>", footer()])
+                      pricing(), reviews(), location(), articles(arts, img_fn, date_fn), faq(), booking(), "</main>", footer()])
     return f"""<!doctype html>
 <html lang="id">
 <head>
