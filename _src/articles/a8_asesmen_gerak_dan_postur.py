@@ -9,7 +9,7 @@ ARTICLE = {
 "meta_desc": "Apa yang terjadi di sesi asesmen fisioterapi pertama? Tahap demi tahap selama 60 menit: wawancara, skrining tanda bahaya, pengukuran, diagnosis fisioterapi, dan rencana tertulis.",
 "excerpt": ["Enam puluh menit, empat belas pengukuran, satu rencana tertulis — tanpa paket yang harus dibeli di tempat.",
             "Sixty minutes, fourteen measurements, one written plan — no package to buy on the spot."],
-"dek": ["Enam puluh menit, empat belas pengukuran, satu rencana tertulis. Ini yang terjadi dari menit pertama sampai kamu pulang — dan kenapa kami mengukur sebelum menyentuh.",
+"dek": ["Enam puluh menit, empat belas pengukuran, satu rencana tertulis. Ini yang terjadi dari menit pertama sampai kamu pulang — dan mengapa kami mengukur sebelum menyentuh.",
         "Sixty minutes, fourteen measurements, one written plan. This is what happens from the first minute until you leave — and why we measure before we touch."],
 "published": "2026-08-22", "modified": "2026-11-03",
 "read": 6,
@@ -55,7 +55,7 @@ ARTICLE = {
 
  ["h2", "menit-demi-menit", "Menit demi menit", "Minute by minute"],
  ["table", [
-   ["Waktu", "Yang terjadi", "Kenapa", "Time", "What happens", "Why"],
+   ["Waktu", "Yang terjadi", "Mengapa", "Time", "What happens", "Why"],
    ["0–15", "Wawancara sambil duduk: riwayat, pekerjaan, olahraga, tujuanmu, serta skrining tanda bahaya", "Cerita cedera adalah bagian dari asesmen. Memastikan keluhan berada dalam lingkup fisioterapi", "0–15", "Seated interview: history, work, sport, your goal, plus a red-flag screen", "The story of the injury is part of the assessment. Making sure the problem is within physiotherapy's scope"],
    ["15–20", "Pengukuran: rentang gerak, kekuatan, tes fungsional, analisis postur dan gerak", "Membuat baseline yang bisa dibandingkan", "15–20", "Measurement: range, strength, functional tests, posture and movement analysis", "Creating a comparable baseline"],
    ["20–45", "Penjelasan diagnosis fisioterapi dan pemilihan latihan gerak", "Kamu harus bisa menjelaskan ulang dengan kata-katamu sendiri", "20–45", "Explaining the physiotherapy diagnosis and choosing movement exercises", "You should be able to explain it back in your own words"],

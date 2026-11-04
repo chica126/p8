@@ -6,7 +6,7 @@ ARTICLE = {
 "title": ["Runner's knee, shin splints, Achilles: membedakan tiga nyeri lari",
           "Runner's knee, shin splints, Achilles: telling three running pains apart"],
 "meta_title": "Cedera Lari: Runner's Knee, Shin Splints & Nyeri Achilles | Physio8",
-"meta_desc": "Nyeri lutut, tulang kering, atau tendon Achilles saat lari? Cara membedakan tiga cedera lari paling umum, kenapa aturan 10% tidak cukup, dan latihan yang direkomendasikan.",
+"meta_desc": "Nyeri lutut, tulang kering, atau tendon Achilles saat lari? Cara membedakan tiga cedera lari paling umum, mengapa aturan 10% tidak cukup, dan latihan yang direkomendasikan.",
 "excerpt": ["Lokasi nyeri, waktu munculnya, dan respons terhadap tempo memberi tahu kita tiga hal berbeda. Plus kesalahan progresi mingguan yang paling sering.",
             "Where it hurts, when it starts and how it responds to pace tell us three different things. Plus the most common weekly-progression mistake."],
 "dek": ["Tiga cedera yang paling sering membuat pelari berhenti punya pola yang berbeda — dan penanganan yang berbeda pula. Kuncinya ada di lokasi, waktu, dan respons terhadap beban.",
@@ -73,7 +73,7 @@ ARTICLE = {
    ["Bila melanggar", "Turunkan volume, jangan berhenti total", "If breached", "Cut volume, do not stop completely"]
  ]],
 
- ["h2", "aturan-10-persen", "Aturan 10%: kenapa tidak cukup", "The 10% rule: why it is not enough"],
+ ["h2", "aturan-10-persen", "Aturan 10%: mengapa tidak cukup", "The 10% rule: why it is not enough"],
  ["p", "Hampir setiap pelari pernah mendengar: jangan naikkan jarak lebih dari 10% per minggu. Masalahnya, uji acak terkontrol pada pelari pemula menemukan program bertahap dengan aturan 10% tidak menurunkan angka cedera dibanding program standar [7]. Tinjauan sistematis tentang kesalahan latihan juga menyimpulkan bukti hubungan antara pola progresi dan cedera masih terbatas [9].",
   "Nearly every runner has heard it: never increase distance by more than 10% a week. The problem is that a randomised controlled trial in novice runners found a graded 10%-rule programme did not reduce injury rates compared with a standard programme [7]. A systematic review of training errors also concluded that evidence linking progression patterns to injury remains limited [9]."],
  ["p", "Artinya bukan progresi tidak penting — artinya satu angka tidak cukup. Yang lebih berguna adalah memperhatikan lonjakan mendadak (misalnya dari 15 km ke 30 km karena ikut long run komunitas), perubahan tempo, sepatu, atau permukaan yang terjadi bersamaan, serta respons tubuh keesokan harinya.",

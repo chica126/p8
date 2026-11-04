@@ -34,7 +34,7 @@ ARTICLE = {
   "The same measurements are repeated at Stages 1, 6 and 8: baseline, proof, prevention."]
 ],
 "blocks": [
- ["h2", "kenapa-bertahap", "Kenapa pemulihan perlu tahapan", "Why recovery needs stages"],
+ ["h2", "kenapa-bertahap", "Mengapa pemulihan perlu tahapan", "Why recovery needs stages"],
  ["p", "Banyak pasien berhenti terapi saat nyerinya hilang. Masalahnya, nyeri biasanya turun jauh sebelum jaringan kembali kuat dan pola gerak kembali terkendali. Itulah sebabnya cedera yang \"sudah sembuh\" sering kambuh. Pedoman rehabilitasi modern menganjurkan progresi berbasis kriteria — pindah ke tahap berikutnya karena tes terlewati, bukan karena waktu berlalu [2]. Kerangkanya mengikuti alur kerja fisioterapi yang dideskripsikan World Physiotherapy: pemeriksaan, evaluasi, diagnosis, prognosis, rencana, lalu intervensi [5].",
   "Many patients stop treatment when the pain goes. The problem is that pain usually drops long before tissues are strong again and movement is back under control. That is why injuries that were 'healed' so often come back. Modern rehab guidelines advocate criterion-based progression — moving to the next stage because a test was passed, not because time went by [2]. The framework follows the physiotherapy workflow described by World Physiotherapy: examination, evaluation, diagnosis, prognosis, plan, then intervention [5]."],
  ["p", "Beban latihan juga bukan sekadar pelengkap. Konsep mechanotherapy menjelaskan bahwa beban mekanis yang diberikan lewat latihan diterjemahkan tubuh menjadi respons seluler yang mendorong perbaikan dan penguatan tendon, otot, dan tulang [1].",
@@ -50,7 +50,7 @@ ARTICLE = {
  ]],
 
  ["h2", "tahu", "Fase 1 — TAHU: Assess & Diagnose", "Phase 1 — KNOW: Assess & Diagnose"],
- ["p", "Tahap 1 adalah pengukuran: wawancara, skrining tanda bahaya, rentang gerak, kekuatan, tes fungsional, dan analisis postur serta gerak. Tahap 2 adalah penjelasan: diagnosis fisioterapi yang ditulis — temuan, penyebab, rencana, jumlah sesi, dan total biaya. Kriteria keluarnya sederhana tapi tegas: kamu bisa menjelaskan ulang masalahmu dengan kata-katamu sendiri.",
+ ["p", "Tahap 1 adalah pengukuran: wawancara, skrining tanda bahaya, rentang gerak, kekuatan, tes fungsional, dan analisis postur serta gerak. Tahap 2 adalah penjelasan: diagnosis fisioterapi yang ditulis — temuan, penyebab, rencana, jumlah sesi, dan total biaya. Kriteria keluarnya sederhana namun tegas: kamu bisa menjelaskan ulang masalahmu dengan kata-katamu sendiri.",
   "Stage 1 is measurement: interview, red-flag screen, range of motion, strength, functional tests and posture and movement analysis. Stage 2 is explanation: a written physiotherapy diagnosis — findings, cause, plan, number of sessions and total cost. The exit criterion is simple but firm: you can explain your problem back in your own words."],
 
  ["h2", "pulih", "Fase 2 — PULIH: Relieve & Rebuild", "Phase 2 — HEAL: Relieve & Rebuild"],

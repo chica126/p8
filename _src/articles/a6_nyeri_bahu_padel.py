@@ -6,7 +6,7 @@ ARTICLE = {
 "title": ["Nyeri bahu pemain padel: rotator cuff, bukan \"salah urat\"",
           "Shoulder pain in padel players: the rotator cuff, not a 'pulled nerve'"],
 "meta_title": "Nyeri Bahu Main Padel: Cedera Rotator Cuff & Cara Pulih | Physio8",
-"meta_desc": "Nyeri bahu setelah main padel? Kenapa smash dan bandeja membebani rotator cuff, tanda yang perlu diperiksa, dan program penguatan bahu berbasis bukti untuk pemain padel.",
+"meta_desc": "Nyeri bahu setelah main padel? Mengapa smash dan bandeja membebani rotator cuff, tanda yang perlu diperiksa, dan program penguatan bahu berbasis bukti untuk pemain padel.",
 "excerpt": ["Smash berulang membebani otot rotator cuff pada rentang yang sama setiap kali. Tes mandiri sederhana dan program penguatan 8 minggu.",
             "Repeated smashes load the rotator cuff through the same range every time. A simple self-check and an eight-week strengthening programme."],
 "dek": ["Padel sedang naik daun, dan begitu pula keluhan bahu dan siku. Kebanyakan bukan \"salah urat\", melainkan tendon rotator cuff yang menerima beban overhead lebih banyak daripada kemampuannya.",
@@ -36,7 +36,7 @@ ARTICLE = {
   "Sudden weakness after a fall or impact needs prompt medical evaluation [2]."]
 ],
 "blocks": [
- ["h2", "padel-dan-bahu", "Kenapa padel membebani bahu", "Why padel loads the shoulder"],
+ ["h2", "padel-dan-bahu", "Mengapa padel membebani bahu", "Why padel loads the shoulder"],
  ["p", "Tinjauan cakupan tahun 2026 yang merangkum 14 studi dengan lebih dari 3.500 pemain menemukan bahwa di tubuh bagian atas, siku adalah area yang paling sering cedera, diikuti bahu; di tubuh bagian bawah, lutut dan pergelangan kaki [1]. Angka kejadiannya sekitar 3 cedera per 1.000 jam latihan, dan sekitar 40% pemain mengalami setidaknya satu cedera per tahun [1].",
   "A 2026 scoping review pooling 14 studies and more than 3,500 players found that in the upper body the elbow was injured most often, followed by the shoulder; in the lower body, the knee and ankle [1]. Incidence was about 3 injuries per 1,000 training hours, and around 40% of players had at least one injury a year [1]."],
  ["p", "Bahu pemain padel bekerja keras pada pukulan overhead — smash, bandeja, dan vibora — yang diulang puluhan kali dalam satu pertandingan, sering dengan rentang gerak yang sama. Pemain rekreasional yang baru mulai, atau yang tiba-tiba bermain tiga sampai empat kali seminggu, menaikkan beban lebih cepat daripada kemampuan tendon beradaptasi.",
@@ -54,7 +54,7 @@ ARTICLE = {
    ["Tempelkan siku di samping badan, putar lengan bawah keluar melawan tahanan tangan lain. Bandingkan kiri dan kanan.", "With your elbow tucked in, rotate your forearm outward against your other hand's resistance. Compare left and right."],
    ["Coba raih ke belakang punggung seperti memasang kaitan bra atau memasukkan dompet. Terbatas atau nyeri di satu sisi?", "Reach behind your back as if tucking in a shirt or reaching a back pocket. Limited or painful on one side?"]
  ]],
- ["p", "Tes ini bukan untuk self-diagnosis — namun hanya membantumu memutuskan apakah perlu melakukan pemeriksaan lebih lanjut atau tidak. Jika terjadi kelemahan mendadak setelah jatuh atau benturan, atau tidak bisa mengangkat lengan sama sekali, perlu evaluasi medis segera [2].",
+ ["p", "Tes ini bukan untuk self-diagnosis — melainkan hanya membantumu memutuskan apakah perlu melakukan pemeriksaan lebih lanjut atau tidak. Jika terjadi kelemahan mendadak setelah jatuh atau benturan, atau tidak bisa mengangkat lengan sama sekali, perlu evaluasi medis segera [2].",
   "This is not for self-diagnosis — it only helps you decide whether a proper examination is needed. Sudden weakness after a fall or impact, or being unable to lift the arm at all, needs prompt medical evaluation [2]."],
 
  ["h2", "program-8-minggu", "Program penguatan dalam 8 minggu", "An eight-week strengthening programme"],

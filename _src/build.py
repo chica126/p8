@@ -725,13 +725,14 @@ def main():
     tpl_a = open(os.path.join(SRC, "template-artikel.dc.html"), encoding="utf-8").read()
     tpl_h = open(os.path.join(SRC, "template-hub.dc.html"), encoding="utf-8").read()
     written = []
+    import build_pages  # static pages in the homepage design system (replaces the dc templates)
     for a in arts:
         out = os.path.join(ROOT, "artikel", a["slug"], "index.html")
         os.makedirs(os.path.dirname(out), exist_ok=True)
-        open(out, "w", encoding="utf-8").write(build_article(a, bys, tpl_a))
+        open(out, "w", encoding="utf-8").write(build_pages.build_article(a, bys))
         written.append((out, word_count(a), len(a["refs"])))
     hub = os.path.join(ROOT, "artikel", "index.html")
-    open(hub, "w", encoding="utf-8").write(build_hub(arts, tpl_h))
+    open(hub, "w", encoding="utf-8").write(build_pages.build_hub(arts))
     open(os.path.join(ROOT, "Artikel Hub.dc.html"), "w", encoding="utf-8").write(
         redirect_stub("./artikel/index.html", url_of(), "Artikel — Physio8"))
     open(os.path.join(ROOT, "Artikel Detail.dc.html"), "w", encoding="utf-8").write(

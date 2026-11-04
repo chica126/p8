@@ -6,7 +6,7 @@ ARTICLE = {
 "title": ["Nyeri pinggang bawah karena duduk lama: yang benar-benar bekerja",
           "Low back pain from long sitting: what actually works"],
 "meta_title": "Sakit Pinggang Karena Duduk Lama: Penyebab & Latihan yang Terbukti | Physio8",
-"meta_desc": "Sakit pinggang karena duduk lama? Kenapa tirah baring memperlambat pemulihan, latihan yang direkomendasikan WHO dan NICE, dan tanda bahaya yang perlu segera diperiksa.",
+"meta_desc": "Sakit pinggang karena duduk lama? Mengapa tirah baring memperlambat pemulihan, latihan yang direkomendasikan WHO dan NICE, dan tanda bahaya yang perlu segera diperiksa.",
 "excerpt": ["Tirah baring memperlambat pemulihan. Beban terkontrol mempercepatnya. Program 6 minggu dengan target yang bisa diukur.",
             "Bed rest slows recovery. Controlled load speeds it up. A six-week programme with measurable targets."],
 "dek": ["Sebagian besar nyeri pinggang bawah tidak berbahaya dan membaik dengan tetap aktif. Pedoman WHO, NICE, dan The Lancet sepakat pada satu hal: latihan, bukan tirah baring.",
@@ -36,13 +36,13 @@ ARTICLE = {
   "Back pain after trauma, with fever, or with new bladder or bowel problems is an emergency [5]."]
 ],
 "blocks": [
- ["h2", "kenapa-duduk", "Kenapa duduk lama membuat pinggang sakit", "Why long sitting makes your back hurt"],
+ ["h2", "kenapa-duduk", "Mengapa duduk lama membuat pinggang sakit", "Why long sitting makes your back hurt"],
  ["p", "Duduk bukan musuh. Yang menjadi masalah adalah duduk dalam satu posisi selama berjam-jam tanpa jeda, ditambah otot pinggul dan batang tubuh yang jarang diberi beban. Hasilnya jaringan menjadi lebih sensitif terhadap posisi yang sebenarnya aman. Tinjauan di The Lancet menekankan bahwa nyeri pinggang dipengaruhi banyak faktor — fisik, psikologis, dan sosial — bukan hanya satu struktur yang \"rusak\" [1].",
   "Sitting is not the enemy. The problem is sitting in one position for hours without a break, combined with hip and trunk muscles that rarely get loaded. Tissues become more sensitive to positions that are actually safe. A review in The Lancet stresses that back pain is shaped by many factors — physical, psychological and social — not by one 'broken' structure [1]."],
  ["p", "Karena itu hasil MRI sering tidak sejalan dengan rasa nyeri. Banyak orang tanpa keluhan punya gambaran \"tonjolan diskus\" di MRI. Pedoman internasional tidak menyarankan pencitraan rutin untuk nyeri pinggang tanpa tanda bahaya [1][4].",
   "That is why MRI findings often do not match pain. Many people with no symptoms show 'disc bulges' on MRI. International guidelines advise against routine imaging for low back pain without red flags [1][4]."],
 
- ["h2", "tirah-baring", "Tirah baring: kenapa justru memperlambat", "Bed rest: why it slows things down"],
+ ["h2", "tirah-baring", "Tirah baring: mengapa justru memperlambat", "Bed rest: why it slows things down"],
  ["p", "Tinjauan Cochrane membandingkan saran tirah baring dengan saran tetap aktif untuk nyeri pinggang akut. Hasilnya: orang yang disarankan tetap aktif mengalami nyeri dan fungsi yang sedikit lebih baik [2]. Istirahat total beberapa hari membuat otot kaku, tidur terganggu, dan rasa takut bergerak semakin besar — semuanya memperpanjang nyeri.",
   "A Cochrane review compared advice to rest in bed with advice to stay active for acute low back pain. People advised to stay active had slightly better pain and function [2]. Several days of complete rest stiffens muscles, disturbs sleep and grows the fear of moving — all of which prolong pain."],
 

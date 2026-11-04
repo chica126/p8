@@ -48,7 +48,7 @@ ARTICLE = {
    ["24–72 jam", "puncak nyeri", "peak"],
    ["5–7 hari", "umumnya hilang", "usually gone"]
  ]],
- ["p", "Angka ini dari tinjauan klasik Cheung dan rekan di jurnal Sports Medicine [1], dan sejalan dengan penjelasan Cleveland Clinic [6]. Kalau pola nyerimu cocok dengan timeline itu dan terus membaik setiap hari, kemungkinan besar kamu tidak perlu ke mana-mana selain kembali bergerak.",
+ ["p", "Angka ini dari tinjauan klasik Cheung dan rekan di jurnal Sports Medicine [1], dan sejalan dengan penjelasan Cleveland Clinic [6]. Jika pola nyerimu cocok dengan timeline itu dan terus membaik setiap hari, kemungkinan besar kamu tidak perlu ke mana-mana selain kembali bergerak.",
   "These figures come from the classic review by Cheung and colleagues in Sports Medicine [1], and match Cleveland Clinic's patient guidance [6]. If your soreness fits that timeline and improves day by day, you most likely need nothing beyond moving again."],
 
  ["h2", "doms-vs-cedera", "DOMS vs cedera: tabel pembeda", "DOMS vs injury: the comparison"],
@@ -102,7 +102,7 @@ ARTICLE = {
  ["Apakah perlu kompres es atau air hangat?", "Should I use ice or heat?",
   "Keduanya boleh untuk kenyamanan, tetapi efeknya pada kecepatan pemulihan kecil. Untuk cedera akut, fokus pada perlindungan beberapa hari pertama lalu kembali memberi beban bertahap.",
   "Either is fine for comfort, but the effect on recovery speed is small. For an acute injury, focus on protection for the first few days, then gradual reloading."],
- ["Kenapa saya selalu pegal setelah futsal, padahal rutin main?", "Why am I always sore after futsal even though I play every week?",
+ ["Mengapa saya selalu pegal setelah futsal, padahal rutin main?", "Why am I always sore after futsal even though I play every week?",
   "Seminggu sekali belum cukup untuk adaptasi penuh, terutama untuk kerja eksentrik. Tambahkan dua sesi kekuatan singkat di hari kerja.",
   "Once a week is not enough for full adaptation, especially to eccentric work. Add two short strength sessions midweek."]
 ],

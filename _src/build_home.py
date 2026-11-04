@@ -494,7 +494,7 @@ def articles(arts, img_fn, date_fn):
                 f'<figcaption class="credit"><span{en("Photo")}>Foto</span>: {esc(im["name"])} / Unsplash</figcaption></figure>'
                 f'<div class="body"><p class="meta"><span{en(a["tag"][1] + " · " + d[1])}>{a["tag"][0]} · {d[0]}</span></p>'
                 f'<h3{en(a["title"][1])}>{esc(a["title"][0])}</h3><p class="ex"{en(a["excerpt"][1])}>{esc(a["excerpt"][0])}</p>'
-                f'<span class="link-arrow more"><span{en("Keep reading")}>Lanjut baca</span>{icon("arrow")}</span></div></a>')
+                f'<span class="link-arrow more"><span{en("Read more")}>Baca selengkapnya</span>{icon("arrow")}</span></div></a>')
     lst = "".join(card(a, "row", 600, 450) for a in rest)
     return f"""<section class="sec" id="artikel">
   <div class="wrap">

@@ -28,7 +28,7 @@ ARTICLE = {
 "takeaways": [
  ["Nyeri otot yang merata, muncul 24–72 jam setelah aktivitas dan membaik saat kamu bergerak, hampir selalu DOMS — bukan cedera [3].",
   "Diffuse muscle soreness that appears 24–72 hours after activity and eases once you move is almost always DOMS, not an injury [3]."],
- ["Jika nyeri belum berubah atau justru memburuk setelah 72 jam istirahat, itu bukanlah ujian kesabaran — namun sebuah informasi.",
+ ["Jika nyeri belum berubah atau justru memburuk setelah 72 jam istirahat, itu bukanlah ujian kesabaran — melainkan sebuah informasi.",
   "If pain has not changed or is worse after 72 hours of rest, that is not a patience problem. That is information."],
  ["Bengkak, sendi yang terasa kurang stabil, kesemutan menjalar, atau nyeri yang membangunkanmu saat tidur: jangan ditunda untuk melakukan pengecekan [2].",
   "Swelling, a joint that feels unstable, radiating numbness, or pain that wakes you from sleep: get them checked without delay [2]."],
@@ -92,7 +92,7 @@ ARTICLE = {
  ["p", "Kami tidak memulai dengan terapi. Kami memulai dengan angka, supaya enam minggu kemudian ada sesuatu yang bisa dibandingkan.",
   "We do not open with treatment. We open with numbers, so that six weeks later there is something to compare against."],
  ["ul", [
-   ["Riwayat dan tujuanmu — termasuk tanggal lomba atau turnamen, kalau ada.", "Your history and your goal — including a race or tournament date if you have one."],
+   ["Riwayat dan tujuanmu — termasuk tanggal lomba atau turnamen, jika ada.", "Your history and your goal — including a race or tournament date if you have one."],
    ["Skrining tanda bahaya sebelum pemeriksaan fisik apa pun.", "A red-flag screen before any hands-on examination."],
    ["Range of motion diukur dengan goniometer, dalam derajat, kedua sisi [8].", "Range of motion measured with a goniometer, in degrees, both sides [8]."],
    ["Tes kekuatan untuk kelompok otot yang relevan, dibandingkan kiri dan kanan.", "Strength testing for the relevant muscle groups, left against right."],
@@ -108,7 +108,7 @@ ARTICLE = {
    ["Nyeri pinggang bawah non-spesifik", "Sebagian besar membaik dalam beberapa minggu", "Non-specific low back pain", "Most improve within a few weeks"],
    ["Pasca rekonstruksi ACL", "Minimal 9 bulan untuk memenuhi return to sport assessment [9]", "After ACL reconstruction", "At least 9 months to pass a return-to-sport assessment [9]"]
  ]],
- ["p", "Angka-angka itu mengasumsikan program rumah dikerjakan konsisten. Kalau tes ulang pekan keenam mengatakan lain, kami mengubah rencananya — bukan sekadar menambah jumlah sesi.",
+ ["p", "Angka-angka itu mengasumsikan program rumah dikerjakan konsisten. Jika tes ulang pekan keenam mengatakan lain, kami mengubah rencananya — bukan sekadar menambah jumlah sesi.",
   "Those numbers assume the home programme is done consistently. If the week-six re-test says otherwise, we change the plan — we do not simply add sessions."],
 
  ["h2", "hari-ini", "Yang bisa kamu lakukan hari ini", "What you can do today"],
@@ -117,7 +117,7 @@ ARTICLE = {
    ["Kurangi satu variabel: turunkan jarak atau beban sekitar 30%, pertahankan frekuensinya.", "Cut one variable: drop distance or load by about 30% and keep the frequency."],
    ["Gerakkan sendi yang nyeri dalam rentang tanpa nyeri, 10 repetisi, tiga kali sehari.", "Move the painful joint through its pain-free range, 10 reps, three times a day."]
  ]],
- ["p", "Kalau setelah tiga hari trennya belum menurun, kami bisa mengukurnya di klinik Physio8 yang berlokasi di Gading Serpong. Satu sesi asesmen biasanya cukup untuk tahu apakah ini masalah beban, mobilitas, atau kontrol gerak — dan berapa lama perbaikannya.",
+ ["p", "Jika setelah tiga hari trennya belum menurun, kami bisa mengukurnya di klinik Physio8 yang berlokasi di Gading Serpong. Satu sesi asesmen biasanya cukup untuk tahu apakah ini masalah beban, mobilitas, atau kontrol gerak — dan berapa lama perbaikannya.",
   "If the trend has not turned after three days, we can measure it at the Physio8 clinic, located in Gading Serpong. One assessment is usually enough to know whether this is a load, mobility or motor-control problem — and how long the fix takes."]
 ],
 "faqs": [
