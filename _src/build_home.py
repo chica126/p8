@@ -455,12 +455,18 @@ def pricing():
 </section>"""
 
 
-# Real Google reviews, quoted verbatim (typos included). Names shortened to first name + initial.
+# Google reviews, lightly edited for grammar (disclosed in the lede). Initials only.
+# Each links to the reviewer's Google Maps review list, where the original text is visible.
+GCONTRIB = "https://www.google.com/maps/contrib/{}/reviews"
 REVIEWS = [
-    ("Lim W.", "Kaki area ankle agak sakit akhirnya mutusin utk fisio di Physio8. Surprisingly hbs difisio lgs enakan, tdnya bt lari msh sakit. Msh bth beberapa kali treatment, but this place recommended bgt bt yg sering olahraga dan bth treatment after exercise."),
-    ("KJ", "Excellent service, keluhan pundak yg ketarik di terapi pertama langsung kerasa recoverynya. Very recommended!"),
-    ("Freshica D.", "Suka banget fisio di sini, therapistnya profesional dan ruang treatmentnya juga bersih dan nyaman. Will come back again"),
-    ("Adrian L.", "nice and cozy place with best physiotherapist. 10/10 will recommened to a friends"),
+    ("LW", "106484979768626244143",
+     "Ankle saya agak sakit, akhirnya saya memutuskan untuk fisioterapi di Physio8. Setelah terapi langsung terasa lebih enak … Masih butuh beberapa kali terapi, tetapi tempat ini sangat saya rekomendasikan untuk yang sering berolahraga."),
+    ("KJ", "100007919406253877349",
+     "Excellent service. Pundak saya yang ketarik langsung terasa pulih sejak terapi pertama. Highly recommended."),
+    ("FD", "112314815388332209838",
+     "Suka sekali fisioterapi di sini. Terapisnya profesional, ruang terapinya bersih dan nyaman. I will definitely come back."),
+    ("AL", "113599951162355304549",
+     "A nice and cozy place with the best physiotherapists. 10/10, I would recommend it to my friends."),
 ]
 STAR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95z"/></svg>'
 
@@ -469,14 +475,15 @@ def reviews():
     stars = (f'<p class="stars" role="img" aria-label="5 dari 5 bintang" data-en-aria-label="5 out of 5 stars">{STAR * 5}</p>')
     cards = "".join(
         f'<figure class="rev rv"><span class="q">{icon("quote")}</span>{stars}'
-        f'<blockquote lang="id"><p>{esc(t)}</p></blockquote>'
-        f'<figcaption><b>{esc(n)}</b><span{en("Google review")}>Ulasan Google</span></figcaption></figure>'
-        for n, t in REVIEWS)
+        f'<blockquote cite="{GCONTRIB.format(cid)}"><p>{esc(t)}</p></blockquote>'
+        f'<figcaption><b>{esc(n)}</b><a href="{GCONTRIB.format(cid)}" target="_blank" rel="noopener noreferrer nofollow">'
+        f'<span{en("Read on Google")}>Ulasan Google</span>{icon("external")}</a></figcaption></figure>'
+        for n, cid, t in REVIEWS)
     return f"""<section class="sec tint" id="ulasan">
   <div class="wrap">
     <div class="sec-head">
       <div><p class="eyebrow"{en("Patient reviews")}>Ulasan pasien</p><h2 class="h2"{en("What our patients say")}>Apa kata pasien kami</h2></div>
-      <div><p class="lede"{en("Real reviews from Google, shown as written, in their original language.")}>Ulasan asli dari Google, kami tampilkan apa adanya tanpa disunting.</p>
+      <div><p class="lede"{en("Reviews from Google, lightly edited for readability and shown in their original language. Open each one to read it as written.")}>Ulasan dari Google, kami rapikan seperlunya agar mudah dibaca. Buka setiap ulasan untuk membaca versi aslinya.</p>
       <a class="link-arrow rev-all" href="{esc(MAP_LINK)}" target="_blank" rel="noopener noreferrer"><span{en("Read all reviews on Google")}>Baca semua ulasan di Google</span>{icon("external")}</a></div>
     </div>
     <div class="revs">{cards}</div>

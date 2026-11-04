@@ -434,7 +434,9 @@ ul,ol{margin:0;padding:0;list-style:none}
 .rev blockquote p{font-size:16.5px;line-height:1.65;color:var(--body)}
 .rev figcaption{margin-top:auto;padding-top:18px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:2px}
 .rev figcaption b{font-size:16px;color:var(--ink)}
-.rev figcaption span{font-size:14px;color:var(--teal-text);font-weight:500}
+.rev figcaption a{display:inline-flex;align-items:center;gap:6px;font-size:14px;color:var(--teal-text);font-weight:500;width:fit-content}
+.rev figcaption a:hover{color:var(--purple);text-decoration:underline}
+.rev figcaption a svg{width:14px;height:14px}
 
 @media (prefers-reduced-motion:no-preference){
   html.js .rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
