@@ -487,7 +487,6 @@ def reviews():
       <a class="link-arrow rev-all" href="{esc(MAP_LINK)}" target="_blank" rel="noopener noreferrer"><span{en("Read all reviews on Google")}>Baca semua ulasan di Google</span>{icon("external")}</a></div>
     </div>
     <div class="revs">{cards}</div>
-    <p class="rev-note"{en("Reviews lightly edited for readability.")}>Ulasan disunting ringan agar mudah dibaca.</p>
     {wa_cta("Punya keluhan serupa?", "Dealing with something similar?", "Tanyakan via WhatsApp", "Ask on WhatsApp", wa_pair("Halo Physio8, saya ingin bertanya tentang keluhan saya.", "Hi Physio8, I would like to ask about my condition."))}
   </div>
 </section>"""
