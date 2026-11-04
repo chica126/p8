@@ -483,7 +483,7 @@ def reviews():
   <div class="wrap">
     <div class="sec-head">
       <div><p class="eyebrow"{en("Patient reviews")}>Ulasan pasien</p><h2 class="h2"{en("What our patients say")}>Apa kata pasien kami</h2></div>
-      <div><p class="lede"{en("Hear from patients who have been through therapy with us, from an ankle that hurt on every run to a pulled shoulder.")}>Simak pengalaman pasien yang sudah menjalani terapi bersama kami, dari ankle yang sakit saat berlari sampai pundak yang ketarik.</p>
+      <div><p class="lede"{en("Hear from patients who have been through therapy with us.")}>Simak pengalaman pasien yang sudah menjalani terapi bersama kami.</p>
       <a class="link-arrow rev-all" href="{esc(MAP_LINK)}" target="_blank" rel="noopener noreferrer"><span{en("Read all reviews on Google")}>Baca semua ulasan di Google</span>{icon("external")}</a></div>
     </div>
     <div class="revs">{cards}</div>
