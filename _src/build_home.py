@@ -144,6 +144,9 @@ INJURIES = [
     ("Lari", "Running", "runners-knee-shin-splints-achilles",
      "Runner's knee, shin splints, dan tendon Achilles yang kaku tiap pagi.",
      "Runner's knee, shin splints and an Achilles that is stiff every morning."),
+    ("Bersepeda", "Cycling", None,
+     "Nyeri lutut bagian depan atau samping, pinggang dan leher pegal karena posisi di atas sepeda, dan tangan yang kebas setelah gowes jauh.",
+     "Pain at the front or side of the knee, a sore lower back and neck from your riding position, and hands that go numb on long rides."),
     ("Futsal &amp; sepak bola", "Futsal &amp; football", "nyeri-setelah-olahraga-weekend",
      "Hamstring tertarik, keseleo pergelangan kaki, dan nyeri yang muncul dua hari setelah main.",
      "Pulled hamstrings, sprained ankles and the soreness that shows up two days after a game."),
@@ -190,9 +193,11 @@ FAQ = [
 
 TITLE = ("Physio8 — Fisioterapi Cedera Olahraga & Clinical Pilates di Gading Serpong",
          "Physio8 — Sports Injury Physiotherapy & Clinical Pilates in Gading Serpong")
-DESC = ("Fisioterapi untuk cedera olahraga padel, tenis, lari, dan futsal, plus clinical Pilates, di Paramount Gading Serpong. Gerakmu diukur dengan kamera AR, lalu dilatih sampai siap main lagi.",
-        "Physiotherapy for padel, tennis, running and futsal injuries, plus clinical Pilates, in Paramount Gading Serpong. Your movement is measured with an AR camera, then trained until you are ready to play again.")
+DESC = ("Fisioterapi untuk cedera olahraga padel, tenis, lari, bersepeda, dan futsal, plus clinical Pilates, di Paramount Gading Serpong. Gerakmu diukur dengan kamera AR, lalu dilatih sampai siap main lagi.",
+        "Physiotherapy for padel, tennis, running, cycling and futsal injuries, plus clinical Pilates, in Paramount Gading Serpong. Your movement is measured with an AR camera, then trained until you are ready to play again.")
 
+WA_CYCLING = (wa("Halo Physio8, saya pesepeda dan ingin konsultasi soal keluhan saat/setelah gowes. (dari website)"),
+              wa("Hi Physio8, I cycle and would like advice about pain during or after riding. (from the website)"))
 WA_PRICE = (wa("Halo Physio8, saya ingin tanya harga layanan fisioterapi. (dari website)"),
             wa("Hi Physio8, I would like to ask about your prices. (from the website)"))
 
@@ -227,7 +232,7 @@ def hero():
       <p class="hero-k"><span{en("Sports physiotherapy")}>Fisioterapi olahraga</span><span class="sep" aria-hidden="true"></span><span>Paramount Gading Serpong</span></p>
       <h1>
         <span class="display"><span>Recover.</span><span class="c2">Move.</span><span class="c3">Repeat.</span></span>
-        <span class="h1-sub"{en("Physiotherapy for sports injuries in Gading Serpong, from the padel and tennis court to your running route.")}>Fisioterapi untuk cedera olahraga di Gading Serpong, dari lapangan padel dan tenis sampai rute larimu.</span>
+        <span class="h1-sub"{en("Physiotherapy for sports injuries in Gading Serpong, from the padel and tennis court to your running and cycling routes.")}>Fisioterapi untuk cedera olahraga di Gading Serpong, dari lapangan padel dan tenis sampai rute lari dan gowesmu.</span>
       </h1>
       <p class="lede"{en("Shoulder hurts on every smash? Elbow sore after a match, or a knee that complains on your runs? We find the cause, measure how you move, then build a programme to get you back to playing.")}>Bahu sakit setiap smash? Siku nyeri setelah main, atau lutut yang protes waktu lari? Kami cari penyebabnya, ukur gerakmu, lalu susun programnya sampai kamu bisa main lagi.</p>
       <div class="hero-cta">
@@ -247,13 +252,17 @@ def injuries():
     cards = ""
     for k, (ti, te, slug, di, de) in enumerate(INJURIES):
         cls = "inj rv" + (" big" if k == 0 else "")
-        cards += (f'<a class="{cls}" href="/artikel/{slug}/"><h3{en(te)}>{ti}</h3><p{en(de)}>{di}</p>'
-                  f'<span class="link-arrow"><span{en("Read the guide")}>Baca panduannya</span>{icon("arrow")}</span></a>')
+        if slug:
+            href, lab = f'href="/artikel/{slug}/"', ("Baca panduannya", "Read the guide")
+        else:
+            href, lab = wa_attrs(WA_CYCLING), ("Konsultasi via WhatsApp", "Ask us on WhatsApp")
+        cards += (f'<a class="{cls}" {href}><h3{en(te)}>{ti}</h3><p{en(de)}>{di}</p>'
+                  f'<span class="link-arrow"><span{en(lab[1])}>{lab[0]}</span>{icon("arrow")}</span></a>')
     return f"""<section class="sec" id="cedera">
   <div class="wrap">
     <div class="sec-head">
       <div><p class="eyebrow"{en("Sports injuries")}>Cedera olahraga</p><h2 class="h2"{en("Injuries we treat")}>Cedera yang kami tangani</h2></div>
-      <p class="lede"{en("We focus on people who play padel, tennis, run or play futsal. Injuries like these often start small, get ignored because you can still play, and end up keeping you off the court.")}>Fokus kami pemain padel, tenis, pelari, dan pemain futsal. Cedera seperti ini biasanya mulai dari nyeri kecil, dibiarkan karena masih bisa main, lalu lama-lama bikin kamu berhenti.</p>
+      <p class="lede"{en("We focus on padel and tennis players, runners, cyclists and futsal players. Injuries like these often start small, get ignored because you can still play, and end up keeping you off the court.")}>Fokus kami pemain padel dan tenis, pelari, pesepeda, dan pemain futsal. Cedera seperti ini biasanya mulai dari nyeri kecil, dibiarkan karena masih bisa main, lalu lama-lama bikin kamu berhenti.</p>
     </div>
     <div class="injuries">{cards}</div>
   </div>
@@ -270,7 +279,7 @@ def pathway():
     return f"""<section class="sec tint" id="metode">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="eyebrow">Physio8 Pathway</p><h2 class="h2"{en("From injury back to the court")}>Dari cedera sampai balik ke lapangan</h2></div>
+      <div><p class="eyebrow">Physio8 Pathway</p><h2 class="h2"{en("From injury back to the court")}>Dari cedera sampai kembali ke lapangan</h2></div>
       <p class="lede"{en("The programme has eight steps. The first two happen in the clinic: we examine you and explain what is going on. After that you come in for treatment sessions and do home exercises in between, which we keep track of.")}>Programnya ada delapan tahap. Dua tahap pertama di klinik: kami periksa dan jelaskan masalahnya. Setelah itu kamu datang untuk sesi terapi, dan di sela-selanya mengerjakan latihan di rumah yang kami pantau.</p>
     </div>
     <ol class="steps">{steps}</ol>
@@ -550,7 +559,7 @@ def jsonld():
         "geo": {"@type": "GeoCoordinates", "latitude": GEO[0], "longitude": GEO[1]}, "hasMap": MAP_LINK,
         "areaServed": "Gading Serpong, Tangerang", "currenciesAccepted": "IDR", "sameAs": [IG],
         "medicalSpecialty": "PhysicalTherapy",
-        "knowsAbout": ["Sports injuries", "Padel injuries", "Tennis elbow", "Running injuries", "ACL rehabilitation", "Clinical Pilates"],
+        "knowsAbout": ["Sports injuries", "Padel injuries", "Tennis elbow", "Running injuries", "Cycling injuries", "ACL rehabilitation", "Clinical Pilates"],
         "availableService": [{"@type": "MedicalTherapy", "name": x} for x in
                              ("Sports injury physiotherapy", "Clinical Pilates", "Manual therapy", "Dry needling", "Kinesio taping",
                               "Movement & Posture Assessment", "Post-surgery rehabilitation")],

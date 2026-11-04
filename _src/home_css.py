@@ -261,9 +261,9 @@ ul,ol{margin:0;padding:0;list-style:none}
 .inj h3{font-size:22px}
 .inj p{color:var(--muted);font-size:16px}
 .inj .link-arrow{margin-top:auto;padding-top:8px;font-size:15px}
-.inj.big{grid-column:span 2;background:var(--purple);border-color:var(--purple)}
-.inj.big h3{color:#fff;font-size:clamp(26px,2.6vw,34px)}
-.inj.big p{color:#CBC3E8;font-size:17.5px;max-width:560px}
+.inj.big{background:var(--purple);border-color:var(--purple)}
+.inj.big h3{color:#fff}
+.inj.big p{color:#CBC3E8}
 .inj.big .link-arrow{color:#D8E37A}
 /* services (no prices) */
 .svcs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
