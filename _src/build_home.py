@@ -103,7 +103,7 @@ def journey(i, n=8):
 
 
 # ------------------------------------------------------------------ content
-NAV = [("cedera", "Cedera olahraga", "Sports injuries"), ("metode", "Metode", "Method"), ("harga", "Layanan", "Services"),
+NAV = [("keluhan", "Keluhan", "Conditions"), ("metode", "Metode", "Method"), ("harga", "Layanan", "Services"),
        ("tim", "Tim", "Team"), ("lokasi", "Lokasi", "Location"), ("artikel", "Artikel", "Articles")]
 
 STEPS = [
@@ -137,25 +137,28 @@ METHOD = [
      "The day-one measurements are repeated, so you can see the change in numbers.", []),
 ]
 
-INJURIES = [
-    ("Padel &amp; tenis", "Padel &amp; tennis", "nyeri-bahu-padel",
-     "Bahu nyeri saat smash atau servis, tennis elbow, pergelangan tangan, dan betis yang tertarik saat berlari jarak pendek di lapangan.",
-     "Shoulder pain on smashes and serves, tennis elbow, sore wrists, and calves that pull on short sprints across the court."),
-    ("Lari", "Running", "runners-knee-shin-splints-achilles",
-     "Runner's knee, shin splints, dan tendon Achilles yang kaku setiap pagi.",
-     "Runner's knee, shin splints and an Achilles that is stiff every morning."),
-    ("Bersepeda", "Cycling", None,
-     "Nyeri lutut bagian depan atau samping, pinggang dan leher pegal karena posisi di atas sepeda, dan tangan yang kebas setelah bersepeda jarak jauh.",
-     "Pain at the front or side of the knee, a sore lower back and neck from your riding position, and hands that go numb on long rides."),
-    ("Futsal &amp; sepak bola", "Futsal &amp; football", "nyeri-setelah-olahraga-weekend",
-     "Hamstring tertarik, keseleo pergelangan kaki, dan nyeri yang muncul dua hari setelah bertanding.",
-     "Pulled hamstrings, sprained ankles and the soreness that shows up two days after a game."),
-    ("Setelah operasi", "After surgery", "rehabilitasi-pasca-operasi-acl",
-     "Program setelah rekonstruksi ACL atau operasi bahu, sampai lolos tes untuk kembali bermain.",
-     "Rehab after ACL reconstruction or shoulder surgery, through to the return-to-sport tests."),
-    ("Punggung &amp; leher", "Back &amp; neck", "nyeri-pinggang-duduk-lama",
-     "Pinggang dan leher pegal karena duduk lama atau bekerja di depan layar. Kamu tidak harus menjadi atlet untuk datang.",
-     "A sore lower back or stiff neck from long hours at a desk. You do not have to be an athlete to come in."),
+INJURIES = [  # (title id, title en, link kind, target, text id, text en)
+    ("Cedera olahraga", "Sports injuries", "url", "/artikel/",
+     "Untuk pemain padel dan tenis, pelari, pesepeda, dan pemain futsal. Bahu nyeri saat smash, tennis elbow, runner's knee, hamstring tertarik, hingga keseleo pergelangan kaki.",
+     "For padel and tennis players, runners, cyclists and futsal players. Shoulder pain on smashes, tennis elbow, runner's knee, pulled hamstrings and sprained ankles."),
+    ("Nyeri punggung &amp; leher", "Back &amp; neck pain", "url", "/artikel/nyeri-pinggang-duduk-lama/",
+     "Pinggang dan leher pegal karena duduk lama, bekerja di depan layar, atau salah posisi saat mengangkat beban.",
+     "A sore lower back or neck from long hours sitting, screen work or lifting the wrong way."),
+    ("Nyeri sendi", "Joint pain", "url", "/artikel/kapan-perlu-fisioterapi/",
+     "Bahu, lutut, pinggul, atau pergelangan yang nyeri dan kaku, terutama yang tidak membaik setelah beberapa hari.",
+     "Painful, stiff shoulders, knees, hips or wrists, especially when it has not settled after a few days."),
+    ("Pemulihan pasca operasi", "Recovery after surgery", "url", "/artikel/rehabilitasi-pasca-operasi-acl/",
+     "Program setelah operasi ACL, bahu, atau sendi lainnya, dari mengembalikan gerak hingga lolos tes untuk kembali beraktivitas.",
+     "Rehab after ACL, shoulder or other joint surgery, from restoring movement to passing the tests to get back to your activities."),
+    ("Penguatan untuk orang tua", "Strength for older adults", "wa", "senior",
+     "Latihan kekuatan dan keseimbangan agar orang tua tetap mandiri, lebih stabil saat berjalan, dan percaya diri bergerak.",
+     "Strength and balance training to help older adults stay independent, steadier on their feet and confident moving."),
+    ("Postur &amp; pola gerak", "Posture &amp; movement", "url", "/artikel/asesmen-gerak-dan-postur/",
+     "Bahu tidak sejajar, postur membungkuk, atau gerakan yang terasa tidak seimbang. Kami ukur dari empat sisi dengan kamera AR.",
+     "Uneven shoulders, a slouched posture or movement that feels lopsided. We measure it from four sides with an AR camera."),
+    ("Nyeri yang sering kambuh", "Pain that keeps coming back", "url", "#pilates",
+     "Cedera yang sama terulang setiap kali kembali aktif. Biasanya kekuatan dan kontrol geraknya belum pulih sepenuhnya.",
+     "The same injury returning every time you get active again. Usually strength and movement control have not fully recovered."),
 ]
 
 CREDS = [
@@ -196,8 +199,8 @@ TITLE = ("Physio8 — Fisioterapi Cedera Olahraga & Clinical Pilates di Gading S
 DESC = ("Fisioterapi untuk cedera olahraga padel, tenis, lari, bersepeda, dan futsal, plus clinical Pilates, di Paramount Gading Serpong. Gerakmu diukur dengan kamera AR, lalu dilatih sampai siap main lagi.",
         "Physiotherapy for padel, tennis, running, cycling and futsal injuries, plus clinical Pilates, in Paramount Gading Serpong. Your movement is measured with an AR camera, then trained until you are ready to play again.")
 
-WA_CYCLING = (wa("Halo Physio8, saya pesepeda dan ingin konsultasi soal keluhan saat/setelah gowes. (dari website)"),
-              wa("Hi Physio8, I cycle and would like advice about pain during or after riding. (from the website)"))
+WA_SENIOR = (wa("Halo Physio8, saya ingin konsultasi soal program penguatan untuk orang tua. (dari website)"),
+             wa("Hi Physio8, I would like to ask about a strength programme for an older adult. (from the website)"))
 WA_PRICE = (wa("Halo Physio8, saya ingin tanya harga layanan fisioterapi. (dari website)"),
             wa("Hi Physio8, I would like to ask about your prices. (from the website)"))
 
@@ -250,19 +253,23 @@ def hero():
 
 def injuries():
     cards = ""
-    for k, (ti, te, slug, di, de) in enumerate(INJURIES):
+    for k, (ti, te, kind, target, di, de) in enumerate(INJURIES):
         cls = "inj rv" + (" big" if k == 0 else "")
-        if slug:
-            href, lab = f'href="/artikel/{slug}/"', ("Baca selengkapnya", "Read more")
+        if kind == "wa":
+            href, lab = wa_attrs(WA_SENIOR), ("Konsultasi via WhatsApp", "Ask us on WhatsApp")
+        elif target == "/artikel/":
+            href, lab = f'href="{target}"', ("Lihat panduan cedera", "See injury guides")
+        elif target.startswith("#"):
+            href, lab = f'href="{target}"', ("Pelajari clinical Pilates", "About clinical Pilates")
         else:
-            href, lab = wa_attrs(WA_CYCLING), ("Konsultasi via WhatsApp", "Ask us on WhatsApp")
+            href, lab = f'href="{target}"', ("Baca selengkapnya", "Read more")
         cards += (f'<a class="{cls}" {href}><h3{en(te)}>{ti}</h3><p{en(de)}>{di}</p>'
                   f'<span class="link-arrow"><span{en(lab[1])}>{lab[0]}</span>{icon("arrow")}</span></a>')
-    return f"""<section class="sec" id="cedera">
+    return f"""<section class="sec" id="keluhan">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="eyebrow"{en("Sports injuries")}>Cedera olahraga</p><h2 class="h2"{en("Find the right care for your injury")}>Temukan solusi untuk cederamu</h2></div>
-      <p class="lede"{en("Pain that will not go away? We help padel and tennis players, runners, cyclists and futsal players get back to the sport they love. Pick your sport to start.")}>Nyeri yang tidak kunjung hilang? Kami membantu pemain padel dan tenis, pelari, pesepeda, serta pemain futsal kembali menikmati olahraga favorit mereka. Pilih jenis olahragamu untuk mulai.</p>
+      <div><p class="eyebrow"{en("What we treat")}>Yang kami tangani</p><h2 class="h2"{en("Find the right care for you")}>Temukan solusi untuk keluhanmu</h2></div>
+      <p class="lede"{en("Pain that will not go away, recovery after surgery, or staying strong as you get older? We treat a wide range of muscle, joint and movement problems, with a special focus on sports injuries.")}>Nyeri yang tidak kunjung hilang, pemulihan setelah operasi, atau ingin tetap kuat di usia lanjut? Kami menangani berbagai keluhan otot, sendi, dan gerak, dengan fokus khusus pada cedera olahraga.</p>
     </div>
     <div class="injuries">{cards}</div>
   </div>
@@ -520,7 +527,7 @@ def booking():
 
 
 def footer():
-    cols = [("Physio8", "Physio8", [("#cedera", "Cedera olahraga", "Sports injuries"), ("#metode", "Physio8 Pathway", "Physio8 Pathway"),
+    cols = [("Physio8", "Physio8", [("#keluhan", "Yang kami tangani", "What we treat"), ("#metode", "Physio8 Pathway", "Physio8 Pathway"),
                                     ("#pilates", "Clinical Pilates", "Clinical Pilates"), ("#harga", "Layanan", "Services"),
                                     ("#tim", "Tim", "Team"), ("#faq", "FAQ", "FAQ")]),
             ("Artikel", "Articles", [("/artikel/nyeri-bahu-padel/", "Cedera bahu pemain padel", "Padel shoulder injuries"),
