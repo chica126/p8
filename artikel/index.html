@@ -414,6 +414,16 @@ ul,ol{margin:0;padding:0;list-style:none}
 [data-until].expired{display:none !important}
 
 /* reveal */
+/* timer promo (under Pilates) */
+.tm-promo{margin-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:56px minmax(0,1fr) auto auto;gap:24px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 28px}
+.tm-promo .ic{width:56px;height:56px;border-radius:16px;background:var(--purple-50);color:var(--purple);display:flex;align-items:center;justify-content:center}
+.tm-promo .ic svg{width:28px;height:28px}
+.tm-promo h3{font-size:20px;color:var(--ink);letter-spacing:-.01em}
+.tm-promo p{margin-top:6px;font-size:15.5px;color:var(--muted);line-height:1.6;max-width:620px}
+.tm-promo .pv{width:96px;height:96px;border-radius:50%;background:var(--teal);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:inset 0 0 0 5px rgba(255,255,255,.35)}
+.tm-promo .pv b{font-size:24px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1}
+.tm-promo .pv span{font-size:12px;font-weight:600;margin-top:4px}
+
 /* reviews */
 .rev-all{margin-top:18px}
 .rev-note{margin-top:14px;font-size:13px;color:var(--faint)}
@@ -438,6 +448,8 @@ ul,ol{margin:0;padding:0;list-style:none}
 
 /* responsive */
 @media (max-width:1080px){
+  .tm-promo .pv{display:none}
+  .tm-promo{grid-template-columns:56px minmax(0,1fr) auto}
   .revs{grid-template-columns:repeat(2,minmax(0,1fr))}
   .injuries{grid-template-columns:repeat(2,minmax(0,1fr))}
   .inj.big{grid-column:1/-1}
@@ -475,6 +487,8 @@ ul,ol{margin:0;padding:0;list-style:none}
   .map{min-height:340px}
 }
 @media (max-width:640px){
+  .tm-promo{grid-template-columns:minmax(0,1fr);padding:22px;gap:16px}
+  .tm-promo .btn{width:100%}
   .revs{grid-template-columns:minmax(0,1fr)}
   .sec-cta .btn{width:100%}
   .injuries,.svcs{grid-template-columns:minmax(0,1fr)}

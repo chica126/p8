@@ -398,6 +398,15 @@ def pilates():
       {wa_cta("Ingin mencoba clinical Pilates?", "Interested in clinical Pilates?", "Tanyakan via WhatsApp", "Ask on WhatsApp", wa_pair("Halo Physio8, saya ingin tanya tentang clinical Pilates.", "Hi Physio8, I would like to ask about clinical Pilates."))}
     </div>
   </div>
+  <div class="wrap">
+    <div class="tm-promo rv">
+      <span class="ic">{icon("timer")}</span>
+      <div class="tx"><h3{en("Exercising at home? Use our workout timer")}>Latihan di rumah? Gunakan timer latihan kami</h3>
+        <p{en("Set work, rest and rounds to match your physiotherapist's plan. A sound marks every change, so you can focus on your movement.")}>Atur waktu latihan, istirahat, dan putaran sesuai program dari fisioterapismu. Bunyi menandai setiap pergantian, jadi kamu cukup fokus pada gerakan.</p></div>
+      <div class="pv" aria-hidden="true"><b>0:20</b><span{en("Work")}>Latihan</span></div>
+      <a class="btn btn-primary" href="/timer/">{icon("play")}<span{en("Open the timer")}>Buka timer</span></a>
+    </div>
+  </div>
 </section>"""
 
 

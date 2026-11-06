@@ -414,6 +414,16 @@ ul,ol{margin:0;padding:0;list-style:none}
 [data-until].expired{display:none !important}
 
 /* reveal */
+/* timer promo (under Pilates) */
+.tm-promo{margin-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:56px minmax(0,1fr) auto auto;gap:24px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 28px}
+.tm-promo .ic{width:56px;height:56px;border-radius:16px;background:var(--purple-50);color:var(--purple);display:flex;align-items:center;justify-content:center}
+.tm-promo .ic svg{width:28px;height:28px}
+.tm-promo h3{font-size:20px;color:var(--ink);letter-spacing:-.01em}
+.tm-promo p{margin-top:6px;font-size:15.5px;color:var(--muted);line-height:1.6;max-width:620px}
+.tm-promo .pv{width:96px;height:96px;border-radius:50%;background:var(--teal);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:inset 0 0 0 5px rgba(255,255,255,.35)}
+.tm-promo .pv b{font-size:24px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1}
+.tm-promo .pv span{font-size:12px;font-weight:600;margin-top:4px}
+
 /* reviews */
 .rev-all{margin-top:18px}
 .rev-note{margin-top:14px;font-size:13px;color:var(--faint)}
@@ -438,6 +448,8 @@ ul,ol{margin:0;padding:0;list-style:none}
 
 /* responsive */
 @media (max-width:1080px){
+  .tm-promo .pv{display:none}
+  .tm-promo{grid-template-columns:56px minmax(0,1fr) auto}
   .revs{grid-template-columns:repeat(2,minmax(0,1fr))}
   .injuries{grid-template-columns:repeat(2,minmax(0,1fr))}
   .inj.big{grid-column:1/-1}
@@ -475,6 +487,8 @@ ul,ol{margin:0;padding:0;list-style:none}
   .map{min-height:340px}
 }
 @media (max-width:640px){
+  .tm-promo{grid-template-columns:minmax(0,1fr);padding:22px;gap:16px}
+  .tm-promo .btn{width:100%}
   .revs{grid-template-columns:minmax(0,1fr)}
   .sec-cta .btn{width:100%}
   .injuries,.svcs{grid-template-columns:minmax(0,1fr)}
@@ -641,6 +655,15 @@ ul,ol{margin:0;padding:0;list-style:none}
         <li><span class="ix">03</span><div><h3 data-en="Adjusted to you">Disesuaikan dengan kondisimu</h3><p data-en="Run by the physiotherapist who has your measurements, with load increased gradually and checked again at steps 6 and 8.">Dipandu fisioterapis yang memegang hasil pengukuranmu, bebannya dinaikkan secara bertahap, lalu dievaluasi ulang pada tahap 6 dan 8.</p></div></li>
       </ul>
       <div class="sec-cta rv"><p data-en="Interested in clinical Pilates?">Ingin mencoba clinical Pilates?</p><a class="btn btn-ghost" href="https://wa.me/6281511488080?text=Halo%20Physio8%2C%20saya%20ingin%20tanya%20tentang%20clinical%20Pilates.%20%28dari%20website%29" data-en-href="https://wa.me/6281511488080?text=Hi%20Physio8%2C%20I%20would%20like%20to%20ask%20about%20clinical%20Pilates.%20%28from%20the%20website%29" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2C6.6 2.2 2.2 6.6 2.2 12c0 1.7.45 3.35 1.28 4.8L2.2 21.8l5.12-1.27c1.4.77 2.99 1.17 4.68 1.17 5.4 0 9.8-4.4 9.8-9.8S17.4 2.2 12 2.2zm0 17.8c-1.5 0-2.97-.4-4.25-1.16l-.3-.18-3.04.75.8-2.93-.2-.31A8.1 8.1 0 0 1 3.9 12c0-4.47 3.63-8.1 8.1-8.1s8.1 3.63 8.1 8.1-3.63 8-8.1 8zm4.45-6.06c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.44-1.36-1.69-.14-.24-.01-.37.11-.5.11-.11.24-.28.37-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.43-.06-.12-.55-1.32-.75-1.81-.2-.47-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.3-.22.24-.85.83-.85 2.03s.87 2.35.99 2.51c.12.16 1.72 2.62 4.16 3.68.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/></svg><span data-en="Ask on WhatsApp">Tanyakan via WhatsApp</span></a></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="tm-promo rv">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></svg></span>
+      <div class="tx"><h3 data-en="Exercising at home? Use our workout timer">Latihan di rumah? Gunakan timer latihan kami</h3>
+        <p data-en="Set work, rest and rounds to match your physiotherapist&#x27;s plan. A sound marks every change, so you can focus on your movement.">Atur waktu latihan, istirahat, dan putaran sesuai program dari fisioterapismu. Bunyi menandai setiap pergantian, jadi kamu cukup fokus pada gerakan.</p></div>
+      <div class="pv" aria-hidden="true"><b>0:20</b><span data-en="Work">Latihan</span></div>
+      <a class="btn btn-primary" href="/timer/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg><span data-en="Open the timer">Buka timer</span></a>
     </div>
   </div>
 </section>
