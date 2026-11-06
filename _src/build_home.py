@@ -402,7 +402,7 @@ def pilates():
     <div class="tm-promo rv">
       <span class="ic">{icon("timer")}</span>
       <div class="tx"><h3{en("Exercising at home? Use our workout timer")}>Latihan di rumah? Gunakan timer latihan kami</h3>
-        <p{en("Set work, rest and rounds to match your physiotherapist's plan. A sound marks every change, so you can focus on your movement.")}>Atur waktu latihan, istirahat, dan putaran sesuai program dari fisioterapismu. Bunyi menandai setiap pergantian, jadi kamu cukup fokus pada gerakan.</p></div>
+        <p{en("Set work, rest and reps to match your physiotherapist's plan. A sound marks every change, so you can focus on your movement.")}>Atur waktu latihan, istirahat, dan repetisi sesuai program dari fisioterapismu. Bunyi menandai setiap pergantian, jadi kamu cukup fokus pada gerakan.</p></div>
       <div class="pv" aria-hidden="true"><b>0:20</b><span{en("Work")}>Latihan</span></div>
       <a class="btn btn-primary" href="/timer/">{icon("play")}<span{en("Open the timer")}>Buka timer</span></a>
     </div>

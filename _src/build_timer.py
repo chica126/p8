@@ -14,8 +14,8 @@ FIELDS = [
     ("p", "Persiapan", "Get ready", "Hitung mundur sebelum mulai", "Countdown before you start", "hourglass", 10, 0, 120, "t"),
     ("w", "Latihan", "Work", "Lama setiap gerakan", "Length of each exercise block", "dumbbell", 20, 5, 600, "t"),
     ("r", "Istirahat", "Rest", "Jeda di antara gerakan", "Pause between blocks", "wind", 10, 0, 600, "t"),
-    ("c", "Putaran", "Rounds", "Latihan dan istirahat dalam satu set", "Work and rest pairs in one set", "repeat", 1, 1, 50, "n"),
-    ("s", "Set", "Sets", "Ulangi seluruh putaran", "Repeat all rounds", "layers", 3, 1, 20, "n"),
+    ("c", "Repetisi", "Reps", "Latihan dan istirahat dalam satu set", "Work and rest pairs in one set", "repeat", 1, 1, 50, "n"),
+    ("s", "Set", "Sets", "Ulangi seluruh repetisi", "Repeat all reps", "layers", 3, 1, 20, "n"),
     ("sr", "Istirahat antar set", "Rest between sets", "Jeda yang lebih panjang", "A longer break", "coffee", 20, 0, 600, "t"),
     ("cd", "Pendinginan", "Cool down", "Peregangan ringan di akhir", "Easy stretching at the end", "heart", 0, 0, 900, "t"),
 ]
@@ -155,14 +155,14 @@ body.tm-live{overflow:hidden}
 
 TIMER_JS = r"""
 (function(){
-  var d=document, F=__FIELDS__, PRE=__PRESETS__, STORE='p8-timer', BASE=__URL__;
+  var d=document, F=__FIELDS__, PRE=__PRESETS__, STORE='p8-timer-v2', BASE=__URL__;
   var L={
     id:{prep:'Persiapan',work:'Latihan',rest:'Istirahat',setrest:'Istirahat antar set',cool:'Pendinginan',done:'Selesai',
-        round:'Putaran',set:'Set',next:'Berikutnya',left:'Sisa',sec:'dtk',min:'mnt',intervals:'interval',total:'Total waktu',
+        round:'Repetisi',set:'Set',next:'Berikutnya',left:'Sisa',sec:'dtk',min:'mnt',intervals:'interval',total:'Total waktu',
         pause:'Jeda',resume:'Lanjut',copied:'Tautan disalin',doneMsg:'Kerja bagus. Catat bagaimana rasanya untuk fisioterapismu.',
         wa:'Halo, ini pengaturan timer latihan dari Physio8: ', voice:{prep:'Bersiap',work:'Mulai',rest:'Istirahat',setrest:'Istirahat antar set',cool:'Pendinginan',done:'Selesai'}},
     en:{prep:'Get ready',work:'Work',rest:'Rest',setrest:'Rest between sets',cool:'Cool down',done:'Done',
-        round:'Round',set:'Set',next:'Next',left:'Left',sec:'sec',min:'min',intervals:'intervals',total:'Total time',
+        round:'Rep',set:'Set',next:'Next',left:'Left',sec:'sec',min:'min',intervals:'intervals',total:'Total time',
         pause:'Pause',resume:'Resume',copied:'Link copied',doneMsg:'Good work. Note how it felt for your physiotherapist.',
         wa:'Hi, here are my Physio8 workout timer settings: ', voice:{prep:'Get ready',work:'Go',rest:'Rest',setrest:'Rest between sets',cool:'Cool down',done:'Done'}}
   };
@@ -171,7 +171,7 @@ TIMER_JS = r"""
   var COLORS={prep:'#5B4BA0',work:'#008699',rest:'#A6B717',setrest:'#CBC3E8',cool:'#E7E3F4'};
 
   // ---------- state ----------
-  var v={}, opt={beep:true,voice:false,vib:true}, name='';
+  var v={}, opt={beep:true,voice:true,vib:true}, name='';
   F.forEach(function(f){v[f.k]=f.d});
   try{var sv=JSON.parse(localStorage.getItem(STORE)||'null'); if(sv){F.forEach(function(f){if(typeof sv.v[f.k]==='number')v[f.k]=sv.v[f.k]}); if(sv.o)opt=Object.assign(opt,sv.o); if(typeof sv.n==='string')name=sv.n;}}catch(e){}
   var qs=new URLSearchParams(location.search), fromUrl=false;
@@ -339,9 +339,9 @@ def _row(f):
 def build_timer():
     title = "Timer Latihan untuk Program di Rumah | Physio8"
     desc = ("Timer latihan interval dari Physio8 untuk latihan pemulihan dan penguatan di rumah. "
-            "Atur waktu latihan, istirahat, putaran dan set sesuai program dari fisioterapismu.")
+            "Atur waktu latihan, istirahat, repetisi, dan set sesuai program dari fisioterapismu.")
     title_en = "Workout Timer for Your Home Programme | Physio8"
-    desc_en = "Physio8's interval timer for recovery and strengthening exercise at home. Set work, rest, rounds and sets to match your physiotherapist's plan."
+    desc_en = "Physio8's interval timer for recovery and strengthening exercise at home. Set work, rest, reps and sets to match your physiotherapist's plan."
     ld = build.js({"@context": "https://schema.org", "@graph": [
         {"@type": "WebApplication", "@id": URL + "#app", "name": "Timer Latihan Physio8", "url": URL,
          "applicationCategory": "HealthApplication", "operatingSystem": "Web", "inLanguage": ["id-ID", "en"],
@@ -423,7 +423,7 @@ def build_timer():
     <div class="tm-how">
       <div class="sec-head" style="margin-bottom:28px"><div><p class="eyebrow" data-en="How to use it">Cara menggunakan</p><h2 class="h2" data-en="Three steps to start">Tiga langkah untuk mulai</h2></div></div>
       <ol>
-        <li><b data-en="Set your timing">Atur waktunya</b><p data-en="Pick a quick option or set work, rest, rounds and sets yourself.">Pilih salah satu pilihan cepat, atau atur sendiri waktu latihan, istirahat, putaran, dan set.</p></li>
+        <li><b data-en="Set your timing">Atur waktunya</b><p data-en="Pick a quick option or set work, rest, reps and sets yourself.">Pilih salah satu pilihan cepat, atau atur sendiri waktu latihan, istirahat, repetisi, dan set.</p></li>
         <li><b data-en="Place your phone where you can see it">Letakkan ponsel di tempat yang terlihat</b><p data-en="The screen stays on while the timer runs. Turn the volume up so you can hear each change.">Layar tetap menyala selama timer berjalan. Naikkan volume agar setiap pergantian terdengar.</p></li>
         <li><b data-en="Press Start and move">Tekan Mulai dan bergerak</b><p data-en="Tap the big button to pause. On a keyboard, Space pauses and the arrow keys skip.">Ketuk tombol besar untuk jeda. Di keyboard, tombol spasi untuk jeda dan tombol panah untuk melompat.</p></li>
       </ol>
