@@ -265,7 +265,7 @@ TIMER_JS = r"""
   // ---------- runner ----------
   var st=d.querySelector('.stage'), stPh=st.querySelector('.st-ph'), stName=st.querySelector('.st-name'), stNum=st.querySelector('.st-num'),
       fg=st.querySelector('.fg'), stMeta=st.querySelector('.st-meta'), stNext=st.querySelector('.st-next'), stTot=st.querySelector('.st-total'),
-      bMain=st.querySelector('.main'), live=st.querySelector('.st-live'), C=2*Math.PI*48;
+      bMain=st.querySelector('.main'), live=st.querySelector('.st-live'), C=2*Math.PI*46;
   fg.style.strokeDasharray=C;
   var seq=[], idx=0, endAt=0, remain=0, paused=false, run=false, lastSec=-1, raf=0, iv=0, TT=0;
   var IP=bMain.innerHTML, IR=__ICONPLAY__;
@@ -439,7 +439,7 @@ def build_timer():
   <div class="st-top"><img src="/p8/logo-full-white.svg" alt="Physio8" width="60" height="40"><button type="button" class="st-x" data-act="stop" aria-label="Berhenti" data-en-aria-label="Stop">{icon("x")}</button></div>
   <div class="st-mid">
     <p class="st-ph"></p><p class="st-name"></p>
-    <div class="st-ring"><svg viewBox="0 0 100 100" aria-hidden="true"><circle class="bg" cx="50" cy="50" r="48"/><circle class="fg" cx="50" cy="50" r="48"/></svg><div class="st-num" aria-hidden="true">0</div></div>
+    <div class="st-ring"><svg viewBox="0 0 100 100" aria-hidden="true"><circle class="bg" cx="50" cy="50" r="46"/><circle class="fg" cx="50" cy="50" r="46"/></svg><div class="st-num" aria-hidden="true">0</div></div>
     <p class="st-meta"></p><p class="st-next"></p>
     <div class="st-done"><button type="button" class="btn btn-white" data-act="again">{icon("restart")}<span data-en="Do it again">Ulangi</span></button><button type="button" class="btn btn-white" data-act="stop" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.5)"><span data-en="Back to settings">Kembali ke pengaturan</span></button></div>
   </div>
