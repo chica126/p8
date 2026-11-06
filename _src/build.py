@@ -698,6 +698,7 @@ def build_sitemap(arts):
     latest = max(a["modified"] for a in arts)
     urls = [(SITE_BASE, max(latest, HOME_MODIFIED), "1.0", None), (url_of(), latest, "0.9", None)]
     urls += [(url_of(a["slug"]), a["modified"], "0.8", a) for a in arts]
+    urls.append((SITE_BASE + "timer/", "2026-11-06", "0.6", None))
     out = ['<?xml version="1.0" encoding="UTF-8"?>',
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
            'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
@@ -737,11 +738,14 @@ def main():
         redirect_stub("./artikel/index.html", url_of(), "Artikel — Physio8"))
     open(os.path.join(ROOT, "Artikel Detail.dc.html"), "w", encoding="utf-8").write(
         redirect_stub("./artikel/kapan-perlu-fisioterapi/index.html", url_of("kapan-perlu-fisioterapi"), "Kapan nyeri butuh fisioterapi — Physio8"))
+    import build_timer
+    os.makedirs(os.path.join(ROOT, "timer"), exist_ok=True)
+    open(os.path.join(ROOT, "timer", "index.html"), "w", encoding="utf-8").write(build_timer.build_timer())
     from build_home import build_home
     open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8").write(build_home(arts, img, fmt_date_short))
     for path, wc, nref in written:
         print(f"{os.path.relpath(path, ROOT):55s} {wc:5d} words  {nref} refs")
-    print("artikel/index.html (hub) + 2 redirect stubs + index.html (homepage)")
+    print("artikel/index.html (hub) + 2 redirect stubs + timer/index.html + index.html (homepage)")
     print(f"sitemap.xml ({build_sitemap(arts)} URLs) + robots.txt")
 
 

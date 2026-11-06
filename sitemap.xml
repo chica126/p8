@@ -64,4 +64,9 @@
     <priority>0.8</priority>
     <image:image><image:loc>https://images.unsplash.com/photo-1645005512964-5057008b4425?w=1200&amp;h=630&amp;q=80&amp;auto=format&amp;fit=crop&amp;crop=faces,entropy</image:loc></image:image>
   </url>
+  <url>
+    <loc>https://physio8.id/timer/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <priority>0.6</priority>
+  </url>
 </urlset>

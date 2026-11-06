@@ -588,7 +588,7 @@ def booking():
 def footer():
     cols = [("Physio8", "Physio8", [("#keluhan", "Yang kami tangani", "What we treat"), ("#metode", "Physio8 Pathway", "Physio8 Pathway"),
                                     ("#pilates", "Clinical Pilates", "Clinical Pilates"), ("#harga", "Layanan", "Services"),
-                                    ("#tim", "Tim", "Team"), ("#faq", "FAQ", "FAQ")]),
+                                    ("#tim", "Tim", "Team"), ("#faq", "FAQ", "FAQ"), ("/timer/", "Timer latihan", "Workout timer")]),
             ("Artikel", "Articles", [("/artikel/nyeri-bahu-padel/", "Cedera bahu pemain padel", "Padel shoulder injuries"),
                                      ("/artikel/runners-knee-shin-splints-achilles/", "Cedera lari", "Running injuries"),
                                      ("/artikel/rehabilitasi-pasca-operasi-acl/", "Rehabilitasi ACL", "ACL rehab"),
