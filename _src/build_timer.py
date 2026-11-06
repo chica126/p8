@@ -1,4 +1,4 @@
-"""Physio8 interval (Tabata-style) workout timer at /timer/ — same design system as the homepage."""
+"""Physio8 interval workout timer at /timer/ — same design system as the homepage."""
 import json
 
 import build
@@ -14,17 +14,15 @@ FIELDS = [
     ("p", "Persiapan", "Get ready", "Hitung mundur sebelum mulai", "Countdown before you start", "hourglass", 10, 0, 120, "t"),
     ("w", "Latihan", "Work", "Lama setiap gerakan", "Length of each exercise block", "dumbbell", 20, 5, 600, "t"),
     ("r", "Istirahat", "Rest", "Jeda di antara gerakan", "Pause between blocks", "wind", 10, 0, 600, "t"),
-    ("c", "Putaran", "Rounds", "Latihan dan istirahat dalam satu set", "Work and rest pairs in one set", "repeat", 8, 1, 50, "n"),
-    ("s", "Set", "Sets", "Ulangi seluruh putaran", "Repeat all rounds", "layers", 1, 1, 20, "n"),
-    ("sr", "Istirahat antar set", "Rest between sets", "Jeda yang lebih panjang", "A longer break", "coffee", 60, 0, 600, "t"),
+    ("c", "Putaran", "Rounds", "Latihan dan istirahat dalam satu set", "Work and rest pairs in one set", "repeat", 1, 1, 50, "n"),
+    ("s", "Set", "Sets", "Ulangi seluruh putaran", "Repeat all rounds", "layers", 3, 1, 20, "n"),
+    ("sr", "Istirahat antar set", "Rest between sets", "Jeda yang lebih panjang", "A longer break", "coffee", 20, 0, 600, "t"),
     ("cd", "Pendinginan", "Cool down", "Peregangan ringan di akhir", "Easy stretching at the end", "heart", 0, 0, 900, "t"),
 ]
 
 PRESETS = [
-    ("Tabata 20/10 × 8", "Tabata 20/10 × 8", {"p": 10, "w": 20, "r": 10, "c": 8, "s": 1, "sr": 60, "cd": 0}),
-    ("Interval 30/30 × 6", "Interval 30/30 × 6", {"p": 10, "w": 30, "r": 30, "c": 6, "s": 1, "sr": 60, "cd": 0}),
-    ("Tahan 45/15 × 5", "Hold 45/15 × 5", {"p": 10, "w": 45, "r": 15, "c": 5, "s": 1, "sr": 60, "cd": 0}),
-    ("3 set × 10 putaran", "3 sets × 10 rounds", {"p": 10, "w": 30, "r": 15, "c": 10, "s": 3, "sr": 90, "cd": 120}),
+    ("Tahan 20 dtk × 3 set", "Hold 20 s × 3 sets", {"p": 10, "w": 20, "r": 10, "c": 1, "s": 3, "sr": 20, "cd": 0}),
+    ("Tahan 30 dtk × 4 set", "Hold 30 s × 4 sets", {"p": 10, "w": 30, "r": 10, "c": 1, "s": 4, "sr": 30, "cd": 0}),
 ]
 
 TIMER_CSS = r"""
@@ -233,7 +231,7 @@ TIMER_JS = r"""
       barT=d.querySelector('.tm-bar .t b'), barS=d.querySelector('.tm-bar .t span');
   function refresh(){
     Object.keys(rows).forEach(function(k){ var r=rows[k]; r.out.textContent=fmtField(r.f,v[k]); r.mi.disabled=v[k]<=r.f.min; r.pl.disabled=v[k]>=r.f.max; });
-    rows.sr.row.classList.toggle('off', v.s<2);
+    rows.sr.row.classList.toggle('off', v.s<2); rows.r.row.classList.toggle('off', v.c<2);
     var seq=plan(), t=total(seq), n=seq.filter(function(x){return x.ph==='work'||x.ph==='rest'}).length;
     sumBig.textContent=fmt(t); barT.textContent=fmt(t);
     var pl=function(n,w){return n+' '+w.toLowerCase()+(lang()==='en'&&n!==1?'s':'')};
@@ -283,7 +281,7 @@ TIMER_JS = r"""
     remain=x.dur*1000; endAt=now()+remain; lastSec=-1;
     st.setAttribute('data-ph',x.ph);
     stPh.textContent=T(x.ph); stName.textContent=(x.ph==='work'&&name.trim())?name.trim():'';
-    var m=[]; if(x.c){m.push(T('round')+' '+x.c+'/'+v.c)} if(x.s&&v.s>1){m.push(T('set')+' '+x.s+'/'+v.s)}
+    var m=[]; if(x.c&&v.c>1){m.push(T('round')+' '+x.c+'/'+v.c)} if(x.s&&v.s>1){m.push(T('set')+' '+x.s+'/'+v.s)}
     stMeta.innerHTML=m.map(function(t){return '<span>'+t+'</span>'}).join('');
     var nx=seq[i+1]; stNext.textContent=nx?(T('next')+': '+T(nx.ph)+' · '+fmtField({t:'t'},nx.dur)):'';
     live.textContent=T(x.ph)+(stName.textContent?', '+stName.textContent:'');
@@ -339,10 +337,10 @@ def _row(f):
 
 
 def build_timer():
-    title = "Timer Latihan Interval dan Tabata | Physio8"
+    title = "Timer Latihan untuk Program di Rumah | Physio8"
     desc = ("Timer latihan interval dari Physio8 untuk latihan pemulihan dan penguatan di rumah. "
             "Atur waktu latihan, istirahat, putaran dan set sesuai program dari fisioterapismu.")
-    title_en = "Interval and Tabata Workout Timer | Physio8"
+    title_en = "Workout Timer for Your Home Programme | Physio8"
     desc_en = "Physio8's interval timer for recovery and strengthening exercise at home. Set work, rest, rounds and sets to match your physiotherapist's plan."
     ld = build.js({"@context": "https://schema.org", "@graph": [
         {"@type": "WebApplication", "@id": URL + "#app", "name": "Timer Latihan Physio8", "url": URL,
@@ -413,7 +411,7 @@ def build_timer():
           <div class="tm-legend" aria-hidden="true"><span style="--c:#008699" data-en="Work">Latihan</span><span style="--c:#A6B717" data-en="Rest">Istirahat</span><span style="--c:#CBC3E8" data-en="Between sets">Antar set</span></div>
           <button type="button" class="btn btn-white start" data-act="start">{icon("play")}<span data-en="Start">Mulai</span></button>
         </div>
-        <div class="tm-note">{icon("info")}<p data-en="Use the timing your physiotherapist gave you. Tabata is high-intensity training and is not right for every condition. Stop if you feel sharp pain, dizziness or chest pain.">Gunakan takaran dari fisioterapismu. Tabata adalah latihan intensitas tinggi dan tidak cocok untuk semua kondisi. Hentikan latihan jika muncul nyeri tajam, pusing, atau nyeri dada.</p></div>
+        <div class="tm-note">{icon("info")}<p data-en="Use the timing your physiotherapist gave you. Stop if you feel sharp pain, dizziness or chest pain.">Gunakan takaran dari fisioterapismu. Hentikan latihan jika muncul nyeri tajam, pusing, atau nyeri dada.</p></div>
         <div class="tm-share">
           <b data-en="Save or share these settings">Simpan atau bagikan pengaturan ini</b>
           <p data-en="The link opens this timer with the same settings. Handy for physiotherapists sending a programme to patients.">Tautan akan membuka timer ini dengan pengaturan yang sama. Praktis untuk fisioterapis yang mengirim program ke pasien.</p>
