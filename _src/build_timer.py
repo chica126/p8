@@ -411,7 +411,7 @@ def build_timer():
           <div class="tm-legend" aria-hidden="true"><span style="--c:#008699" data-en="Work">Latihan</span><span style="--c:#A6B717" data-en="Rest">Istirahat</span><span style="--c:#CBC3E8" data-en="Between sets">Antar set</span></div>
           <button type="button" class="btn btn-white start" data-act="start">{icon("play")}<span data-en="Start">Mulai</span></button>
         </div>
-        <div class="tm-note">{icon("info")}<p data-en="Use the timing your physiotherapist gave you. Stop if you feel sharp pain, dizziness or chest pain.">Gunakan takaran dari fisioterapismu. Hentikan latihan jika muncul nyeri tajam, pusing, atau nyeri dada.</p></div>
+        <div class="tm-note">{icon("info")}<p data-en="Follow the programme your physiotherapist recommended. Stop if you feel sharp pain, dizziness or chest pain.">Ikuti program yang dianjurkan fisioterapismu. Hentikan latihan jika muncul nyeri tajam, pusing, atau nyeri dada.</p></div>
         <div class="tm-share">
           <b data-en="Save or share these settings">Simpan atau bagikan pengaturan ini</b>
           <p data-en="The link opens this timer with the same settings. Handy for physiotherapists sending a programme to patients.">Tautan akan membuka timer ini dengan pengaturan yang sama. Praktis untuk fisioterapis yang mengirim program ke pasien.</p>
