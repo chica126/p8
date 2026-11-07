@@ -52,10 +52,18 @@ TIMER_CSS = r"""
 .tm-name label{display:block;font-size:14px;font-weight:600;color:var(--ink);margin-bottom:8px}
 .tm-name input{width:100%;height:48px;border-radius:14px;border:1px solid var(--line-strong);padding:0 16px;font:500 16px var(--font);color:var(--ink)}
 .tm-name input:focus,.tm-name input:focus-visible{outline:none;border-color:var(--purple);box-shadow:0 0 0 3px var(--purple-50)}
-.tm-opts{display:flex;flex-wrap:wrap;gap:8px;padding-top:18px}
-.tm-opt{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 14px;border-radius:999px;border:1px solid var(--line-strong);background:#fff;font:500 14px var(--font);color:var(--body);cursor:pointer}
-.tm-opt svg{width:17px;height:17px}
-.tm-opt[aria-pressed="true"]{background:var(--teal-50);border-color:var(--teal);color:var(--teal-text)}
+.tm-sws{padding-top:6px}
+.tm-sws > p{font-size:14px;font-weight:600;color:var(--ink);padding:14px 0 2px}
+.sw-row{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:14px;align-items:center;width:100%;padding:12px 0;border:0;border-bottom:1px solid var(--line);background:none;text-align:left;font:inherit;color:inherit;cursor:pointer}
+.sw-row:last-child{border-bottom:0}
+.sw-row b{display:block;font-size:16px;color:var(--ink)}
+.sw-row small{display:block;font-size:13.5px;color:var(--muted);line-height:1.4;margin-top:2px}
+.sw-row[aria-checked="false"] .tm-ic{background:var(--surface);color:var(--faint)}
+.sw{position:relative;flex:0 0 auto;width:52px;height:30px;border-radius:999px;background:var(--line-strong);transition:background .2s ease}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(26,17,66,.25);transition:transform .2s ease}
+[aria-checked="true"] > .sw{background:var(--teal)}
+[aria-checked="true"] > .sw::after{transform:translateX(22px)}
+.sw-row:focus-visible{outline:2px solid var(--purple);outline-offset:2px;border-radius:12px}
 .tm-side{position:sticky;top:104px;display:grid;gap:16px}
 .tm-sum{background:var(--purple);color:#CBC3E8;border-radius:var(--radius);padding:30px}
 .tm-sum .k{font-size:14px;font-weight:600;color:#C9D46B}
@@ -100,12 +108,12 @@ TIMER_CSS = r"""
 .st-mid{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:0}
 .st-ph{font-size:clamp(28px,5vw,56px);font-weight:800;letter-spacing:-.02em;line-height:1.05}
 .st-name{font-size:clamp(17px,2.2vw,24px);font-weight:600;opacity:.9;margin-top:8px;min-height:1.3em}
-.st-ring{position:relative;width:min(62vmin,460px);aspect-ratio:1;margin:clamp(12px,3vh,32px) 0}
+.st-ring{position:relative;width:clamp(160px,calc(100vh - 540px),min(62vmin,460px));width:clamp(160px,calc(100dvh - 540px),min(62vmin,460px));aspect-ratio:1;margin:clamp(10px,2.5vh,28px) 0;flex:0 0 auto}
 .st-ring svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
 .st-ring circle{fill:none;stroke-width:6}
 .st-ring .bg{stroke:currentColor;opacity:.18}
 .st-ring .fg{stroke:currentColor;stroke-linecap:round;transition:stroke-dashoffset .25s linear}
-.st-num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:min(24vmin,190px);font-weight:800;letter-spacing:-.04em;font-variant-numeric:tabular-nums;line-height:1}
+.st-num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:clamp(64px,calc((100vh - 540px)*.4),min(24vmin,190px));font-weight:800;letter-spacing:-.04em;font-variant-numeric:tabular-nums;line-height:1}
 .st-num.long{font-size:min(17vmin,140px)}
 .st-meta{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;font-size:clamp(15px,1.8vw,19px);font-weight:600}
 .st-meta span{opacity:.92}
@@ -119,6 +127,17 @@ TIMER_CSS = r"""
 .stage[data-ph="rest"] .st-ctl .main{background:#1A1142;color:#fff}
 .st-ctl .main svg{width:34px;height:34px}
 .st-total{text-align:center;font-size:14px;opacity:.8;margin-top:12px;font-variant-numeric:tabular-nums}
+.st-opts{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:16px}
+.st-o{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 8px 0 12px;border-radius:999px;border:0;background:rgba(255,255,255,.14);color:inherit;font:600 13.5px var(--font);cursor:pointer}
+.stage[data-ph="rest"] .st-o{background:rgba(26,17,66,.08)}
+.st-o svg{width:17px;height:17px}
+.st-o[aria-checked="false"] svg,.st-o[aria-checked="false"] .lb{opacity:.6}
+.st-o .sw{width:36px;height:22px;background:rgba(255,255,255,.28)}
+.stage[data-ph="rest"] .st-o .sw{background:rgba(26,17,66,.18)}
+.st-o .sw::after{top:3px;left:3px;width:16px;height:16px;box-shadow:none}
+.st-o[aria-checked="true"] > .sw{background:currentColor}
+.st-o[aria-checked="true"] > .sw::after{transform:translateX(14px);background:var(--bgc)}
+.stage[data-ph="done"] .st-opts{display:none}
 .st-done{display:none;margin-top:18px;gap:10px;flex-wrap:wrap;justify-content:center}
 .stage[data-ph="done"] .st-done{display:flex}
 .stage[data-ph="done"] .st-ctl,.stage[data-ph="done"] .st-ring{display:none}
@@ -140,10 +159,14 @@ body.tm-live{overflow:hidden}
 @media (max-width:640px){
   .tm-card{padding:6px 18px 20px}
   .tm-row{grid-template-columns:minmax(0,1fr) auto;gap:10px}
-  .tm-row .tm-ic{display:none}
+  .tm-row .tm-ic,.sw-row .tm-ic{display:none}
+  .sw-row{grid-template-columns:minmax(0,1fr) auto}
   .step button{width:42px;height:42px}
   .step output{min-width:58px;font-size:18px}
   .st-top img{height:32px}
+  .st-o{padding:0 6px 0 10px;gap:6px;font-size:13px}
+  .st-ring{width:clamp(160px,calc(100vh - 470px),min(66vmin,460px));width:clamp(160px,calc(100dvh - 470px),min(66vmin,460px))}
+  .st-num{font-size:clamp(60px,calc((100vh - 470px)*.4),min(24vmin,190px))}
 }
 @media (orientation:landscape) and (max-height:520px){
   .st-ring{width:min(48vmin,300px);margin:6px 0}
@@ -222,10 +245,15 @@ TIMER_JS = r"""
     presetBtns.forEach(function(x){x.setAttribute('aria-pressed',String(x===b))}); refresh(); save(); }); });
   function clearPreset(){presetBtns.forEach(function(x){x.setAttribute('aria-pressed','false')})}
   function markPreset(){ presetBtns.forEach(function(b,i){ var p=PRE[i], ok=Object.keys(p).every(function(k){return v[k]===p[k]}); b.setAttribute('aria-pressed',String(ok)); }); }
-  d.querySelectorAll('.tm-opt').forEach(function(b){ var k=b.getAttribute('data-o'); b.setAttribute('aria-pressed',String(!!opt[k]));
-    b.addEventListener('click',function(){ opt[k]=!opt[k]; b.setAttribute('aria-pressed',String(opt[k])); save(); if(k==='beep'&&opt[k]){unlock(); tone(880,.12)} if(k==='vib'&&opt[k]&&navigator.vibrate)navigator.vibrate(60); if(k==='voice'&&opt[k]){unlock(); say(T('voice').work)} }); });
-  if(!('speechSynthesis' in window)){var vb=d.querySelector('[data-o="voice"]'); if(vb) vb.hidden=true;}
-  if(!navigator.vibrate){var vv=d.querySelector('[data-o="vib"]'); if(vv) vv.hidden=true;}
+  var swEls=[].slice.call(d.querySelectorAll('[data-o]'));
+  function paintOpts(){ swEls.forEach(function(b){ b.setAttribute('aria-checked',String(!!opt[b.getAttribute('data-o')])) }); }
+  function setOpt(k,val){ opt[k]=val; paintOpts(); save();
+    if(k==='beep'&&val){unlock(); tone(880,.12)} if(k==='vib'&&val&&navigator.vibrate)navigator.vibrate(60);
+    if(k==='voice'){ if(val){unlock(); say(T('voice').work)} else { try{speechSynthesis.cancel()}catch(e){} } } }
+  swEls.forEach(function(b){ b.addEventListener('click',function(){ setOpt(b.getAttribute('data-o'), !opt[b.getAttribute('data-o')]); }); });
+  paintOpts();
+  if(!('speechSynthesis' in window)) d.querySelectorAll('[data-o="voice"]').forEach(function(x){x.hidden=true});
+  if(!navigator.vibrate) d.querySelectorAll('[data-o="vib"]').forEach(function(x){x.hidden=true});
 
   var sumBig=d.querySelector('.tm-sum .big'), sumMeta=d.querySelector('.tm-sum .meta'), planBar=d.querySelector('.tm-plan'),
       barT=d.querySelector('.tm-bar .t b'), barS=d.querySelector('.tm-bar .t span');
@@ -396,10 +424,10 @@ def build_timer():
         {rows}
         <div class="tm-name"><label for="tm-n" data-en="Exercise name (optional)">Nama latihan (opsional)</label>
           <input id="tm-n" type="text" maxlength="60" autocomplete="off" placeholder="Contoh: squat ke kursi" data-en-placeholder="e.g. sit-to-stand"></div>
-        <div class="tm-opts" role="group" aria-label="Tanda" data-en-aria-label="Cues">
-          <button type="button" class="tm-opt" data-o="beep">{icon("volume")}<span data-en="Sound">Bunyi</span></button>
-          <button type="button" class="tm-opt" data-o="voice">{icon("megaphone")}<span data-en="Voice cues">Aba-aba suara</span></button>
-          <button type="button" class="tm-opt" data-o="vib">{icon("vibrate")}<span data-en="Vibrate">Getar</span></button>
+        <div class="tm-sws" role="group" aria-label="Tanda" data-en-aria-label="Cues"><p data-en="Cues while you exercise">Tanda saat berlatih</p>
+          <button type="button" class="sw-row" role="switch" aria-checked="true" data-o="beep"><span class="tm-ic">{icon("volume")}</span><span><b data-en="Sound">Bunyi</b><small data-en="A beep at every change and in the last 3 seconds">Bip di setiap pergantian dan 3 detik terakhir</small></span><span class="sw" aria-hidden="true"></span></button>
+          <button type="button" class="sw-row" role="switch" aria-checked="true" data-o="voice"><span class="tm-ic">{icon("megaphone")}</span><span><b data-en="Voice cues">Aba-aba suara</b><small data-en="A voice calls out each phase, such as work and rest">Suara menyebutkan setiap fase, misalnya latihan dan istirahat</small></span><span class="sw" aria-hidden="true"></span></button>
+          <button type="button" class="sw-row" role="switch" aria-checked="true" data-o="vib"><span class="tm-ic">{icon("vibrate")}</span><span><b data-en="Vibrate">Getar</b><small data-en="Your phone vibrates at every change">Ponsel bergetar di setiap pergantian</small></span><span class="sw" aria-hidden="true"></span></button>
         </div>
       </div>
       <aside class="tm-side">
@@ -447,6 +475,11 @@ def build_timer():
     <button type="button" class="sm" data-act="back" aria-label="Ulangi bagian ini" data-en-aria-label="Restart this block">{icon("restart")}</button>
     <button type="button" class="main" aria-label="Jeda" data-en-aria-label="Pause">{icon("pause")}</button>
     <button type="button" class="sm" data-act="skip" aria-label="Lewati" data-en-aria-label="Skip">{icon("skip")}</button>
+  </div>
+  <div class="st-opts" role="group" aria-label="Tanda" data-en-aria-label="Cues">
+    <button type="button" class="st-o" role="switch" aria-checked="true" data-o="beep">{icon("volume")}<span class="lb" data-en="Sound">Bunyi</span><span class="sw" aria-hidden="true"></span></button>
+    <button type="button" class="st-o" role="switch" aria-checked="true" data-o="voice">{icon("megaphone")}<span class="lb" data-en="Voice">Aba-aba</span><span class="sw" aria-hidden="true"></span></button>
+    <button type="button" class="st-o" role="switch" aria-checked="true" data-o="vib">{icon("vibrate")}<span class="lb" data-en="Vibrate">Getar</span><span class="sw" aria-hidden="true"></span></button>
   </div>
   <p class="st-total"></p>
   <p class="sr st-live" aria-live="polite"></p>

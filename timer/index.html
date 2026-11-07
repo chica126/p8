@@ -692,10 +692,18 @@ ul,ol{margin:0;padding:0;list-style:none}
 .tm-name label{display:block;font-size:14px;font-weight:600;color:var(--ink);margin-bottom:8px}
 .tm-name input{width:100%;height:48px;border-radius:14px;border:1px solid var(--line-strong);padding:0 16px;font:500 16px var(--font);color:var(--ink)}
 .tm-name input:focus,.tm-name input:focus-visible{outline:none;border-color:var(--purple);box-shadow:0 0 0 3px var(--purple-50)}
-.tm-opts{display:flex;flex-wrap:wrap;gap:8px;padding-top:18px}
-.tm-opt{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 14px;border-radius:999px;border:1px solid var(--line-strong);background:#fff;font:500 14px var(--font);color:var(--body);cursor:pointer}
-.tm-opt svg{width:17px;height:17px}
-.tm-opt[aria-pressed="true"]{background:var(--teal-50);border-color:var(--teal);color:var(--teal-text)}
+.tm-sws{padding-top:6px}
+.tm-sws > p{font-size:14px;font-weight:600;color:var(--ink);padding:14px 0 2px}
+.sw-row{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:14px;align-items:center;width:100%;padding:12px 0;border:0;border-bottom:1px solid var(--line);background:none;text-align:left;font:inherit;color:inherit;cursor:pointer}
+.sw-row:last-child{border-bottom:0}
+.sw-row b{display:block;font-size:16px;color:var(--ink)}
+.sw-row small{display:block;font-size:13.5px;color:var(--muted);line-height:1.4;margin-top:2px}
+.sw-row[aria-checked="false"] .tm-ic{background:var(--surface);color:var(--faint)}
+.sw{position:relative;flex:0 0 auto;width:52px;height:30px;border-radius:999px;background:var(--line-strong);transition:background .2s ease}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(26,17,66,.25);transition:transform .2s ease}
+[aria-checked="true"] > .sw{background:var(--teal)}
+[aria-checked="true"] > .sw::after{transform:translateX(22px)}
+.sw-row:focus-visible{outline:2px solid var(--purple);outline-offset:2px;border-radius:12px}
 .tm-side{position:sticky;top:104px;display:grid;gap:16px}
 .tm-sum{background:var(--purple);color:#CBC3E8;border-radius:var(--radius);padding:30px}
 .tm-sum .k{font-size:14px;font-weight:600;color:#C9D46B}
@@ -740,12 +748,12 @@ ul,ol{margin:0;padding:0;list-style:none}
 .st-mid{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:0}
 .st-ph{font-size:clamp(28px,5vw,56px);font-weight:800;letter-spacing:-.02em;line-height:1.05}
 .st-name{font-size:clamp(17px,2.2vw,24px);font-weight:600;opacity:.9;margin-top:8px;min-height:1.3em}
-.st-ring{position:relative;width:min(62vmin,460px);aspect-ratio:1;margin:clamp(12px,3vh,32px) 0}
+.st-ring{position:relative;width:clamp(160px,calc(100vh - 540px),min(62vmin,460px));width:clamp(160px,calc(100dvh - 540px),min(62vmin,460px));aspect-ratio:1;margin:clamp(10px,2.5vh,28px) 0;flex:0 0 auto}
 .st-ring svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
 .st-ring circle{fill:none;stroke-width:6}
 .st-ring .bg{stroke:currentColor;opacity:.18}
 .st-ring .fg{stroke:currentColor;stroke-linecap:round;transition:stroke-dashoffset .25s linear}
-.st-num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:min(24vmin,190px);font-weight:800;letter-spacing:-.04em;font-variant-numeric:tabular-nums;line-height:1}
+.st-num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:clamp(64px,calc((100vh - 540px)*.4),min(24vmin,190px));font-weight:800;letter-spacing:-.04em;font-variant-numeric:tabular-nums;line-height:1}
 .st-num.long{font-size:min(17vmin,140px)}
 .st-meta{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;font-size:clamp(15px,1.8vw,19px);font-weight:600}
 .st-meta span{opacity:.92}
@@ -759,6 +767,17 @@ ul,ol{margin:0;padding:0;list-style:none}
 .stage[data-ph="rest"] .st-ctl .main{background:#1A1142;color:#fff}
 .st-ctl .main svg{width:34px;height:34px}
 .st-total{text-align:center;font-size:14px;opacity:.8;margin-top:12px;font-variant-numeric:tabular-nums}
+.st-opts{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:16px}
+.st-o{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 8px 0 12px;border-radius:999px;border:0;background:rgba(255,255,255,.14);color:inherit;font:600 13.5px var(--font);cursor:pointer}
+.stage[data-ph="rest"] .st-o{background:rgba(26,17,66,.08)}
+.st-o svg{width:17px;height:17px}
+.st-o[aria-checked="false"] svg,.st-o[aria-checked="false"] .lb{opacity:.6}
+.st-o .sw{width:36px;height:22px;background:rgba(255,255,255,.28)}
+.stage[data-ph="rest"] .st-o .sw{background:rgba(26,17,66,.18)}
+.st-o .sw::after{top:3px;left:3px;width:16px;height:16px;box-shadow:none}
+.st-o[aria-checked="true"] > .sw{background:currentColor}
+.st-o[aria-checked="true"] > .sw::after{transform:translateX(14px);background:var(--bgc)}
+.stage[data-ph="done"] .st-opts{display:none}
 .st-done{display:none;margin-top:18px;gap:10px;flex-wrap:wrap;justify-content:center}
 .stage[data-ph="done"] .st-done{display:flex}
 .stage[data-ph="done"] .st-ctl,.stage[data-ph="done"] .st-ring{display:none}
@@ -780,10 +799,14 @@ body.tm-live{overflow:hidden}
 @media (max-width:640px){
   .tm-card{padding:6px 18px 20px}
   .tm-row{grid-template-columns:minmax(0,1fr) auto;gap:10px}
-  .tm-row .tm-ic{display:none}
+  .tm-row .tm-ic,.sw-row .tm-ic{display:none}
+  .sw-row{grid-template-columns:minmax(0,1fr) auto}
   .step button{width:42px;height:42px}
   .step output{min-width:58px;font-size:18px}
   .st-top img{height:32px}
+  .st-o{padding:0 6px 0 10px;gap:6px;font-size:13px}
+  .st-ring{width:clamp(160px,calc(100vh - 470px),min(66vmin,460px));width:clamp(160px,calc(100dvh - 470px),min(66vmin,460px))}
+  .st-num{font-size:clamp(60px,calc((100vh - 470px)*.4),min(24vmin,190px))}
 }
 @media (orientation:landscape) and (max-height:520px){
   .st-ring{width:min(48vmin,300px);margin:6px 0}
@@ -827,10 +850,10 @@ body.tm-live{overflow:hidden}
         <div class="tm-row" data-k="p"><span class="tm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></svg></span><div><b data-en="Get ready">Persiapan</b><small data-en="Countdown before you start">Hitung mundur sebelum mulai</small></div><div class="step"><button type="button" class="mi" aria-label="Kurangi persiapan" data-en-aria-label="Decrease get ready"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/></svg></button><output aria-live="off"></output><button type="button" class="pl" aria-label="Tambah persiapan" data-en-aria-label="Increase get ready"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button></div></div><div class="tm-row" data-k="w"><span class="tm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6.5 6.5 11 11"/><path d="m21 21-1-1"/><path d="m3 3 1 1"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></svg></span><div><b data-en="Work">Latihan</b><small data-en="Length of each exercise block">Lama setiap gerakan</small></div><div class="step"><button type="button" class="mi" aria-label="Kurangi latihan" data-en-aria-label="Decrease work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/></svg></button><output aria-live="off"></output><button type="button" class="pl" aria-label="Tambah latihan" data-en-aria-label="Increase work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button></div></div><div class="tm-row" data-k="r"><span class="tm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></svg></span><div><b data-en="Rest">Istirahat</b><small data-en="Pause between blocks">Jeda di antara gerakan</small></div><div class="step"><button type="button" class="mi" aria-label="Kurangi istirahat" data-en-aria-label="Decrease rest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/></svg></button><output aria-live="off"></output><button type="button" class="pl" aria-label="Tambah istirahat" data-en-aria-label="Increase rest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button></div></div><div class="tm-row" data-k="c"><span class="tm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg></span><div><b data-en="Reps">Repetisi</b><small data-en="Work and rest pairs in one set">Latihan dan istirahat dalam satu set</small></div><div class="step"><button type="button" class="mi" aria-label="Kurangi repetisi" data-en-aria-label="Decrease reps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/></svg></button><output aria-live="off"></output><button type="button" class="pl" aria-label="Tambah repetisi" data-en-aria-label="Increase reps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button></div></div><div class="tm-row" data-k="s"><span class="tm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span><div><b data-en="Sets">Set</b><small data-en="Repeat all reps">Ulangi seluruh repetisi</small></div><div class="step"><button type="button" class="mi" aria-label="Kurangi set" data-en-aria-label="Decrease sets"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/></svg></button><output aria-live="off"></output><button type="button" class="pl" aria-label="Tambah set" data-en-aria-label="Increase sets"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button></div></div><div class="tm-row" data-k="sr"><span class="tm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/><path d="M6 2v2"/></svg></span><div><b data-en="Rest between sets">Istirahat antar set</b><small data-en="A longer break">Jeda yang lebih panjang</small></div><div class="step"><button type="button" class="mi" aria-label="Kurangi istirahat antar set" data-en-aria-label="Decrease rest between sets"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/></svg></button><output aria-live="off"></output><button type="button" class="pl" aria-label="Tambah istirahat antar set" data-en-aria-label="Increase rest between sets"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button></div></div><div class="tm-row" data-k="cd"><span class="tm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span><div><b data-en="Cool down">Pendinginan</b><small data-en="Easy stretching at the end">Peregangan ringan di akhir</small></div><div class="step"><button type="button" class="mi" aria-label="Kurangi pendinginan" data-en-aria-label="Decrease cool down"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/></svg></button><output aria-live="off"></output><button type="button" class="pl" aria-label="Tambah pendinginan" data-en-aria-label="Increase cool down"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button></div></div>
         <div class="tm-name"><label for="tm-n" data-en="Exercise name (optional)">Nama latihan (opsional)</label>
           <input id="tm-n" type="text" maxlength="60" autocomplete="off" placeholder="Contoh: squat ke kursi" data-en-placeholder="e.g. sit-to-stand"></div>
-        <div class="tm-opts" role="group" aria-label="Tanda" data-en-aria-label="Cues">
-          <button type="button" class="tm-opt" data-o="beep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg><span data-en="Sound">Bunyi</span></button>
-          <button type="button" class="tm-opt" data-o="voice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg><span data-en="Voice cues">Aba-aba suara</span></button>
-          <button type="button" class="tm-opt" data-o="vib"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 8 2 2-2 2 2 2-2 2"/><path d="m22 8-2 2 2 2-2 2 2 2"/><rect width="8" height="14" x="8" y="5" rx="1"/></svg><span data-en="Vibrate">Getar</span></button>
+        <div class="tm-sws" role="group" aria-label="Tanda" data-en-aria-label="Cues"><p data-en="Cues while you exercise">Tanda saat berlatih</p>
+          <button type="button" class="sw-row" role="switch" aria-checked="true" data-o="beep"><span class="tm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg></span><span><b data-en="Sound">Bunyi</b><small data-en="A beep at every change and in the last 3 seconds">Bip di setiap pergantian dan 3 detik terakhir</small></span><span class="sw" aria-hidden="true"></span></button>
+          <button type="button" class="sw-row" role="switch" aria-checked="true" data-o="voice"><span class="tm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></span><span><b data-en="Voice cues">Aba-aba suara</b><small data-en="A voice calls out each phase, such as work and rest">Suara menyebutkan setiap fase, misalnya latihan dan istirahat</small></span><span class="sw" aria-hidden="true"></span></button>
+          <button type="button" class="sw-row" role="switch" aria-checked="true" data-o="vib"><span class="tm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 8 2 2-2 2 2 2-2 2"/><path d="m22 8-2 2 2 2-2 2 2 2"/><rect width="8" height="14" x="8" y="5" rx="1"/></svg></span><span><b data-en="Vibrate">Getar</b><small data-en="Your phone vibrates at every change">Ponsel bergetar di setiap pergantian</small></span><span class="sw" aria-hidden="true"></span></button>
         </div>
       </div>
       <aside class="tm-side">
@@ -904,6 +927,11 @@ body.tm-live{overflow:hidden}
     <button type="button" class="sm" data-act="back" aria-label="Ulangi bagian ini" data-en-aria-label="Restart this block"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></button>
     <button type="button" class="main" aria-label="Jeda" data-en-aria-label="Pause"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="4" width="4" height="16" rx="1"/><rect x="6" y="4" width="4" height="16" rx="1"/></svg></button>
     <button type="button" class="sm" data-act="skip" aria-label="Lewati" data-en-aria-label="Skip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" x2="19" y1="5" y2="19"/></svg></button>
+  </div>
+  <div class="st-opts" role="group" aria-label="Tanda" data-en-aria-label="Cues">
+    <button type="button" class="st-o" role="switch" aria-checked="true" data-o="beep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg><span class="lb" data-en="Sound">Bunyi</span><span class="sw" aria-hidden="true"></span></button>
+    <button type="button" class="st-o" role="switch" aria-checked="true" data-o="voice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg><span class="lb" data-en="Voice">Aba-aba</span><span class="sw" aria-hidden="true"></span></button>
+    <button type="button" class="st-o" role="switch" aria-checked="true" data-o="vib"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 8 2 2-2 2 2 2-2 2"/><path d="m22 8-2 2 2 2-2 2 2 2"/><rect width="8" height="14" x="8" y="5" rx="1"/></svg><span class="lb" data-en="Vibrate">Getar</span><span class="sw" aria-hidden="true"></span></button>
   </div>
   <p class="st-total"></p>
   <p class="sr st-live" aria-live="polite"></p>
@@ -1024,10 +1052,15 @@ body.tm-live{overflow:hidden}
     presetBtns.forEach(function(x){x.setAttribute('aria-pressed',String(x===b))}); refresh(); save(); }); });
   function clearPreset(){presetBtns.forEach(function(x){x.setAttribute('aria-pressed','false')})}
   function markPreset(){ presetBtns.forEach(function(b,i){ var p=PRE[i], ok=Object.keys(p).every(function(k){return v[k]===p[k]}); b.setAttribute('aria-pressed',String(ok)); }); }
-  d.querySelectorAll('.tm-opt').forEach(function(b){ var k=b.getAttribute('data-o'); b.setAttribute('aria-pressed',String(!!opt[k]));
-    b.addEventListener('click',function(){ opt[k]=!opt[k]; b.setAttribute('aria-pressed',String(opt[k])); save(); if(k==='beep'&&opt[k]){unlock(); tone(880,.12)} if(k==='vib'&&opt[k]&&navigator.vibrate)navigator.vibrate(60); if(k==='voice'&&opt[k]){unlock(); say(T('voice').work)} }); });
-  if(!('speechSynthesis' in window)){var vb=d.querySelector('[data-o="voice"]'); if(vb) vb.hidden=true;}
-  if(!navigator.vibrate){var vv=d.querySelector('[data-o="vib"]'); if(vv) vv.hidden=true;}
+  var swEls=[].slice.call(d.querySelectorAll('[data-o]'));
+  function paintOpts(){ swEls.forEach(function(b){ b.setAttribute('aria-checked',String(!!opt[b.getAttribute('data-o')])) }); }
+  function setOpt(k,val){ opt[k]=val; paintOpts(); save();
+    if(k==='beep'&&val){unlock(); tone(880,.12)} if(k==='vib'&&val&&navigator.vibrate)navigator.vibrate(60);
+    if(k==='voice'){ if(val){unlock(); say(T('voice').work)} else { try{speechSynthesis.cancel()}catch(e){} } } }
+  swEls.forEach(function(b){ b.addEventListener('click',function(){ setOpt(b.getAttribute('data-o'), !opt[b.getAttribute('data-o')]); }); });
+  paintOpts();
+  if(!('speechSynthesis' in window)) d.querySelectorAll('[data-o="voice"]').forEach(function(x){x.hidden=true});
+  if(!navigator.vibrate) d.querySelectorAll('[data-o="vib"]').forEach(function(x){x.hidden=true});
 
   var sumBig=d.querySelector('.tm-sum .big'), sumMeta=d.querySelector('.tm-sum .meta'), planBar=d.querySelector('.tm-plan'),
       barT=d.querySelector('.tm-bar .t b'), barS=d.querySelector('.tm-bar .t span');
